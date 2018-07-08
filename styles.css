@@ -31,9 +31,8 @@ h4 {
     border: 0;
 }
 
-.general {
-    /* border-color: black; */
-    
+.br {
+    white-space: pre-wrap;
 }
 
 section {
@@ -59,40 +58,50 @@ section {
     font-size: 20px;
 }
 
-.slidecontainer {
-    width: 100%; /* Width of the outside container */
-    padding: 2px;
+#timeContainer {
+    width: 100%;
     height: 10%;
     background: black;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rectangle {
+    background-color: #555;
+  }
+
+.rectangle:hover {
+    opacity: .8;
+}
+
+
+/* Timeline - Years */
+
+#eventContainer {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+
+.timelines-years {
+	border-top: 1px solid #cfc1c1;
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    -webkit-padding-start: 0;
+}
+
+li {	
+	display: inline-block;
+    width: 9.091%;
+	color: #868686;
+    font-size: 20px;
     text-align: center;
+    border-right: 1px solid #cfc1c1;
 }
 
-/* The slider itself */
-.slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 25px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-
-    margin-top: 2.5%;    
-}
-
-/* Mouse-over effects */
-.slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) */ 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 50px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+li:last-child {
+    border-right: 0px;
 }
