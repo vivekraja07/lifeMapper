@@ -106,8 +106,8 @@ var x = {
         }
     },
     //moved to Noida
-    'May 2005 to October 2007': {
-        start: 'May-2005',
+    'June 2005 to October 2007': {
+        start: 'June-2005',
         end: 'October-2007',
         loc: [28.5735143, 77.36474339999995],
         zoom: 13,
@@ -149,9 +149,9 @@ var x = {
 
     },
     //hooch 9
-    'August 2012 to May 2013': {
+    'August 2012 to July 2013': {
         start: 'August-2012',
-        end: 'May-2013',
+        end: 'July-2013',
         loc: [34.048914, -84.208506],
         zoom: 13,
         options: { duration: 15 },
@@ -162,62 +162,172 @@ var x = {
             School: "Chattahoochee High School"
         }
     },
-    // //hooch 10
-    // 'August 2013 to May 2014': {
-    //     loc: [34.048914, -84.208506], 
-    //     zoom: 13, 
-    //     options: {duration: 15},
-    //     info: {
-    //         General: "10th grade",
-    //         Location: "Alpharetta, Georgia",
-    //         Languages: "Tamil \nEnglish \nHindi",
-    //         School: "Chattahoochee High School"
-    //     }
-    // },
-    // 'May 2014 to May 2014': {
-    //     loc: [34.048914, -84.208506], 
-    //     zoom: 13, 
-    //     options: {duration: 15},
-    //     info: {
-    //         General: "10th grade",
-    //         Location: "Alpharetta, Georgia",
-    //         Languages: "Tamil \nEnglish \nHindi",
-    //         School: "Chattahoochee High School"
-    //     }
-    // },
-    // //subway
-    // '2014': {
-    //     loc: [34.048914, -84.208506], 
-    //     zoom: 13, 
-    //     options: {duration: 15},
-    //     info: {
-    //         General: "10th grade",
-    //         Location: "Alpharetta, Georgia",
-    //         Languages: "Tamil \nEnglish \nHindi",
-    //         School: "Chattahoochee High School"
-    //     }
-    // },
-    // '2015': {
-    //     loc: [34.048914, -84.208506], 
-    //     zoom: 13, 
-    //     options: {duration: 15},
-    //     info: {
-    //         General: "10th grade",
-    //         Location: "Alpharetta, Georgia",
-    //         Languages: "Tamil \nEnglish \nHindi",
-    //         School: "Chattahoochee High School"
-    //     }
-    // },
+    //hooch 10
+    'August 2013 to May 2014': {
+        start: 'August-2013',
+        end: 'May-2014',
+        loc: [34.048914, -84.208506],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "10th grade",
+            Location: "Alpharetta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+            School: "Chattahoochee High School"
+        }
+    },
+    //subway
+    'June 2014 to July 2014': {
+        start: 'June-2014',
+        end: 'July-2014',
+        loc: [34.047090, -84.179381],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Sandwich Artist at Subway",
+            Location: "Alpharetta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
+    //11th gradee
+    'August 2014 to May 2015': {
+        start: 'August-2014',
+        end: 'May-2015',
+        loc: [34.048914, -84.208506],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "11th grade",
+            Location: "Alpharetta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+            School: "Chattahoochee High School"
+        }
+    },
+    //topgolf + cross-country + tutoring
+    'June 2015 to July 2015': {
+        start: 'June-2015',
+        end: 'July-2015',
+        loc: [34.048069, -84.299236],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "TopGolf + Cross-Country + Tutoring",
+            Location: "Alpharetta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
+    //12th grade
+    'August 2015 to May 2016': {
+        start: 'August-2015',
+        end: 'May-2016',
+        loc: [34.048914, -84.208506],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "12th grade",
+            Location: "Alpharetta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+            School: "Chattahoochee High School"
+        }
+    },
+    //financial analyst internship
+    'June 2016 to August 2016': {
+        start: 'June-2016',
+        end: 'August-2016',
+        loc: [33.776497, -84.387357],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Financial Analyst Internship",
+            Location: "Atlanta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
+    //year 1, semester 1 at gatech
+    'September 2016 to December 2016': {
+        start: 'September-2016',
+        end: 'December-2016',
+        loc: [33.777378, -84.395516],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Freshman year 1st semester at GA Tech",
+            Location: "Atlanta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
+    //year 1, semester 2 at gatech
+    'January 2017 to May 2017': {
+        start: 'January-2017',
+        end: 'May-2017',
+        loc: [33.777378, -84.395516],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Freshman year 2nd semester at GA Tech",
+            Location: "Atlanta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
+    //thrivent Internship 
+    'June 2017 to August 2017': {
+        start: 'June-2017',
+        end: 'August-2017',
+        loc: [44.317762, -88.386899],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Software Engineer Internship at Thrivent Financial",
+            Location: "Atlanta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
 
-    // '2017': {
-    //     loc: [47.605958, -122.316235], 
-    //     zoom: 13, 
-    //     options: {duration: 15}
-    // }
+    //year 2, semester 1 at gatech
+    'September 2017 to December 2017': {
+        start: 'September-2017',
+        end: 'December-2017',
+        loc: [33.777378, -84.395516],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Sophomore year 1st semester at GA Tech",
+            Location: "Atlanta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
+    //year 2, semester 2 at gatech
+    'January 2018 to May 2018': {
+        start: 'January-2018',
+        end: 'May-2018',
+        loc: [33.777378, -84.395516],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Sophomore year 2nd semester at GA Tech",
+            Location: "Atlanta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
+    //home depot
+    //thrivent Internship 
+    'June 2018 to August 2018': {
+        start: 'June-2018',
+        end: 'August-2018',
+        loc: [33.865413, -84.481199],
+        zoom: 13,
+        options: { duration: 15 },
+        info: {
+            General: "Software Engineer Internship at Home Depot",
+            Location: "Atlanta, Georgia",
+            Languages: "Tamil \nEnglish \nHindi",
+        }
+    },
 };
 
 //let us initialize the timeline here
-total = '366';
+total = '248';
+count = 0;
 for (event in x) {
     var era = document.createElement('div');
     era.className = 'rectangle';
@@ -227,22 +337,25 @@ for (event in x) {
     //we need to get a width from the start and end dates
     start = getAsMonth(eventData.start);
     end = getAsMonth(eventData.end);
-    // console.log("start: " + start);
-    // console.log("end: " + end);
-    numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0]);
-    // console.log(numMonths);
+    console.log("start: " + start);
+    console.log("end: " + end);
+    numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1);
+    count += numMonths;
+    console.log(numMonths);
+    console.log("============================================")
     perc = (numMonths / total * 100).toFixed(2);
 
     era.style.width = (perc + "%");
-
+    era.onclick = 'showInfo("this")'
     eventContainer.appendChild(era);
 
 }
+console.log(count);
 
 
 
 
-// Update the current slider value (each time you drag the slider handle)
+//Update the current slider value (each time you drag the slider handle)
 // slider.oninput = function () {
 //     date.innerHTML = this.value;
 //     while (toRemove.length != 0) {
@@ -264,6 +377,10 @@ for (event in x) {
 //         toRemove.push(section);
 //     }
 // }
+
+function showInfo(event) {
+    console.log("HERE: " + event)
+}
 
 
 // var marker = L.marker([39.8283, -98.5795]).addTo(mymap);
