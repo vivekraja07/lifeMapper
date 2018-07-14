@@ -325,12 +325,18 @@ var x = {
     },
 };
 
+
 //let us initialize the timeline here
 total = '248';
 count = 0;
 for (event in x) {
-    var era = document.createElement('div');
+    const era = document.createElement('div');
     era.className = 'rectangle';
+    era.dataset.name = event;
+
+    era.addEventListener('click', function() {
+        showInfo(era.dataset.name)
+    });
 
     eventData = x[event];
 
@@ -346,13 +352,32 @@ for (event in x) {
     perc = (numMonths / total * 100).toFixed(2);
 
     era.style.width = (perc + "%");
-    era.onclick = 'showInfo("this")'
     eventContainer.appendChild(era);
 
 }
 console.log(count);
 
+function showInfo(dataSetName) {
+    date.innerHTML = dataSetName;
+    while (toRemove.length != 0) {
+        div.removeChild(toRemove.pop());
+    }
+    //map.flyTo(x[dataSetName].loc, x[dataSetName].zoom, x[dataSetName].options);
+    for (var feature in x[dataSetName].info) {
 
+        var section = document.createElement('section');
+        section.className = 'br';
+        var topic = document.createElement('h4');
+        topic.textContent = feature;
+        section.appendChild(topic);
+        var para = document.createElement('p');
+        para.textContent = x[dataSetName].info[feature];
+        section.appendChild(para);
+
+        div.appendChild(section);
+        toRemove.push(section);
+    }
+}
 
 
 //Update the current slider value (each time you drag the slider handle)
@@ -377,10 +402,6 @@ console.log(count);
 //         toRemove.push(section);
 //     }
 // }
-
-function showInfo(event) {
-    console.log("HERE: " + event)
-}
 
 
 // var marker = L.marker([39.8283, -98.5795]).addTo(mymap);
