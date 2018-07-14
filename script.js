@@ -13,7 +13,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(map);
 
 var date = document.getElementById("date");
-// date.innerHTML = slider.value; // Display the default slider value
 div = document.getElementById('features');
 var eventContainer = document.getElementById('eventContainer');
 var toRemove = [];
@@ -329,33 +328,54 @@ var x = {
 //let us initialize the timeline here
 total = '248';
 count = 0;
+
+var index = -1;
 for (event in x) {
     const era = document.createElement('div');
     era.className = 'rectangle';
+    era.id = ++index;
     era.dataset.name = event;
 
-    era.addEventListener('click', function() {
+    era.addEventListener('click', function () {
         showInfo(era.dataset.name)
+
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+        } else {
+            console.log("No active")
+        }
+        era.className += " active";
+
+        index = era.id;
+        // console.log("Index:" + index)
     });
+
 
     eventData = x[event];
 
     //we need to get a width from the start and end dates
     start = getAsMonth(eventData.start);
     end = getAsMonth(eventData.end);
-    console.log("start: " + start);
-    console.log("end: " + end);
+    // console.log("start: " + start);
+    // console.log("end: " + end);
     numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1);
     count += numMonths;
-    console.log(numMonths);
-    console.log("============================================")
+    // console.log(numMonths);
+    // console.log("============================================")
     perc = (numMonths / total * 100).toFixed(2);
 
     era.style.width = (perc + "%");
     eventContainer.appendChild(era);
 
 }
-console.log(count);
+
+// console.log(count);
+
+//activate the last rectangle
+var lastChild = document.getElementById(index);
+console.log(lastChild);
+lastChild.click();
 
 function showInfo(dataSetName) {
     date.innerHTML = dataSetName;
@@ -379,29 +399,35 @@ function showInfo(dataSetName) {
     }
 }
 
+function getNext() {
+    var next = document.getElementById(+index + +1);
+    if (next) {
+        next.click();
+    } else {
+        alert("This is still a mystery!")
+    }
+}
 
-//Update the current slider value (each time you drag the slider handle)
-// slider.oninput = function () {
-//     date.innerHTML = this.value;
-//     while (toRemove.length != 0) {
-//         div.removeChild(toRemove.pop());
-//     }
-//     //map.flyTo(x[this.value].loc, x[this.value].zoom, x[this.value].options);
-//     for (var feature in x[this.value].info) {
+function getPrev() {
+    var prev = document.getElementById(+index - +1);
+    if (prev) {
+        prev.click();
+    } else {
+        alert("This is out of the scope of this project")
+    }
+}
 
-//         var section = document.createElement('section');
-//         section.className = 'br';
-//         var topic = document.createElement('h4');
-//         topic.textContent = feature;
-//         section.appendChild(topic);
-//         var para = document.createElement('p');
-//         para.textContent = x[this.value].info[feature];
-//         section.appendChild(para);
+document.onkeydown = function (e) {
+    switch (e.keyCode) {
+        case 37:
+            getPrev();
+            break;
+        case 39:
+            getNext();
+            break;
+    }
+};
 
-//         div.appendChild(section);
-//         toRemove.push(section);
-//     }
-// }
 
 
 // var marker = L.marker([39.8283, -98.5795]).addTo(mymap);
