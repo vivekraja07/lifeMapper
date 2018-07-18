@@ -1,21 +1,30 @@
-var map = L.map('mapid').setView([39.8283, -98.5795], 4);
+var map = L.map('map').setView([39.8283, -98.5795], 4);
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    maxZoom: 35,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1Ijoidml2ZWtyYWphMDciLCJhIjoiY2ppaHd1NHgxMHMwcjNsbnh6MmRoNmN6NyJ9.slF_wHT3c0XmJme3-6crhA',
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    bearing: -0,
-    speed: 0.2,
-    pitch: 0
+L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+    maxZoom: 20,
+    subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+    attribution: 'Google-Maps',
 }).addTo(map);
+
+// L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+//     maxZoom: 35,
+//     id: 'mapbox.streets-satellite',
+//     accessToken: 'pk.eyJ1Ijoidml2ZWtyYWphMDciLCJhIjoiY2ppaHd1NHgxMHMwcjNsbnh6MmRoNmN6NyJ9.slF_wHT3c0XmJme3-6crhA',
+//     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+//         '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+//         'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+//     bearing: -0,
+//     speed: 0.2,
+//     pitch: 0
+// }).addTo(map);
+
+//L.tileLayer('https://api.mapbox.com/styles/v1/vivekraja07/cjjnftey106hn2rmu6fe5ykmv/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoidml2ZWtyYWphMDciLCJhIjoiY2ppaHd1NHgxMHMwcjNsbnh6MmRoNmN6NyJ9.slF_wHT3c0XmJme3-6crhA').addTo(map);
 
 var date = document.getElementById("date");
 div = document.getElementById('features');
 var eventContainer = document.getElementById('eventContainer');
 var toRemove = [];
+
 
 function getAsMonth(date) {
 
@@ -68,8 +77,8 @@ var x = {
         start: 'January-1998',
         end: 'June-1999',
         loc: [11.1085, 77.3411],
-        zoom: 13,
-        options: { duration: 6 },
+        zoom: 18,
+        options: { duration: 15 },
         info: {
             General: "This is where the story begins folks.",
             Location: "Tirupur, Tamil Nadu",
@@ -81,8 +90,8 @@ var x = {
         start: 'July-1999',
         end: 'May-2003',
         loc: [11.0168, 76.9558],
-        zoom: 13,
-        options: { duration: 6 },
+        zoom: 18,
+        options: { duration: 15 },
         info: {
             General: "Moved to the neighboring, more industrial city",
             Location: "Coimbatore, Tamil Nadu",
@@ -95,8 +104,8 @@ var x = {
         start: 'June-2003',
         end: 'May-2005',
         loc: [23.020999, 72.5252289],
-        zoom: 13,
-        options: { duration: 6 },
+        zoom: 20,
+        options: { duration: 15 },
         info: {
             General: "Moved to the distant state of Gujarat, where I learned some new languages",
             Location: "Ahemdabad, Gujarat",
@@ -109,8 +118,8 @@ var x = {
         start: 'June-2005',
         end: 'October-2007',
         loc: [28.5735143, 77.36474339999995],
-        zoom: 13,
-        options: { duration: 6 },
+        zoom: 18,
+        options: { duration: 15 },
         info: {
             General: "Moved to the distant state of Uttar Pradesh, which is on the outskirts of Delhi. ",
             Location: "Noida, Uttar Pradesh",
@@ -123,7 +132,7 @@ var x = {
         start: 'November-2007',
         end: 'May-2009',
         loc: [34.056411, -84.196612],
-        zoom: 13,
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "Arrived at the US of A.",
@@ -137,7 +146,7 @@ var x = {
         start: 'June-2009',
         end: 'July-2012',
         loc: [34.067403, -84.231445],
-        zoom: 13,
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "These 3 years of middle school were a period of great growth and development",
@@ -151,8 +160,8 @@ var x = {
     'August 2012 to July 2013': {
         start: 'August-2012',
         end: 'July-2013',
-        loc: [34.048914, -84.208506],
-        zoom: 13,
+        loc: [34.049821, -84.208407],
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "9th grade",
@@ -165,8 +174,8 @@ var x = {
     'August 2013 to May 2014': {
         start: 'August-2013',
         end: 'May-2014',
-        loc: [34.048914, -84.208506],
-        zoom: 13,
+        loc: [34.049821, -84.208407],
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "10th grade",
@@ -180,7 +189,7 @@ var x = {
         start: 'June-2014',
         end: 'July-2014',
         loc: [34.047090, -84.179381],
-        zoom: 13,
+        zoom: 20,
         options: { duration: 15 },
         info: {
             General: "Sandwich Artist at Subway",
@@ -192,8 +201,8 @@ var x = {
     'August 2014 to May 2015': {
         start: 'August-2014',
         end: 'May-2015',
-        loc: [34.048914, -84.208506],
-        zoom: 13,
+        loc: [34.049821, -84.208407],
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "11th grade",
@@ -206,8 +215,8 @@ var x = {
     'June 2015 to July 2015': {
         start: 'June-2015',
         end: 'July-2015',
-        loc: [34.048069, -84.299236],
-        zoom: 13,
+        loc: [34.045314, -84.307211],
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "TopGolf + Cross-Country + Tutoring",
@@ -219,8 +228,8 @@ var x = {
     'August 2015 to May 2016': {
         start: 'August-2015',
         end: 'May-2016',
-        loc: [34.048914, -84.208506],
-        zoom: 13,
+        loc: [34.049821, -84.208407],
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "12th grade",
@@ -234,8 +243,8 @@ var x = {
         start: 'June-2016',
         end: 'August-2016',
         loc: [33.776497, -84.387357],
-        zoom: 13,
-        options: { duration: 15 },
+        zoom: 18,
+        options: { duration: 10 },
         info: {
             General: "Financial Analyst Internship",
             Location: "Atlanta, Georgia",
@@ -247,8 +256,8 @@ var x = {
         start: 'September-2016',
         end: 'December-2016',
         loc: [33.777378, -84.395516],
-        zoom: 13,
-        options: { duration: 15 },
+        zoom: 18,
+        options: { duration: 8 },
         info: {
             General: "Freshman year 1st semester at GA Tech",
             Location: "Atlanta, Georgia",
@@ -260,7 +269,7 @@ var x = {
         start: 'January-2017',
         end: 'May-2017',
         loc: [33.777378, -84.395516],
-        zoom: 13,
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "Freshman year 2nd semester at GA Tech",
@@ -272,8 +281,8 @@ var x = {
     'June 2017 to August 2017': {
         start: 'June-2017',
         end: 'August-2017',
-        loc: [44.317762, -88.386899],
-        zoom: 13,
+        loc: [44.305783, -88.387126],
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "Software Engineer Internship at Thrivent Financial",
@@ -287,7 +296,7 @@ var x = {
         start: 'September-2017',
         end: 'December-2017',
         loc: [33.777378, -84.395516],
-        zoom: 13,
+        zoom: 18,
         options: { duration: 15 },
         info: {
             General: "Sophomore year 1st semester at GA Tech",
@@ -300,26 +309,31 @@ var x = {
         start: 'January-2018',
         end: 'May-2018',
         loc: [33.777378, -84.395516],
-        zoom: 13,
-        options: { duration: 15 },
+        zoom: 18,
+        options: { duration: 8 },
         info: {
             General: "Sophomore year 2nd semester at GA Tech",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
         }
     },
-    //home depot
-    //thrivent Internship 
+    //home depot internship
     'June 2018 to August 2018': {
         start: 'June-2018',
         end: 'August-2018',
-        loc: [33.865413, -84.481199],
-        zoom: 13,
+        loc: [33.865961, -84.482348],
+        zoom: 18,
         options: { duration: 15 },
         info: {
+            Job: {
+                title: "Software Engineering Intern",
+                company: "The Home Depot",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/homeDepot.png",
+                addDetails: "This was a fun internship!"
+            },
             General: "Software Engineer Internship at Home Depot",
             Location: "Atlanta, Georgia",
-            Languages: "Tamil \nEnglish \nHindi",
+            Languages: "Tamil \nEnglish \nHindi \nSpanish",
         }
     },
 };
@@ -377,25 +391,70 @@ var lastChild = document.getElementById(index);
 console.log(lastChild);
 lastChild.click();
 
+var mapOn = true;
+
+function turnMapOff() {
+    mapOn = !mapOn;
+}
+
 function showInfo(dataSetName) {
     date.innerHTML = dataSetName;
     while (toRemove.length != 0) {
         div.removeChild(toRemove.pop());
     }
-    //map.flyTo(x[dataSetName].loc, x[dataSetName].zoom, x[dataSetName].options);
+
+    if (mapOn) {
+        //map.flyTo(x[dataSetName].loc, x[dataSetName].zoom, x[dataSetName].options);
+    }
+
     for (var feature in x[dataSetName].info) {
 
-        var section = document.createElement('section');
-        section.className = 'br';
-        var topic = document.createElement('h4');
-        topic.textContent = feature;
-        section.appendChild(topic);
-        var para = document.createElement('p');
-        para.textContent = x[dataSetName].info[feature];
-        section.appendChild(para);
+        if (feature == 'Job') {
 
-        div.appendChild(section);
-        toRemove.push(section);
+            console.log("JOB!!")
+
+            var section = document.createElement('section');
+            section.className = 'br';
+
+
+            var backgroundDetails = document.createElement('div');
+
+
+            var summaryInfo = document.createElement('div');
+
+            var title = document.createElement('h3');
+
+            title.textContent = x[dataSetName].info[feature].title;
+            summaryInfo.appendChild(title);
+
+            var company = document.createElement('h4');
+            company.textContent = x[dataSetName].info[feature].company;
+            summaryInfo.appendChild(company);
+            
+            backgroundDetails.appendChild(summaryInfo);
+
+            section.appendChild(backgroundDetails);
+
+            div.appendChild(section);
+            toRemove.push(section);
+
+
+        } else {
+            var section = document.createElement('section');
+            section.className = 'br';
+            var topic = document.createElement('h4');
+            topic.textContent = feature;
+            section.appendChild(topic);
+            var para = document.createElement('p');
+            para.textContent = x[dataSetName].info[feature];
+            section.appendChild(para);
+
+            div.appendChild(section);
+            toRemove.push(section);
+        }
+
+
+
     }
 }
 
@@ -430,66 +489,5 @@ document.onkeydown = function (e) {
 
 
 
-// var marker = L.marker([39.8283, -98.5795]).addTo(mymap);
 
-// var circle = L.circle([51.508, -98.5795], {
-//     color: 'red',
-//     fillColor: '#f03',
-//     fillOpacity: 0.5,
-//     radius: 500
-// }).addTo(mymap);
-
-// var polygon = L.polygon([
-//     [51.509, -98.5795],
-//     [51.503, -90],
-//     [50, -80]
-// ]).addTo(mymap);
-
-// marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-// circle.bindPopup("I am a circle.");
-// polygon.bindPopup("I am a polygon.");
-
-// var popup = L.popup()
-//     .setLatLng([71.509, -93.5795])
-//     .setContent("I am a standalone popup.")
-//     .openOn(mymap);
-
-// var popup = L.popup();
-
-// function onMapClick(e) {
-//     popup
-//         .setLatLng(e.latlng)
-//         .setContent("You clicked the map at " + e.latlng.toString())
-//         .openOn(map);
-// }
-
-// map.on('click', onMapClick);
-
-
-
-// // On every scroll event, check which element is on screen
-// window.onscroll = function() {
-//     var chapterNames = Object.keys(chapters);
-//     for (var i = 0; i < chapterNames.length; i++) {
-//         var chapterName = chapterNames[i];
-//         if (isElementOnScreen(chapterName)) {
-//             setActiveChapter(chapterName);
-//             break;
-//         }
-//     }
-// };
-// var activeChapterName = 'baker';
-// function setActiveChapter(chapterName) {
-//     if (chapterName === activeChapterName) return;
-//     map.flyTo(chapters[chapterName]);
-//     document.getElementById(chapterName).setAttribute('class', 'active');
-//     document.getElementById(activeChapterName).setAttribute('class', '');
-//     activeChapterName = chapterName;
-// }
-// function isElementOnScreen(id) {
-//     var element = document.getElementById(id);
-//     var bounds = element.getBoundingClientRect();
-//     return bounds.top < window.innerHeight && bounds.bottom > 0;
-// }
-// </script>
 

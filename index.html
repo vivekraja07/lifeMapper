@@ -3,15 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Wiki-Maps</title>
+    <title>Life-Mapper</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
         crossorigin="" />
+
 </head>
 
 <body>
 
-    <div id="mapid"></div>
+
+    <div id = "leftHalf">
+        <div id = "buttons">
+            <button id = "mapOff" onclick = "turnMapOff()">Turn Off</button>
+        </div>
+         <div id="map"></div>
+    </div>
+
+
 
     <div id='features'>
 
@@ -19,7 +28,7 @@
 
             <b class="previous round" onclick="getPrev()">&#8249;</b>
             <h3 id="date">January 12, 2013</h3>
-            <b class="next round" onclick = "getNext()" >&#8250;</b>
+            <b class="next round" onclick="getNext()">&#8250;</b>
 
         </section>
 
@@ -59,6 +68,7 @@
 
 
     <!-- Javascript Files-->
+    <!-- might need to add key to the map later-->
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
         crossorigin=""></script>
     <script type="text/javascript" src="script.js"> </script>
