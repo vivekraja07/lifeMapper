@@ -329,7 +329,10 @@ var x = {
                 title: "Software Engineering Intern",
                 company: "The Home Depot",
                 icon: "/Users/vxr0532/Documents/lifeMapper/icons/homeDepot.png",
-                addDetails: "This was a fun internship!"
+                addDetails: [
+                    "This was a fun internship!",
+                    "Lots of learning and stuff like that "
+                ]
             },
             General: "Software Engineer Internship at Home Depot",
             Location: "Atlanta, Georgia",
@@ -411,19 +414,26 @@ function showInfo(dataSetName) {
 
         if (feature == 'Job') {
 
-            console.log("JOB!!")
-
             var section = document.createElement('section');
             section.className = 'br';
 
 
             var backgroundDetails = document.createElement('div');
+            backgroundDetails.className = 'jobHolder'
 
+            var logoHolder = document.createElement('div');
+            logoHolder.className = "logoHolder";
+            var logo = document.createElement('img');
+            logo.src = x[dataSetName].info[feature].icon;
+            logoHolder.appendChild(logo);
+
+            backgroundDetails.appendChild(logoHolder);
 
             var summaryInfo = document.createElement('div');
+            summaryInfo.className = "summaryInfo";
 
             var title = document.createElement('h3');
-
+            title.className = "jobTitle";
             title.textContent = x[dataSetName].info[feature].title;
             summaryInfo.appendChild(title);
 
@@ -434,6 +444,18 @@ function showInfo(dataSetName) {
             backgroundDetails.appendChild(summaryInfo);
 
             section.appendChild(backgroundDetails);
+
+            var extraDetails = document.createElement('div');
+            extraDetails.className = "extraDetails";
+
+            var deet = document.createElement('p');
+            for (var i = 0; i < x[dataSetName].info[feature].addDetails.length; i++) {
+                deet.textContent += "•  " + x[dataSetName].info[feature].addDetails[i] + '\r\n';
+            
+            }
+            
+            extraDetails.appendChild(deet);
+            section.appendChild(extraDetails);
 
             div.appendChild(section);
             toRemove.push(section);
