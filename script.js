@@ -21,6 +21,7 @@ L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
 //L.tileLayer('https://api.mapbox.com/styles/v1/vivekraja07/cjjnftey106hn2rmu6fe5ykmv/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoidml2ZWtyYWphMDciLCJhIjoiY2ppaHd1NHgxMHMwcjNsbnh6MmRoNmN6NyJ9.slF_wHT3c0XmJme3-6crhA').addTo(map);
 
 var date = document.getElementById("date");
+events = document.getElementById("events");
 div = document.getElementById('features');
 var eventContainer = document.getElementById('eventContainer');
 var toRemove = [];
@@ -192,6 +193,18 @@ var x = {
         zoom: 20,
         options: { duration: 15 },
         info: {
+            Job: {
+                title: "Sandwich Artist",
+                company: "Subway",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/subway.png",
+                range: "Jun 2014 to July 2014 • 3 mos",
+                location: "Duluth, GA",
+                addDetails: [
+                    "Managed all transactions and dealt with customers single-handedly.",
+                    "Learned about the business operations and efficient procedures of the multi-million dollar corporation.",
+                    "Created a report at the end of the summer with sales data, outlining ideas on decreasing costs and increasing sales."
+                ]
+            },
             General: "Sandwich Artist at Subway",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -219,6 +232,27 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            Job: {
+                title: "Food Runner and Busser",
+                company: "TopGolf",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/topgolf.png",
+                range: "Jun 2015 to Jul 2015 • 2 mos",
+                location: "Alpharetta, GA",
+                addDetails: [
+                    "Ensured guest satisfaction and created a fun environment.",
+                    "Carried around 8lbs of food up and down a fleet of stairs to guests at the facility"
+                ]
+            },
+            Job2: {
+                title: "Private Tutor",
+                company: "Self-Employed",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/tutor.png",
+                range: "Jun 2015 - Jul 2015 • 2 mos",
+                location: "Johns Creek, GA",
+                addDetails: [
+                    "Tutored 3 elementary and middle school students in basic English and Mathematics" 
+                ]
+            },
             General: "TopGolf + Cross-Country + Tutoring",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -232,6 +266,38 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            Job: {
+                title: "President and Founder",
+                company: "APEX Tutoring",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/apex.png",
+                range: "Apr 2016 - Jun 2016 • 3 mos",
+                location: "GT Campus",
+                addDetails: [
+                    "Opened up a tutoring center (2200 square feet) for high school students taking the AP Exam.",
+                    "Helped over 41 students ace their exams, leading Principal of CHS, Tim Corrigan to claim, “Thank you for providing this wonderful opportunity for our students.”",
+                ]
+            },
+            Job2: {
+                title: "President and Founder",
+                company: "Winter Cougar Tennis Camp",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/winterCougarTennis.png",
+                range: "Dec 2015 • 1 week",
+                location: "Alpharetta, GA",
+                addDetails: [
+                    "Organized a camp for all tennis players interested in trying out for Chattahoochee’s Varsity team.", 
+                    "More than 65% of the players that attended camp and tried out made the team."
+                ]
+            },
+            Job3: {
+                title: "Private Tutor for AP US Government",
+                company: "Self-Employed",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/govTutor.png",
+                range: "Aug 2015 - Mar 2016 • 1 year",
+                location: "Johns Creek, GA",
+                addDetails: [
+                    "Tutored around 30 high school students, primarily in the class of AP Government" 
+                ]
+            },
             General: "12th grade",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -246,6 +312,16 @@ var x = {
         zoom: 18,
         options: { duration: 10 },
         info: {
+            Job: {
+                title: "Financial Analyst Internship",
+                company: "Scheller College of Business at Georgia Tech",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/scheller.png",
+                range: "Jun 2016 - Aug 2016 • 3 mos",
+                location: "GT Campus",
+                addDetails: [
+                    "Used Bloomberg Essentials to recreate contemporary models of the 1992 Tweedy, Browne’s famous “What has Worked in Investing” Report",
+                ]
+            },
             General: "Financial Analyst Internship",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -285,6 +361,18 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            Job: {
+                title: "Planning and Execution Oversight Intern",
+                company: "Thrivent Financial",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/thrivent.jpeg",
+                range: "Jun 2017 - Aug 2017 • 3 mos",
+                location: "Appleton, Wisconsin",
+                addDetails: [
+                    "Wrote selenium scripts to automate testing of applications using WebDriver, java, and Selenium Grid",
+                    "Trained over 10 experienced java developers in Selenium scripting",
+                    "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data. Script would send an email with results of validation test"
+                ]
+            },
             General: "Software Engineer Internship at Thrivent Financial",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -299,6 +387,16 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            Job: {
+                title: "Tutor - CS 2110 and CS 1332",
+                company: "College of Computing at Georgia Tech",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/coc.png",
+                range: "September 2017 - December 2018 • 5 mos",
+                location: "GT Campus",
+                addDetails: [
+                    "Tutored 3 students weekly in CS 2110 (Computer Systems and Organization) and CS 1332 (Data Structures and Algorithms)",
+                ]
+            },
             General: "Sophomore year 1st semester at GA Tech",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -316,7 +414,7 @@ var x = {
                 title: "Teaching Assistant, CS 2200: Systems and Networks",
                 company: "College of Computing at Georgia Tech",
                 icon: "/Users/vxr0532/Documents/lifeMapper/icons/coc.png",
-                range: "Jan 2018 - April 2018 • 4 mos",
+                range: "Jan 2018 - May 2018 • 5 mos",
                 location: "GT Campus",
                 addDetails: [
                     "Design homework questions and projects both to help study and demonstrate mastery of material",
@@ -417,7 +515,7 @@ function turnMapOff() {
 function showInfo(dataSetName) {
     date.innerHTML = dataSetName;
     while (toRemove.length != 0) {
-        div.removeChild(toRemove.pop());
+        events.removeChild(toRemove.pop());
     }
 
     if (mapOn) {
@@ -425,8 +523,7 @@ function showInfo(dataSetName) {
     }
 
     for (var feature in x[dataSetName].info) {
-
-        if (feature == 'Job') {
+        if (feature.includes('Job')) {
 
             var section = document.createElement('section');
             section.className = 'sec br';
@@ -479,7 +576,7 @@ function showInfo(dataSetName) {
             extraDetails.appendChild(deet);
             section.appendChild(extraDetails);
 
-            div.appendChild(section);
+            events.appendChild(section);
             toRemove.push(section);
 
 
@@ -493,7 +590,7 @@ function showInfo(dataSetName) {
             para.textContent = x[dataSetName].info[feature];
             section.appendChild(para);
 
-            div.appendChild(section);
+            events.appendChild(section);
             toRemove.push(section);
         }
 
