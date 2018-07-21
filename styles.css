@@ -16,6 +16,17 @@ body {
     font-size: 0;
 }
 
+img {
+
+    border-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+    border: 4px solid transparent;
+} 
+
 h3 {
     text-align: center;
 }
@@ -36,8 +47,8 @@ h4 {
 }
 
 .logoHolder {
-   width: 64px;
-   height: 64px; 
+   width: 72px;
+   height: 72px; 
 
    float: left;
 }
@@ -56,13 +67,17 @@ h4 {
 
 .extraDetails {
     margin-left: 80px;
+    margin-top: 16px;
 }
 
 img {
-    height: 100%;
-    width: 100%;
+    height: 64px;
+    width: 64px;
 }
 
+.sec {
+    padding: 20px 72px 16px 24px;
+}
 .br {
     white-space: pre-wrap;
 }

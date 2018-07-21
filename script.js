@@ -312,6 +312,18 @@ var x = {
         zoom: 18,
         options: { duration: 8 },
         info: {
+            Job: {
+                title: "Teaching Assistant, CS 2200: Systems and Networks",
+                company: "College of Computing at Georgia Tech",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/coc.png",
+                range: "Jan 2018 - April 2018 • 4 mos",
+                location: "GT Campus",
+                addDetails: [
+                    "Design homework questions and projects both to help study and demonstrate mastery of material",
+                    "Lecture recitation urging students to be engaged and excited to learn about microprocessors and network designs",
+                    "Tutor students individually, assisting with both homework and general questions"
+                ]
+            },
             General: "Sophomore year 2nd semester at GA Tech",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -329,6 +341,8 @@ var x = {
                 title: "Software Engineering Intern",
                 company: "The Home Depot",
                 icon: "/Users/vxr0532/Documents/lifeMapper/icons/homeDepot.png",
+                range: "May 2018 - Aug 2018 • 3 mos",
+                location: "Smyrna, GA",
                 addDetails: [
                     "This was a fun internship!",
                     "Lots of learning and stuff like that "
@@ -415,7 +429,7 @@ function showInfo(dataSetName) {
         if (feature == 'Job') {
 
             var section = document.createElement('section');
-            section.className = 'br';
+            section.className = 'sec br';
 
 
             var backgroundDetails = document.createElement('div');
@@ -440,7 +454,15 @@ function showInfo(dataSetName) {
             var company = document.createElement('h4');
             company.textContent = x[dataSetName].info[feature].company;
             summaryInfo.appendChild(company);
-            
+
+            var range = document.createElement('h5');
+            range.textContent = x[dataSetName].info[feature].range;
+            summaryInfo.appendChild(range);
+
+            var loc = document.createElement('h5');
+            loc.textContent = x[dataSetName].info[feature].location;
+            summaryInfo.appendChild(loc);
+
             backgroundDetails.appendChild(summaryInfo);
 
             section.appendChild(backgroundDetails);
@@ -451,9 +473,9 @@ function showInfo(dataSetName) {
             var deet = document.createElement('p');
             for (var i = 0; i < x[dataSetName].info[feature].addDetails.length; i++) {
                 deet.textContent += "•  " + x[dataSetName].info[feature].addDetails[i] + '\r\n';
-            
+
             }
-            
+
             extraDetails.appendChild(deet);
             section.appendChild(extraDetails);
 
@@ -463,7 +485,7 @@ function showInfo(dataSetName) {
 
         } else {
             var section = document.createElement('section');
-            section.className = 'br';
+            section.className = 'sec br';
             var topic = document.createElement('h4');
             topic.textContent = feature;
             section.appendChild(topic);
