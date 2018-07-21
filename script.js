@@ -335,10 +335,50 @@ var x = {
         zoom: 18,
         options: { duration: 8 },
         info: {
+            Education: {
+                name: "Georgia Institute of Technology",
+                title: "BS - Computer Science, minor in Spanish",
+                range: "2016 - 2020 • Freshman",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/gatech.png",
+                courses: [
+                    {
+                        courseNum: "CS 2051",
+                        title: "Honors Discrete Math",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "CS 1331",
+                        title: "Intro to Object Oriented Programming",
+                        creditHours: "3"
+                    }, 
+                    {
+                        courseNum: "CS 1100",
+                        title: "Freshman Leap Seminar",
+                        creditHours: "1"
+                    },
+                    {
+                        courseNum: "MGT 3078",
+                        title: "Finance and Investments",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "PHYS 2211",
+                        title: "Intro Physics I",
+                        creditHours: "4"
+                    },
+                    {
+                        courseNum: "APPH 1040",
+                        title: "Scientific Foundation of Health",
+                        creditHours: "2"
+                    }
+                ]
+            }, 
             General: "Freshman year 1st semester at GA Tech",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
-        }
+        },
+        
+        
     },
     //year 1, semester 2 at gatech
     'January 2017 to May 2017': {
@@ -348,9 +388,37 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            Education: {
+                name: "Georgia Institute of Technology",
+                title: "BS - Computer Science, minor in Spanish",
+                range: "2016 - 2020 • Freshman",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/gatech.png",
+                courses: [
+                    {
+                        courseNum: "CS 1332",
+                        title: "Data Structures and Algorithms",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "CS 2110",
+                        title: "Computer Organization and Programming",
+                        creditHours: "4"
+                    }, 
+                    {
+                        courseNum: "CS 2340",
+                        title: "Objects and Design",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "CHEM 1212k",
+                        title: "Chemical Principles II",
+                        creditHours: "4"
+                    }
+                ]
+            }, 
             General: "Freshman year 2nd semester at GA Tech",
             Location: "Atlanta, Georgia",
-            Languages: "Tamil \nEnglish \nHindi",
+            Languages: "Tamil \nEnglish \nHindi",   
         }
     },
     //thrivent Internship 
@@ -397,6 +465,40 @@ var x = {
                     "Tutored 3 students weekly in CS 2110 (Computer Systems and Organization) and CS 1332 (Data Structures and Algorithms)",
                 ]
             },
+            Education: {
+                name: "Georgia Institute of Technology",
+                title: "BS - Computer Science, minor in Spanish",
+                range: "2016 - 2020 • Sophomore",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/gatech.png",
+                courses: [
+                    {
+                        courseNum: "CS 2200",
+                        title: "Systems and Networks",
+                        creditHours: "4"
+                    },
+                    {
+                        courseNum: "CS 3600",
+                        title: "Intro to Artificial Intelligence",
+                        creditHours: "3"
+                    }, 
+                    {
+                        courseNum: "CS 4400",
+                        title: "Intro to Database Systems",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "PSYC 1101",
+                        title: "General Psychology",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "SPAN 3101",
+                        title: "Spanish Conversation I",
+                        creditHours: "3"
+                    }
+                ]
+                    
+            },
             General: "Sophomore year 1st semester at GA Tech",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -421,6 +523,40 @@ var x = {
                     "Lecture recitation urging students to be engaged and excited to learn about microprocessors and network designs",
                     "Tutor students individually, assisting with both homework and general questions"
                 ]
+            },
+            Education: {
+                name: "Georgia Institute of Technology",
+                title: "BS - Computer Science, minor in Spanish",
+                range: "2016 - 2020 • Sophomore",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/gatech.png",
+                courses: [
+                    {
+                        courseNum: "CS 3251",
+                        title: "Computer Networking I",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "CS 3511",
+                        title: "Algorithms Honors",
+                        creditHours: "3"
+                    }, 
+                    {
+                        courseNum: "CS 4641",
+                        title: "Machine Learning",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "ISYE 3770",
+                        title: "Statistics and Applications",
+                        creditHours: "3"
+                    },
+                    {
+                        courseNum: "PHIL 3127",
+                        title: "Sci, Tech, & Human Values",
+                        creditHours: "3"
+                    }
+                ]
+                    
             },
             General: "Sophomore year 2nd semester at GA Tech",
             Location: "Atlanta, Georgia",
@@ -580,7 +716,92 @@ function showInfo(dataSetName) {
             toRemove.push(section);
 
 
-        } else {
+        } else if (feature == "Education") {
+            var section = document.createElement('section');
+            section.className = 'sec br';
+
+            var schoolHolder = document.createElement('div');
+            schoolHolder.className = 'schoolHolder';
+
+            var logoHolder = document.createElement('div');
+            logoHolder.className = 'logoHolder';
+
+            var icon = document.createElement('img');
+            icon.src = x[dataSetName].info[feature].icon;
+            logoHolder.appendChild(icon);
+
+            schoolHolder.appendChild(logoHolder);
+
+            var summaryInfo = document.createElement('div');
+            summaryInfo.className = 'summaryInfo';
+            
+            var name = document.createElement('h3');
+            name.className = 'schoolTitle';
+            name.textContent = x[dataSetName].info[feature].name;
+            summaryInfo.appendChild(name);
+
+            var title = document.createElement('h4');
+            title.textContent = x[dataSetName].info[feature].title;
+            summaryInfo.appendChild(title);
+
+            var range = document.createElement('h5');
+            range.textContent = x[dataSetName].info[feature].range;
+            summaryInfo.appendChild(range);
+
+            schoolHolder.appendChild(summaryInfo);
+            section.appendChild(schoolHolder);
+
+            
+
+            var courses = document.createElement('table');
+            courses.className = "courses";
+
+            var tbdy = document.createElement('tbody');
+
+            var trHead = document.createElement('tr');
+
+            var th_courseNum = document.createElement('th');
+            th_courseNum.textContent = "Course Number";
+            trHead.appendChild(th_courseNum);
+
+            var th_title = document.createElement('th');
+            th_title.textContent = "Course Name";
+            trHead.appendChild(th_title);
+
+            var th_creds = document.createElement('th');
+            th_creds.textContent = "Credit Hours";
+            trHead.appendChild(th_creds);
+
+            tbdy.appendChild(trHead);
+            
+
+            for (var i = 0; i < x[dataSetName].info[feature].courses.length; i++) {
+                var tr = document.createElement('tr');
+                
+                var td_courseNum = document.createElement('td');
+                td_courseNum.textContent = x[dataSetName].info[feature].courses[i].courseNum;
+                tr.appendChild(td_courseNum);
+
+                var td_title = document.createElement('td');
+                td_title.textContent = x[dataSetName].info[feature].courses[i].title;
+                tr.appendChild(td_title);
+
+                var td_creds = document.createElement('td');
+                td_creds.textContent = x[dataSetName].info[feature].courses[i].creditHours;
+                tr.appendChild(td_creds);
+
+                tbdy.appendChild(tr);
+            } 
+            
+            
+            courses.appendChild(tbdy);
+            section.appendChild(courses);
+
+            events.appendChild(section);
+            toRemove.push(section);
+
+        }
+        else {
             var section = document.createElement('section');
             section.className = 'sec br';
             var topic = document.createElement('h4');

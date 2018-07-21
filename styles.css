@@ -53,7 +53,7 @@ h4 {
    float: left;
 }
 
-.jobTitle {
+.jobTitle, .schoolTitle {
     text-align: left;
 }
 
@@ -65,7 +65,22 @@ h4 {
     /* display: flex; */
 }
 
-.extraDetails {
+.courses {
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid; 
+}
+
+th, td {
+    padding: 0px 2px 2px 2px;
+}
+
+.courses th {
+    border-bottom: 1px solid;
+}
+
+
+.extraDetails, .courses {
     margin-left: 80px;
     margin-top: 16px;
 }
