@@ -165,6 +165,62 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            school: {
+                name: "Chattahoochee High School",
+                title: "Freshman",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/hooch.png",
+                range: "Aug 2012 - May 2013 • 1 year",
+                courses: [
+                    {
+                        courseNum: 1,
+                        title: "Accelerated Geometry Honors",
+                        grade: "105",
+                        grade2: "106"
+                    },
+                    {
+                        courseNum: 2,
+                        title: "Honors Biology",
+                        grade: "105",
+                        grade2: "106"
+                    },
+                    {
+                        courseNum: 3,
+                        title: "Band - Tuba Player",
+                        grade: "97",
+                        grade2: "100"
+                    },
+                    {
+                        courseNum: 4,
+                        title: "Home Room/Lunch",
+                        grade: "-",
+                        grade2: "-"
+                    },
+                    {
+                        courseNum: 5,
+                        title: "Spanish 2 Honors",
+                        grade: "106",
+                        grade2: "106"
+                    },
+                    {
+                        courseNum: 6,
+                        title: "Literature and Comprehension",
+                        grade: "97",
+                        grade2: "100"
+                    },
+                    {
+                        courseNum: 7,
+                        title: "AP US Government and Poltics",
+                        grade: "107",
+                        grade2: "-"
+                    },
+                    {
+                        courseNum: 7,
+                        title: "AP Comparative Government",
+                        grade: "-",
+                        grade2: "105"
+                    }
+                ],
+            },
             General: "9th grade",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -179,6 +235,56 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            school: {
+                name: "Chattahoochee High School",
+                title: "Sophomore",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/hooch.png",
+                range: "Aug 2013 - May 2014 • 1 year",
+                courses: [
+                    {
+                        courseNum: 1,
+                        title: "Honors Chemistry",
+                        grade: "103",
+                        grade2: "104"
+                    },
+                    {
+                        courseNum: 2,
+                        title: "Band - Tuba Player",
+                        grade: "100",
+                        grade2: "100"
+                    },
+                    {
+                        courseNum: 3,
+                        title: "Honors Literature",
+                        grade: "103",
+                        grade2: "104"
+                    },
+                    {
+                        courseNum: 4,
+                        title: "Spanish 3 Honors",
+                        grade: "103",
+                        grade2: "103"
+                    },
+                    {
+                        courseNum: 5,
+                        title: "Home Room/Lunch",
+                        grade: "-",
+                        grade2: "-"
+                    },
+                    {
+                        courseNum: 6,
+                        title: "AP World History",
+                        grade: "101",
+                        grade2: "100"
+                    },
+                    {
+                        courseNum: 7,
+                        title: "Accelerated PreCalculus Honors",
+                        grade: "107",
+                        grade2: "105"
+                    }
+                ],
+            },
             General: "10th grade",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -218,6 +324,56 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            school: {
+                name: "Chattahoochee High School",
+                title: "Junior",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/hooch.png",
+                range: "Aug 2014 - May 2015 • 1 year",
+                courses: [
+                    {
+                        courseNum: 1,
+                        title: "AP Spanish Lang",
+                        grade: "106",
+                        grade2: "106"
+                    },
+                    {
+                        courseNum: 2,
+                        title: "AP US History",
+                        grade: "103",
+                        grade2: "100"
+                    },
+                    {
+                        courseNum: 3,
+                        title: "Accounting Principles 1",
+                        grade: "98",
+                        grade2: "96"
+                    },
+                    {
+                        courseNum: 4,
+                        title: "Home Room/Lunch",
+                        grade: "-",
+                        grade2: "-"
+                    },
+                    {
+                        courseNum: 5,
+                        title: "AP Calculus BC",
+                        grade: "103",
+                        grade2: "102"
+                    },
+                    {
+                        courseNum: 6,
+                        title: "AP Chemistry",
+                        grade: "102",
+                        grade2: "102"
+                    },
+                    {
+                        courseNum: 7,
+                        title: "AP English Lanugage",
+                        grade: "99",
+                        grade2: "100"
+                    }
+                ],
+            },
             General: "11th grade",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -250,7 +406,7 @@ var x = {
                 range: "Jun 2015 - Jul 2015 • 2 mos",
                 location: "Johns Creek, GA",
                 addDetails: [
-                    "Tutored 3 elementary and middle school students in basic English and Mathematics" 
+                    "Tutored 3 elementary and middle school students in basic English and Mathematics"
                 ]
             },
             General: "TopGolf + Cross-Country + Tutoring",
@@ -266,6 +422,68 @@ var x = {
         zoom: 18,
         options: { duration: 15 },
         info: {
+            school: {
+                name: "Chattahoochee High School",
+                title: "Senior",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/hooch.png",
+                range: "Aug 2015 - May 2016 • 1 year",
+                courses: [
+                    {
+                        courseNum: 1,
+                        title: "GT Distance Calculus MOWR",
+                        grade: "102",
+                        grade2: "92"
+                    },
+                    {
+                        courseNum: 2,
+                        title: "Personal Fitness",
+                        grade: "99",
+                        grade2: "-"
+                    },
+                    {
+                        courseNum: 2,
+                        title: "GPC - College English 1102",
+                        grade: "-",
+                        grade2: "92"
+                    },
+                    {
+                        courseNum: 3,
+                        title: "AP Microeconomics",
+                        grade: "99",
+                        grade2: "-"
+                    },
+                    {
+                        courseNum: 3,
+                        title: "AP Macroeconomics",
+                        grade: "-",
+                        grade2: "98"
+                    },
+                    {
+                        courseNum: 4,
+                        title: "Home Room/Lunch",
+                        grade: "-",
+                        grade2: "-"
+                    },
+                    {
+                        courseNum: 5,
+                        title: "AP Computer Science A",
+                        grade: "104",
+                        grade2: "99"
+                    },
+                    {
+                        courseNum: 6,
+                        title: "AP Physics 1",
+                        grade: "103",
+                        grade2: "95"
+                    },
+                    {
+                        courseNum: 7,
+                        title: "AP Statistics",
+                        grade: "102",
+                        grade2: "95"
+                    }
+                ],
+            },
             Job: {
                 title: "President and Founder",
                 company: "APEX Tutoring",
@@ -284,7 +502,7 @@ var x = {
                 range: "Dec 2015 • 1 week",
                 location: "Alpharetta, GA",
                 addDetails: [
-                    "Organized a camp for all tennis players interested in trying out for Chattahoochee’s Varsity team.", 
+                    "Organized a camp for all tennis players interested in trying out for Chattahoochee’s Varsity team.",
                     "More than 65% of the players that attended camp and tried out made the team."
                 ]
             },
@@ -295,13 +513,12 @@ var x = {
                 range: "Aug 2015 - Mar 2016 • 1 year",
                 location: "Johns Creek, GA",
                 addDetails: [
-                    "Tutored around 30 high school students, primarily in the class of AP Government" 
+                    "Tutored around 30 high school students, primarily in the class of AP Government"
                 ]
             },
             General: "12th grade",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
-            School: "Chattahoochee High School"
         }
     },
     //financial analyst internship
@@ -350,7 +567,7 @@ var x = {
                         courseNum: "CS 1331",
                         title: "Intro to Object Oriented Programming",
                         creditHours: "3"
-                    }, 
+                    },
                     {
                         courseNum: "CS 1100",
                         title: "Freshman Leap Seminar",
@@ -372,13 +589,13 @@ var x = {
                         creditHours: "2"
                     }
                 ]
-            }, 
+            },
             General: "Freshman year 1st semester at GA Tech",
             Location: "Atlanta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
         },
-        
-        
+
+
     },
     //year 1, semester 2 at gatech
     'January 2017 to May 2017': {
@@ -403,7 +620,7 @@ var x = {
                         courseNum: "CS 2110",
                         title: "Computer Organization and Programming",
                         creditHours: "4"
-                    }, 
+                    },
                     {
                         courseNum: "CS 2340",
                         title: "Objects and Design",
@@ -415,10 +632,10 @@ var x = {
                         creditHours: "4"
                     }
                 ]
-            }, 
+            },
             General: "Freshman year 2nd semester at GA Tech",
             Location: "Atlanta, Georgia",
-            Languages: "Tamil \nEnglish \nHindi",   
+            Languages: "Tamil \nEnglish \nHindi",
         }
     },
     //thrivent Internship 
@@ -480,7 +697,7 @@ var x = {
                         courseNum: "CS 3600",
                         title: "Intro to Artificial Intelligence",
                         creditHours: "3"
-                    }, 
+                    },
                     {
                         courseNum: "CS 4400",
                         title: "Intro to Database Systems",
@@ -497,7 +714,7 @@ var x = {
                         creditHours: "3"
                     }
                 ]
-                    
+
             },
             General: "Sophomore year 1st semester at GA Tech",
             Location: "Atlanta, Georgia",
@@ -539,7 +756,7 @@ var x = {
                         courseNum: "CS 3511",
                         title: "Algorithms Honors",
                         creditHours: "3"
-                    }, 
+                    },
                     {
                         courseNum: "CS 4641",
                         title: "Machine Learning",
@@ -556,7 +773,7 @@ var x = {
                         creditHours: "3"
                     }
                 ]
-                    
+
             },
             General: "Sophomore year 2nd semester at GA Tech",
             Location: "Atlanta, Georgia",
@@ -608,7 +825,7 @@ for (event in x) {
         if (current.length > 0) {
             current[0].className = current[0].className.replace(" active", "");
         } else {
-            console.log("No active")
+            //console.log("No active")
         }
         era.className += " active";
 
@@ -639,7 +856,6 @@ for (event in x) {
 
 //activate the last rectangle
 var lastChild = document.getElementById(index);
-console.log(lastChild);
 lastChild.click();
 
 var mapOn = true;
@@ -734,7 +950,7 @@ function showInfo(dataSetName) {
 
             var summaryInfo = document.createElement('div');
             summaryInfo.className = 'summaryInfo';
-            
+
             var name = document.createElement('h3');
             name.className = 'schoolTitle';
             name.textContent = x[dataSetName].info[feature].name;
@@ -751,7 +967,7 @@ function showInfo(dataSetName) {
             schoolHolder.appendChild(summaryInfo);
             section.appendChild(schoolHolder);
 
-            
+
 
             var courses = document.createElement('table');
             courses.className = "courses";
@@ -773,11 +989,11 @@ function showInfo(dataSetName) {
             trHead.appendChild(th_creds);
 
             tbdy.appendChild(trHead);
-            
+
 
             for (var i = 0; i < x[dataSetName].info[feature].courses.length; i++) {
                 var tr = document.createElement('tr');
-                
+
                 var td_courseNum = document.createElement('td');
                 td_courseNum.textContent = x[dataSetName].info[feature].courses[i].courseNum;
                 tr.appendChild(td_courseNum);
@@ -791,14 +1007,109 @@ function showInfo(dataSetName) {
                 tr.appendChild(td_creds);
 
                 tbdy.appendChild(tr);
-            } 
-            
-            
+            }
+
+
             courses.appendChild(tbdy);
             section.appendChild(courses);
 
             events.appendChild(section);
             toRemove.push(section);
+
+        } else if (feature == "school") {
+            var section = document.createElement('section');
+            section.className = 'sec br';
+
+            var schoolHolder = document.createElement('div');
+            schoolHolder.className = 'schoolHolder';
+
+            var logoHolder = document.createElement('div');
+            logoHolder.className = 'logoHolder';
+
+            var icon = document.createElement('img');
+            icon.src = x[dataSetName].info[feature].icon;
+            logoHolder.appendChild(icon);
+
+            schoolHolder.appendChild(logoHolder);
+
+            var summaryInfo = document.createElement('div');
+            summaryInfo.className = 'summaryInfo';
+
+            var name = document.createElement('h3');
+            name.className = 'schoolTitle';
+            name.textContent = x[dataSetName].info[feature].name;
+            summaryInfo.appendChild(name);
+
+            var title = document.createElement('h4');
+            title.textContent = x[dataSetName].info[feature].title;
+            summaryInfo.appendChild(title);
+
+            var range = document.createElement('h5');
+            range.textContent = x[dataSetName].info[feature].range;
+            summaryInfo.appendChild(range);
+
+            schoolHolder.appendChild(summaryInfo);
+            section.appendChild(schoolHolder);
+
+
+
+            var courses = document.createElement('table');
+            courses.className = "courses";
+
+            var tbdy = document.createElement('tbody');
+
+            var trHead = document.createElement('tr');
+
+            var th_period = document.createElement('th');
+            th_period.className = "period";
+            th_period.textContent = "Period";
+            trHead.appendChild(th_period);
+
+            var th_title = document.createElement('th');
+            th_title.textContent = "Course Title";
+            trHead.appendChild(th_title);
+
+            var th_creds = document.createElement('th');
+            th_creds.textContent = "Fall";
+            trHead.appendChild(th_creds);
+
+            var th_creds2 = document.createElement('th');
+            th_creds2.textContent = "Spring";
+            trHead.appendChild(th_creds2);
+
+            tbdy.appendChild(trHead);
+
+
+            for (var i = 0; i < x[dataSetName].info[feature].courses.length; i++) {
+                var tr = document.createElement('tr');
+
+                var td_courseNum = document.createElement('td');
+                td_courseNum.className = "period";
+                td_courseNum.textContent = x[dataSetName].info[feature].courses[i].courseNum;
+                tr.appendChild(td_courseNum);
+
+                var td_title = document.createElement('td');
+                td_title.textContent = x[dataSetName].info[feature].courses[i].title;
+                tr.appendChild(td_title);
+
+                var td_grade = document.createElement('td');
+                td_grade.textContent = x[dataSetName].info[feature].courses[i].grade;
+                tr.appendChild(td_grade);
+
+                var td_grade2 = document.createElement('td');
+                td_grade2.textContent = x[dataSetName].info[feature].courses[i].grade2;
+                tr.appendChild(td_grade2);
+
+                tbdy.appendChild(tr);
+            }
+
+
+            courses.appendChild(tbdy);
+            section.appendChild(courses);
+
+            events.appendChild(section);
+            toRemove.push(section);
+
 
         }
         else {
