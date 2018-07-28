@@ -311,6 +311,19 @@ var x = {
                     "Created a report at the end of the summer with sales data, outlining ideas on decreasing costs and increasing sales."
                 ]
             },
+            summerSchool: {
+                name: "Fulton Virtual School",
+                title: "Sophomore",
+                icon: "/Users/vxr0532/Documents/lifeMapper/icons/fvs.png",
+                range: "June 2013 - July 2014 • 3 mos",
+                courses: [
+                    {
+                        courseNum: "Summer Online Course",
+                        title: "FVS General Health",
+                        grade: "99"
+                    }
+                ],
+            },
             General: "Sandwich Artist at Subway",
             Location: "Alpharetta, Georgia",
             Languages: "Tamil \nEnglish \nHindi",
@@ -871,7 +884,7 @@ function showInfo(dataSetName) {
     }
 
     if (mapOn) {
-        //map.flyTo(x[dataSetName].loc, x[dataSetName].zoom, x[dataSetName].options);
+        map.flyTo(x[dataSetName].loc, x[dataSetName].zoom, x[dataSetName].options);
     }
 
     for (var feature in x[dataSetName].info) {
@@ -1110,6 +1123,83 @@ function showInfo(dataSetName) {
             events.appendChild(section);
             toRemove.push(section);
 
+
+        } else if (feature == "summerSchool") {
+            var section = document.createElement('section');
+            section.className = 'sec br';
+
+            var schoolHolder = document.createElement('div');
+            schoolHolder.className = 'schoolHolder';
+
+            var logoHolder = document.createElement('div');
+            logoHolder.className = 'logoHolder';
+
+            var icon = document.createElement('img');
+            icon.src = x[dataSetName].info[feature].icon;
+            logoHolder.appendChild(icon);
+
+            schoolHolder.appendChild(logoHolder);
+
+            var summaryInfo = document.createElement('div');
+            summaryInfo.className = 'summaryInfo';
+
+            var name = document.createElement('h3');
+            name.className = 'schoolTitle';
+            name.textContent = x[dataSetName].info[feature].name;
+            summaryInfo.appendChild(name);
+
+            var title = document.createElement('h4');
+            title.textContent = x[dataSetName].info[feature].title;
+            summaryInfo.appendChild(title);
+
+            var range = document.createElement('h5');
+            range.textContent = x[dataSetName].info[feature].range;
+            summaryInfo.appendChild(range);
+
+            schoolHolder.appendChild(summaryInfo);
+            section.appendChild(schoolHolder);
+
+
+
+            var courses = document.createElement('table');
+            courses.className = "courses";
+
+            var tbdy = document.createElement('tbody');
+
+            var trHead = document.createElement('tr');
+
+            var th_title = document.createElement('th');
+            th_title.textContent = "Course Title";
+            trHead.appendChild(th_title);
+
+            var th_creds = document.createElement('th');
+            th_creds.textContent = "Summer";
+            trHead.appendChild(th_creds);
+
+
+            tbdy.appendChild(trHead);
+
+
+            for (var i = 0; i < x[dataSetName].info[feature].courses.length; i++) {
+                var tr = document.createElement('tr');
+
+                var td_title = document.createElement('td');
+                td_title.textContent = x[dataSetName].info[feature].courses[i].title;
+                tr.appendChild(td_title);
+
+                var td_grade = document.createElement('td');
+                td_grade.textContent = x[dataSetName].info[feature].courses[i].grade;
+                tr.appendChild(td_grade);
+
+                tbdy.appendChild(tr);
+            }
+
+
+            courses.appendChild(tbdy);
+            section.appendChild(courses);
+
+            events.appendChild(section);
+            toRemove.push(section);
 
         }
         else {
