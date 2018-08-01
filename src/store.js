@@ -5,12 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    active: 'June 2018 to August 2018'
   },
   mutations: {
-
+    setActive(state, event) {
+      state.active = event 
+    }
   },
   actions: {
-
+    increment (context) {
+      context.commit('setActive')
+    }
   }
 })
