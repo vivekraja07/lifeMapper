@@ -21,9 +21,13 @@
                         <h4 class = "companyName"> {{events[active].info[propertyName].company}} </h4>
                         <h5 class = "timeRange"> {{events[active].info[propertyName].range}} </h5>
                         <h5 class = "timeRange"> {{events[active].info[propertyName].location}} </h5>
-
                     </div>
 
+                    <div class = "extraDetails">
+                        <li v-for="point in events[active].info[propertyName].addDetails" :key="point">
+                            {{point}}
+                        </li>
+                    </div>
 
 
                 </div>
@@ -54,6 +58,19 @@ export default {
 </script>
 
 <style scoped>
+
+    #features {
+        height: 90%;
+    }
+
+    .jobHolder {
+        text-align: left;
+    }
+
+    .extraDetails {
+        margin-left: 80px;
+        margin-top: 16px;
+    }
 
     .summaryInfo {
         margin-left: 80px;

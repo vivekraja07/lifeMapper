@@ -13,8 +13,8 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    increment (context) {
-      context.commit('setActive')
+    activeSet (context, active) {
+      context.commit('setActive', active)
     }
   }
 })

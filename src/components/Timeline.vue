@@ -1,7 +1,7 @@
 <template>
     <div id="timeContainer">
         <div id="eventContainer">
-            <div v-for="event in events" :key="event.start" class="rectangle" :style="{width: getWidth(event.start, event.end)}"> 
+            <div v-for="(event, propertyName, index) in events" :key="index" :class="{'rectangle':true, 'active':(propertyName === active)}" v-on:click="activeSet(propertyName)" :style="{width: getWidth(event.start, event.end)}"> 
                
             </div>
         </div>
@@ -42,10 +42,9 @@ export default {
     events: Object
   },
   methods: {
-    //   ...mapActions([
-    //   // `mapActions` also supports payloads:
-    //   'incrementBy' // map `this.incrementBy(amount)` to `this.$store.dispatch('incrementBy', amount)`
-    // ]),
+      ...mapActions([
+      'activeSet'
+    ]),
     getWidth(beg, finish) {
           var total = '248';
           var start = this.getAsMonth(beg);
@@ -107,11 +106,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* Timeline - Years */
 
 
 #timeContainer {
-    width: 100%;
     height: 10%;
     display: flex;
     flex-direction: column;
