@@ -118,56 +118,19 @@ export default {
                       name: "Freshman",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2012 - May 2013 • 1 year",
-                      courses: [
-                          {
-                              courseNum: 1,
-                              title: "Accelerated Geometry Honors",
-                              grade: "105",
-                              grade2: "106"
-                          },
-                          {
-                              courseNum: 2,
-                              title: "Honors Biology",
-                              grade: "105",
-                              grade2: "106"
-                          },
-                          {
-                              courseNum: 3,
-                              title: "Band - Tuba Player",
-                              grade: "97",
-                              grade2: "100"
-                          },
-                          {
-                              courseNum: 4,
-                              title: "Home Room/Lunch",
-                              grade: "-",
-                              grade2: "-"
-                          },
-                          {
-                              courseNum: 5,
-                              title: "Spanish 2 Honors",
-                              grade: "106",
-                              grade2: "106"
-                          },
-                          {
-                              courseNum: 6,
-                              title: "Literature and Comprehension",
-                              grade: "97",
-                              grade2: "100"
-                          },
-                          {
-                              courseNum: 7,
-                              title: "AP US Government and Poltics",
-                              grade: "107",
-                              grade2: "-"
-                          },
-                          {
-                              courseNum: 7,
-                              title: "AP Comparative Government",
-                              grade: "-",
-                              grade2: "105"
-                          }
-                      ],
+                      courses: {
+                          columns: ['Course Number', 'Course Title', 'Fall', 'Spring'],
+                          rows: [
+                                [1, "Accelerated Geometry Honors", '105', '106'],
+                                [2, "Honors Biology", "105", '106'],
+                                [3, "Band - Tuba Player", "97", "100"],
+                                [4, "Home Room/Lunch", '-', '-'],
+                                [5, "Spanish 2 Honors", "106", "106"],
+                                [6, "Literature and Comprehension", "97", "100"],
+                                [7, "AP US Government and Politics", "107", "-"],
+                                [7, "AP Comparative Government", "-", "105"]   
+                            ]
+                      },
                   },
                   General: "9th grade",
                   Location: "Alpharetta, Georgia",
@@ -188,50 +151,18 @@ export default {
                       name: "Sophomore",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2013 - May 2014 • 1 year",
-                      courses: [
-                          {
-                              courseNum: 1,
-                              title: "Honors Chemistry",
-                              grade: "103",
-                              grade2: "104"
-                          },
-                          {
-                              courseNum: 2,
-                              title: "Band - Tuba Player",
-                              grade: "100",
-                              grade2: "100"
-                          },
-                          {
-                              courseNum: 3,
-                              title: "Honors Literature",
-                              grade: "103",
-                              grade2: "104"
-                          },
-                          {
-                              courseNum: 4,
-                              title: "Spanish 3 Honors",
-                              grade: "103",
-                              grade2: "103"
-                          },
-                          {
-                              courseNum: 5,
-                              title: "Home Room/Lunch",
-                              grade: "-",
-                              grade2: "-"
-                          },
-                          {
-                              courseNum: 6,
-                              title: "AP World History",
-                              grade: "101",
-                              grade2: "100"
-                          },
-                          {
-                              courseNum: 7,
-                              title: "Accelerated PreCalculus Honors",
-                              grade: "107",
-                              grade2: "105"
-                          }
-                      ],
+                      courses: {
+                        columns: ['Course Number', 'Title', 'Fall', 'Spring'],
+                        rows: [
+                            [1, 'Honors Chemistry', 103, 104],
+                            [2, 'Band - Tuba Player', 100, 100],
+                            [3, 'Honors Literature', 103, 104],
+                            [4, 'Spanish 3 Honors', 103, 104],
+                            [5, 'Home Room/Lunch', '-', '-'],
+                            [6, 'AP World History', 101, 100],
+                            [7, 'Accelerated PreCalculus Honors', 107, 105]
+                        ]
+                      }
                   },
                   General: "10th grade",
                   Location: "Alpharetta, Georgia",
@@ -264,13 +195,10 @@ export default {
                       name: "Sophomore",
                       icon: require('../assets/icons/fvs.png'),
                       range: "June 2013 - July 2014 • 3 mos",
-                      courses: [
-                          {
-                              courseNum: "Summer Online Course",
-                              title: "FVS General Health",
-                              grade: "99"
-                          }
-                      ],
+                      courses: {
+                          columns: ['Course', 'Summer'],
+                          rows: [['FVS General Health', 99]]
+                       }
                   },
                   General: "Sandwich Artist at Subway",
                   Location: "Alpharetta, Georgia",
@@ -290,50 +218,18 @@ export default {
                       name: "Junior",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2014 - May 2015 • 1 year",
-                      courses: [
-                          {
-                              courseNum: 1,
-                              title: "AP Spanish Lang",
-                              grade: "106",
-                              grade2: "106"
-                          },
-                          {
-                              courseNum: 2,
-                              title: "AP US History",
-                              grade: "103",
-                              grade2: "100"
-                          },
-                          {
-                              courseNum: 3,
-                              title: "Accounting Principles 1",
-                              grade: "98",
-                              grade2: "96"
-                          },
-                          {
-                              courseNum: 4,
-                              title: "Home Room/Lunch",
-                              grade: "-",
-                              grade2: "-"
-                          },
-                          {
-                              courseNum: 5,
-                              title: "AP Calculus BC",
-                              grade: "103",
-                              grade2: "102"
-                          },
-                          {
-                              courseNum: 6,
-                              title: "AP Chemistry",
-                              grade: "102",
-                              grade2: "102"
-                          },
-                          {
-                              courseNum: 7,
-                              title: "AP English Lanugage",
-                              grade: "99",
-                              grade2: "100"
-                          }
-                      ],
+                      courses: {
+                        columns: ['Course Number', 'Title', 'Fall', 'Spring'],
+                        rows: [
+                            [1, 'AP Spanish Lang', 106, 106],
+                            [2, 'AP US History', 103, 100],
+                            [3, 'Accounting Principles 1', 98, 96],
+                            [4, 'Home Room/Lunch', '-', '-'],
+                            [5, 'AP Calculus BC', 103, 102],
+                            [6, 'AP Chemistry', 102, 102],
+                            [7, 'AP English Lanugage', 99, 100]
+                        ]
+                      }
                   },
                   General: "11th grade",
                   Location: "Alpharetta, Georgia",
@@ -388,62 +284,20 @@ export default {
                       name: "Senior",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2015 - May 2016 • 1 year",
-                      courses: [
-                          {
-                              courseNum: 1,
-                              title: "GT Distance Calculus MOWR",
-                              grade: "102",
-                              grade2: "92"
-                          },
-                          {
-                              courseNum: 2,
-                              title: "Personal Fitness",
-                              grade: "99",
-                              grade2: "-"
-                          },
-                          {
-                              courseNum: 2,
-                              title: "GPC - College English 1102",
-                              grade: "-",
-                              grade2: "92"
-                          },
-                          {
-                              courseNum: 3,
-                              title: "AP Microeconomics",
-                              grade: "99",
-                              grade2: "-"
-                          },
-                          {
-                              courseNum: 3,
-                              title: "AP Macroeconomics",
-                              grade: "-",
-                              grade2: "98"
-                          },
-                          {
-                              courseNum: 4,
-                              title: "Home Room/Lunch",
-                              grade: "-",
-                              grade2: "-"
-                          },
-                          {
-                              courseNum: 5,
-                              title: "AP Computer Science A",
-                              grade: "104",
-                              grade2: "99"
-                          },
-                          {
-                              courseNum: 6,
-                              title: "AP Physics 1",
-                              grade: "103",
-                              grade2: "95"
-                          },
-                          {
-                              courseNum: 7,
-                              title: "AP Statistics",
-                              grade: "102",
-                              grade2: "95"
-                          }
-                      ],
+                      courses: {
+                        columns: ['Course Number', 'Title', 'Fall', 'Spring'],
+                        rows: [
+                            [1, 'GT Distance Calculus MOWR', 102, 92],
+                            [2, 'Personal Fitness', 99, '-'],
+                            [2, 'GPC - College English 1102', '-', 92],
+                            [3, 'AP Microeconomics', 99, '-'],
+                            [3, 'AP Macroeconomics', '-', 98],
+                            [4, 'Home Room/Lunch',  '-', '-'],
+                            [5, 'AP Computer Science A', 104, 99],
+                            [6, 'AP Physics 1', 103, 95],
+                            [7, 'AP Statistics', 102, 95],
+                        ]
+                      }
                   },
                   Job: {
                       title: "President and Founder",
@@ -518,38 +372,17 @@ export default {
                       name: "BS - Computer Science, minor in Spanish",
                       range: "2016 - 2020 • Freshman",
                       icon: require('../assets/icons/gatech.png'),
-                      courses: [
-                          {
-                              courseNum: "CS 2051",
-                              title: "Honors Discrete Math",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "CS 1331",
-                              title: "Intro to Object Oriented Programming",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "CS 1100",
-                              title: "Freshman Leap Seminar",
-                              creditHours: "1"
-                          },
-                          {
-                              courseNum: "MGT 3078",
-                              title: "Finance and Investments",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "PHYS 2211",
-                              title: "Intro Physics I",
-                              creditHours: "4"
-                          },
-                          {
-                              courseNum: "APPH 1040",
-                              title: "Scientific Foundation of Health",
-                              creditHours: "2"
-                          }
-                      ]
+                      courses: {
+                          columns: ['Course Number','Course Name','Credit Hours'],
+                          rows: [
+                            ["CS 2051", "Honors Discrete Math", "3"],
+                            ["CS 1331", "Intro to Object Oriented Programming", "3"],
+                            ["CS 1100", "Freshman Leap Seminar", "1"],
+                            ["MGT 3078", "Finance and Investments","3"],
+                            ["PHYS 2211","Intro Physics I","4"],
+                            ["APPH 1040", "Scientific Foundation of Health","2"]
+                          ]
+                      }
                   },
                   General: "Freshman year 1st semester at GA Tech",
                   Location: "Atlanta, Georgia",
@@ -571,28 +404,15 @@ export default {
                       name: "BS - Computer Science, minor in Spanish",
                       range: "2016 - 2020 • Freshman",
                       icon: require('../assets/icons/gatech.png'),
-                      courses: [
-                          {
-                              courseNum: "CS 1332",
-                              title: "Data Structures and Algorithms",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "CS 2110",
-                              title: "Computer Organization and Programming",
-                              creditHours: "4"
-                          },
-                          {
-                              courseNum: "CS 2340",
-                              title: "Objects and Design",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "CHEM 1212k",
-                              title: "Chemical Principles II",
-                              creditHours: "4"
-                          }
-                      ]
+                      courses: {
+                          columns: ['Course Number','Course Name','Credit Hours'],
+                          rows: [
+                            ["CS 1332", "Data Structures and Algorithms", "3"],
+                            ["CS 2110", "Computer Organization and Programming", "4"],
+                            ["CS 2340", "Objects and Design", "3"],
+                            ["CHEM 1212k", "Chemical Principles II","4"],
+                          ]
+                      }
                   },
                   General: "Freshman year 2nd semester at GA Tech",
                   Location: "Atlanta, Georgia",
@@ -648,34 +468,16 @@ export default {
                       name: "BS - Computer Science, minor in Spanish",
                       range: "2016 - 2020 • Sophomore",
                       icon: require('../assets/icons/gatech.png'),
-                      courses: [
-                          {
-                              courseNum: "CS 2200",
-                              title: "Systems and Networks",
-                              creditHours: "4"
-                          },
-                          {
-                              courseNum: "CS 3600",
-                              title: "Intro to Artificial Intelligence",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "CS 4400",
-                              title: "Intro to Database Systems",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "PSYC 1101",
-                              title: "General Psychology",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "SPAN 3101",
-                              title: "Spanish Conversation I",
-                              creditHours: "3"
-                          }
-                      ]
-
+                      courses: {
+                          columns: ['Course Number','Course Name','Credit Hours'],
+                          rows: [
+                            ["CS 2200", "Systems and Networks", "4"],
+                            ["CS 3600", "Intro to Artificial Intelligence", "3"],
+                            ["CS 4400", "Intro to Database Systems", "3"],
+                            ["PSYCH 1101", "General Psychology","3"],
+                            ["SPAN 3101", "Spanish Conversation I","3"],
+                          ]
+                      }
                   },
                   General: "Sophomore year 1st semester at GA Tech",
                   Location: "Atlanta, Georgia",
@@ -711,7 +513,6 @@ export default {
                           columns: ['Course Number','Course Name','Credit Hours'],
                           rows: [
                             ["CS 3251", "Computer Networking I", "3"],
-                            ["CS 3511", "Algorithms Honors", "3"],
                             ["CS 3511", "Algorithms Honors", "3"],
                             ["CS 4641","Machine Learning","3"],
                             ["ISYE 3770","Statistics and Applications","3"],

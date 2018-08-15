@@ -33,7 +33,7 @@
                             </thead>
                             <tbody>
                             <tr v-for="(value, index) in events[active].info[propertyName].courses.rows" :key="index">
-                                <td v-for="key in value" :key="key">
+                                <td v-for="(key, index) in value" :key="index">
                                     {{key}}
                                 </td>
                             </tr>
