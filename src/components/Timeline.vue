@@ -145,14 +145,13 @@ export default {
     justify-content: center;
     height: 30%;
     -webkit-padding-start: 0;
-    margin: 0
 }
 
 li {	
 	display: inline-block;
     width: 4.819267%;
 	color: #868686;
-    font-size: 20px;
+    /* font-size: 20px; */
     text-align: center;
     border-right: 1px solid #cfc1c1;
 }

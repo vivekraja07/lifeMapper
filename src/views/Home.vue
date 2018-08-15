@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <!-- <img src="../assets/logo.png"> -->
-    <Information v-bind:events="x"> </Information>
-    <Timeline v-bind:events="x"/>
+    <Information v-bind:events="x"> </Information><Timeline v-bind:events="x"/>
   </div>
 </template>
 
@@ -115,8 +114,8 @@ export default {
               options: { duration: 15 },
               info: {
                   school: {
-                      name: "Chattahoochee High School",
-                      title: "Freshman",
+                      title: "Chattahoochee High School",
+                      name: "Freshman",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2012 - May 2013 • 1 year",
                       courses: [
@@ -185,8 +184,8 @@ export default {
               options: { duration: 15 },
               info: {
                   school: {
-                      name: "Chattahoochee High School",
-                      title: "Sophomore",
+                      title: "Chattahoochee High School",
+                      name: "Sophomore",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2013 - May 2014 • 1 year",
                       courses: [
@@ -250,7 +249,7 @@ export default {
               info: {
                   Job: {
                       title: "Sandwich Artist",
-                      company: "Subway",
+                      name: "Subway",
                       icon: require('../assets/icons/subway.png'),
                       range: "Jun 2014 to July 2014 • 3 mos",
                       location: "Duluth, GA",
@@ -261,8 +260,8 @@ export default {
                       ]
                   },
                   summerSchool: {
-                      name: "Fulton Virtual School",
-                      title: "Sophomore",
+                      title: "Fulton Virtual School",
+                      name: "Sophomore",
                       icon: require('../assets/icons/fvs.png'),
                       range: "June 2013 - July 2014 • 3 mos",
                       courses: [
@@ -287,8 +286,8 @@ export default {
               options: { duration: 15 },
               info: {
                   school: {
-                      name: "Chattahoochee High School",
-                      title: "Junior",
+                      title: "Chattahoochee High School",
+                      name: "Junior",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2014 - May 2015 • 1 year",
                       courses: [
@@ -352,7 +351,7 @@ export default {
               info: {
                   Job: {
                       title: "Food Runner and Busser",
-                      company: "TopGolf",
+                      name: "TopGolf",
                       icon: require('../assets/icons/topgolf.png'),
                       range: "Jun 2015 to Jul 2015 • 2 mos",
                       location: "Alpharetta, GA",
@@ -363,7 +362,7 @@ export default {
                   },
                   Job2: {
                       title: "Private Tutor",
-                      company: "Self-Employed",
+                      name: "Self-Employed",
                       icon: require('../assets/icons/tutor.png'),
                       range: "Jun 2015 - Jul 2015 • 2 mos",
                       location: "Johns Creek, GA",
@@ -385,8 +384,8 @@ export default {
               options: { duration: 15 },
               info: {
                   school: {
-                      name: "Chattahoochee High School",
-                      title: "Senior",
+                      title: "Chattahoochee High School",
+                      name: "Senior",
                       icon: require('../assets/icons/hooch.png'),
                       range: "Aug 2015 - May 2016 • 1 year",
                       courses: [
@@ -448,7 +447,7 @@ export default {
                   },
                   Job: {
                       title: "President and Founder",
-                      company: "APEX Tutoring",
+                      name: "APEX Tutoring",
                       icon: require('../assets/icons/apex.png'),
                       range: "Apr 2016 - Jun 2016 • 3 mos",
                       location: "GT Campus",
@@ -459,7 +458,7 @@ export default {
                   },
                   Job2: {
                       title: "President and Founder",
-                      company: "Winter Cougar Tennis Camp",
+                      name: "Winter Cougar Tennis Camp",
                       icon: require('../assets/icons/winterCougarTennis.png'),
                       range: "Dec 2015 • 1 week",
                       location: "Alpharetta, GA",
@@ -470,7 +469,7 @@ export default {
                   },
                   Job3: {
                       title: "Private Tutor for AP US Government",
-                      company: "Self-Employed",
+                      name: "Self-Employed",
                       icon: require('../assets/icons/govTutor.png'),
                       range: "Aug 2015 - Mar 2016 • 1 year",
                       location: "Johns Creek, GA",
@@ -493,7 +492,7 @@ export default {
               info: {
                   Job: {
                       title: "Financial Analyst Internship",
-                      company: "Scheller College of Business at Georgia Tech",
+                      name: "Scheller College of Business at Georgia Tech",
                       icon: require('../assets/icons/scheller.png'),
                       range: "Jun 2016 - Aug 2016 • 3 mos",
                       location: "GT Campus",
@@ -515,8 +514,8 @@ export default {
               options: { duration: 8 },
               info: {
                   Education: {
-                      name: "Georgia Institute of Technology",
-                      title: "BS - Computer Science, minor in Spanish",
+                      title: "Georgia Institute of Technology",
+                      name: "BS - Computer Science, minor in Spanish",
                       range: "2016 - 2020 • Freshman",
                       icon: require('../assets/icons/gatech.png'),
                       courses: [
@@ -568,8 +567,8 @@ export default {
               options: { duration: 15 },
               info: {
                   Education: {
-                      name: "Georgia Institute of Technology",
-                      title: "BS - Computer Science, minor in Spanish",
+                      title: "Georgia Institute of Technology",
+                      name: "BS - Computer Science, minor in Spanish",
                       range: "2016 - 2020 • Freshman",
                       icon: require('../assets/icons/gatech.png'),
                       courses: [
@@ -610,7 +609,7 @@ export default {
               info: {
                   Job: {
                       title: "Planning and Execution Oversight Intern",
-                      company: "Thrivent Financial",
+                      name: "Thrivent Financial",
                       icon: require('../assets/icons/thrivent.jpeg'),
                       range: "Jun 2017 - Aug 2017 • 3 mos",
                       location: "Appleton, Wisconsin",
@@ -636,7 +635,7 @@ export default {
               info: {
                   Job: {
                       title: "Tutor - CS 2110 and CS 1332",
-                      company: "College of Computing at Georgia Tech",
+                      name: "College of Computing at Georgia Tech",
                       icon: require('../assets/icons/coc.png'),
                       range: "September 2017 - December 2018 • 5 mos",
                       location: "GT Campus",
@@ -645,8 +644,8 @@ export default {
                       ]
                   },
                   Education: {
-                      name: "Georgia Institute of Technology",
-                      title: "BS - Computer Science, minor in Spanish",
+                      title: "Georgia Institute of Technology",
+                      name: "BS - Computer Science, minor in Spanish",
                       range: "2016 - 2020 • Sophomore",
                       icon: require('../assets/icons/gatech.png'),
                       courses: [
@@ -693,7 +692,7 @@ export default {
               info: {
                   Job: {
                       title: "Teaching Assistant, CS 2200: Systems and Networks",
-                      company: "College of Computing at Georgia Tech",
+                      name: "College of Computing at Georgia Tech",
                       icon: require('../assets/icons/coc.png'),
                       range: "Jan 2018 - May 2018 • 5 mos",
                       location: "GT Campus",
@@ -704,38 +703,21 @@ export default {
                       ]
                   },
                   Education: {
-                      name: "Georgia Institute of Technology",
-                      title: "BS - Computer Science, minor in Spanish",
+                      title: "Georgia Institute of Technology",
+                      name: "BS - Computer Science, minor in Spanish",
                       range: "2016 - 2020 • Sophomore",
                       icon: require('../assets/icons/gatech.png'),
-                      courses: [
-                          {
-                              courseNum: "CS 3251",
-                              title: "Computer Networking I",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "CS 3511",
-                              title: "Algorithms Honors",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "CS 4641",
-                              title: "Machine Learning",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "ISYE 3770",
-                              title: "Statistics and Applications",
-                              creditHours: "3"
-                          },
-                          {
-                              courseNum: "PHIL 3127",
-                              title: "Sci, Tech, & Human Values",
-                              creditHours: "3"
-                          }
-                      ]
-
+                      courses: {
+                          columns: ['Course Number','Course Name','Credit Hours'],
+                          rows: [
+                            ["CS 3251", "Computer Networking I", "3"],
+                            ["CS 3511", "Algorithms Honors", "3"],
+                            ["CS 3511", "Algorithms Honors", "3"],
+                            ["CS 4641","Machine Learning","3"],
+                            ["ISYE 3770","Statistics and Applications","3"],
+                            ["PHIL 3127", "Sci, Tech, & Human Values","3"]
+                          ]
+                      }
                   },
                   General: "Sophomore year 2nd semester at GA Tech",
                   Location: "Atlanta, Georgia",
@@ -752,7 +734,7 @@ export default {
               info: {
                   Job: {
                       title: "Software Engineering Intern",
-                      company: "The Home Depot",
+                      name: "The Home Depot",
                       icon: require('../assets/icons/homeDepot.png'),
                       range: "May 2018 - Aug 2018 • 3 mos",
                       location: "Smyrna, GA",
