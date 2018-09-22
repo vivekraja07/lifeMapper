@@ -1,38 +1,52 @@
 <template>
+    
     <div id='features'>
-
         <div class="dates">
-
-            <b class="previous round" onclick="getPrev()">&#8249;</b>
+            <b class="previous round" v-on:click="getPrev()">&#8249;</b>
             <h3 id="date">{{active}}</h3>
-            <b class="next round" onclick="getNext()">&#8250;</b>
+            <b class="next round" v-on:click="getNext()">&#8250;</b>
 
         </div>
 
         <div id = "events">
             <section v-for="(value, propertyName, index) in events[active].info" :key="index"> 
-                    <div class = "logoHolder" v-if="events[active].info[propertyName].icon"> 
-                        <img :src="events[active].info[propertyName].icon"/>
+                    <div class = "logoHolder" v-if="value.icon"> 
+                        <img :src="value.icon"/>
                     </div>
-                    <div class = "summaryInfo" v-if="events[active].info[propertyName].icon">
-                        <h3 class = "title"> {{events[active].info[propertyName].title}} </h3>
-                        <h4 class = "name"> {{events[active].info[propertyName].name}} </h4>
-                        <h5 class = "timeRange"> {{events[active].info[propertyName].range}} </h5>
-                        <h5 v-if="events[active].info[propertyName].location" class = "location"> {{events[active].info[propertyName].location}} </h5>
+                    <div class = "summaryInfo" v-if="value.icon">
+                        <h3 class = "title"> {{value.title}} </h3>
+                        <h4 class = "name"> {{value.name}} </h4>
+                        <h5 class = "timeRange"> {{value.range}} </h5>
+                        <h5 v-if="value.location" class = "location"> {{value.location}} </h5>
                     </div>
 
-                    <div class = "extraDetails">
 
-                        <table v-if="events[active].info[propertyName].courses">
+                    <div class = "general" v-if="propertyName=='General'">
+                        <h3 class = "title"> General </h3>
+                        <li> {{value.title}} </li>
+                        <li> {{value.Location}} </li>
+                    </div>
+
+
+                    <div class = "Languages" v-if="propertyName=='Languages'">
+                        <h3 class = "title"> Languages </h3>
+                        <li v-for="language in value" :key="language"> {{language}} </li>
+                    </div>
+
+
+
+                    <div class = "extraDetails" v-if="value.courses || value.addDetails">
+
+                        <table v-if="value.courses">
                             <thead>
                                 <tr>
-                                    <th v-for="(value, index) in events[active].info[propertyName].courses.columns" :key="index">
+                                    <th v-for="(value, index) in value.courses.columns" :key="index">
                                         {{value}}
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <tr v-for="(value, index) in events[active].info[propertyName].courses.rows" :key="index">
+                            <tr v-for="(value, index) in value.courses.rows" :key="index">
                                 <td v-for="(key, index) in value" :key="index">
                                     {{key}}
                                 </td>
@@ -40,7 +54,7 @@
                             </tbody>
                         </table>
 
-                        <li v-for="point in events[active].info[propertyName].addDetails" :key="point">
+                        <li v-for="point in value.addDetails" :key="point">
                             {{point}}
                         </li>
                     </div>
@@ -52,19 +66,50 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 
 export default {
   name: 'Information',
     props: {
     events: Object
-  },   
+  },
+  created() {
+      window.addEventListener('keydown', (e) => {
+          if (e.key == 'ArrowLeft') {
+              this.getPrev()
+          } else if (e.key == 'ArrowRight') {
+              this.getNext()
+          }
+      })
+  },
   computed: {
     active () {
         return this.$store.state.active
     }
   },
   methods: {
-      
+    ...mapActions([
+      'activeSet'
+    ]),
+    getNext() {
+        var size = Object.keys(this.events).length;
+        var index = Object.keys(this.events).indexOf(this.active);
+        if (index + 1 >= size) {
+            alert("This is still a mystery!")
+        } else {
+            this.activeSet(Object.keys(this.events)[index+1])
+        }
+    },
+    getPrev() {
+        var size = Object.keys(this.events).length;
+        var index = Object.keys(this.events).indexOf(this.active);
+        if (index - 1 < 0) {
+            alert("This is out of scope for this project!")
+        } else {
+            this.activeSet(Object.keys(this.events)[index-1])
+        }
+    }
   }
 }
 </script>

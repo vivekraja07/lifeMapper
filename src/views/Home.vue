@@ -29,9 +29,11 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
-                  General: "This is where the story begins folks.",
-                  Location: "Tirupur, Tamil Nadu",
-                  Language: "Tamil"
+                  General: {
+                      title: "This is where the story begins folks.",
+                      Location: "Tirupur, Tamil Nadu"
+                  },
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //moved to Coimbatore
@@ -42,9 +44,11 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
-                  General: "Moved to the neighboring, more industrial city",
-                  Location: "Coimbatore, Tamil Nadu",
-                  Language: "Tamil",
+                  General: {
+                      title: "Moved to the neighboring, more industrial city",
+                      Location: "Coimbatore, Tamil Nadu"
+                  },
+                  Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Perks Matriculation \nRamakrishna Mission \nAvanashi-Lingam"
               }
           },
@@ -56,9 +60,11 @@ export default {
               zoom: 20,
               options: { duration: 15 },
               info: {
-                  General: "Moved to the distant state of Gujarat, where I learned some new languages",
-                  Location: "Ahemdabad, Gujarat",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  General: {
+                    title: "Moved to the distant state of Gujarat, where I learned some new languages",
+                    Location: "Ahemdabad, Gujarat",
+                  },
+                  Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Eklavya Vidyalaya"
               }
           },
@@ -70,9 +76,11 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
-                  General: "Moved to the distant state of Uttar Pradesh, which is on the outskirts of Delhi. ",
-                  Location: "Noida, Uttar Pradesh",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  General: {
+                    title: "Moved to the distant state of Uttar Pradesh, which is on the outskirts of Delhi. ",
+                    Location: "Noida, Uttar Pradesh",
+                  },
+                  Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Kotari International"
               }
           },
@@ -84,9 +92,11 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
-                  General: "Arrived at the US of A.",
-                  Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  General: {
+                      title: "Arrived at the US of A.",
+                      Location: "Alpharetta, Georgia"
+                  },
+                  Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Abbotts Hill Elementary"
               }
           },
@@ -98,9 +108,11 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
-                  General: "These 3 years of middle school were a period of great growth and development",
-                  Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  General: {
+                    title: "These 3 years of middle school were a period of great growth and development",
+                    Location: "Alpharetta, Georgia",
+                  },
+                  Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Webb Bridge Middle School"
               }
 
@@ -113,6 +125,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "9th grade",
+                    Location: "Alpharetta, Georgia",
+                  },
                   school: {
                       title: "Chattahoochee High School",
                       name: "Freshman",
@@ -132,10 +148,7 @@ export default {
                             ]
                       },
                   },
-                  General: "9th grade",
-                  Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
-                  School: "Chattahoochee High School"
+                  Languages: ["Tamil","English","Hindi","Spanish"],
               }
           },
           //hooch 10
@@ -146,6 +159,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                      title: "Sophomore year 2nd semester at GA Tech",
+                      Location: "Atlanta, Georgia"
+                  },
                   school: {
                       title: "Chattahoochee High School",
                       name: "Sophomore",
@@ -166,7 +183,7 @@ export default {
                   },
                   General: "10th grade",
                   Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Chattahoochee High School"
               }
           },
@@ -178,6 +195,10 @@ export default {
               zoom: 20,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "Sandwich Artist at Subway",
+                    Location: "Alpharetta, Georgia",
+                  },
                   Job: {
                       title: "Sandwich Artist",
                       name: "Subway",
@@ -200,9 +221,7 @@ export default {
                           rows: [['FVS General Health', 99]]
                        }
                   },
-                  General: "Sandwich Artist at Subway",
-                  Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //11th gradee
@@ -213,6 +232,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "11th grade",
+                    Location: "Alpharetta, Georgia",
+                  },
                   school: {
                       title: "Chattahoochee High School",
                       name: "Junior",
@@ -231,10 +254,7 @@ export default {
                         ]
                       }
                   },
-                  General: "11th grade",
-                  Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
-                  School: "Chattahoochee High School"
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //topgolf + cross-country + tutoring
@@ -245,6 +265,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "TopGolf + Cross-Country + Tutoring",
+                    Location: "Alpharetta, Georgia",
+                  },
                   Job: {
                       title: "Food Runner and Busser",
                       name: "TopGolf",
@@ -266,9 +290,7 @@ export default {
                           "Tutored 3 elementary and middle school students in basic English and Mathematics"
                       ]
                   },
-                  General: "TopGolf + Cross-Country + Tutoring",
-                  Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //12th grade
@@ -279,6 +301,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "12th grade",
+                    Location: "Alpharetta, Georgia",
+                  },
                   school: {
                       title: "Chattahoochee High School",
                       name: "Senior",
@@ -331,9 +357,7 @@ export default {
                           "Tutored around 30 high school students, primarily in the class of AP Government"
                       ]
                   },
-                  General: "12th grade",
-                  Location: "Alpharetta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //financial analyst internship
@@ -344,6 +368,10 @@ export default {
               zoom: 18,
               options: { duration: 10 },
               info: {
+                  General: {
+                    title: "Financial Analyst Internship",
+                    Location: "Atlanta, Georgia",
+                  },
                   Job: {
                       title: "Financial Analyst Internship",
                       name: "Scheller College of Business at Georgia Tech",
@@ -354,9 +382,7 @@ export default {
                           "Used Bloomberg Essentials to recreate contemporary models of the 1992 Tweedy, Browne’s famous “What has Worked in Investing” Report",
                       ]
                   },
-                  General: "Financial Analyst Internship",
-                  Location: "Atlanta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //year 1, semester 1 at gatech
@@ -367,6 +393,10 @@ export default {
               zoom: 18,
               options: { duration: 8 },
               info: {
+                  General: {
+                    title: "Freshman year 1st semester at GA Tech",
+                    Location: "Atlanta, Georgia",
+                  },
                   Education: {
                       title: "Georgia Institute of Technology",
                       name: "BS - Computer Science, minor in Spanish",
@@ -384,9 +414,7 @@ export default {
                           ]
                       }
                   },
-                  General: "Freshman year 1st semester at GA Tech",
-                  Location: "Atlanta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               },
 
 
@@ -399,6 +427,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "Freshman year 2nd semester at GA Tech",
+                    Location: "Atlanta, Georgia",
+                  },
                   Education: {
                       title: "Georgia Institute of Technology",
                       name: "BS - Computer Science, minor in Spanish",
@@ -414,9 +446,7 @@ export default {
                           ]
                       }
                   },
-                  General: "Freshman year 2nd semester at GA Tech",
-                  Location: "Atlanta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //thrivent Internship 
@@ -427,6 +457,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "Software Engineer Internship at Thrivent Financial",
+                    Location: "Atlanta, Georgia",
+                  },
                   Job: {
                       title: "Planning and Execution Oversight Intern",
                       name: "Thrivent Financial",
@@ -439,9 +473,7 @@ export default {
                           "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data. Script would send an email with results of validation test"
                       ]
                   },
-                  General: "Software Engineer Internship at Thrivent Financial",
-                  Location: "Atlanta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
 
@@ -453,6 +485,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                    title: "Sophomore year 1st semester at GA Tech",
+                    Location: "Atlanta, Georgia",
+                  },
                   Job: {
                       title: "Tutor - CS 2110 and CS 1332",
                       name: "College of Computing at Georgia Tech",
@@ -479,9 +515,7 @@ export default {
                           ]
                       }
                   },
-                  General: "Sophomore year 1st semester at GA Tech",
-                  Location: "Atlanta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //year 2, semester 2 at gatech
@@ -492,6 +526,10 @@ export default {
               zoom: 18,
               options: { duration: 8 },
               info: {
+                  General: {
+                      title: "Sophomore year 2nd semester at GA Tech",
+                      Location: "Atlanta, Georgia"
+                  },
                   Job: {
                       title: "Teaching Assistant, CS 2200: Systems and Networks",
                       name: "College of Computing at Georgia Tech",
@@ -520,9 +558,7 @@ export default {
                           ]
                       }
                   },
-                  General: "Sophomore year 2nd semester at GA Tech",
-                  Location: "Atlanta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
           //home depot internship
@@ -533,6 +569,10 @@ export default {
               zoom: 18,
               options: { duration: 15 },
               info: {
+                  General: {
+                      title: "Software Engineer Internship at Home Depot",
+                      Location: "Atlanta, Georgia"
+                  },
                   Job: {
                       title: "Software Engineering Intern",
                       name: "The Home Depot",
@@ -544,9 +584,7 @@ export default {
                           "Lots of learning and stuff like that "
                       ]
                   },
-                  General: "Software Engineer Internship at Home Depot",
-                  Location: "Atlanta, Georgia",
-                  Languages: "Tamil \nEnglish \nHindi \nSpanish",
+                  Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
       }
