@@ -36,7 +36,7 @@ export default {
                       title: "This is where the story begins folks.",
                       Location: "Tirupur, Tamil Nadu"
                   },
-                  Languages: ["Tamil","English","Hindi","Spanish"]
+                  Languages: ["Tamil"]
               }
           },
           //moved to Coimbatore
@@ -67,7 +67,13 @@ export default {
                     title: "Moved to the distant state of Gujarat, where I learned some new languages",
                     Location: "Ahemdabad, Gujarat",
                   },
-                  Languages: ["Tamil","English","Hindi","Spanish"],
+                  Education: {
+                      title: "Eklavya Vidyalaya",
+                      name: "1st - 2nd Grade Student",
+                      range: "Jun 2003 - May 2005 • 2 years",
+                      icon: require('../assets/icons/eklavya.jpg'),
+                  },
+                  Languages: ["Tamil","English","Hindi"],
                   School: "Eklavya Vidyalaya"
               }
           },
@@ -83,8 +89,13 @@ export default {
                     title: "Moved to the distant state of Uttar Pradesh, which is on the outskirts of Delhi. ",
                     Location: "Noida, Uttar Pradesh",
                   },
-                  Languages: ["Tamil","English","Hindi","Spanish"],
-                  School: "Kotari International"
+                  Education: {
+                      title: "Kothari International School",
+                      name: "3th - 4th Grade Student",
+                      range: "Jun 2005 - Oct 2007 • 1.5 years",
+                      icon: require('../assets/icons/kothari.png'),
+                  },
+                  Languages: ["Tamil","English","Hindi"],
               }
           },
           //moved to Alpharetta -> Abbotts Hill Road
@@ -99,8 +110,13 @@ export default {
                       title: "Arrived at the US of A.",
                       Location: "Alpharetta, Georgia"
                   },
+                  Education: {
+                      title: "Abbotts Hill Elementary",
+                      name: "4th - 5th Grade Student",
+                      range: "Nov 2007 - May 2009 • 1.5 years",
+                      icon: require('../assets/icons/abbotts.jpg'),
+                  },
                   Languages: ["Tamil","English","Hindi","Spanish"],
-                  School: "Abbotts Hill Elementary"
               }
           },
           //started going to Webb Bridge
@@ -114,6 +130,12 @@ export default {
                   General: {
                     title: "These 3 years of middle school were a period of great growth and development",
                     Location: "Alpharetta, Georgia",
+                  },
+                  Education: {
+                      title: "Webb Bridge Middle School",
+                      name: "6th - 8th Grade Student",
+                      range: "Aug 2009 - May 2012 • 3 years",
+                      icon: require('../assets/icons/wbms.jpeg'),
                   },
                   Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Webb Bridge Middle School"
@@ -184,8 +206,6 @@ export default {
                         ]
                       }
                   },
-                  General: "10th grade",
-                  Location: "Alpharetta, Georgia",
                   Languages: ["Tamil","English","Hindi","Spanish"],
                   School: "Chattahoochee High School"
               }
@@ -417,6 +437,14 @@ export default {
                           ]
                       }
                   },
+                  Projects: [{
+                      title: "Project Euler",
+                    details: [
+                          "A series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve",
+                          "Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems",
+                          "Solved 65 problems on the site (top 3.532% on the site)"
+                      ]
+                  }],
                   Languages: ["Tamil","English","Hindi","Spanish"]
               },
 
@@ -449,6 +477,21 @@ export default {
                           ]
                       }
                   },
+                Projects: [{
+                    title: "WaterFall",
+                    details: [
+                          "Developed an Android application that allows users and experts to report water availability and contamination levels in their area in the event of a natural disaster",
+                          "Used a Firebase backend for authorization and water report storage, implementing maps and location services to help users find clean water nearby"
+                      ]
+                  },
+                    {
+                    title: "Gameboy Game: Drone Wars",
+                    details: [
+                          "For CS 2110, created a gameboy game called Drone Wars in which a drone would roam the screen dropping bombs",
+                          "The player will have to dodge the bombs while simultaneously shooting bullets back up at the drones",
+                          "This game was written using native C"
+                      ]
+                  }],
                   Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
@@ -476,6 +519,18 @@ export default {
                           "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data. Script would send an email with results of validation test"
                       ]
                   },
+                  Projects: [{
+                    title: "Craigslist Data Mining",
+                    details: [
+                          "Using Selenium WebDriver, Java, ChromeDriver, Apache POI, and Excel to grab CraigsList data and store in Excel",
+                          "Then, cross-referenced car with Kelly Blue Book to find out if car is a good deal or not"
+                      ]
+                  },{
+                    title: "Expense Report",
+                    details: [
+                          "Created an Expense Report using VBA that would forecast spending based on current trends, had budgetary capabilities, and had a friendly UI"
+                      ]
+                  }],
                   Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
@@ -518,6 +573,14 @@ export default {
                           ]
                       }
                   },
+                  Projects: [{
+                    title: "SYNCRUS (Winner at HackGT)",
+                    details: [
+                          "We were inspired by the data set provided by NCR to build a data visualization of a stores best selling departments in different cities across the nation",
+                          "We also build a simulation of shoppers to analyze the efficiency and shopper-friendly design of the stores locations per city.",
+                          "We wanted to create a analytical view of the entire lifecycle of selling a product, from warehouse distribution to product placement within each specific store."
+                      ]
+                  }],
                   Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
@@ -583,17 +646,17 @@ export default {
                       range: "May 2018 - Aug 2018 • 3 mos",
                       location: "Smyrna, GA",
                       addDetails: [
-                          "This was a fun internship!",
-                          "Lots of learning and stuff like that "
+                          "Created Flagster, a Feature-Flagging service using Node.js for the API and Vue.js for the front-end",
+                          "Worked full-stack using TDD and XP and interacted with product owner to determine optimal design",
+                          "Deployed to production and is used daily by 2000+ stores in a department that accounts for 8% of firm’s revenue"
                       ]
                   },
-                  Project: {
+                  Projects: [{
                     title: "LifeMapper",
-                    addDetails: [
-                          "This was a fun internship!",
-                          "Lots of learning and stuff like that "
+                    details: [
+                          "Vue application that plots major life events on a Leaflet Map along with a time-line",
                       ]
-                  },
+                  }],
                   Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },

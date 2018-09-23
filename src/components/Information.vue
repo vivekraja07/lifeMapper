@@ -19,21 +19,28 @@
                         <h5 v-if="value.location" class = "location"> {{value.location}} </h5>
                     </div>
 
-
                     <div class = "general" v-if="propertyName=='General'">
                         <h3 class = "title"> General </h3>
                         <li> {{value.title}} </li>
                         <li> {{value.Location}} </li>
                     </div>
 
-
                     <div class = "Languages" v-if="propertyName=='Languages'">
                         <h3 class = "title"> Languages </h3>
                         <li v-for="language in value" :key="language"> {{language}} </li>
                     </div>
 
-                    <div class = "extraDetails" v-if="value.courses || value.addDetails">
+                    <div class="Projects" v-if="propertyName=='Projects'">
+                        <h2 class="name"> Projects</h2>
+                        <div class="Project" v-for="project in value" :key="project.title">
+                            <h3 class="title"> {{project.title}} </h3>
+                            <li v-for="point in project.details" :key="point">
+                                {{point}}
+                            </li>
+                        </div>
+                    </div>
 
+                    <div class = "extraDetails" v-if="value.courses || value.addDetails">
                         <table v-if="value.courses">
                             <thead>
                                 <tr>
