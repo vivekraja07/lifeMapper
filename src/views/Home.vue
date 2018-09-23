@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <!-- <img src="../assets/logo.png"> -->
-    <Information v-bind:events="x"> </Information><Timeline v-bind:events="x"/>
+    <Map v-bind:events="x"/>
+    <Information v-bind:events="x"/>
+    <Timeline v-bind:events="x"/>
   </div>
 </template>
 
@@ -9,13 +11,14 @@
 // @ is an alias to /src
 import Information from '@/components/Information.vue'
 import Timeline from '@/components/Timeline.vue'
-
+import Map from '@/components/Map.vue'
 
 export default {
   name: 'home',
   components: {
     Information,
-    Timeline
+    Timeline,
+    Map
   },
   data: function() { 
     return {
@@ -584,6 +587,13 @@ export default {
                           "Lots of learning and stuff like that "
                       ]
                   },
+                  Project: {
+                    title: "LifeMapper",
+                    addDetails: [
+                          "This was a fun internship!",
+                          "Lots of learning and stuff like that "
+                      ]
+                  },
                   Languages: ["Tamil","English","Hindi","Spanish"]
               }
           },
@@ -598,9 +608,5 @@ export default {
   height: 100%;
   width: 100%;
 }
-
-
-
-
 
 </style>

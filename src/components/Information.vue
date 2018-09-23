@@ -5,7 +5,6 @@
             <b class="previous round" v-on:click="getPrev()">&#8249;</b>
             <h3 id="date">{{active}}</h3>
             <b class="next round" v-on:click="getNext()">&#8250;</b>
-
         </div>
 
         <div id = "events">
@@ -32,8 +31,6 @@
                         <h3 class = "title"> Languages </h3>
                         <li v-for="language in value" :key="language"> {{language}} </li>
                     </div>
-
-
 
                     <div class = "extraDetails" v-if="value.courses || value.addDetails">
 
@@ -71,7 +68,7 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'Information',
-    props: {
+  props: {
     events: Object
   },
   created() {
@@ -118,7 +115,9 @@ export default {
 
     #features {
         height: 90%;
+        width: 50%;
         overflow: auto;
+        display: inline-block;
     }
 
     /* date styles go here */

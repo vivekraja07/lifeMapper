@@ -9,8 +9,8 @@ export default new Vuex.Store({
   },
   mutations: {
     setActive(state, event) {
-      state.active = event 
-    }
+      state.active = event
+    },
   },
   actions: {
     activeSet (context, active) {
