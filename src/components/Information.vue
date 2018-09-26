@@ -31,8 +31,8 @@
                     </div>
 
                     <div class="Projects" v-if="propertyName=='Projects'">
-                        <h2 class="name"> Projects</h2>
-                        <div class="Project" v-for="project in value" :key="project.title">
+                        <h2 class="projectTitle"> Projects</h2>
+                        <div class="Project" v-for="project in value" v-on:click="sideBarToggle()" :key="project.title">
                             <h3 class="title"> {{project.title}} </h3>
                             <li v-for="point in project.details" :key="point">
                                 {{point}}
@@ -90,11 +90,15 @@ export default {
   computed: {
     active () {
         return this.$store.state.active
+    },
+    open () {
+        return this.$store.state.sidebarOpen
     }
   },
   methods: {
     ...mapActions([
-      'activeSet'
+      'activeSet',
+      'sideBarToggle'
     ]),
     getNext() {
         var size = Object.keys(this.events).length;
@@ -125,6 +129,10 @@ export default {
         width: 50%;
         overflow: auto;
         display: inline-block;
+    }
+
+    .projectTitle {
+        text-align: center;
     }
 
     /* date styles go here */

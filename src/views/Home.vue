@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <!-- <img src="../assets/logo.png"> -->
+    <Sidebar/>
     <Map v-bind:events="x"/>
     <Information v-bind:events="x"/>
     <Timeline v-bind:events="x"/>
@@ -12,13 +13,15 @@
 import Information from '@/components/Information.vue'
 import Timeline from '@/components/Timeline.vue'
 import Map from '@/components/Map.vue'
+import Sidebar from '@/components/Sidebar.vue'
 
 export default {
   name: 'home',
   components: {
     Information,
     Timeline,
-    Map
+    Map,
+    Sidebar
   },
   data: function() { 
     return {
@@ -51,8 +54,20 @@ export default {
                       title: "Moved to the neighboring, more industrial city",
                       Location: "Coimbatore, Tamil Nadu"
                   },
-                  Languages: ["Tamil","English","Hindi","Spanish"],
-                  School: "Perks Matriculation \nRamakrishna Mission \nAvanashi-Lingam"
+                  school: {
+                      title: "Ramakrishna Mission School",
+                      name: "Kindergarten",
+                      range: "Jun 2001 - May 2002 • 1 year",
+                      icon: require('../assets/icons/ramakrishna.jpg')
+                  },
+                  Education: {
+                      title: "Perks Matriculation",
+                      name: "1st Grade Student",
+                      range: "Jun 2002 - May 2003 • 1 year",
+                      icon: require('../assets/icons/perks.png'),
+                  },
+                  Languages: ["Tamil"],
+                //   School: "Perks Matriculation \nRamakrishna Mission \nAvanashi-Lingam"
               }
           },
           //moved to Ahemdabad
@@ -74,7 +89,6 @@ export default {
                       icon: require('../assets/icons/eklavya.jpg'),
                   },
                   Languages: ["Tamil","English","Hindi"],
-                  School: "Eklavya Vidyalaya"
               }
           },
           //moved to Noida
@@ -138,7 +152,6 @@ export default {
                       icon: require('../assets/icons/wbms.jpeg'),
                   },
                   Languages: ["Tamil","English","Hindi","Spanish"],
-                  School: "Webb Bridge Middle School"
               }
 
           },
@@ -185,8 +198,8 @@ export default {
               options: { duration: 15 },
               info: {
                   General: {
-                      title: "Sophomore year 2nd semester at GA Tech",
-                      Location: "Atlanta, Georgia"
+                      title: "10th Grade",
+                      Location: "Alpharetta, Georgia"
                   },
                   school: {
                       title: "Chattahoochee High School",
@@ -207,7 +220,6 @@ export default {
                       }
                   },
                   Languages: ["Tamil","English","Hindi","Spanish"],
-                  School: "Chattahoochee High School"
               }
           },
           //subway
@@ -667,9 +679,12 @@ export default {
 </script>
 
 <style scoped>
+
 .home {
   height: 100%;
   width: 100%;
 }
+
+
 
 </style>
