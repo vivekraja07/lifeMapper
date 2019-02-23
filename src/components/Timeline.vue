@@ -1,8 +1,8 @@
 <template>
     <div id="timeContainer">
         <div id="eventContainer">
-            <div v-for="(event, propertyName, index) in events" :key="index" :class="{'rectangle':true, 'active':(propertyName === active)}" v-on:click="activeSet(propertyName)" :style="{width: getWidth(event.start, event.end)}"> 
-               
+            <div v-for="(event, propertyName, index) in events" :key="index" :class="{'rectangle':true, 'active':(propertyName === active)}" v-on:click="activeSet(propertyName)" :style="{width: getWidth(event.start, event.end)}">
+
             </div>
         </div>
 
@@ -28,6 +28,7 @@
             <li>2016</li>
             <li>2017</li>
             <li>2018</li>
+            <li>'19</li>
 
         </ul>
     </div>
@@ -42,63 +43,63 @@ export default {
     events: Object
   },
   methods: {
-      ...mapActions([
+    ...mapActions([
       'activeSet'
     ]),
-    getWidth(beg, finish) {
-          var total = '248';
-          var start = this.getAsMonth(beg);
-          var end = this.getAsMonth(finish);
-          var numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1);
-          var perc = (numMonths / total * 100).toFixed(2);
-          return perc + '%'
-      },
-    getAsMonth(date) {
-        var arr = date.split("-");
-        switch (arr[0]) {
-            case 'January':
-                arr[0] = 1;
-                break;
-            case 'February':
-                arr[0] = 2;
-                break;
-            case 'March':
-                arr[0] = 3;
-                break;
-            case 'April':
-                arr[0] = 4;
-                break;
-            case 'May':
-                arr[0] = 5;
-                break;
-            case 'June':
-                arr[0] = 6;
-                break;
-            case 'July':
-                arr[0] = 7;
-                break;
-            case 'August':
-                arr[0] = 8;
-                break;
-            case 'September':
-                arr[0] = 9;
-                break;
-            case 'October':
-                arr[0] = 10;
-                break;
-            case 'November':
-                arr[0] = 11;
-                break;
-            case 'December':
-                arr[0] = 12;
-                break;
-        }
-        return arr;
+    getWidth (beg, finish) {
+      var total = '257'
+      var start = this.getAsMonth(beg)
+      var end = this.getAsMonth(finish)
+      var numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1)
+      var perc = (numMonths / total * 100).toFixed(2)
+      return perc + '%'
+    },
+    getAsMonth (date) {
+      var arr = date.split('-')
+      switch (arr[0]) {
+        case 'January':
+          arr[0] = 1
+          break
+        case 'February':
+          arr[0] = 2
+          break
+        case 'March':
+          arr[0] = 3
+          break
+        case 'April':
+          arr[0] = 4
+          break
+        case 'May':
+          arr[0] = 5
+          break
+        case 'June':
+          arr[0] = 6
+          break
+        case 'July':
+          arr[0] = 7
+          break
+        case 'August':
+          arr[0] = 8
+          break
+        case 'September':
+          arr[0] = 9
+          break
+        case 'October':
+          arr[0] = 10
+          break
+        case 'November':
+          arr[0] = 11
+          break
+        case 'December':
+          arr[0] = 12
+          break
+      }
+      return arr
     }
   },
   computed: {
-      active () {
-        return this.$store.state.active
+    active () {
+      return this.$store.state.active
     }
   }
 }
@@ -107,58 +108,58 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-
 #timeContainer {
-    height: 10%;
-    display: flex;
-    flex-direction: column;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
 }
 
 .rectangle {
-    background-color: #555;
-    /* border-right: thin solid; */
-    cursor: pointer;
+  background-color: #555;
+  /* border-right: thin solid; */
+  cursor: pointer;
   }
 
 .rectangle:hover {
-    opacity: .8;
+  opacity: .8;
 }
 
 .rectangle:active {
-    background-color: red;
+  background-color: red;
 }
 
 .active {
-    background-color: blue;
+  background-color: blue;
 }
 
 #eventContainer {
-    display: flex;
-    justify-content: center;
-    height: 70%;
+  display: flex;
+  justify-content: center;
+  height: 70%;
 }
 
 .timelines-years {
 	border-top: 1px solid #cfc1c1;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    height: 30%;
-    -webkit-padding-start: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 30%;
+  -webkit-padding-start: 0;
 }
 
-li {	
+li {
 	display: inline-block;
-    width: 4.819267%;
-	color: #868686;
-    /* font-size: 20px; */
-    text-align: center;
-    border-right: 1px solid #cfc1c1;
+  width: 4.66926070039%;
+  color: #868686;
+  /* font-size: 20px; */
+  text-align: center;
+  border-right: 1px solid #cfc1c1;
 }
 
 li:last-child {
-    border-right: 0px;
-    width: 3.4483%
+  border-right: 0px;
+  width: 1.94552529183%;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-    
+
     <div id='features'>
         <div class="dates">
             <b class="previous round" v-on:click="getPrev()">&#8249;</b>
@@ -8,39 +8,18 @@
         </div>
 
         <div id = "events">
-            <section v-for="(value, propertyName, index) in events[active].info" :key="index"> 
-                    <div class = "logoHolder" v-if="value.icon"> 
-                        <img :src="value.icon"/>
-                    </div>
-                    <div class = "summaryInfo" v-if="value.icon">
-                        <h3 class = "title"> {{value.title}} </h3>
-                        <h4 class = "name"> {{value.name}} </h4>
-                        <h5 class = "timeRange"> {{value.range}} </h5>
-                        <h5 v-if="value.location" class = "location"> {{value.location}} </h5>
-                    </div>
-
-                    <div class = "general" v-if="propertyName=='General'">
-                        <h3 class = "title"> General </h3>
-                        <li> {{value.title}} </li>
-                        <li> {{value.Location}} </li>
-                    </div>
-
-                    <div class = "Languages" v-if="propertyName=='Languages'">
-                        <h3 class = "title"> Languages </h3>
-                        <li v-for="language in value" :key="language"> {{language}} </li>
-                    </div>
-
-                    <div class="Projects" v-if="propertyName=='Projects'">
-                        <h2 class="projectTitle"> Projects</h2>
-                        <div class="Project" v-for="project in value" v-on:click="sideBarToggle()" :key="project.title">
-                            <h3 class="title"> {{project.title}} </h3>
-                            <li v-for="point in project.details" :key="point">
-                                {{point}}
-                            </li>
-                        </div>
-                    </div>
-
-                    <div class = "extraDetails" v-if="value.courses || value.addDetails">
+            <section v-for="(value, propertyName, index) in events[active].info" :key="index">
+                    <div class = "School" v-if="propertyName=='school' || propertyName=='Education'">
+                      <div class = "logoHolder">
+                          <img :src="value.icon"/>
+                      </div>
+                      <div class = "summaryInfo" v-if="value.icon">
+                          <h3 class = "title"> {{value.title}} </h3>
+                          <h4 class = "name"> {{value.name}} </h4>
+                          <h5 class = "timeRange"> {{value.range}} </h5>
+                          <h5 v-if="value.location" class = "location"> {{value.location}} </h5>
+                      </div>
+                       <div class = "extraDetails" v-if="value.courses || value.addDetails">
                         <table v-if="value.courses">
                             <thead>
                                 <tr>
@@ -61,6 +40,73 @@
                         <li v-for="point in value.addDetails" :key="point">
                             {{point}}
                         </li>
+                      </div>
+
+      
+                    </div>
+
+                    <div class = "Jobs" v-if="propertyName=='Jobs'">
+                      <h2 class="sectionTitle">Jobs</h2>
+                      <div class="Job" v-for="job in value" :key="job.title">
+                        <div class = "logoHolder" v-if="job.icon">
+                          <img :src="job.icon"/>
+                        </div>
+                        <div class = "summaryInfo" v-if="job.icon">
+                          <h3 class = "title"> {{job.title}} </h3>
+                          <h4 class = "name"> {{job.name}} </h4>
+                          <h5 class = "timeRange"> {{job.range}} </h5>
+                          <h5 v-if="job.location" class = "location"> {{job.location}} </h5>
+                        </div>
+
+                        <div class = "extraDetails" v-if="job.addDetails">
+                          <li v-for="point in job.addDetails" :key="point">
+                              {{point}}
+                          </li>
+                        </div>
+                      </div>
+
+      
+                    </div>
+
+                    <div class = "general" v-if="propertyName=='General'">
+                        <h3 class = "title"> General </h3>
+                        <li> {{value.title}} </li>
+                        <li> {{value.Location}} </li>
+                    </div>
+
+                    <div class = "Languages" v-if="propertyName=='Languages'">
+                        <h3 class = "title"> Languages </h3>
+                        <li v-for="language in value" :key="language"> {{language}} </li>
+                    </div>
+
+                    <div class="Projects" v-if="propertyName=='Projects'">
+                        <h2 class="sectionTitle"> Projects</h2>
+                        <div class="Project" v-for="project in value" v-on:click="sideBarToggle()" :key="project.title">
+                            <h3 class="title"> {{project.title}} </h3>
+                            <li v-for="point in project.details" :key="point">
+                                {{point}}
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="Activities" v-if="propertyName=='Activities'">
+                        <h2 class="sectionTitle">Activities</h2>
+                      <div class="Activity" v-for="activity in value" :key="activity.title">
+                        <div class = "logoHolder">
+                          <img :src="activity.icon"/>
+                        </div>
+                        <div class = "summaryInfo">
+                          <h3 class = "title"> {{activity.title}} </h3>
+                          <h4 class = "name"> {{activity.name}} </h4>
+                          <h5 class = "timeRange"> {{activity.range}} </h5>
+                        </div>
+
+                        <div class = "extraDetails">
+                          <li v-for="point in activity.details" :key="point">
+                              {{point}}
+                          </li>
+                        </div>
+                      </div>
                     </div>
 
             </section>
@@ -72,27 +118,26 @@
 <script>
 import { mapActions } from 'vuex'
 
-
 export default {
   name: 'Information',
   props: {
     events: Object
   },
-  created() {
-      window.addEventListener('keydown', (e) => {
-          if (e.key == 'ArrowLeft') {
-              this.getPrev()
-          } else if (e.key == 'ArrowRight') {
-              this.getNext()
-          }
-      })
+  created () {
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        this.getPrev()
+      } else if (e.key === 'ArrowRight') {
+        this.getNext()
+      }
+    })
   },
   computed: {
     active () {
-        return this.$store.state.active
+      return this.$store.state.active
     },
     open () {
-        return this.$store.state.sidebarOpen
+      return this.$store.state.sidebarOpen
     }
   },
   methods: {
@@ -100,23 +145,22 @@ export default {
       'activeSet',
       'sideBarToggle'
     ]),
-    getNext() {
-        var size = Object.keys(this.events).length;
-        var index = Object.keys(this.events).indexOf(this.active);
-        if (index + 1 >= size) {
-            alert("This is still a mystery!")
-        } else {
-            this.activeSet(Object.keys(this.events)[index+1])
-        }
+    getNext () {
+      var size = Object.keys(this.events).length
+      var index = Object.keys(this.events).indexOf(this.active)
+      if (index + 1 >= size) {
+        alert('This is still a mystery! Google?')
+      } else {
+        this.activeSet(Object.keys(this.events)[index + 1])
+      }
     },
-    getPrev() {
-        var size = Object.keys(this.events).length;
-        var index = Object.keys(this.events).indexOf(this.active);
-        if (index - 1 < 0) {
-            alert("This is out of scope for this project!")
-        } else {
-            this.activeSet(Object.keys(this.events)[index-1])
-        }
+    getPrev () {
+      var index = Object.keys(this.events).indexOf(this.active)
+      if (index - 1 < 0) {
+        alert('This is out of scope for this project!')
+      } else {
+        this.activeSet(Object.keys(this.events)[index - 1])
+      }
     }
   }
 }
@@ -124,14 +168,44 @@ export default {
 
 <style scoped>
 
-    #features {
-        height: 90%;
-        width: 50%;
-        overflow: auto;
-        display: inline-block;
+#features {
+    height: 90%;
+    width: 50%;
+    /* overflow: auto; */
+    display: inline-block;
+    font-size: 1rem;
+}
+
+h3 {
+  align-self: center;
+}
+
+.round {
+  align-self: center;
+}
+
+.Job, .Activity, .Project {
+  border-bottom: 1px dashed #bdbdbd;
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+.Job:last-child, .Activity:last-child, .Project:last-child  {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.Job:first-of-type, .Activity:first-of-type, .Project:first-of-type  {
+  padding-top: 0px;
+}
+
+
+    #events {
+      overflow: auto;
+      height: 90%;
     }
 
-    .projectTitle {
+    .sectionTitle {
         text-align: center;
     }
 
@@ -139,11 +213,15 @@ export default {
     .dates {
         background: black;
         color: white;
-        padding: 23.5px;
         border: 0;
+        height: 10%;
+
         display: flex;
+        justify-content:  space-around;
+        align-content: center;
         flex-direction: row;
-        justify-content:  space-between;;
+
+        text-align: center;
     }
 
     b {
@@ -171,7 +249,7 @@ export default {
 
     .logoHolder {
         width: 72px;
-        height: 72px; 
+        height: 72px;
         float: left;
     }
 
@@ -180,7 +258,7 @@ export default {
         border: 4px solid transparent;
         height: 64px;
         width: 64px;
-    } 
+    }
 
     .summaryInfo {
         margin-left: 80px;
@@ -194,12 +272,11 @@ export default {
     /* table styles */
     table {
         text-align: center;
-        border: 1px solid; 
+        border: 1px solid;
     }
 
     th {
         border-bottom: 1px solid;
     }
-
 
 </style>

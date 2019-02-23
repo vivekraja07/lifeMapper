@@ -6,22 +6,22 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     sidebarOpen: false,
-    active: 'June 2018 to August 2018'
+    active: 'January 2019 to May 2019'
   },
   mutations: {
-    setActive(state, event) {
+    setActive (state, event) {
       state.active = event
     },
-    toggleSideBar(state) {
+    toggleSideBar (state) {
       state.sidebarOpen = !state.sidebarOpen
-    },
+    }
   },
   actions: {
     activeSet (context, active) {
       context.commit('setActive', active)
     },
-    sideBarToggle(context) {
+    sideBarToggle (context) {
       context.commit('toggleSideBar')
-    },
+    }
   }
 })
