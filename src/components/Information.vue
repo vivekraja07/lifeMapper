@@ -75,8 +75,25 @@
                     </div>
 
                     <div class = "Languages" v-if="propertyName=='Languages'">
-                        <h3 class = "title"> Languages </h3>
-                        <li v-for="language in value" :key="language"> {{language}} </li>
+                        <h3 class = "sectionTitle"> Civilian Languages </h3>
+
+                        <div v-for="(language, index) in value" :key="language.name"> 
+                          <p> {{language.name}} </p>
+                            <div class="container">
+                              <div class = "skills" :style="{width: language.skill, 'background-color': colors[index]}">{{language.skill}} </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class = "Languages" v-if="propertyName=='CLanguages'">
+                        <h3 class = "sectionTitle"> Computer Languages </h3>
+
+                        <div v-for="(language, index) in value" :key="language.name"> 
+                          <p> {{language.name}} </p>
+                            <div class="container">
+                              <div class="skills" :style="{width: language.skill, 'background-color': comp_colors[index]}">{{language.skill}} </div>
+                          </div>
+                        </div>
                     </div>
 
                     <div class="Projects" v-if="propertyName=='Projects'">
@@ -91,7 +108,7 @@
 
                     <div class="Activities" v-if="propertyName=='Activities'">
                         <h2 class="sectionTitle">Activities</h2>
-                      <div class="Activity" v-for="activity in value" :key="activity.title">
+                      <div class="Activity" v-for="activity in value" :key="activity.name">
                         <div class = "logoHolder">
                           <img :src="activity.icon"/>
                         </div>
@@ -122,6 +139,33 @@ export default {
   name: 'Information',
   props: {
     events: Object
+  },
+  data: function() {
+    return {
+      colors: [
+         "#4CAF50",
+         "#2196F3",
+         "#f44336",
+         "#808080"
+      ],
+      comp_colors: [
+        "#1D2951",
+                "#003152",
+
+        "#111E6C",
+        "#000080",
+                "#1034A6",
+        "#0E4D92",
+        "#0F52BA",
+        "#0080FF",
+        "#6593F5",
+        "#3FE0D0",
+        "#0F52BA",
+        
+        
+        
+      ]    
+    }
   },
   created () {
     window.addEventListener('keydown', (e) => {
@@ -167,6 +211,20 @@ export default {
 </script>
 
 <style scoped>
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding: 10px; /* Add some padding */
+  color: white; /* White text color */
+}
 
 #features {
     height: 90%;

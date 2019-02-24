@@ -39,7 +39,12 @@ export default {
               title: 'This is where the story begins folks.',
               Location: 'Tirupur, Tamil Nadu'
             },
-            Languages: ['Tamil']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '15%' 
+              }
+            ]
           }
         },
         // moved to Coimbatore
@@ -66,7 +71,16 @@ export default {
               range: 'Jun 2002 - May 2003 • 1 year',
               icon: require('../assets/icons/perks.png')
             },
-            Languages: ['Tamil']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '70%' 
+              },
+              {
+                name: 'English',
+                skill: '5%' 
+              }
+            ]
             //   School: "Perks Matriculation \nRamakrishna Mission \nAvanashi-Lingam"
           }
         },
@@ -88,7 +102,20 @@ export default {
               range: 'Jun 2003 - May 2005 • 2 years',
               icon: require('../assets/icons/eklavya.jpg')
             },
-            Languages: ['Tamil', 'English', 'Hindi']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '70%' 
+              },
+              {
+                name: 'English',
+                skill: '30%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '35%' 
+              }
+            ]
           }
         },
         // moved to Noida
@@ -109,7 +136,20 @@ export default {
               range: 'Jun 2005 - Oct 2007 • 1.5 years',
               icon: require('../assets/icons/kothari.png')
             },
-            Languages: ['Tamil', 'English', 'Hindi']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '70%' 
+              },
+              {
+                name: 'English',
+                skill: '50%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '55%' 
+              }
+            ]
           }
         },
         // moved to Alpharetta -> Abbotts Hill Road
@@ -130,7 +170,20 @@ export default {
               range: 'Nov 2007 - May 2009 • 1.5 years',
               icon: require('../assets/icons/abbotts.jpg')
             },
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '65%' 
+              },
+              {
+                name: 'English',
+                skill: '70%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '50%' 
+              }
+            ]
           }
         },
         // started going to Webb Bridge
@@ -159,7 +212,24 @@ export default {
                   'Lead discussions and service projects'
                 ]
             }],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '63%' 
+              },
+              {
+                name: 'English',
+                skill: '80%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '45%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '10%' 
+              }
+            ]
           }
 
         },
@@ -202,7 +272,24 @@ export default {
                   'Lead discussions and service projects'
                 ]
             }],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '62%' 
+              },
+              {
+                name: 'English',
+                skill: '85%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '40%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '25%' 
+              },
+            ]
           }
         },
         // hooch 10
@@ -252,7 +339,24 @@ export default {
                 ]
               }
             ],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '62%' 
+              },
+              {
+                name: 'English',
+                skill: '87%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '40%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '35%' 
+              },
+            ]
           }
         },
         // subway
@@ -289,10 +393,27 @@ export default {
                 rows: [['FVS General Health', 99]]
               }
             },
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '62%' 
+              },
+              {
+                name: 'English',
+                skill: '87%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '40%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '35%' 
+              },
+            ]
           }
         },
-        // 11th gradee
+        // 11th grade
         'August 2014 to May 2015': {
           start: 'August-2014',
           end: 'May-2015',
@@ -347,7 +468,24 @@ export default {
                 ]
               }
             ],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '62%' 
+              },
+              {
+                name: 'English',
+                skill: '95%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '40%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '45%' 
+              },
+            ]
           }
         },
         // topgolf + cross-country + tutoring
@@ -383,7 +521,24 @@ export default {
                 'Tutored 3 elementary and middle school students in basic English and Mathematics'
               ]
             }],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '62%' 
+              },
+              {
+                name: 'English',
+                skill: '95%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '40%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '45%' 
+              },
+            ]
           }
         },
         // 12th grade
@@ -476,7 +631,30 @@ export default {
                 ]
               }
             ],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '55%' 
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '62%' 
+              },
+              {
+                name: 'English',
+                skill: '95%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '40%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '40%' 
+              },
+            ]
           }
         },
         // financial analyst internship
@@ -501,7 +679,30 @@ export default {
                 'Used Bloomberg Essentials to recreate contemporary models of the 1992 Tweedy, Browne’s famous “What has Worked in Investing” Report'
               ]
             }],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '55%' 
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '62%' 
+              },
+              {
+                name: 'English',
+                skill: '95%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '40%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '45%' 
+              },
+            ]
           }
         },
         // year 1, semester 1 at gatech
@@ -551,7 +752,34 @@ export default {
                 ]
               }
             ],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '70%' 
+              },
+              {
+                name: 'Python',
+                skill: '5%'
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%' 
+              },
+              {
+                name: 'English',
+                skill: '94%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '38%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '43%' 
+              },
+            ]
           }
 
         },
@@ -607,7 +835,38 @@ export default {
                 ]
               }
             ],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '90%' 
+              },
+              {
+                name: 'C',
+                skill: '25%'
+              },
+              {
+                name: 'Python',
+                skill: '5%'
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%' 
+              },
+              {
+                name: 'English',
+                skill: '94%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '38%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '43%' 
+              },
+            ]
           }
         },
         // thrivent Internship
@@ -646,7 +905,47 @@ export default {
                 'Created an Expense Report using VBA that would forecast spending based on current trends, had budgetary capabilities, and had a friendly UI'
               ]
             }],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '90%' 
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'C',
+                skill: '25%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'Python',
+                skill: '5%'
+              }
+
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%' 
+              },
+              {
+                name: 'English',
+                skill: '94%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '38%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '43%' 
+              },
+            ]
           }
         },
 
@@ -696,7 +995,51 @@ export default {
                 'We wanted to create a analytical view of the entire lifecycle of selling a product, from warehouse distribution to product placement within each specific store.'
               ]
             }],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '90%' 
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Python',
+                skill: '50%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%' 
+              },
+              {
+                name: 'English',
+                skill: '94%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '38%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '50%' 
+              },
+            ]
           }
         },
         // year 2, semester 2 at gatech
@@ -739,7 +1082,55 @@ export default {
                 ]
               }
             },
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '90%' 
+              },
+              {
+                name: 'Python',
+                skill: '75%'
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Scikit-Learn',
+                skill: '46%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%' 
+              },
+              {
+                name: 'English',
+                skill: '94%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '38%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '43%' 
+              },
+            ]
           }
         },
         // home depot internship
@@ -772,7 +1163,67 @@ export default {
                 'Vue application that plots major life events on a Leaflet Map along with a time-line'
               ]
             }],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '95%' 
+              },
+              {
+                name: 'Vue.js',
+                skill: '80%' 
+              },
+              {
+                name: 'Node.js',
+                skill: '79%' 
+              },
+              {
+                name: 'Python',
+                skill: '75%'
+              },
+              {
+                name: 'Javascript',
+                skill: '67%'
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Scikit-Learn',
+                skill: '46%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%' 
+              },
+              {
+                name: 'English',
+                skill: '94%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '38%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '43%' 
+              },
+            ]
           }
         },
         // year 3 semester 1 at gatech
@@ -823,7 +1274,49 @@ export default {
                 ]
               }
             ],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '95%' 
+              },
+              {
+                name: 'Vue.js',
+                skill: '80%' 
+              },
+              {
+                name: 'Node.js',
+                skill: '79%' 
+              },
+              {
+                name: 'Python',
+                skill: '78%'
+              },
+              {
+                name: 'Javascript',
+                skill: '67%'
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Scikit-Learn',
+                skill: '46%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+
+            ],
           }
         },
         // year 3 semester 2 at gatech
@@ -882,7 +1375,7 @@ export default {
             {
               title: 'My Finances',
               details: [
-                'Developing a personalized finance website to replace my use of Intuit Mint',
+                'Developing a personalized finance website to replace my use of Intuit Mint'
               ]},
               {
               title: 'My Tasks',
@@ -890,17 +1383,76 @@ export default {
                 'Developing a personalized to-do app that caters to my needs and habits'
               ]},
                 {
-              title: 'Internship Search Visualization -> Summer 2019',
+              title: 'Internship Search Visualization',
               details: [
-                'Developing a visualization using D3 and collected data of the timeline of my summer internship search'
+                'Developing a visualization using D3 and collected data of the timeline of my 2019 summer internship search'
               ]}
             ],
-            Languages: ['Tamil', 'English', 'Hindi', 'Spanish']
+                        CLanguages: [
+              {
+                name: 'Java',
+                skill: '95%' 
+              },
+              {
+                name: 'Vue.js',
+                skill: '80%' 
+              },
+              {
+                name: 'Node.js',
+                skill: '79%' 
+              },
+              {
+                name: 'Python',
+                skill: '78%'
+              },
+              {
+                name: 'Javascript',
+                skill: '67%'
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Scikit-Learn',
+                skill: '46%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%' 
+              },
+              {
+                name: 'English',
+                skill: '94%' 
+              },
+              {
+                name: 'Hindi',
+                skill: '38%' 
+              },
+              {
+                name: 'Spanish',
+                skill: '43%' 
+              },
+            ]
           }
         }
       }
     }
-  }
+    }
 }
 
 </script>
