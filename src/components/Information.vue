@@ -42,7 +42,6 @@
                         </li>
                       </div>
 
-      
                     </div>
 
                     <div class = "Jobs" v-if="propertyName=='Jobs'">
@@ -65,7 +64,6 @@
                         </div>
                       </div>
 
-      
                     </div>
 
                     <div class = "general" v-if="propertyName=='General'">
@@ -77,7 +75,7 @@
                     <div class = "Languages" v-if="propertyName=='Languages'">
                         <h3 class = "sectionTitle"> Civilian Languages </h3>
 
-                        <div v-for="(language, index) in value" :key="language.name"> 
+                        <div v-for="(language, index) in value" :key="language.name">
                           <p> {{language.name}} </p>
                             <div class="container">
                               <div class = "skills" :style="{width: language.skill, 'background-color': colors[index]}">{{language.skill}} </div>
@@ -88,7 +86,7 @@
                     <div class = "Languages" v-if="propertyName=='CLanguages'">
                         <h3 class = "sectionTitle"> Computer Languages </h3>
 
-                        <div v-for="(language, index) in value" :key="language.name"> 
+                        <div v-for="(language, index) in value" :key="language.name">
                           <p> {{language.name}} </p>
                             <div class="container">
                               <div class="skills" :style="{width: language.skill, 'background-color': comp_colors[index]}">{{language.skill}} </div>
@@ -140,31 +138,29 @@ export default {
   props: {
     events: Object
   },
-  data: function() {
+  data: function () {
     return {
       colors: [
-         "#4CAF50",
-         "#2196F3",
-         "#f44336",
-         "#808080"
+        '#4CAF50',
+        '#2196F3',
+        '#f44336',
+        '#808080'
       ],
       comp_colors: [
-        "#1D2951",
-                "#003152",
+        '#1D2951',
+        '#003152',
 
-        "#111E6C",
-        "#000080",
-                "#1034A6",
-        "#0E4D92",
-        "#0F52BA",
-        "#0080FF",
-        "#6593F5",
-        "#3FE0D0",
-        "#0F52BA",
-        
-        
-        
-      ]    
+        '#111E6C',
+        '#000080',
+        '#1034A6',
+        '#0E4D92',
+        '#0F52BA',
+        '#0080FF',
+        '#6593F5',
+        '#3FE0D0',
+        '#0F52BA'
+
+      ]
     }
   },
   created () {
@@ -256,7 +252,6 @@ h3 {
 .Job:first-of-type, .Activity:first-of-type, .Project:first-of-type  {
   padding-top: 0px;
 }
-
 
     #events {
       overflow: auto;

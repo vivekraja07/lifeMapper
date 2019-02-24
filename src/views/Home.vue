@@ -1,8 +1,9 @@
 <template>
   <div class="home">
     <!-- <img src="../assets/logo.png"> -->
-    <Sidebar/>
-    <Map v-bind:events="x"/>
+    <!-- <Sidebar/> -->
+    
+    <LeftSide v-bind:events="x"/>
     <Information v-bind:events="x"/>
     <Timeline v-bind:events="x"/>
   </div>
@@ -12,16 +13,16 @@
 // @ is an alias to /src
 import Information from '@/components/Information.vue'
 import Timeline from '@/components/Timeline.vue'
-import Map from '@/components/Map.vue'
 import Sidebar from '@/components/Sidebar.vue'
+import LeftSide from '@/components/LeftSide.vue'
 
 export default {
   name: 'home',
   components: {
     Information,
     Timeline,
-    Map,
-    Sidebar
+    Sidebar,
+    LeftSide
   },
   data: function () {
     return {
@@ -42,7 +43,7 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '15%' 
+                skill: '15%'
               }
             ]
           }
@@ -74,11 +75,11 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '70%' 
+                skill: '70%'
               },
               {
                 name: 'English',
-                skill: '5%' 
+                skill: '5%'
               }
             ]
             //   School: "Perks Matriculation \nRamakrishna Mission \nAvanashi-Lingam"
@@ -105,15 +106,15 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '70%' 
+                skill: '70%'
               },
               {
                 name: 'English',
-                skill: '30%' 
+                skill: '30%'
               },
               {
                 name: 'Hindi',
-                skill: '35%' 
+                skill: '35%'
               }
             ]
           }
@@ -139,15 +140,15 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '70%' 
+                skill: '70%'
               },
               {
                 name: 'English',
-                skill: '50%' 
+                skill: '50%'
               },
               {
                 name: 'Hindi',
-                skill: '55%' 
+                skill: '55%'
               }
             ]
           }
@@ -173,15 +174,15 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '65%' 
+                skill: '65%'
               },
               {
                 name: 'English',
-                skill: '70%' 
+                skill: '70%'
               },
               {
                 name: 'Hindi',
-                skill: '50%' 
+                skill: '50%'
               }
             ]
           }
@@ -205,29 +206,29 @@ export default {
               icon: require('../assets/icons/wbms.jpeg')
             },
             Activities: [{
-                title: 'Bala Vihar',
-                icon: require('../assets/icons/CMA.png'),
-                name: 'Co-President of JCHYK and Student',
-                details: [
-                  'Lead discussions and service projects'
-                ]
+              title: 'Bala Vihar',
+              icon: require('../assets/icons/CMA.png'),
+              name: 'Co-President of JCHYK and Student',
+              details: [
+                'Lead discussions and service projects'
+              ]
             }],
             Languages: [
               {
                 name: 'Tamil',
-                skill: '63%' 
+                skill: '63%'
               },
               {
                 name: 'English',
-                skill: '80%' 
+                skill: '80%'
               },
               {
                 name: 'Hindi',
-                skill: '45%' 
+                skill: '45%'
               },
               {
                 name: 'Spanish',
-                skill: '10%' 
+                skill: '10%'
               }
             ]
           }
@@ -265,30 +266,30 @@ export default {
               }
             },
             Activities: [{
-                title: 'Bala Vihar',
-                icon: require('../assets/icons/CMA.png'),
-                name: 'Co-President of JCHYK and Student',
-                details: [
-                  'Lead discussions and service projects'
-                ]
+              title: 'Bala Vihar',
+              icon: require('../assets/icons/CMA.png'),
+              name: 'Co-President of JCHYK and Student',
+              details: [
+                'Lead discussions and service projects'
+              ]
             }],
             Languages: [
               {
                 name: 'Tamil',
-                skill: '62%' 
+                skill: '62%'
               },
               {
                 name: 'English',
-                skill: '85%' 
+                skill: '85%'
               },
               {
                 name: 'Hindi',
-                skill: '40%' 
+                skill: '40%'
               },
               {
                 name: 'Spanish',
-                skill: '25%' 
-              },
+                skill: '25%'
+              }
             ]
           }
         },
@@ -327,10 +328,10 @@ export default {
                 title: 'Varsity Tennis',
                 icon: require('../assets/icons/hooch_tennis.jpg'),
                 details: [
-                  'Ranked 3rd best team in Nation by the National High School Tennis Association',
+                  'Ranked 3rd best team in Nation by the National High School Tennis Association'
                 ]
               },
-               {
+              {
                 title: 'Bala Vihar',
                 icon: require('../assets/icons/CMA.png'),
                 name: 'Co-President of JCHYK and Student',
@@ -342,20 +343,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '62%' 
+                skill: '62%'
               },
               {
                 name: 'English',
-                skill: '87%' 
+                skill: '87%'
               },
               {
                 name: 'Hindi',
-                skill: '40%' 
+                skill: '40%'
               },
               {
                 name: 'Spanish',
-                skill: '35%' 
-              },
+                skill: '35%'
+              }
             ]
           }
         },
@@ -396,20 +397,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '62%' 
+                skill: '62%'
               },
               {
                 name: 'English',
-                skill: '87%' 
+                skill: '87%'
               },
               {
                 name: 'Hindi',
-                skill: '40%' 
+                skill: '40%'
               },
               {
                 name: 'Spanish',
-                skill: '35%' 
-              },
+                skill: '35%'
+              }
             ]
           }
         },
@@ -448,7 +449,7 @@ export default {
                 title: 'Varsity Tennis',
                 icon: require('../assets/icons/hooch_tennis.jpg'),
                 details: [
-                  'State Finalists',
+                  'State Finalists'
                 ]
               },
               {
@@ -459,7 +460,7 @@ export default {
                   'Organized meetings, a mock investment game, taught lessons on the workings of the stock market, and invited experienced traders as guest speakers to the meetings'
                 ]
               },
-               {
+              {
                 title: 'Bala Vihar',
                 icon: require('../assets/icons/CMA.png'),
                 name: 'Co-President of JCHYK and Student',
@@ -471,20 +472,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '62%' 
+                skill: '62%'
               },
               {
                 name: 'English',
-                skill: '95%' 
+                skill: '95%'
               },
               {
                 name: 'Hindi',
-                skill: '40%' 
+                skill: '40%'
               },
               {
                 name: 'Spanish',
-                skill: '45%' 
-              },
+                skill: '45%'
+              }
             ]
           }
         },
@@ -524,20 +525,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '62%' 
+                skill: '62%'
               },
               {
                 name: 'English',
-                skill: '95%' 
+                skill: '95%'
               },
               {
                 name: 'Hindi',
-                skill: '40%' 
+                skill: '40%'
               },
               {
                 name: 'Spanish',
-                skill: '45%' 
-              },
+                skill: '45%'
+              }
             ]
           }
         },
@@ -584,7 +585,7 @@ export default {
                 'Helped over 41 students ace their exams, leading Principal of CHS, Tim Corrigan to claim, “Thank you for providing this wonderful opportunity for our students.”'
               ]
             },
-              {
+            {
               title: 'President and Founder',
               name: 'Winter Cougar Tennis Camp',
               icon: require('../assets/icons/winterCougarTennis.png'),
@@ -604,14 +605,14 @@ export default {
               addDetails: [
                 'Tutored around 30 high school students, primarily in the class of AP Government'
               ]
-            },
+            }
             ],
             Activities: [
               {
                 title: 'Varsity Tennis',
                 icon: require('../assets/icons/hooch_tennis.jpg'),
                 details: [
-                  'Regional Champions',
+                  'Regional Champions'
                 ]
               },
               {
@@ -634,26 +635,26 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '55%' 
+                skill: '55%'
               }
             ],
             Languages: [
               {
                 name: 'Tamil',
-                skill: '62%' 
+                skill: '62%'
               },
               {
                 name: 'English',
-                skill: '95%' 
+                skill: '95%'
               },
               {
                 name: 'Hindi',
-                skill: '40%' 
+                skill: '40%'
               },
               {
                 name: 'Spanish',
-                skill: '40%' 
-              },
+                skill: '40%'
+              }
             ]
           }
         },
@@ -682,26 +683,26 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '55%' 
+                skill: '55%'
               }
             ],
             Languages: [
               {
                 name: 'Tamil',
-                skill: '62%' 
+                skill: '62%'
               },
               {
                 name: 'English',
-                skill: '95%' 
+                skill: '95%'
               },
               {
                 name: 'Hindi',
-                skill: '40%' 
+                skill: '40%'
               },
               {
                 name: 'Spanish',
-                skill: '45%' 
-              },
+                skill: '45%'
+              }
             ]
           }
         },
@@ -755,7 +756,7 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '70%' 
+                skill: '70%'
               },
               {
                 name: 'Python',
@@ -765,20 +766,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '61%' 
+                skill: '61%'
               },
               {
                 name: 'English',
-                skill: '94%' 
+                skill: '94%'
               },
               {
                 name: 'Hindi',
-                skill: '38%' 
+                skill: '38%'
               },
               {
                 name: 'Spanish',
-                skill: '43%' 
-              },
+                skill: '43%'
+              }
             ]
           }
 
@@ -838,7 +839,7 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '90%' 
+                skill: '90%'
               },
               {
                 name: 'C',
@@ -852,20 +853,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '61%' 
+                skill: '61%'
               },
               {
                 name: 'English',
-                skill: '94%' 
+                skill: '94%'
               },
               {
                 name: 'Hindi',
-                skill: '38%' 
+                skill: '38%'
               },
               {
                 name: 'Spanish',
-                skill: '43%' 
-              },
+                skill: '43%'
+              }
             ]
           }
         },
@@ -908,7 +909,7 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '90%' 
+                skill: '90%'
               },
               {
                 name: 'Selenium Webdriver',
@@ -931,20 +932,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '61%' 
+                skill: '61%'
               },
               {
                 name: 'English',
-                skill: '94%' 
+                skill: '94%'
               },
               {
                 name: 'Hindi',
-                skill: '38%' 
+                skill: '38%'
               },
               {
                 name: 'Spanish',
-                skill: '43%' 
-              },
+                skill: '43%'
+              }
             ]
           }
         },
@@ -998,7 +999,7 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '90%' 
+                skill: '90%'
               },
               {
                 name: 'C',
@@ -1025,20 +1026,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '61%' 
+                skill: '61%'
               },
               {
                 name: 'English',
-                skill: '94%' 
+                skill: '94%'
               },
               {
                 name: 'Hindi',
-                skill: '38%' 
+                skill: '38%'
               },
               {
                 name: 'Spanish',
-                skill: '50%' 
-              },
+                skill: '50%'
+              }
             ]
           }
         },
@@ -1085,7 +1086,7 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '90%' 
+                skill: '90%'
               },
               {
                 name: 'Python',
@@ -1116,20 +1117,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '61%' 
+                skill: '61%'
               },
               {
                 name: 'English',
-                skill: '94%' 
+                skill: '94%'
               },
               {
                 name: 'Hindi',
-                skill: '38%' 
+                skill: '38%'
               },
               {
                 name: 'Spanish',
-                skill: '43%' 
-              },
+                skill: '43%'
+              }
             ]
           }
         },
@@ -1145,7 +1146,7 @@ export default {
               title: 'Software Engineer Internship at Home Depot',
               Location: 'Atlanta, Georgia'
             },
-            Jobs:  [{
+            Jobs: [{
               title: 'Software Engineering Intern',
               name: 'The Home Depot',
               icon: require('../assets/icons/homeDepot.png'),
@@ -1166,15 +1167,15 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '95%' 
+                skill: '95%'
               },
               {
                 name: 'Vue.js',
-                skill: '80%' 
+                skill: '80%'
               },
               {
                 name: 'Node.js',
-                skill: '79%' 
+                skill: '79%'
               },
               {
                 name: 'Python',
@@ -1209,20 +1210,20 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '61%' 
+                skill: '61%'
               },
               {
                 name: 'English',
-                skill: '94%' 
+                skill: '94%'
               },
               {
                 name: 'Hindi',
-                skill: '38%' 
+                skill: '38%'
               },
               {
                 name: 'Spanish',
-                skill: '43%' 
-              },
+                skill: '43%'
+              }
             ]
           }
         },
@@ -1277,15 +1278,15 @@ export default {
             CLanguages: [
               {
                 name: 'Java',
-                skill: '95%' 
+                skill: '95%'
               },
               {
                 name: 'Vue.js',
-                skill: '80%' 
+                skill: '80%'
               },
               {
                 name: 'Node.js',
-                skill: '79%' 
+                skill: '79%'
               },
               {
                 name: 'Python',
@@ -1316,7 +1317,7 @@ export default {
                 skill: '15%'
               }
 
-            ],
+            ]
           }
         },
         // year 3 semester 2 at gatech
@@ -1331,7 +1332,7 @@ export default {
               title: 'Junior year 2nd semester at GA Tech',
               Location: 'Atlanta, Georgia'
             },
-            Jobs:[{
+            Jobs: [{
               title: 'Resident Advisor at North Avenue South Apartments',
               name: 'Georgia Institute of Technology',
               icon: require('../assets/icons/gatech.png'),
@@ -1362,44 +1363,44 @@ export default {
               {
                 title: 'Day in the Lobby',
                 details: [
-                'Installing cameras in the College of Computing to count number of people in the lobby',
-                "Used a Node server along with Microsoft's Face API for the counting",
-                'Passed the counted data into a Vue application using D3 for data analytics'
-              ]
-            },
-            {
-              title: 'LinkedOut',
-              details: [
-                'Scraping LinkedIn data of GT Alumni, then visualizing the results of various ML algorithms to extract data'
-              ]},
-            {
-              title: 'My Finances',
-              details: [
-                'Developing a personalized finance website to replace my use of Intuit Mint'
-              ]},
+                  'Installing cameras in the College of Computing to count number of people in the lobby',
+                  "Used a Node server along with Microsoft's Face API for the counting",
+                  'Passed the counted data into a Vue application using D3 for data analytics'
+                ]
+              },
               {
-              title: 'My Tasks',
-              details: [
-                'Developing a personalized to-do app that caters to my needs and habits'
-              ]},
-                {
-              title: 'Internship Search Visualization',
-              details: [
-                'Developing a visualization using D3 and collected data of the timeline of my 2019 summer internship search'
-              ]}
+                title: 'LinkedOut',
+                details: [
+                  'Scraping LinkedIn data of GT Alumni, then visualizing the results of various ML algorithms to extract data'
+                ]},
+              {
+                title: 'My Finances',
+                details: [
+                  'Developing a personalized finance website to replace my use of Intuit Mint'
+                ]},
+              {
+                title: 'My Tasks',
+                details: [
+                  'Developing a personalized to-do app that caters to my needs and habits'
+                ]},
+              {
+                title: 'Internship Search Visualization',
+                details: [
+                  'Developing a visualization using D3 and collected data of the timeline of my 2019 summer internship search'
+                ]}
             ],
-                        CLanguages: [
+            CLanguages: [
               {
                 name: 'Java',
-                skill: '95%' 
+                skill: '95%'
               },
               {
                 name: 'Vue.js',
-                skill: '80%' 
+                skill: '80%'
               },
               {
                 name: 'Node.js',
-                skill: '79%' 
+                skill: '79%'
               },
               {
                 name: 'Python',
@@ -1433,26 +1434,26 @@ export default {
             Languages: [
               {
                 name: 'Tamil',
-                skill: '61%' 
+                skill: '61%'
               },
               {
                 name: 'English',
-                skill: '94%' 
+                skill: '94%'
               },
               {
                 name: 'Hindi',
-                skill: '38%' 
+                skill: '38%'
               },
               {
                 name: 'Spanish',
-                skill: '43%' 
-              },
+                skill: '43%'
+              }
             ]
           }
         }
       }
     }
-    }
+  }
 }
 
 </script>

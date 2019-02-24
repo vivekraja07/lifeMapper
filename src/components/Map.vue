@@ -1,7 +1,5 @@
 <template>
-    <div id="mapContainer">
         <div id="map"></div>
-    </div>
 </template>
 
 <script>
@@ -50,14 +48,6 @@ export default {
 </script>
 
 <style scoped>
-
-#mapContainer {
-  width: 50%;
-  height: 90%;
-  display: inline-block;
-  font-size: 1rem;
-
-}
 
 #map {
   width: 100%;
