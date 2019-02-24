@@ -1,10 +1,36 @@
 <template>
   <div id="profile">
       <div class = "logoHolder">
-          <img src="../assets/econ2.png">
+          <img id="vivek" src="../assets/econ2.png">
       </div>
 
       <h1> Vivekanand Rajasekar </h1>
+      <blockquote> 
+        <p>"Never discount the power of enthusiasm."</p>
+        <footer>-Sarah Chang</footer>
+        </blockquote>
+      <br>
+      <div class = "icons">
+        <div class = "iconHolder">
+            <a href="https://www.linkedin.com/in/vivekraja07/">
+              <img src="../assets/linkedin.png">
+            </a>
+        </div>
+
+        <div class = "iconHolder">
+            <a href="https://github.com/vivekraja07">
+              <img src="../assets/github.png">
+            </a>
+        </div>
+
+        <div class = "iconHolder">
+          <a href="https://devpost.com/VivekanandRajasekar">
+            <img src="../assets/devpost.jpg">
+          </a>
+        </div>
+      </div>
+
+
 
   </div>
 </template>
@@ -28,6 +54,16 @@ export default {
   width: 100%;
   height: 100%;
   text-align: center;
+  overflow: auto;
+}
+
+blockquote {
+  padding: 20px;
+}
+
+blockquote p {
+    font-size: 20pt;
+    font-style: italic;
 }
 
 .logoHolder {
@@ -37,10 +73,29 @@ export default {
   padding-bottom: 10px;
 }
 
-img {
+#vivek {
   width: 90%;
   height: 60%;
-  
 }
+
+.iconHolder {
+  width: 72px;
+  height: 72px;
+}
+
+img {
+    border-radius: 6px;
+    border: 4px solid transparent;
+    height: 64px;
+    width: 64px;
+}
+
+.icons {
+  display: flex;
+  justify-content:  space-around;
+  align-content: center;
+  flex-direction: row;
+}
+
 
 </style>

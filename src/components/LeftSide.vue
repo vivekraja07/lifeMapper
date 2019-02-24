@@ -1,16 +1,24 @@
 <template>
   <div id="container">
      <div class="toggle">
-        Vivekanand Rajasekar
-        <br>
-          <!-- <INPUT TYPE="radio" id="map" :value="true" v-model="isMap"/>
-          <label for="map">Map</label>
-          <INPUT TYPE="radio" id="profile" :value="false" v-model="isMap"/>
-          <label for="profile">Profile</label>
-        {{isMap}} -->
+
+        <div class = "buttons">
+          <div>
+            <input type="radio" id="one" value="Map" v-model="pick">
+            <label for="one">Map</label>
+          </div>
+          <div>
+            <input type="radio" id="two" value="Profile" v-model="pick">
+            <label for="two">Profile</label>
+          </div>
+        </div>
+
       </div>
+
       <div class="main">
-        <component :is="dynamicComponent" v-bind:events="events"/>
+        <keep-alive>
+          <component :is="pick" v-bind:events="events"/>
+        </keep-alive>
       </div>
   </div>
 </template>
@@ -31,16 +39,7 @@ export default {
   },
   data: function() {
     return {
-      isMap: false
-    }
-  },
-  computed: {
-    dynamicComponent() {
-      if(this.isMap) {
-        return Map
-      } else {
-        return Profile
-      }
+      pick: 'Map'
     }
   }
 }
@@ -63,7 +62,22 @@ export default {
 
   background: black;
   color: white;
-  border-right: 1px white solid;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 30px;
+  width: 100%;
+
 }
 
 .main {
