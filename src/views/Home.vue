@@ -6,6 +6,7 @@
     <LeftSide v-bind:events="x"/>
     <Information v-bind:events="x"/>
     <Timeline v-bind:events="x"/>
+    <Form v-if="showModal" @close="showModal = false"></Form>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import Information from '@/components/Information.vue'
 import Timeline from '@/components/Timeline.vue'
 import Sidebar from '@/components/Sidebar.vue'
 import LeftSide from '@/components/LeftSide.vue'
+import Form from '@/components/Form.vue'
 
 export default {
   name: 'home',
@@ -22,11 +24,13 @@ export default {
     Information,
     Timeline,
     Sidebar,
-    LeftSide
+    LeftSide,
+    Form
   },
   data: function () {
     return {
       // data
+      showModal: true,
       x: {
         // born in Tirupur
         'January 12, 1998 to June 1999': {
@@ -34,7 +38,7 @@ export default {
           end: 'June-1999',
           loc: [11.1085, 77.3411],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'This is where the story begins folks.',
@@ -54,7 +58,7 @@ export default {
           end: 'May-2003',
           loc: [11.0168, 76.9558],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Moved to the neighboring, more industrial city',
@@ -91,7 +95,7 @@ export default {
           end: 'May-2005',
           loc: [23.020999, 72.5252289],
           zoom: 20,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Moved to the distant state of Gujarat, where I learned some new languages',
@@ -125,7 +129,7 @@ export default {
           end: 'October-2007',
           loc: [28.5735143, 77.36474339999995],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Moved to the distant state of Uttar Pradesh, which is on the outskirts of Delhi. ',
@@ -159,7 +163,7 @@ export default {
           end: 'May-2009',
           loc: [34.056411, -84.196612],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Arrived at the US of A.',
@@ -193,10 +197,10 @@ export default {
           end: 'July-2012',
           loc: [34.067403, -84.231445],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
-              title: 'These 3 years of middle school were a period of great growth and development',
+              title: '6th to 8th Grade',
               Location: 'Alpharetta, Georgia'
             },
             Education: {
@@ -208,9 +212,9 @@ export default {
             Activities: [{
               title: 'Bala Vihar',
               icon: require('../assets/icons/CMA.png'),
-              name: 'Co-President of JCHYK and Student',
+              name: 'Student',
               details: [
-                'Lead discussions and service projects'
+                'Participated in discussions and service projects'
               ]
             }],
             Languages: [
@@ -240,7 +244,7 @@ export default {
           end: 'July-2013',
           loc: [34.049821, -84.208407],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: '9th grade',
@@ -268,9 +272,9 @@ export default {
             Activities: [{
               title: 'Bala Vihar',
               icon: require('../assets/icons/CMA.png'),
-              name: 'Co-President of JCHYK and Student',
+              name: 'Student',
               details: [
-                'Lead discussions and service projects'
+                'Participated in discussions and service projects'
               ]
             }],
             Languages: [
@@ -299,7 +303,7 @@ export default {
           end: 'May-2014',
           loc: [34.049821, -84.208407],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: '10th Grade',
@@ -334,9 +338,9 @@ export default {
               {
                 title: 'Bala Vihar',
                 icon: require('../assets/icons/CMA.png'),
-                name: 'Co-President of JCHYK and Student',
+                name: 'Student',
                 details: [
-                  'Lead discussions and service projects'
+                  'Participated in discussions and service projects'
                 ]
               }
             ],
@@ -366,7 +370,7 @@ export default {
           end: 'July-2014',
           loc: [34.047090, -84.179381],
           zoom: 20,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Sandwich Artist at Subway',
@@ -420,7 +424,7 @@ export default {
           end: 'May-2015',
           loc: [34.049821, -84.208407],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: '11th grade',
@@ -463,9 +467,9 @@ export default {
               {
                 title: 'Bala Vihar',
                 icon: require('../assets/icons/CMA.png'),
-                name: 'Co-President of JCHYK and Student',
+                name: 'Student',
                 details: [
-                  'Lead discussions and service projects'
+                  'Participated in discussions and service projects'
                 ]
               }
             ],
@@ -495,7 +499,7 @@ export default {
           end: 'July-2015',
           loc: [34.045314, -84.307211],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'TopGolf + Cross-Country + Tutoring',
@@ -548,7 +552,7 @@ export default {
           end: 'May-2016',
           loc: [34.049821, -84.208407],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: '12th grade',
@@ -664,7 +668,7 @@ export default {
           end: 'August-2016',
           loc: [33.776497, -84.387357],
           zoom: 18,
-          options: { duration: 10 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Financial Analyst Internship',
@@ -712,7 +716,7 @@ export default {
           end: 'December-2016',
           loc: [33.777378, -84.395516],
           zoom: 18,
-          options: { duration: 8 },
+          options: { duration: 1 },
           info: {
             General: {
               title: 'Freshman year 1st semester at GA Tech',
@@ -790,7 +794,7 @@ export default {
           end: 'May-2017',
           loc: [33.777378, -84.395516],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Freshman year 2nd semester at GA Tech',
@@ -876,7 +880,7 @@ export default {
           end: 'August-2017',
           loc: [44.305783, -88.387126],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Software Engineer Internship at Thrivent Financial',
@@ -956,7 +960,7 @@ export default {
           end: 'December-2017',
           loc: [33.777378, -84.395516],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Sophomore year 1st semester at GA Tech',
@@ -1049,7 +1053,7 @@ export default {
           end: 'May-2018',
           loc: [33.777378, -84.395516],
           zoom: 18,
-          options: { duration: 8 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Sophomore year 2nd semester at GA Tech',
@@ -1140,7 +1144,7 @@ export default {
           end: 'August-2018',
           loc: [33.865961, -84.482348],
           zoom: 18,
-          options: { duration: 15 },
+          options: { duration: 4 },
           info: {
             General: {
               title: 'Software Engineer Internship at Home Depot',
@@ -1233,7 +1237,7 @@ export default {
           end: 'December-2018',
           loc: [33.777378, -84.395516],
           zoom: 18,
-          options: { duration: 8 },
+          options: { duration: 1 },
           info: {
             General: {
               title: 'Junior year 1st semester at GA Tech',
@@ -1243,7 +1247,7 @@ export default {
               title: 'Resident Advisor at North Avenue South Apartments',
               name: 'Georgia Institute of Technology',
               icon: require('../assets/icons/gatech.png'),
-              range: 'Sep 2018 - Dec 2018 • 5 mos',
+              range: 'August 2018 - May 2019 • 1 year',
               location: 'GT Campus',
               addDetails: [
                 'Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues'
@@ -1317,6 +1321,24 @@ export default {
                 skill: '15%'
               }
 
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%'
+              },
+              {
+                name: 'English',
+                skill: '94%'
+              },
+              {
+                name: 'Hindi',
+                skill: '38%'
+              },
+              {
+                name: 'Spanish',
+                skill: '43%'
+              }
             ]
           }
         },
@@ -1326,7 +1348,7 @@ export default {
           end: 'May-2018',
           loc: [33.777378, -84.395516],
           zoom: 18,
-          options: { duration: 8 },
+          options: { duration: 1 },
           info: {
             General: {
               title: 'Junior year 2nd semester at GA Tech',
@@ -1336,7 +1358,7 @@ export default {
               title: 'Resident Advisor at North Avenue South Apartments',
               name: 'Georgia Institute of Technology',
               icon: require('../assets/icons/gatech.png'),
-              range: 'Jan 2019 - May 2019 • 5 mos',
+              range: 'August 2018 - May 2019 • 1 year',
               location: 'GT Campus',
               addDetails: [
                 'Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues'
@@ -1352,10 +1374,11 @@ export default {
                 rows: [
                   ['CS 3312', 'Junior Design - Part 2', '2'],
                   ['CS 4001', 'Computing & Society', '3'],
-                  ['CS 4460', 'Intro Info Visualization', '3'],
+                  ['CS 4460', 'Info Visualization', '3'],
                   ['CS 4510', 'Automata & Complexity', '3'],
-                  ['CS 4675', 'Internet Systems & Services', '1'],
-                  ['MATH 2802', 'Advanced Linear Algebra', '2']
+                  ['CS 4675', 'Internet Systems & Services', '3'],
+                  ['MATH 2802', 'Advanced Linear Algebra', '2'],
+                  ['LMC 3431', 'Technical Communication Approaches', '1']
                 ]
               }
             },

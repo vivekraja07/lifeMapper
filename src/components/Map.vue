@@ -22,7 +22,7 @@ export default {
   },
   watch: {
     'active': function () {
-      this.map.flyTo(this.events[this.active].loc, this.events[this.active].zoom, this.events[this.active].options)
+      this.map.setView(this.events[this.active].loc, this.events[this.active].zoom, this.events[this.active].options)
     }
   },
   computed: {
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     initMap () {
-      this.map = L.map('map').setView([39.8283, -98.5795], 4)
+      this.map = L.map('map').setView(this.events[this.active].loc, this.events[this.active].zoom, this.events[this.active].options)
       this.tileLayer = L.tileLayer(
         'http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
           maxZoom: 20,

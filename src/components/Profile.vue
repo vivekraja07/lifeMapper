@@ -6,7 +6,7 @@
 
       <h1> Vivekanand Rajasekar </h1>
       <blockquote> 
-        <p>"Never discount the power of enthusiasm."</p>
+        <p>"Never discount the power of enthusiasm"</p>
         <footer>-Sarah Chang</footer>
         </blockquote>
       <br>
@@ -26,6 +26,12 @@
         <div class = "iconHolder">
           <a href="https://devpost.com/VivekanandRajasekar">
             <img src="../assets/devpost.jpg">
+          </a>
+        </div>
+
+        <div class = "iconHolder">
+          <a href="https://www.dropbox.com/s/32nohng7ime0t8o/VivekRaja.pdf?dl=0" target="_blank">
+            <img src="../assets/resume.png">
           </a>
         </div>
       </div>

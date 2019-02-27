@@ -189,7 +189,7 @@ export default {
       var size = Object.keys(this.events).length
       var index = Object.keys(this.events).indexOf(this.active)
       if (index + 1 >= size) {
-        alert('This is still a mystery! Google?')
+        console.log('This is still a mystery! Google?')
       } else {
         this.activeSet(Object.keys(this.events)[index + 1])
       }
@@ -197,7 +197,7 @@ export default {
     getPrev () {
       var index = Object.keys(this.events).indexOf(this.active)
       if (index - 1 < 0) {
-        alert('This is out of scope for this project!')
+        console.log('This is out of scope for this project!')
       } else {
         this.activeSet(Object.keys(this.events)[index - 1])
       }
