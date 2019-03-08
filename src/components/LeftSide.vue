@@ -4,12 +4,16 @@
 
         <div class = "buttons">
           <div>
-            <input type="radio" id="one" value="Map" v-model="pick">
+            <input type="radio" id="one" value="Map" v-model="pick" @input="blur">
             <label for="one">Map</label>
           </div>
           <div>
-            <input type="radio" id="two" value="Profile" v-model="pick">
+            <input type="radio" id="two" value="Profile" v-model="pick" @input="blur">
             <label for="two">Profile</label>
+          </div>
+          <div>
+            <input type="radio" id="three" value="Projects" v-model="pick" @input="blur">
+            <label for="three">Projects</label>
           </div>
         </div>
 
@@ -40,6 +44,11 @@ export default {
   data: function() {
     return {
       pick: 'Profile'
+    }
+  },
+  methods: {
+    blur: function (event) {
+      event.target.blur();
     }
   }
 }
