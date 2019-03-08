@@ -3,7 +3,7 @@
     <!-- <img src="../assets/logo.png"> -->
     <!-- <Sidebar/> -->
     
-    <LeftSide v-bind:events="x"/>
+    <LeftSide v-bind:events="x" v-bind:projects="projects"/>
     <Information v-bind:events="x"/>
     <Timeline v-bind:events="x"/>
     <Form v-if="showModal" @close="showModal = false"></Form>
@@ -1473,8 +1473,36 @@ export default {
               }
             ]
           }
-        }
-      }
+        },
+        
+      },
+      projects: 
+        [
+          {
+              title: 'SYNCRUS (Winner at HackGT)',
+              details: [
+                'We were inspired by the data set provided by NCR to build a data visualization of a stores best selling departments in different cities across the nation',
+                'We also build a simulation of shoppers to analyze the efficiency and shopper-friendly design of the stores locations per city.',
+                'We wanted to create a analytical view of the entire lifecycle of selling a product, from warehouse distribution to product placement within each specific store.'
+              ]
+            },
+            {
+              title: 'Expense Report',
+              details: [
+                'Created an Expense Report using VBA that would forecast spending based on current trends, had budgetary capabilities, and had a friendly UI'
+              ]
+            },
+          {
+              title: 'Gameboy Game: Drone Wars',
+              details: [
+                'For CS 2110, created a gameboy game called Drone Wars in which a drone would roam the screen dropping bombs',
+                'The player will have to dodge the bombs while simultaneously shooting bullets back up at the drones',
+                'This game was written using native C'
+              ]
+            }
+
+        ]
+      
     }
   }
 }

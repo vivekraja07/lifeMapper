@@ -21,7 +21,7 @@
 
       <div class="main">
         <keep-alive>
-          <component :is="pick" v-bind:events="events"/>
+          <component :is="pick" v-bind:events="events" v-bind:projects="projects"/>
         </keep-alive>
       </div>
   </div>
@@ -30,16 +30,19 @@
 <script>
 // @ is an alias to /src
 import Map from '@/components/Map.vue'
+import Projects from '@/components/Projects.vue'
 import Profile from '@/components/Profile.vue'
 
 export default {
   name: 'LeftSide',
   components: {
     Profile,
-    Map
+    Map,
+    Projects
   },
   props: {
-    events: Object
+    events: Object,
+    projects: Array
   },
   data: function() {
     return {
