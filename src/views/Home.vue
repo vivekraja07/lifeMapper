@@ -1247,7 +1247,7 @@ export default {
               title: 'Resident Advisor at North Avenue South Apartments',
               name: 'Georgia Institute of Technology',
               icon: require('../assets/icons/gatech.png'),
-              range: 'August 2018 - May 2019 • 1 year',
+              range: 'Aug 2018 - May 2019 • 1 year',
               location: 'GT Campus',
               addDetails: [
                 'Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues'
@@ -1358,7 +1358,7 @@ export default {
               title: 'Resident Advisor at North Avenue South Apartments',
               name: 'Georgia Institute of Technology',
               icon: require('../assets/icons/gatech.png'),
-              range: 'August 2018 - May 2019 • 1 year',
+              range: 'Aug 2018 - May 2019 • 1 year',
               location: 'GT Campus',
               addDetails: [
                 'Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues'
@@ -1484,13 +1484,22 @@ export default {
                 'We were inspired by the data set provided by NCR to build a data visualization of a stores best selling departments in different cities across the nation',
                 'We also build a simulation of shoppers to analyze the efficiency and shopper-friendly design of the stores locations per city.',
                 'We wanted to create a analytical view of the entire lifecycle of selling a product, from warehouse distribution to product placement within each specific store.'
-              ]
+              ],
+              range: 'Oct 13, 2017 - Oct 15, 2017 • 48 hours',
+              link: 'https://vivekraja07.github.io/store_efficiency',
+              tags: ['D3.js', 'Flask', 'Unity', 'SQLite'],
+              github: 'https://github.com/vivekraja07/store_efficiency',
+              devpost: 'https://devpost.com/software/tbd-2853e9'
             },
             {
               title: 'Expense Report',
               details: [
                 'Created an Expense Report using VBA that would forecast spending based on current trends, had budgetary capabilities, and had a friendly UI'
-              ]
+              ],
+              range: '',
+              link: '',
+              tags: '',
+              github: ''
             },
           {
               title: 'Gameboy Game: Drone Wars',
@@ -1498,7 +1507,11 @@ export default {
                 'For CS 2110, created a gameboy game called Drone Wars in which a drone would roam the screen dropping bombs',
                 'The player will have to dodge the bombs while simultaneously shooting bullets back up at the drones',
                 'This game was written using native C'
-              ]
+              ],
+              range: '',
+              link: '',
+              tags: '',
+              github: ''
             }
 
         ]
