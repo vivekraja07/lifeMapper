@@ -32,7 +32,7 @@ export default {
       // data
       // showModal: true,
       //temporary @TODO
-      showModal: false,
+      showModal: true,
       x: {
         // born in Tirupur
         'January 12, 1998 to June 1999': {

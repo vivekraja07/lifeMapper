@@ -46,10 +46,10 @@ export default {
   },
   data: function() {
     return {
-      // pick: 'Profile'
+       pick: 'Profile'
       //@TODO
       //temporary for testing purposes:
-      pick: 'Projects'
+      //pick: 'Projects'
     }
   },
   methods: {
