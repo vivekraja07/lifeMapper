@@ -2,21 +2,32 @@
     <div id = "projects">
         <div class="Project" v-for="(project, index) in projects" :key="index">
             <h3 class="title">
-                <a :href="project.link"> {{project.title}}
-                    <img src="../assets/external.png" alt="logo"/>
+                <a :href="project.link" v-if="!project.routerLink"> {{project.title}}
+                    <img v-if="project.link" src="../assets/external.png" alt="logo"/>
                 </a>
+            <router-link v-if="project.routerLink" :to="{name: project.routerLink.name, params: project.routerLink.props}">
+              {{project.title}}
+              <img src="../assets/external.png" alt="logo"/>
+            </router-link>
             </h3>
             <h5 class = "timeRange"> {{project.range}} </h5>
             <li v-for="point in project.details" :key="point">
                 {{point}}
             </li>
 
-            <span class="label" :class="tag" v-for="tag in project.tags" :key="tag">{{tag}}</span>
-            <div> 
-                 <img class="git" src="../assets/github_mark.png" alt="logo"/>
-                <img class="dev" src="../assets/devpost.jpg" alt="logo"/>
+            <div class="container">
+                <span class="label" :class="tag" v-for="tag in project.tags" :key="tag">{{tag}}</span>
+            </div>
+            <div class="container">
+                <a :href="project.github" v-if="project.github"> 
+                  <img class="git" src="../assets/github_mark.png" alt="logo"/>
+                </a>
+                <a :href="project.devpost" v-if="project.devpost"> 
+                 <img class="dev" src="../assets/devpost.jpg" alt="logo"/>
+                </a>
             </div>
         </div>
+
     </div>
 
 
@@ -33,16 +44,36 @@ export default {
 
 <style scoped>
 
+
+#projects {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: auto;
+}
+
+.container {
+    display:flex;
+    justify-content: center;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.git,.dev {
+    padding-left:  5px;
+    padding-right: 5px;
+}
+
 .label {
   color: white;
   padding: 8px;
 }
 
-.D3\.js {background-color: #4CAF50;} /* Green */
-.Flask {background-color: #2196F3;} /* Blue */
-.Unity {background-color: #ff9800;} /* Orange */
-.SQLite {background-color: #f44336;} /* Red */ 
-.other {background-color: #e7e7e7; color: black;} /* Gray */
+.D3\.js, .Vue\.js, .AntHill {background-color: #4CAF50;} /* Green */
+.Flask, .Selenium.WebDriver, .Pivotal.Cloud.Foundry, .Maven {background-color: #2196F3;} /* Blue */
+.Unity, .Apache.POI, .Node\.js {background-color: #ff9800;} /* Orange */
+.SQLite, .Java, .MariaDB, .Jenkins {background-color: #f44336;} /* Red */ 
+.C, .VBA, .Jasmine, .Jest {background-color: #a51f83;} /* Gray */
 
 .dev {
     width: 32px;

@@ -1,133 +1,133 @@
 <template>
 
-    <div id='features'>
-        <div class="dates">
-            <b class="previous round" v-on:click="getPrev()">&#8249;</b>
-            <h3 id="date">{{active}}</h3>
-            <b class="next round" v-on:click="getNext()">&#8250;</b>
-        </div>
-
-        <div id = "events">
-            <section v-for="(value, propertyName, index) in events[active].info" :key="index">
-                    <div class = "School" v-if="propertyName=='school' || propertyName=='Education'">
-                      <div class = "logoHolder">
-                          <img :src="value.icon"/>
-                      </div>
-                      <div class = "summaryInfo" v-if="value.icon">
-                          <h3 class = "title"> {{value.title}} </h3>
-                          <h4 class = "name"> {{value.name}} </h4>
-                          <h5 class = "timeRange"> {{value.range}} </h5>
-                          <h5 v-if="value.location" class = "location"> {{value.location}} </h5>
-                      </div>
-                       <div class = "extraDetails" v-if="value.courses || value.addDetails">
-                        <table v-if="value.courses">
-                            <thead>
-                                <tr>
-                                    <th v-for="(value, index) in value.courses.columns" :key="index">
-                                        {{value}}
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr v-for="(value, index) in value.courses.rows" :key="index">
-                                <td v-for="(key, index) in value" :key="index">
-                                    {{key}}
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <li v-for="point in value.addDetails" :key="point">
-                            {{point}}
-                        </li>
-                      </div>
-
-                    </div>
-
-                    <div class = "Jobs" v-if="propertyName=='Jobs'">
-                      <h2 class="sectionTitle">Jobs</h2>
-                      <div class="Job" v-for="job in value" :key="job.title">
-                        <div class = "logoHolder" v-if="job.icon">
-                          <img :src="job.icon"/>
-                        </div>
-                        <div class = "summaryInfo" v-if="job.icon">
-                          <h3 class = "title"> {{job.title}} </h3>
-                          <h4 class = "name"> {{job.name}} </h4>
-                          <h5 class = "timeRange"> {{job.range}} </h5>
-                          <h5 v-if="job.location" class = "location"> {{job.location}} </h5>
-                        </div>
-
-                        <div class = "extraDetails" v-if="job.addDetails">
-                          <li v-for="point in job.addDetails" :key="point">
-                              {{point}}
-                          </li>
-                        </div>
-                      </div>
-
-                    </div>
-
-                    <div class = "general" v-if="propertyName=='General'">
-                        <h3 class = "title"> General </h3>
-                        <li> {{value.title}} </li>
-                        <li> {{value.Location}} </li>
-                    </div>
-
-                    <div class = "Languages" v-if="propertyName=='Languages'">
-                        <h3 class = "sectionTitle"> Civilian Languages </h3>
-
-                        <div v-for="(language, index) in value" :key="language.name">
-                          <p> {{language.name}} </p>
-                            <div class="container">
-                              <div class = "skills" :style="{width: language.skill, 'background-color': colors[index]}">{{language.skill}} </div>
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class = "Languages" v-if="propertyName=='CLanguages'">
-                        <h3 class = "sectionTitle"> Computer Languages </h3>
-
-                        <div v-for="(language, index) in value" :key="language.name">
-                          <p> {{language.name}} </p>
-                            <div class="container">
-                              <div class="skills" :style="{width: language.skill, 'background-color': comp_colors[index]}">{{language.skill}} </div>
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="Projects" v-if="propertyName=='Projects'">
-                        <h2 class="sectionTitle"> Projects</h2>
-                        <div class="Project" v-for="project in value" v-on:click="sideBarToggle()" :key="project.title">
-                            <h3 class="title"> {{project.title}} </h3>
-                            <li v-for="point in project.details" :key="point">
-                                {{point}}
-                            </li>
-                        </div>
-                    </div>
-
-                    <div class="Activities" v-if="propertyName=='Activities'">
-                        <h2 class="sectionTitle">Activities</h2>
-                      <div class="Activity" v-for="activity in value" :key="activity.name">
-                        <div class = "logoHolder">
-                          <img :src="activity.icon"/>
-                        </div>
-                        <div class = "summaryInfo">
-                          <h3 class = "title"> {{activity.title}} </h3>
-                          <h4 class = "name"> {{activity.name}} </h4>
-                          <h5 class = "timeRange"> {{activity.range}} </h5>
-                        </div>
-
-                        <div class = "extraDetails">
-                          <li v-for="point in activity.details" :key="point">
-                              {{point}}
-                          </li>
-                        </div>
-                      </div>
-                    </div>
-
-            </section>
-        </div>
-
+  <div id='features'>
+    <div class="dates">
+        <b class="previous round" v-on:click="getPrev()">&#8249;</b>
+        <h3 id="date">{{active}}</h3>
+        <b class="next round" v-on:click="getNext()">&#8250;</b>
     </div>
+
+    <div id = "events">
+      <section v-for="(value, propertyName, index) in events[active].info" :key="index">
+        <div class = "School" v-if="propertyName=='school' || propertyName=='Education'">
+          <div class = "logoHolder">
+              <img :src="value.icon"/>
+          </div>
+          <div class = "summaryInfo" v-if="value.icon">
+              <h3 class = "title"> {{value.title}} </h3>
+              <h4 class = "name"> {{value.name}} </h4>
+              <h5 class = "timeRange"> {{value.range}} </h5>
+              <h5 v-if="value.location" class = "location"> {{value.location}} </h5>
+          </div>
+            <div class = "extraDetails" v-if="value.courses || value.addDetails">
+            <table v-if="value.courses">
+                <thead>
+                    <tr>
+                        <th v-for="(value, index) in value.courses.columns" :key="index">
+                            {{value}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(value, index) in value.courses.rows" :key="index">
+                    <td v-for="(key, index) in value" :key="index">
+                        {{key}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <li v-for="point in value.addDetails" :key="point">
+                {{point}}
+            </li>
+          </div>
+
+        </div>
+
+        <div class = "Jobs" v-if="propertyName=='Jobs'">
+          <h2 class="sectionTitle">Jobs</h2>
+          <div class="Job" v-for="(job, index) in value" :key="index">
+            <div class = "logoHolder" v-if="job.icon">
+              <img :src="job.icon"/>
+            </div>
+            <div class = "summaryInfo" v-if="job.icon">
+              <h3 class = "title"> {{job.title}} </h3>
+              <h4 class = "name"> {{job.name}} </h4>
+              <h5 class = "timeRange"> {{job.range}} </h5>
+              <h5 v-if="job.location" class = "location"> {{job.location}} </h5>
+            </div>
+
+            <div class = "extraDetails" v-if="job.addDetails">
+              <li v-for="point in job.addDetails" :key="point">
+                  {{point}}
+              </li>
+            </div>
+          </div>
+
+        </div>
+
+        <div class = "general" v-if="propertyName=='General'">
+            <h3 class = "title"> General </h3>
+            <li> {{value.title}} </li>
+            <li> {{value.Location}} </li>
+        </div>
+
+        <div class = "Languages" v-if="propertyName=='Languages'">
+            <h3 class = "sectionTitle"> Civilian Languages </h3>
+
+            <div v-for="(language, index) in value" :key="language.name">
+              <p> {{language.name}} </p>
+                <div class="container">
+                  <div class = "skills" :style="{width: language.skill, 'background-color': colors[index]}">{{language.skill}} </div>
+              </div>
+            </div>
+        </div>
+
+        <div class = "Languages" v-if="propertyName=='CLanguages'">
+            <h3 class = "sectionTitle"> Computer Languages </h3>
+
+            <div v-for="(language, index) in value" :key="language.name">
+              <p> {{language.name}} </p>
+                <div class="container">
+                  <div class="skills" :style="{width: language.skill, 'background-color': comp_colors[index]}">{{language.skill}} </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="Projects" v-if="propertyName=='Projects'">
+            <h2 class="sectionTitle"> Projects</h2>
+            <div class="Project" v-for="project in value" v-on:click="sideBarToggle()" :key="project.title">
+                <h3 class="title"> {{project.title}} </h3>
+                <li v-for="point in project.details" :key="point">
+                    {{point}}
+                </li>
+            </div>
+        </div>
+
+        <div class="Activities" v-if="propertyName=='Activities'">
+            <h2 class="sectionTitle">Activities</h2>
+          <div class="Activity" v-for="activity in value" :key="activity.name">
+            <div class = "logoHolder">
+              <img :src="activity.icon"/>
+            </div>
+            <div class = "summaryInfo">
+              <h3 class = "title"> {{activity.title}} </h3>
+              <h4 class = "name"> {{activity.name}} </h4>
+              <h5 class = "timeRange"> {{activity.range}} </h5>
+            </div>
+
+            <div class = "extraDetails">
+              <li v-for="point in activity.details" :key="point">
+                  {{point}}
+              </li>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </div>
 </template>
 
 <script>

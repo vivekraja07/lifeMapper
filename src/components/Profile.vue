@@ -30,7 +30,7 @@
         </div>
 
         <div class = "iconHolder">
-          <a href="https://www.dropbox.com/s/32nohng7ime0t8o/VivekRaja.pdf?dl=0" target="_blank">
+          <a href="https://www.dropbox.com/s/fy0h3cu9kgvxjbg/VivekRaja.pdf?dl=0" target="_blank">
             <img src="../assets/resume.png">
           </a>
         </div>
