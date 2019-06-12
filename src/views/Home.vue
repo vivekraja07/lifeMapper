@@ -1,12 +1,29 @@
 <template>
   <div class="home">
+
     <!-- <img src="../assets/logo.png"> -->
     <!-- <Sidebar/> -->
     
-    <LeftSide v-bind:events="x" v-bind:projects="projects"/>
-    <Information v-bind:events="x"/>
-    <Timeline v-bind:events="x"/>
-    <Form v-if="showModal" @close="showModal = false"></Form>
+    <LeftSide v-bind:events="x" v-bind:projects="projects" v-if="$mq != 'sm'"/>
+    <Information v-bind:events="x" v-if="$mq != 'sm'"/>
+    <Timeline v-bind:events="x" v-if="$mq != 'sm'"/>
+    <Form v-if="showModal && $mq != 'sm'" @close="showModal = false" ></Form>
+    <div class="mobile" v-if="$mq === 'sm'">
+      Hello! Welcome to Vivek's page. 
+      <br>
+      <br>
+      Unfortunately, looks like your screen is too small!
+      <br>
+      <br>
+      This page has been specially designed for larger screens and an upright spine.
+      <br>
+      <br>
+      Please go to VivekRaja.me from a larger screen to learn about Vivek!
+
+      <Profile/>
+      
+    </div>
+
   </div>
 </template>
 
@@ -18,6 +35,8 @@ import Sidebar from '@/components/Sidebar.vue'
 import LeftSide from '@/components/LeftSide.vue'
 import Form from '@/components/Form.vue'
 
+import Profile from '@/components/Profile.vue'
+
 export default {
   name: 'home',
   components: {
@@ -25,7 +44,8 @@ export default {
     Timeline,
     Sidebar,
     LeftSide,
-    Form
+    Form,
+    Profile
   },
   data: function () {
     return {
@@ -1485,7 +1505,7 @@ export default {
           options: { duration: 1 },
           info: {
             General: {
-              title: 'Software Engineering Internship at Qualtrics',
+              title: 'Software Engineer Internship at Qualtrics',
               Location: 'Seattle, Washington'
             },
             Jobs: [{
@@ -1722,6 +1742,11 @@ export default {
   height: 100%;
   width: 100%;
   font-size: 0;
+}
+
+.mobile {
+  font-size: 20px;
+  
 }
 
 </style>

@@ -7,7 +7,16 @@
           
           <div class="modal-body">
             <div class="instructions">
-              Use the left and right keyboard arrow-keys to navigate across time
+              Use the left and right keyboard arrow-keys (or the timeline at the bottom) 
+              to navigate across time.
+            </div>
+             <div class="instructions">
+               If you click on the 'Maps' tab on the top-left and navigate across time, you
+               can travel through location history.
+            </div>
+            <div class="instructions">
+               If time-travel is too much for you, the 'Profile' and 'Projects' tab
+               are stable across time.
             </div>
             <div class = "iconHolder">
               <img src="../assets/keyboardArrows.png">
@@ -39,8 +48,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .iconHolder {
-  width: 300px;
-  height: 200px;
+  width: 150px;
+  height: 100px;
   text-align: center;
   align-self: center;
 }
