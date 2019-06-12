@@ -1492,7 +1492,7 @@ export default {
               title: 'Software Engineering Internship',
               name: 'Qualtrics',
               icon: require('../assets/icons/qualtrics.png'),
-              range: 'Jun 2019 - Aug 2019 • 3 mos',
+              range: 'May 2019 - Aug 2019 • 3 mos',
               location: 'Seattle, WA',
               addDetails: [
                 'Built a PII-cleaning service for Qualtrics’s largest client, who has ~13 million records in the internal XM Directory'

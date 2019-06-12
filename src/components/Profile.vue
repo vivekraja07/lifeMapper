@@ -1,7 +1,7 @@
 <template>
   <div id="profile">
       <div class = "logoHolder">
-          <img id="vivek" src="../assets/econ2.png">
+          <img id="vivek" src="../assets/qualtrics.jpg">
       </div>
 
       <h1> Vivekanand Rajasekar </h1>
@@ -80,8 +80,8 @@ blockquote p {
 }
 
 #vivek {
-  width: 90%;
-  height: 60%;
+  width: 283px;
+  height: 350px;
 }
 
 .iconHolder {
