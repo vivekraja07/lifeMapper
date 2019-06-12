@@ -47,7 +47,7 @@ export default {
       'activeSet'
     ]),
     getWidth (beg, finish) {
-      var total = '257'
+      var total = '260'
       var start = this.getAsMonth(beg)
       var end = this.getAsMonth(finish)
       var numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1)
@@ -150,7 +150,7 @@ export default {
 
 li {
 	display: inline-block;
-  width: 4.66926070039%;
+  width: 4.61538461538%;
   color: #868686;
   /* font-size: 20px; */
   text-align: center;
@@ -159,7 +159,7 @@ li {
 
 li:last-child {
   border-right: 0px;
-  width: 1.94552529183%;
+  width: 3.07692307692%;
 }
 
 </style>

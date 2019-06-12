@@ -1476,6 +1476,97 @@ export default {
             ]
           }
         },
+        // Summer at Qualtrics
+        'June 2019 to August 2019': {
+          start: 'June-2019',
+          end: 'August-2019',
+          loc: [47.5991499,-122.3371529],
+          zoom: 16,
+          options: { duration: 1 },
+          info: {
+            General: {
+              title: 'Software Engineering Internship at Qualtrics',
+              Location: 'Seattle, Washington'
+            },
+            Jobs: [{
+              title: 'Software Engineering Internship',
+              name: 'Qualtrics',
+              icon: require('../assets/icons/qualtrics.png'),
+              range: 'Jun 2019 - Aug 2019 • 3 mos',
+              location: 'Seattle, WA',
+              addDetails: [
+                'Built a PII-cleaning service for Qualtrics’s largest client, who has ~13 million records in the internal XM Directory'
+              ]
+            }],
+            Projects: [ 
+              {
+                title: 'Expense Report 2.0',
+                details: [
+                  'Created an Expense Report with Vue/Node that connects to banks using Plaid, uses K-NN to predict expense category, has budgetary capabilities, and displays interactive charts using D3'
+                ]},
+            ],
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '98%'
+              },
+              {
+                name: 'Vue.js',
+                skill: '80%'
+              },
+              {
+                name: 'Node.js',
+                skill: '79%'
+              },
+              {
+                name: 'Python',
+                skill: '78%'
+              },
+              {
+                name: 'Javascript',
+                skill: '67%'
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Scikit-Learn',
+                skill: '46%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '57%'
+              },
+              {
+                name: 'English',
+                skill: '93%'
+              },
+              {
+                name: 'Hindi',
+                skill: '38%'
+              },
+              {
+                name: 'Spanish',
+                skill: '41%'
+              }
+            ]
+          }
+        },
         
       },
       projects: 

@@ -4,7 +4,6 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-
           
           <div class="modal-body">
             <div class="instructions">
@@ -18,9 +17,6 @@
             </button>
           </div>
 
-
-
-          
         </div>
       </div>
     </div>
