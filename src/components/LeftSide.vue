@@ -15,6 +15,10 @@
             <input type="radio" id="three" value="Projects" v-model="pick" @input="blur">
             <label for="three">Projects</label>
           </div>
+          <div>
+            <input type="radio" id="four" value="Skills" v-model="pick" @input="blur">
+            <label for="four">Skills</label>
+          </div>
         </div>
 
       </div>
@@ -32,13 +36,15 @@
 import Map from '@/components/Map.vue'
 import Projects from '@/components/Projects.vue'
 import Profile from '@/components/Profile.vue'
+import Skills from '@/components/Skills.vue'
 
 export default {
   name: 'LeftSide',
   components: {
     Profile,
     Map,
-    Projects
+    Projects,
+    Skills
   },
   props: {
     events: Object,

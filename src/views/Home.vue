@@ -50,7 +50,7 @@ export default {
   data: function () {
     return {
       // data
-      // showModal: true,
+      // showModal: false,
       //temporary @TODO
       showModal: true,
       x: {
@@ -108,7 +108,6 @@ export default {
                 skill: '5%'
               }
             ]
-            //   School: "Perks Matriculation \nRamakrishna Mission \nAvanashi-Lingam"
           }
         },
         // moved to Ahemdabad
