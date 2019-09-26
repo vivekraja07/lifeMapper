@@ -746,7 +746,7 @@ export default {
             },
             Education: {
               title: 'Georgia Institute of Technology',
-              name: 'BS - Computer Science, minor in Spanish',
+              name: 'BS - Computer Science',
               range: '2016 - 2020 • Freshman',
               icon: require('../assets/icons/gatech.png'),
               courses: {
@@ -824,7 +824,7 @@ export default {
             },
             Education: {
               title: 'Georgia Institute of Technology',
-              name: 'BS - Computer Science, minor in Spanish',
+              name: 'BS - Computer Science',
               range: '2016 - 2020 • Freshman',
               icon: require('../assets/icons/gatech.png'),
               courses: {
@@ -1000,7 +1000,7 @@ export default {
             }],
             Education: {
               title: 'Georgia Institute of Technology',
-              name: 'BS - Computer Science, minor in Spanish',
+              name: 'BS - Computer Science',
               range: '2016 - 2020 • Sophomore',
               icon: require('../assets/icons/gatech.png'),
               courses: {
@@ -1095,7 +1095,7 @@ export default {
             }],
             Education: {
               title: 'Georgia Institute of Technology',
-              name: 'BS - Computer Science, minor in Spanish',
+              name: 'BS - Computer Science',
               range: '2016 - 2020 • Sophomore',
               icon: require('../assets/icons/gatech.png'),
               courses: {
@@ -1277,7 +1277,7 @@ export default {
             }],
             Education: {
               title: 'Georgia Institute of Technology',
-              name: 'BS - Computer Science, minor in Spanish',
+              name: 'BS - Computer Science',
               range: '2016 - 2020 • Junior',
               icon: require('../assets/icons/gatech.png'),
               courses: {
@@ -1388,7 +1388,7 @@ export default {
             }],
             Education: {
               title: 'Georgia Institute of Technology',
-              name: 'BS - Computer Science, minor in Spanish',
+              name: 'BS - Computer Science',
               range: '2016 - 2020 • Junior',
               icon: require('../assets/icons/gatech.png'),
               courses: {
@@ -1515,7 +1515,9 @@ export default {
               range: 'May 2019 - Aug 2019 • 3 mos',
               location: 'Seattle, WA',
               addDetails: [
-                'Built a PII-cleaning service for Qualtrics’s largest client, who has ~13 million records in the internal XM Directory'
+                'Built a PII-cleaning service for Qualtrics’s largest client, impacting over 13 million contacts and transctions',
+                'Designed sophisticated Java process to manipulate databases, store metrics, call internal APIs, and log precise details',
+                'Created system to be fault-tolerant and robust, using SQS for error-retry and intelligent exception handling'
               ]
             }],
             Projects: [ 
@@ -1587,7 +1589,112 @@ export default {
             ]
           }
         },
-        
+        // year 4 semester 1 at gatech
+        'August 2019 to December 2019': {
+          start: 'August-2019',
+          end: 'December-2019',
+          loc: [33.777378, -84.395516],
+          zoom: 18,
+          options: { duration: 1 },
+          info: {
+            General: {
+              title: 'Senior year 1st semester at GA Tech',
+              Location: 'Atlanta, Georgia'
+            },
+            Jobs: [{
+              title: 'Research Assistant for Prof. Ling Liu ',
+              name: 'Distributed Data Intensive Systems Lab',
+              icon: require('../assets/icons/coc.png'),
+              range: 'Aug 2019 - May 2020 • 1 year',
+              location: 'Atlanta, GA',
+              addDetails: [
+                'Researching differentially private and utility preserving publication of trajectory data'
+              ]
+            }],
+            Education: {
+              title: 'Georgia Institute of Technology',
+              name: 'BS - Computer Science',
+              range: '2016 - 2020 • Senior',
+              icon: require('../assets/icons/gatech.png'),
+              courses: {
+                columns: ['Course Number', 'Course Name', 'Credit Hours'],
+                rows: [
+                  ['CS 4641', 'Machine Learning for Trading', '3'],
+                  ['CS 4261', 'Advanced Computer Networks', '3'],
+                  ['ACCT 2101', 'Accounting 1', '3'],
+                  ['SPAN 3300', 'Satire & Media in Latin America', '3']
+                ]
+              }
+            },
+            Projects: [
+              {
+                title: 'Adaptive Video Streaming',
+                details: [
+                  'Comparing various adaptive video streaming algorithms on various TCP flavors'
+                ]}
+            ],
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '95%'
+              },
+              {
+                name: 'Vue.js',
+                skill: '80%'
+              },
+              {
+                name: 'Node.js',
+                skill: '79%'
+              },
+              {
+                name: 'Python',
+                skill: '78%'
+              },
+              {
+                name: 'Javascript',
+                skill: '67%'
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Scikit-Learn',
+                skill: '46%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%'
+              },
+              {
+                name: 'English',
+                skill: '94%'
+              },
+              {
+                name: 'Hindi',
+                skill: '38%'
+              },
+              {
+                name: 'Spanish',
+                skill: '43%'
+              }
+            ]
+          }
+        }
       },
       projects: 
         [
