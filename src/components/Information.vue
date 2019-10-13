@@ -174,6 +174,7 @@ export default {
       } else {
         this.activeSet(Object.keys(this.events)[index + 1])
       }
+      gtag('event','click',{'event_category':'navigation','event_label':'left'});
     },
     getPrev () {
       var index = Object.keys(this.events).indexOf(this.active)
@@ -182,6 +183,7 @@ export default {
       } else {
         this.activeSet(Object.keys(this.events)[index - 1])
       }
+      gtag('event','click',{'event_category':'navigation','event_label':'right'});
     }
   }
 }
