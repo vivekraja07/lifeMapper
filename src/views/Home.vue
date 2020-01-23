@@ -1693,7 +1693,214 @@ export default {
               }
             ]
           }
+        },
+        // year 4 semester 2 at ntu
+        'January 2020 to May 2020': {
+          start: 'January-2020',
+          end: 'May-2020',
+          loc: [1.3483, 103.6831],
+          zoom: 18,
+          options: { duration: 1 },
+          info: {
+            General: {
+              title: 'Senior year 2nd semester - NTU',
+              Location: 'Singapore'
+            },
+            Jobs: [{
+              title: 'Research Assistant for Prof. Ling Liu ',
+              name: 'Distributed Data Intensive Systems Lab',
+              icon: require('../assets/icons/coc.png'),
+              range: 'Aug 2019 - May 2020 • 1 year',
+              location: 'Atlanta, GA',
+              addDetails: [
+                'Researching differentially private and utility preserving publication of trajectory data'
+              ]
+            }],
+            Education: {
+              title: 'Nanyang Technological University',
+              name: 'BS - Computer Science',
+              range: '2016 - 2020 • Senior',
+              icon: require('../assets/icons/ntu.png'),
+              courses: {
+                columns: ['Course Number', 'Course Name', 'Credit Hours'],
+                rows: [
+                  ['CZ 4024', 'Cryptography & Network Security', '3'],
+                  ['BU 8642', 'Leadership in the 21st Century', '3'],
+                  ['BU 8644', 'The Science of Decision Making', '3'],
+                  ['HZ 9101', 'Creating Writing', '3']
+                ]
+              }
+            },
+            CLanguages: [
+              {
+                name: 'Java',
+                skill: '95%'
+              },
+              {
+                name: 'Vue.js',
+                skill: '80%'
+              },
+              {
+                name: 'Node.js',
+                skill: '79%'
+              },
+              {
+                name: 'Python',
+                skill: '78%'
+              },
+              {
+                name: 'Javascript',
+                skill: '67%'
+              },
+              {
+                name: 'C',
+                skill: '65%'
+              },
+              {
+                name: 'Scikit-Learn',
+                skill: '46%'
+              },
+              {
+                name: 'Selenium Webdriver',
+                skill: '45%'
+              },
+              {
+                name: 'VBA',
+                skill: '20%'
+              },
+              {
+                name: 'SQL',
+                skill: '15%'
+              }
+            ],
+            Languages: [
+              {
+                name: 'Tamil',
+                skill: '61%'
+              },
+              {
+                name: 'English',
+                skill: '94%'
+              },
+              {
+                name: 'Hindi',
+                skill: '38%'
+              },
+              {
+                name: 'Spanish',
+                skill: '43%'
+              },
+              {
+                name: 'Singlish',
+                skill: '10%'
+              }
+            ]
+          }
         }
+        //add another here
+        // // year 4 semester 2 at ntu
+        // 'January 2020 to May 2020': {
+        //   start: 'January-2020',
+        //   end: 'May-2020',
+        //   loc: [1.3483, 103.6831],
+        //   zoom: 18,
+        //   options: { duration: 1 },
+        //   info: {
+        //     General: {
+        //       title: 'Senior year 2nd semester - NTU',
+        //       Location: 'Singapore'
+        //     },
+        //     Jobs: [{
+        //       title: 'Research Assistant for Prof. Ling Liu ',
+        //       name: 'Distributed Data Intensive Systems Lab',
+        //       icon: require('../assets/icons/coc.png'),
+        //       range: 'Aug 2019 - May 2020 • 1 year',
+        //       location: 'Atlanta, GA',
+        //       addDetails: [
+        //         'Researching differentially private and utility preserving publication of trajectory data'
+        //       ]
+        //     }],
+        //     Education: {
+        //       title: 'Nanyang Technological University',
+        //       name: 'BS - Computer Science',
+        //       range: '2016 - 2020 • Senior',
+        //       icon: require('../assets/icons/ntu.png'),
+        //       courses: {
+        //         columns: ['Course Number', 'Course Name', 'Credit Hours'],
+        //         rows: [
+        //           ['CZ 4024', 'Cryptography & Network Security', '3'],
+        //           ['BU 8642', 'Leadership in the 21st Century', '3'],
+        //           ['BU 8644', 'The Science of Decision Making', '3'],
+        //           ['HZ 9101', 'Creating Writing', '3']
+        //         ]
+        //       }
+        //     },
+        //     CLanguages: [
+        //       {
+        //         name: 'Java',
+        //         skill: '95%'
+        //       },
+        //       {
+        //         name: 'Vue.js',
+        //         skill: '80%'
+        //       },
+        //       {
+        //         name: 'Node.js',
+        //         skill: '79%'
+        //       },
+        //       {
+        //         name: 'Python',
+        //         skill: '78%'
+        //       },
+        //       {
+        //         name: 'Javascript',
+        //         skill: '67%'
+        //       },
+        //       {
+        //         name: 'C',
+        //         skill: '65%'
+        //       },
+        //       {
+        //         name: 'Scikit-Learn',
+        //         skill: '46%'
+        //       },
+        //       {
+        //         name: 'Selenium Webdriver',
+        //         skill: '45%'
+        //       },
+        //       {
+        //         name: 'VBA',
+        //         skill: '20%'
+        //       },
+        //       {
+        //         name: 'SQL',
+        //         skill: '15%'
+        //       }
+        //     ],
+        //     Languages: [
+        //       {
+        //         name: 'Tamil',
+        //         skill: '61%'
+        //       },
+        //       {
+        //         name: 'English',
+        //         skill: '94%'
+        //       },
+        //       {
+        //         name: 'Hindi',
+        //         skill: '38%'
+        //       },
+        //       {
+        //         name: 'Spanish',
+        //         skill: '43%'
+        //       },
+        //       {
+        //         name: 'Singlish',
+        //         skill: '5%'
+        //       }
+        //     ]
+        //   }
+        // },
       },
       projects: 
         [

@@ -14,7 +14,6 @@
     </section>
     
     <section v-if="events[active].info.CLanguages">
-
         <div class = "Languages" v-if="events[active].info.CLanguages">
             <h3 class = "sectionTitle"> Computer Languages </h3>
 
@@ -50,12 +49,12 @@ export default {
         '#4CAF50',
         '#2196F3',
         '#f44336',
-        '#808080'
+        '#808080',
+        '#ffa500'
       ],
       comp_colors: [
         '#1D2951',
         '#003152',
-
         '#111E6C',
         '#000080',
         '#1034A6',
@@ -65,7 +64,6 @@ export default {
         '#6593F5',
         '#3FE0D0',
         '#0F52BA'
-
       ]
     }
   }
@@ -74,6 +72,9 @@ export default {
 </script>
 
 <style scoped>
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
 
 #skills {
   width: 100%;

@@ -29,7 +29,7 @@
             <li>2017</li>
             <li>2018</li>
             <li>2019</li>
-
+            <li>'20</li>
         </ul>
     </div>
 </template>
@@ -47,7 +47,7 @@ export default {
       'activeSet'
     ]),
     getWidth (beg, finish) {
-      var total = '264'
+      var total = '269'
       var start = this.getAsMonth(beg)
       var end = this.getAsMonth(finish)
       var numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1)
@@ -150,7 +150,7 @@ export default {
 
 li {
 	display: inline-block;
-  width: 4.54545454545%;
+  width: 4.46096654275%;
   color: #868686;
   /* font-size: 20px; */
   text-align: center;
@@ -159,7 +159,7 @@ li {
 
 li:last-child {
   border-right: 0px;
-  /* width: 3.07692307692%; */
+  width: 1.85873605948%;
 }
 
 </style>
