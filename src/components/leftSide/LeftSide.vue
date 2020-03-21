@@ -33,10 +33,10 @@
 
 <script>
 // @ is an alias to /src
-import Map from '@/components/Map.vue'
-import Projects from '@/components/Projects.vue'
-import Profile from '@/components/Profile.vue'
-import Skills from '@/components/Skills.vue'
+import Map from '@/components/leftSide/Map.vue'
+import Projects from '@/components/leftSide/Projects.vue'
+import Profile from '@/components/leftSide/Profile.vue'
+import Skills from '@/components/leftSide/Skills.vue'
 
 export default {
   name: 'LeftSide',

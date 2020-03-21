@@ -19,7 +19,7 @@
                are stable across time.
             </div>
             <div class = "iconHolder">
-              <img src="../assets/keyboardArrows.png">
+              <img src="@/assets/keyboardArrows.png">
             </div>
             <button @click="$emit('close')">
                 OK

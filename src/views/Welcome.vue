@@ -3,7 +3,7 @@
       <p> </p>
     <div class="google">
         <h1>Welcome,</h1>
-        <img src="../assets/Google.png">
+        <img src="@/assets/Google.png">
     </div>
     <p class = "bottom">
             <router-link to="/home" tag="button" class ="button btn btn-4 btn-4c icon-arrow-right">

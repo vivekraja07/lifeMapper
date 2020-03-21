@@ -1,7 +1,7 @@
 <template>
   <div id="profile">
       <div class = "logoHolder">
-          <img id="vivek" src="../assets/qualtrics.jpg">
+          <img id="vivek" src="@/assets/qualtrics.jpg">
       </div>
 
       <h1> Vivekanand Rajasekar </h1>
@@ -13,25 +13,25 @@
       <div class = "icons">
         <div class = "iconHolder">
             <a href="https://www.linkedin.com/in/vivekraja07/">
-              <img src="../assets/linkedin.png">
+              <img src="@/assets/linkedin.png">
             </a>
         </div>
 
         <div class = "iconHolder">
             <a href="https://github.com/vivekraja07">
-              <img src="../assets/github.png">
+              <img src="@/assets/github.png">
             </a>
         </div>
 
         <div class = "iconHolder">
           <a href="https://devpost.com/VivekanandRajasekar">
-            <img src="../assets/devpost.jpg">
+            <img src="@/assets/devpost.jpg">
           </a>
         </div>
         
         <div class = "iconHolder">
           <a href="https://www.dropbox.com/s/xayjr0a3s6vpn0w/VivekRaja.pdf?dl=0" target="_blank">
-            <img src="../assets/resume.png">
+            <img src="@/assets/resume.png">
           </a>
         </div>
       </div>

@@ -3,11 +3,11 @@
         <div class="Project" v-for="(project, index) in projects" :key="index">
             <h3 class="title">
                 <a :href="project.link" v-if="!project.routerLink"> {{project.title}}
-                    <img v-if="project.link" src="../assets/external.png" alt="logo"/>
+                    <img v-if="project.link" src="@/assets/external.png" alt="logo"/>
                 </a>
             <router-link v-if="project.routerLink" :to="{name: project.routerLink.name, params: project.routerLink.props}">
               {{project.title}}
-              <img src="../assets/external.png" alt="logo"/>
+              <img src="@/assets/external.png" alt="logo"/>
             </router-link>
             </h3>
             <h5 class = "timeRange"> {{project.range}} </h5>
@@ -20,10 +20,10 @@
             </div>
             <div class="container">
                 <a :href="project.github" v-if="project.github"> 
-                  <img class="git" src="../assets/github_mark.png" alt="logo"/>
+                  <img class="git" src="@/assets/github_mark.png" alt="logo"/>
                 </a>
                 <a :href="project.devpost" v-if="project.devpost"> 
-                 <img class="dev" src="../assets/devpost.jpg" alt="logo"/>
+                 <img class="dev" src="@/assets/devpost.jpg" alt="logo"/>
                 </a>
             </div>
         </div>
