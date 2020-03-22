@@ -339,7 +339,7 @@
           "icon": "subway.png",
           "range": "Jun 2014 to July 2014 • 3 mos",
           "location": "Duluth, GA",
-          "addDetails": [
+          "details": [
             "Managed all transactions and dealt with customers single-handedly.",
             "Learned about the business operations and efficient procedures of the multi-million dollar corporation.",
             "Created a report at the end of the summer with sales data, outlining ideas on decreasing costs and increasing sales."
@@ -466,7 +466,7 @@
           "icon": "topgolf.png",
           "range": "Jun 2015 to Jul 2015 • 2 mos",
           "location": "Alpharetta, GA",
-          "addDetails": [
+          "details": [
             "Ensured guest satisfaction and created a fun environment.",
             "Carried around 8lbs of food up and down a fleet of stairs to guests at the facility"
           ]
@@ -477,7 +477,7 @@
           "icon": "tutor.png",
           "range": "Jun 2015 - Jul 2015 • 2 mos",
           "location": "Johns Creek, GA",
-          "addDetails": [
+          "details": [
             "Tutored 3 elementary and middle school students in basic English and Mathematics"
           ]
         }],
@@ -538,7 +538,7 @@
           "icon": "apex.png",
           "range": "Apr 2016 - Jun 2016 • 3 mos",
           "location": "GT Campus",
-          "addDetails": [
+          "details": [
             "Opened up a tutoring center (2200 square feet) for high school students taking the AP Exam.",
             "Helped over 41 students ace their exams, leading Principal of CHS, Tim Corrigan to claim, “Thank you for providing this wonderful opportunity for our students.”"
           ]
@@ -549,7 +549,7 @@
           "icon": "winterCougarTennis.png",
           "range": "Dec 2015 • 1 week",
           "location": "Alpharetta, GA",
-          "addDetails": [
+          "details": [
             "Organized a camp for all tennis players interested in trying out for Chattahoochee’s Varsity team.",
             "More than 65% of the players that attended camp and tried out made the team."
           ]
@@ -560,7 +560,7 @@
           "icon": "govTutor.png",
           "range": "Aug 2015 - Mar 2016 • 1 year",
           "location": "Johns Creek, GA",
-          "addDetails": [
+          "details": [
             "Tutored around 30 high school students, primarily in the class of AP Government"
           ]
         }
@@ -633,7 +633,7 @@
           "icon": "scheller.png",
           "range": "Jun 2016 - Aug 2016 • 3 mos",
           "location": "GT Campus",
-          "addDetails": [
+          "details": [
             "Used Bloomberg Essentials to recreate contemporary models of the 1992 Tweedy, Browne’s famous “What has Worked in Investing” Report"
           ]
         }],
@@ -842,7 +842,7 @@
           "icon": "thrivent.jpeg",
           "range": "Jun 2017 - Aug 2017 • 3 mos",
           "location": "Appleton, Wisconsin",
-          "addDetails": [
+          "details": [
             "Wrote selenium scripts to automate testing of applications using WebDriver, java, and Selenium Grid",
             "Trained over 10 experienced java developers in Selenium scripting",
             "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data. Script would send an email with results of validation test"
@@ -921,7 +921,7 @@
           "icon": "coc.png",
           "range": "September 2017 - December 2017 • 5 mos",
           "location": "GT Campus",
-          "addDetails": [
+          "details": [
             "Tutored 3 students weekly in CS 2110 (Computer Systems and Organization) and CS 1332 (Data Structures and Algorithms)"
           ]
         }],
@@ -1013,7 +1013,7 @@
           "icon": "coc.png",
           "range": "Jan 2018 - May 2018 • 5 mos",
           "location": "GT Campus",
-          "addDetails": [
+          "details": [
             "Design homework questions and projects both to help study and demonstrate mastery of material",
             "Lecture recitation urging students to be engaged and excited to learn about microprocessors and network designs",
             "Tutor students individually, assisting with both homework and general questions"
@@ -1103,7 +1103,7 @@
           "icon": "homeDepot.png",
           "range": "May 2018 - Aug 2018 • 3 mos",
           "location": "Smyrna, GA",
-          "addDetails": [
+          "details": [
             "Created Flagster, a Feature-Flagging service using Node.js for the API and Vue.js for the front-end",
             "Worked full-stack using TDD and XP and interacted with product owner to determine optimal design",
             "Deployed to production and is used daily by 2000+ stores in a department that accounts for 8% of firm’s revenue"
@@ -1195,7 +1195,7 @@
           "icon": "gatech.png",
           "range": "Aug 2018 - May 2019 • 1 year",
           "location": "GT Campus",
-          "addDetails": [
+          "details": [
             "Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues"
           ]
         }],
@@ -1305,7 +1305,7 @@
           "icon": "gatech.png",
           "range": "Aug 2018 - May 2019 • 1 year",
           "location": "GT Campus",
-          "addDetails": [
+          "details": [
             "Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues"
           ]
         }],
@@ -1436,7 +1436,7 @@
           "icon": "qualtrics.png",
           "range": "May 2019 - Aug 2019 • 3 mos",
           "location": "Seattle, WA",
-          "addDetails": [
+          "details": [
             "Built a PII-cleaning service for Qualtrics’s largest client, impacting over 13 million contacts and transctions",
             "Designed sophisticated Java process to manipulate databases, store metrics, call internal APIs, and log precise details",
             "Created system to be fault-tolerant and robust, using SQS for error-retry and intelligent exception handling"
@@ -1528,7 +1528,7 @@
           "icon": "coc.png",
           "range": "Aug 2019 - May 2020 • 1 year",
           "location": "Atlanta, GA",
-          "addDetails": [
+          "details": [
             "Researching differentially private and utility preserving publication of trajectory data"
           ]
         }],
@@ -1633,7 +1633,7 @@
           "icon": "coc.png",
           "range": "Aug 2019 - May 2020 • 1 year",
           "location": "Atlanta, GA",
-          "addDetails": [
+          "details": [
             "Researching differentially private and utility preserving publication of trajectory data"
           ]
         }],

@@ -1,31 +1,26 @@
 <template>
     <div class="Activities">
-        <h2 class="sectionTitle">Activities</h2>
-        <div class="Activity" v-for="activity in activities" :key="activity.name">
-            <div class = "logoHolder">
-                <img :src="require('@/assets/icons/' + activity.icon)"/>
-            </div>
+        
+        <h2 class="sectionTitle">{{sectionTitle}}</h2>
+        
+        <Activity class="Activity" v-for="(activity, index) in activities" :key="index" v-bind:activity="activity"/>
 
-            <div class = "summaryInfo">
-                <h3 class = "title"> {{activity.title}} </h3>
-                <h4 class = "name"> {{activity.name}} </h4>
-                <h5 class = "timeRange"> {{activity.range}} </h5>
-            </div>
-
-            <div class = "extraDetails">
-                <li v-for="point in activity.details" :key="point">
-                    {{point}}
-                </li>
-            </div>
-        </div>
     </div>
 </template>
 
 <script>
+import IconHolder from '@/components/information/Elements/IconHolder.vue'
+import Activity from '@/components/information/Elements/Activity.vue'
+
 export default {
   name: 'Activities',
   props: {
     activities: Array,
+    sectionTitle: String
+  },
+  components: {
+    IconHolder,
+    Activity
   }
 }
 </script>
@@ -33,14 +28,6 @@ export default {
 <style scoped>
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
-
-h3 {
-  align-self: center;
-}
-
-.round {
-  align-self: center;
-}
 
 .Activity {
   border-bottom: 1px dashed #bdbdbd;
@@ -59,37 +46,6 @@ h3 {
 
 .sectionTitle {
     text-align: center;
-}
-
-/* logo icon styles go here */
-
-.logoHolder {
-  width: 72px;
-  height: 72px;
-  float: left;
-}
-
-.imageHolder {
-  border-radius: 6px;
-  height: 56px;
-  width: 56px;
-  background-size: contain;
-}
-
-img {
-    border-radius: 6px;
-    border: 4px solid transparent;
-    height: 64px;
-    width: 64px;
-}
-
-.summaryInfo {
-    margin-left: 80px;
-}
-
-.extraDetails {
-    margin-left: 80px;
-    margin-top: 16px;
 }
 
 </style>

@@ -11,6 +11,9 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'Dates',
+  props: {
+    eventOrder: Array
+  },
   created () {
     window.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') {
@@ -20,10 +23,14 @@ export default {
       }
     })
   },
+  computed: {
+    active () {
+      return this.$store.state.active
+    }
+  },
   methods: {
     ...mapActions([
       'activeSet',
-      'sideBarToggle'
     ]),
     getNext () {
       var size = Object.keys(this.eventOrder).length
@@ -31,7 +38,7 @@ export default {
       if (index + 1 >= size) {
         console.log('This is still a mystery! Google?')
       } else {
-        this.activeSet(Object.keys(this.events)[index + 1])
+        this.activeSet(this.eventOrder[index + 1])
       }
       gtag('event','click',{'event_category':'navigation','event_label':'left'});
     },
@@ -41,14 +48,9 @@ export default {
       if (index - 1 < 0) {
         console.log('This is out of scope for this project!')
       } else {
-        this.activeSet(Object.keys(this.events)[index - 1])
+        this.activeSet(this.eventOrder[index - 1])
       }
       gtag('event','click',{'event_category':'navigation','event_label':'right'});
-    }
-  },
-computed: {
-    active () {
-      return this.$store.state.active
     }
   }
 }

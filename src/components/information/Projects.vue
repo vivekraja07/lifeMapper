@@ -23,9 +23,6 @@ export default {
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
-h3 {
-  align-self: center;
-}
 
 .Project {
   border-bottom: 1px dashed #bdbdbd;
