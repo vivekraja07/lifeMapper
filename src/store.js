@@ -8,7 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     sidebarOpen: false,
-    active: 'January 2020 to May 2020'
+    active: 'June 2021 to December 2021'
   },
   mutations: {
     setActive (state, event) {

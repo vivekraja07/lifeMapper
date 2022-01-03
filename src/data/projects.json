@@ -1,36 +1,13 @@
 [
     {
-    "title": "Flagster @ THD",
-    "range": "May 2018 - Aug 2018 • 3 mos",
-    "details": [
-        "Developed a Feature-Flagging service allowing store-granular manipulation during run time",
-        "Worked full-stack using TDD and XP and interacted with product owner to determine optimal design",
-        "Deployed to production and is used daily by 2000+ stores in a department that accounts for 8% of firm’s revenue"
-    ],
-    "tags": ["Vue.js", "Node.js", "MariaDB","Jasmine", "Pivotal Cloud Foundry", "Jest"],
-    "routerLink": {
-        "name": "slides",
-        "props": {
-        "ppTitle": "Flagster @ The Home Depot", 
-        "ppLink":"//www.slideshare.net/slideshow/embed_code/key/qWVOdWT4m1Rro5"
-        }
-    }
-
-    },
-
-    {
-    "title": "Summer Projects @ Thrivent",
-    "range": "May 2017 - Aug 2017 • 3 mos",
-    "details": [
-        "Wrote Selenium scripts to automate testing, and contributed to PDF-parsing in framework",
-        "Trained over 10 experienced Java developers in the Selenium framework",
-        "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data"
-    ],
-    "tags": ["Selenium WebDriver", "Java", "VBA", "AntHill", "Maven","Jenkins"],
-    "routerLink": {
-        "name": "thrivent"
-    }
-
+        "title": "Utility-Optimized Synthesis of Differentially\nPrivate Location Traces",
+        "range": "Aug 2019 - May 2020 • 1 year",
+        "details": [
+            "OptaTrace introduces a utility module that contains several built-in error metrics for utility benchmarking and for choosing Err, as well as a front-end web interface for accessible and interactive DPLTS service",
+            "Accepted and published in the IEEE Conference 2020"
+        ],
+        "tags": ["Differential Privacy","SciPy","Python", "Java", "Vue.js"],
+        "link": "https://arxiv.org/pdf/2009.06505.pdf"
     },
     
     {
@@ -60,6 +37,51 @@
     },
 
     {
+        "title": "Summer Projects @ Thrivent",
+        "range": "May 2017 - Aug 2017 • 3 mos",
+        "details": [
+            "Wrote Selenium scripts to automate testing, and contributed to PDF-parsing in framework",
+            "Trained over 10 experienced Java developers in the Selenium framework",
+            "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data"
+        ],
+        "tags": ["Selenium WebDriver", "Java", "VBA", "AntHill", "Maven","Jenkins"],
+        "routerLink": {
+            "name": "thrivent"
+        }
+
+    },
+
+    {
+        "title": "Flagster @ THD",
+        "range": "May 2018 - Aug 2018 • 3 mos",
+        "details": [
+            "Developed a Feature-Flagging service allowing store-granular manipulation during run time",
+            "Worked full-stack using TDD and XP and interacted with product owner to determine optimal design",
+            "Deployed to production and is used daily by 2000+ stores in a department that accounts for 8% of firm’s revenue"
+        ],
+        "tags": ["Vue.js", "Node.js", "MariaDB","Jasmine", "Pivotal Cloud Foundry", "Jest"],
+        "routerLink": {
+            "name": "slides",
+            "props": {
+                "ppTitle": "Flagster @ The Home Depot",
+                "ppLink":"//www.slideshare.net/slideshow/embed_code/key/qWVOdWT4m1Rro5"
+            }
+        }
+
+    },
+
+    {
+        "title": "WikiMaps (HackGT)",
+        "details": [
+            "Interface that will allow all history-lovers to contribute to historical analysis, while allowing them to learn from the collective knowledge of the human community"
+        ],
+        "range": "Oct 25, 2019- Oct 27, 2019 • 48 hours",
+        "tags": ["Vue.js", "ESRI"],
+        "github": "https://github.com/vivekraja07/wikimaps",
+        "devpost": "https://devpost.com/software/wikimaps-free-online-encyclopedia-of-maps"
+    },
+
+    {
     "title": "LifeMapper",
     "range": "May 2018 - Aug 2018 • 3 mos",
     "details": [
@@ -77,7 +99,8 @@
         "Junior Design Project with the GT College of Computing as our client",
         "Installed raspberry pi cameras in the lobby to count number of people in line to meet recruiters",
         "Developed user-tested UI that enables easy analysis of the data"
-    ]
+    ],
+    "tags": ["Vue.js", "Node.js"]
     },
 
     {
@@ -94,47 +117,47 @@
     "title": "Expense Report",
     "range": "Jun 2017 - Aug 2017 • 3 mos",
     "details": [
-        "Created an Expense Report that would forecast spending based on current trends, had budgetary capabilities, and had a friendly UI"
+        "Created an Expense Report that would forecast spending based on current trends, had budgetary capabilities, and had an excel-based UI"
     ],
     "tags": ["VBA"]
     },
     {
     "title": "Project Euler",
-    "range": "Sep 2016 to Dec 2016 • 1 semester",
+    "range": "Sep 2016 to Dec 2017 • 3 semesters",
     "details": [
         "A series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve",
         "Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems",
-        "Solved 65 problems on the site (top 3.532% on the site)"
+        "Solved 76 problems on the site (top 2.336%% on the site)"
     ],
     "tags": ["Java"],
-    "github": "https://github.com/vivekraja07/ProjectEuler"
+    "github": "https://github.com/vivekraja07/ProjectEuler",
+        "link": "https://vivekraja07.github.io/store_efficiency"
     },
     {
     "title": "LinkedOut",
-    "range": "Jan 2019 - Present • 1 Semester",
+    "range": "Jan 2019 - June 2019 • 1 Semester",
     "details": [
-        "Scraping LinkedIn data of GT Alumni, then visualizing the results of various ML algorithms to extract data"
-    ]},
-    {
-    "title": "My Finances",
-    "range": "Jan 2019 - Present • 1 Semester",
-    "details": [
-        "Developing a personalized finance website to replace my use of Intuit Mint"
-    ]},
-    {
-    "title": "My Tasks",
-    "range": "Jan 2019 - Present • 1 Semester",
-    "details": [
-        "Developing a personalized to-do app that caters to my needs and habits"
+        "Scraped LinkedIn data of GT Alumni, then visualizing the results of various ML algorithms to extract data"
     ],
-    "github": "https://github.com/vivekraja07/tasks"
+    "tags": ["React.js", "D3.js"],
+    "github": "https://github.com/vivekraja07/linked-out"
     },
     {
-    "title": "Internship Search Visualization",
-    "range": "Jan 2019 - Present • 1 Semester",
+    "title": "My Finances",
+    "range": "Jan 2019 - Jun 2019 • 1 Semester",
     "details": [
-        "Developing a visualization using D3 and collected data of the timeline of my 2019 summer internship search"
-    ]
+        "Developed a personalized finance website to replace my use of Intuit Mint"
+    ],
+        "tags": ["Vue.js", "Node.js"]
+    },
+    {
+    "title": "My Tasks",
+    "range": "Jan 2019 - Jun 2019 • 1 Semester",
+    "details": [
+        "Developed a personalized to-do app that caters to my needs and habits"
+    ],
+        "tags": ["Vue.js", "Node.js"],
+    "github": "https://github.com/vivekraja07/tasks"
     }
 ]
 

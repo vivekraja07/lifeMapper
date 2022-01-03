@@ -29,7 +29,8 @@
             <li>2017</li>
             <li>2018</li>
             <li>2019</li>
-            <li>'20</li>
+            <li>2020</li>
+            <li>2021</li>
         </ul>
     </div>
 </template>
@@ -47,11 +48,13 @@ export default {
       'activeSet'
     ]),
     getWidth (beg, finish) {
-      var total = '269'
+      var total = '276' // = 12 * 23
       var start = this.getAsMonth(beg)
       var end = this.getAsMonth(finish)
       var numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1)
       var perc = (numMonths / total * 100).toFixed(2)
+
+      // console.log(beg + ' to ' + finish + ': ' + numMonths + ': ' + perc)
       return perc + '%'
     },
     getAsMonth (date) {
@@ -150,7 +153,7 @@ export default {
 
 li {
 	display: inline-block;
-  width: 4.46096654275%;
+  width: 4.34782608696%; /* = 100 / 23 */
   color: #868686;
   /* font-size: 20px; */
   text-align: center;
@@ -159,7 +162,7 @@ li {
 
 li:last-child {
   border-right: 0px;
-  width: 1.85873605948%;
+/*  !*width: 1.85873605948%;*!*/
 }
 
 </style>

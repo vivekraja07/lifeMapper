@@ -19,17 +19,16 @@
                 <span class="label" :class="tag" v-for="tag in project.tags" :key="tag">{{tag}}</span>
             </div>
             <div class="container">
-                <a :href="project.github" v-if="project.github"> 
+                <a :href="project.github" v-if="project.github">
                   <img class="git" src="@/assets/github_mark.png" alt="logo"/>
                 </a>
-                <a :href="project.devpost" v-if="project.devpost"> 
+                <a :href="project.devpost" v-if="project.devpost">
                  <img class="dev" src="@/assets/devpost.jpg" alt="logo"/>
                 </a>
             </div>
         </div>
 
     </div>
-
 
 </template>
 
@@ -43,7 +42,6 @@ export default {
 </script>
 
 <style scoped>
-
 
 #projects {
   width: 100%;
@@ -70,10 +68,10 @@ export default {
 }
 
 .D3\.js, .Vue\.js, .AntHill {background-color: #4CAF50;} /* Green */
-.Flask, .Selenium.WebDriver, .Pivotal.Cloud.Foundry, .Maven {background-color: #2196F3;} /* Blue */
-.Unity, .Apache.POI, .Node\.js {background-color: #ff9800;} /* Orange */
-.SQLite, .Java, .MariaDB, .Jenkins {background-color: #f44336;} /* Red */ 
-.C, .VBA, .Jasmine, .Jest {background-color: #a51f83;} /* Gray */
+.Flask, .Selenium.WebDriver, .Pivotal.Cloud.Foundry, .Maven, .React\.js, .SciPy {background-color: #2196F3;} /* Blue */
+.Unity, .Apache.POI, .Node\.js, .Differential.Privacy {background-color: #ff9800;} /* Orange */
+.SQLite, .Java, .MariaDB, .Jenkins, .ESRI {background-color: #f44336;} /* Red */
+.C, .VBA, .Jasmine, .Jest, .Python {background-color: #a51f83;} /* Gray */
 
 .dev {
     width: 32px;
@@ -99,6 +97,5 @@ h5 {
   border-bottom: 0px;
   padding-bottom: 0px;
 }
-
 
 </style>

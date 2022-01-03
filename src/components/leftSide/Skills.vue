@@ -3,7 +3,7 @@
     <section v-if="events[active].info.Languages">
 
       <div class = "Languages">
-            <h3 class = "sectionTitle"> Civilian Languages </h3>
+            <h3 class = "sectionTitle"> Languages </h3>
             <div v-for="(language, index) in events[active].info.Languages" :key="language.name">
               <p> {{language.name}} </p>
                 <div class="container">
@@ -12,10 +12,10 @@
             </div>
         </div>
     </section>
-    
+
     <section v-if="events[active].info.CLanguages">
         <div class = "Languages" v-if="events[active].info.CLanguages">
-            <h3 class = "sectionTitle"> Computer Languages </h3>
+            <h3 class = "sectionTitle"> Technical Skills </h3>
 
             <div v-for="(language, index) in events[active].info.CLanguages" :key="language.name">
               <p> {{language.name}} </p>
@@ -62,8 +62,9 @@ export default {
         '#0F52BA',
         '#0080FF',
         '#6593F5',
+        '#0F52BA',
         '#3FE0D0',
-        '#0F52BA'
+        '#33E000'
       ]
     }
   }
@@ -110,9 +111,5 @@ section {
 h3 {
   align-self: center;
 }
-
-
-
-
 
 </style>

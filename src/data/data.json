@@ -903,7 +903,6 @@
         ]
       }
     },
-
     
     "September 2017 to December 2017": {
       "start": "September-2017",
@@ -1718,109 +1717,188 @@
           }
         ]
       }
+    },
+
+    "June 2020 to May 2021": {
+    "start": "June-2020",
+    "end": "May-2021",
+    "loc": [34.05328440831842, -83.88131775804713],
+    "zoom": 17,
+    "info": {
+      "General": {
+        "title": "Started Full Time Job - WFH Covid-19",
+        "Location": "Lawrenceville, GA"
+      },
+      "Jobs": [{
+        "title": "Software Engineer",
+        "name": "Expanse - Acquired by Palo Alto Networks",
+        "icon": "expanse.jpeg",
+        "range": "Aug 2020 - Present • 1 year 6 months",
+        "location": "San Francisco, CA"
+      }],
+      "CLanguages": [
+        {
+          "name": "Java",
+          "skill": "95%"
+        },
+        {
+          "name": "Google Dataflow",
+          "skill": "80%"
+        },
+        {
+          "name": "Vue.js",
+          "skill": "80%"
+        },
+        {
+          "name": "Node.js",
+          "skill": "79%"
+        },
+        {
+          "name": "Python",
+          "skill": "78%"
+        },
+        {
+          "name": "Javascript",
+          "skill": "67%"
+        },
+        {
+          "name": "C",
+          "skill": "65%"
+        },
+        {
+          "name": "Groovy",
+          "skill": "62%"
+        },
+        {
+          "name": "SQL",
+          "skill": "60%"
+        },
+        {
+          "name": "Scikit-Learn",
+          "skill": "46%"
+        },
+        {
+          "name": "Selenium Webdriver",
+          "skill": "45%"
+        },
+        {
+          "name": "VBA",
+          "skill": "20%"
+        }
+      ],
+      "Languages": [
+        {
+          "name": "Tamil",
+          "skill": "61%"
+        },
+        {
+          "name": "English",
+          "skill": "94%"
+        },
+        {
+          "name": "Hindi",
+          "skill": "38%"
+        },
+        {
+          "name": "Spanish",
+          "skill": "43%"
+        }
+      ]
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  },
+
+    "June 2021 to December 2021": {
+    "start": "June-2021",
+    "end": "December-2021",
+    "loc": [37.79136573465197, -122.39794588682582],
+    "zoom": 15,
+    "info": {
+      "General": {
+        "title": "Finally Moved to SF",
+        "Location": "San Francisco, CA"
+      },
+      "Jobs": [{
+        "title": "Staff Software Engineer",
+        "name": "Expanse - Acquired by Palo Alto Networks",
+        "icon": "expanse.jpeg",
+        "range": "Oct 2021 - Present • 4 months",
+        "location": "San Francisco, CA"
+      },
+        {
+          "title": "Software Engineer",
+          "name": "Expanse - Acquired by Palo Alto Networks",
+          "icon": "expanse.jpeg",
+          "range": "Aug 2020 - Oct 2021 • 1 year 3 months",
+          "location": "San Francisco, CA"
+        }],
+      "CLanguages": [
+        {
+          "name": "Java",
+          "skill": "95%"
+        },
+        {
+          "name": "Google Dataflow",
+          "skill": "80%"
+        },
+        {
+          "name": "Vue.js",
+          "skill": "80%"
+        },
+        {
+          "name": "Node.js",
+          "skill": "79%"
+        },
+        {
+          "name": "Python",
+          "skill": "78%"
+        },
+        {
+          "name": "Javascript",
+          "skill": "67%"
+        },
+        {
+          "name": "C",
+          "skill": "65%"
+        },
+        {
+          "name": "Groovy",
+          "skill": "62%"
+        },
+        {
+          "name": "SQL",
+          "skill": "60%"
+        },
+        {
+          "name": "Scikit-Learn",
+          "skill": "46%"
+        },
+        {
+          "name": "Selenium Webdriver",
+          "skill": "45%"
+        },
+        {
+          "name": "VBA",
+          "skill": "20%"
+        }
+      ],
+      "Languages": [
+        {
+          "name": "Tamil",
+          "skill": "61%"
+        },
+        {
+          "name": "English",
+          "skill": "94%"
+        },
+        {
+          "name": "Hindi",
+          "skill": "38%"
+        },
+        {
+          "name": "Spanish",
+          "skill": "43%"
+        }
+      ]
+    }
   }
+}
