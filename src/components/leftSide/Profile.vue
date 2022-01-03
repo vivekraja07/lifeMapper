@@ -1,13 +1,13 @@
 <template>
   <div id="profile">
       <div class = "logoHolder">
-          <img id="vivek" src="@/assets/qualtrics.jpg">
+          <img id="vivek" src="@/assets/singapore.jpg">
       </div>
 
       <h1> Vivekanand Rajasekar </h1>
-      <blockquote> 
+      <blockquote>
         <p>"Never discount the power of enthusiasm"</p>
-        <footer>-Sarah Chang</footer>
+        <footer>-S. Chang</footer>
         </blockquote>
       <br>
       <div class = "icons">
@@ -28,15 +28,13 @@
             <img src="@/assets/devpost.jpg">
           </a>
         </div>
-        
+
         <div class = "iconHolder">
           <a href="https://www.dropbox.com/s/xayjr0a3s6vpn0w/VivekRaja.pdf?dl=0" target="_blank">
             <img src="@/assets/resume.png">
           </a>
         </div>
       </div>
-
-
 
   </div>
 </template>
@@ -49,7 +47,7 @@ export default {
   },
   props: {
     events: Object
-  },
+  }
 }
 
 </script>
@@ -80,8 +78,8 @@ blockquote p {
 }
 
 #vivek {
-  width: 283px;
-  height: 350px;
+  width: 605px;
+  height: 453px;
 }
 
 .iconHolder {
@@ -102,6 +100,5 @@ img {
   align-content: center;
   flex-direction: row;
 }
-
 
 </style>

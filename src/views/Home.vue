@@ -3,13 +3,13 @@
 
     <!-- <img src="@/assets/logo.png"> -->
     <!-- <Sidebar/> -->
-    
+
     <LeftSide v-bind:events="x" v-bind:projects="projects" v-if="$mq != 'sm'"/>
     <Information v-bind:events="x" v-bind:eventOrder="eventOrder" v-if="$mq != 'sm'"/>
     <Timeline v-bind:events="x" v-if="$mq != 'sm'"/>
     <Form v-if="showModal && $mq != 'sm'" @close="showModal = false" ></Form>
     <div class="mobile" v-if="$mq === 'sm'">
-      Hello! Welcome to Vivek's page. 
+      Hello! Welcome to Vivek's page.
       <br>
       <br>
       Unfortunately, looks like your screen is too small!
@@ -21,7 +21,7 @@
       Please go to VivekRaja.me from a larger screen to learn about Vivek!
 
       <Profile/>
-      
+
     </div>
 
   </div>
@@ -54,13 +54,13 @@ export default {
   data: function () {
     return {
       // data
-      showModal: false,
-      //temporary @TODO
-      // showModal: true,
+      // showModal: false,
+      // temporary @TODO
+      showModal: true,
       x: myX,
       eventOrder: myEventOrder,
-      projects: myProjects,
-    } 
+      projects: myProjects
+    }
   }
 }
 
@@ -76,7 +76,7 @@ export default {
 
 .mobile {
   font-size: 20px;
-  
+
 }
 
 </style>
