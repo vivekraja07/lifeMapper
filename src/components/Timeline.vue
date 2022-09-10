@@ -31,6 +31,7 @@
             <li>2019</li>
             <li>2020</li>
             <li>2021</li>
+            <li>2022</li>
         </ul>
     </div>
 </template>
@@ -48,7 +49,7 @@ export default {
       'activeSet'
     ]),
     getWidth (beg, finish) {
-      var total = '276' // = 12 * 23
+      var total = '286' // = 12 * 23 + 10
       var start = this.getAsMonth(beg)
       var end = this.getAsMonth(finish)
       var numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1)

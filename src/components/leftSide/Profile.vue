@@ -7,7 +7,6 @@
       <h1> Vivekanand Rajasekar </h1>
       <blockquote>
         <p>"Never discount the power of enthusiasm"</p>
-        <footer>-S. Chang</footer>
         </blockquote>
       <br>
       <div class = "icons">

@@ -1733,8 +1733,16 @@
         "title": "Software Engineer",
         "name": "Expanse - Acquired by Palo Alto Networks",
         "icon": "expanse.jpeg",
-        "range": "Aug 2020 - Present • 1 year 6 months",
-        "location": "San Francisco, CA"
+        "range": "Aug 2020 - Present • 2 years 2 months",
+        "location": "San Francisco, CA",
+        "details": [
+          "Served as the tech lead on Service Deltas, leading the Data Platform team to migrate the Dataflow pipelines that power the Expanse product from a series of batch pipelines to streaming ones, reducing the latency from days to minutes",
+          "Created the XDR Collector, an integration to bring endpoint data into Expander and power the Remote Workforce product. In addition, worked on the API, UI, and platform to deliver this feature successfully",
+          "Led cross-team effort to increase database scalability, upgrading our largest production databases to Aurora without incident or significant downtime, analyzing index usage, and creating patterns for pruning stale data",
+          "Created Tycho-Ops, a one-click deploy tool that moved the team to daily releases, allowing for faster iteration",
+          "As the L2 On-Call engineer, drove responses on larger incidents and set up new response standards",
+          "Organized the company’s formal mentorship program, matching over 60 mentees and mentors and also started the New College Grad (NCG) program, creating a shared space for new engineers to collaborate during WFH"
+        ]
       }],
       "CLanguages": [
         {
@@ -1809,27 +1817,36 @@
 
     "June 2021 to Present": {
     "start": "June-2021",
-    "end": "December-2021",
+    "end": "September-2022",
     "loc": [37.79136573465197, -122.39794588682582],
     "zoom": 15,
     "info": {
       "General": {
-        "title": "Finally Moved to SF",
+        "title": "Finally Working In Person in SF",
         "Location": "San Francisco, CA"
       },
       "Jobs": [{
         "title": "Staff Software Engineer",
         "name": "Expanse - Acquired by Palo Alto Networks",
         "icon": "expanse.jpeg",
-        "range": "Oct 2021 - Present • 4 months",
-        "location": "San Francisco, CA"
-      },
-        {
-          "title": "Software Engineer",
-          "name": "Expanse - Acquired by Palo Alto Networks",
-          "icon": "expanse.jpeg",
-          "range": "Aug 2020 - Oct 2021 • 1 year 3 months",
-          "location": "San Francisco, CA"
+        "range": "Oct 2021 - Present • 2 years 2 months",
+        "location": "San Francisco, CA",
+          "details": [
+            "Served as the tech lead on Service Deltas, leading the Data Platform team to migrate the Dataflow pipelines that power the Expanse product from a series of batch pipelines to streaming ones, reducing the latency from days to minutes",
+            "Created the XDR Collector, an integration to bring endpoint data into Expander and power the Remote Workforce product. In addition, worked on the API, UI, and platform to deliver this feature successfully",
+            "Led cross-team effort to increase database scalability, upgrading our largest production databases to Aurora without incident or significant downtime, analyzing index usage, and creating patterns for pruning stale data",
+            "Created Tycho-Ops, a one-click deploy tool that moved the team to daily releases, allowing for faster iteration",
+            "As the L2 On-Call engineer, drove responses on larger incidents and set up new response standards",
+            "Organized the company’s formal mentorship program, matching over 60 mentees and mentors and also started the New College Grad (NCG) program, creating a shared space for new engineers to collaborate during WFH"
+          ]
+        }],
+        "Activities": [{
+          "title": "AIF Bay Area Young Professionals",
+          "icon": "aif.png",
+          "name": "Community Outreach Lead",
+          "details": [
+            "Leading a team of dedicated volunteers to partner with local businesses to raise funds for the underprivileged"
+          ]
         }],
       "CLanguages": [
         {
@@ -1838,7 +1855,7 @@
         },
         {
           "name": "Google Dataflow",
-          "skill": "80%"
+          "skill": "90%"
         },
         {
           "name": "Vue.js",
