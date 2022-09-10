@@ -3,14 +3,16 @@
 # abort on errors
 set -e
 
+
 # build
+export NODE_OPTIONS=--openssl-legacy-provider
 npm run build
 
 # navigate into the build output directory
 cd dist
 
 # if you are deploying to a custom domain
-echo 'www.vivekraja.me' > CNAME
+# echo 'www.vivekraja.me' > CNAME
 
 git init
 git add -A
@@ -20,6 +22,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:vivekraja07/personalWebsite.git master:gh-pages
+git push -f git@github.com:vivekraja07/lifeMapper.git master:gh-pages
 
 cd -
