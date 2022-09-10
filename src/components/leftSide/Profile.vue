@@ -29,7 +29,7 @@
         </div>
 
         <div class = "iconHolder">
-          <a href="https://www.dropbox.com/s/xayjr0a3s6vpn0w/VivekRaja.pdf?dl=0" target="_blank">
+          <a href="https://www.dropbox.com/s/id52myrvdr17n6u/VivekRaja.pdf?dl=0" target="_blank">
             <img src="@/assets/resume.png">
           </a>
         </div>
