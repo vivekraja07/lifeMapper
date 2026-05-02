@@ -82,30 +82,69 @@ export default {
   height: 100%;
   text-align: center;
   overflow: auto;
+  overflow-x: hidden;
+  padding: 0;
+  background: var(--color-surface, #fff);
+  scrollbar-gutter: stable;
+}
+
+.Languages > div {
+  margin-bottom: 1rem;
+}
+
+.Languages > div:last-child {
+  margin-bottom: 0;
 }
 
 /* Container for skill bars */
 .container {
-  width: 100%; /* Full width */
-  background-color: #ddd; /* Grey background */
+  width: 100%;
+  background-color: var(--color-border, #e2e8f0);
+  border-radius: var(--radius-pill, 999px);
+  overflow: hidden;
 }
 
 .sectionTitle {
+    font-family: var(--font-display, system-ui, sans-serif);
+    font-weight: var(--font-heading-weight, 700);
+    font-size: 1.125rem;
+    letter-spacing: -0.02em;
     text-align: center;
+    color: var(--color-ink, #0f172a);
+    margin-bottom: 0.75rem;
 }
 
 section {
-    border: 3px solid;
-    border-style: solid;
+    border: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
     border-top: 0;
-    padding: 20px 72px 16px 24px;
+    padding: 1.25rem 1.5rem 1.25rem 1.25rem;
     text-align: left;
+    background: var(--color-surface, #fff);
+}
+
+section:first-of-type {
+  border-top: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
+}
+
+.Languages p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-ink, #0f172a);
+  margin-bottom: 0.35rem;
+  text-align: left;
 }
 
 .skills {
-  text-align: right; /* Right-align text */
-  padding: 10px; /* Add some padding */
-  color: white; /* White text color */
+  text-align: right;
+  padding: 0.5rem 0.75rem;
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 0 var(--radius-pill, 999px) var(--radius-pill, 999px) 0;
+  min-height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 h3 {

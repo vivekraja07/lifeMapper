@@ -75,8 +75,23 @@ export default {
 }
 
 .mobile {
-  font-size: 20px;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-ink, #0f172a);
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
+}
 
+.mobile::before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin: 0 auto 1.5rem;
+  border-radius: var(--radius-pill, 999px);
+  background: linear-gradient(90deg, var(--color-accent, #0ea5e9), var(--color-accent-hover, #0284c7));
 }
 
 </style>

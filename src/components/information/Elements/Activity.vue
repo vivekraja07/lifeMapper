@@ -46,7 +46,36 @@ export default {
 
 .addDetails {
     margin-left: 80px;
-    margin-top: 16px;
+    margin-top: 1rem;
+    color: var(--color-ink, #0f172a);
+}
+
+.title {
+  font-family: var(--font-display, system-ui, sans-serif);
+  font-weight: var(--font-heading-weight, 700);
+  font-size: 1.0625rem;
+  letter-spacing: -0.02em;
+  color: var(--color-ink, #0f172a);
+  margin-bottom: 0.25rem;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-muted, #64748b);
+  margin-bottom: 0.2rem;
+}
+
+.timeRange, .location {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-muted, #64748b);
+}
+
+.addDetails li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  line-height: 1.55;
 }
 
 </style>

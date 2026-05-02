@@ -60,39 +60,54 @@ export default {
 /* Make sure that padding behaves as expected */
 * {box-sizing:border-box}
 
-/* date styles go here */
 .dates {
-    background: black;
-    color: white;
+    background: var(--color-chrome, #0f172a);
+    color: #f8fafc;
     border: 0;
     height: 10%;
-
+    min-height: 3.5rem;
     display: flex;
-    justify-content:  space-around;
-    align-content: center;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
-
     text-align: center;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
 
 h3 {
   align-self: center;
+  font-family: var(--font-display, system-ui, sans-serif);
+  font-weight: var(--font-heading-weight, 700);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  letter-spacing: -0.02em;
+  color: #f8fafc;
 }
 
 .round {
   align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-chrome-muted, #94a3b8);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 b {
-    font-size: 30px;
+    font-size: inherit;
     text-decoration: none;
+    font-weight: 400;
 }
 
 b:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
     cursor: pointer;
 }
-
 
 </style>

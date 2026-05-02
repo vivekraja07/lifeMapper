@@ -68,22 +68,47 @@ export default {
 #features {
     height: 90%;
     width: 50%;
-    /* overflow: auto; */
     display: inline-block;
     font-size: 1rem;
+    vertical-align: top;
+    background: var(--color-surface, #fff);
 }
 
 #events {
   overflow: auto;
+  overflow-x: hidden;
   height: 90%;
+  padding-right: 0;
+  scrollbar-gutter: stable;
 }
 
 section {
-    border: 3px solid;
-    border-style: solid;
+    border: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
     border-top: 0;
-    padding: 20px 72px 16px 24px;
+    padding: 1.25rem 1.5rem 1.25rem 1.25rem;
     text-align: left;
+    background: var(--color-surface, #fff);
+}
+
+section:first-of-type {
+  border-top: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
+}
+
+.general .title {
+  font-family: var(--font-display, system-ui, sans-serif);
+  font-weight: var(--font-heading-weight, 700);
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: var(--color-ink, #0f172a);
+}
+
+.general li {
+  list-style: none;
+  line-height: 1.55;
+  padding-left: 0;
+  margin-bottom: 0.35rem;
 }
 
 </style>

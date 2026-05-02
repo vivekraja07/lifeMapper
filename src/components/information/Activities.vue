@@ -30,22 +30,28 @@ export default {
 * {box-sizing:border-box}
 
 .Activity {
-  border-bottom: 1px dashed #bdbdbd;
-  padding-top: 20px;
-  padding-bottom: 16px;
+  border-bottom: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
 }
 
 .Activity:last-child {
-  border-bottom: 0px;
-  padding-bottom: 0px;
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .Activity:first-of-type {
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 .sectionTitle {
+    font-family: var(--font-display, system-ui, sans-serif);
+    font-weight: var(--font-heading-weight, 700);
+    font-size: 1.125rem;
+    letter-spacing: -0.02em;
     text-align: center;
+    color: var(--color-ink, #0f172a);
+    margin-bottom: 0.75rem;
 }
 
 </style>

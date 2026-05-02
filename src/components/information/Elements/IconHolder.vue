@@ -30,10 +30,13 @@ export default {
 }
 
 img {
-    border-radius: 6px;
-    border: 4px solid transparent;
+    border-radius: var(--radius, 10px);
+    border: 2px solid var(--color-border, #e2e8f0);
     height: 64px;
     width: 64px;
+    object-fit: contain;
+    background: var(--color-surface, #fff);
+    box-shadow: var(--shadow-sm, 0 1px 2px rgba(15, 23, 42, 0.06));
 }
 
 </style>
