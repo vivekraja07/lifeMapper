@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     sidebarOpen: false,
-    active: 'June 2021 to Present'
+    active: 'June 2021 to Present',
+    /** Left panel tab: 'Map' | 'Profile' | 'Projects' | 'Skills' — matches LeftSide dynamic component name */
+    leftSidePick: 'Profile'
   },
   mutations: {
     setActive (state, event) {
@@ -14,6 +16,9 @@ export default new Vuex.Store({
     },
     toggleSideBar (state) {
       state.sidebarOpen = !state.sidebarOpen
+    },
+    setLeftSidePick (state, pick) {
+      state.leftSidePick = pick
     }
   },
   actions: {

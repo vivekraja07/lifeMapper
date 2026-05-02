@@ -1,7 +1,7 @@
 <template>
     <div class="Activities">
         
-        <h2 class="sectionTitle">{{sectionTitle}}</h2>
+        <h2 v-if="sectionTitle" class="sectionTitle">{{sectionTitle}}</h2>
         
         <Activity class="Activity" v-for="(activity, index) in activities" :key="index" v-bind:activity="activity"/>
 
@@ -31,8 +31,8 @@ export default {
 
 .Activity {
   border-bottom: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
-  padding-top: 1.25rem;
-  padding-bottom: 1rem;
+  padding-top: 0.95rem;
+  padding-bottom: 0.7rem;
 }
 
 .Activity:last-child {

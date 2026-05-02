@@ -9,13 +9,17 @@
             <h5 v-if="activity.location" class = "location"> {{activity.location}} </h5>
         </div>
 
-        <div class = "addDetails" v-if="activity.courses || activity.details">
+        <div class="addDetails" v-if="activity.courses || activity.details">
 
-            <Table v-if="activity.courses" v-bind:Table="activity.courses" />
+            <div v-if="activity.courses" class="addDetails-table">
+                <Table v-bind:Table="activity.courses" />
+            </div>
 
-            <li v-for="point in activity.details" :key="point">
-                {{point}}
-            </li>
+            <ul v-if="activity.details && activity.details.length" class="addDetails-bullets">
+                <li v-for="point in activity.details" :key="point">
+                    {{point}}
+                </li>
+            </ul>
         </div>
 
 
@@ -45,9 +49,30 @@ export default {
 }
 
 .addDetails {
-    margin-left: 80px;
-    margin-top: 1rem;
+    clear: left;
+    margin-top: 0.75rem;
     color: var(--color-ink, #0f172a);
+}
+
+.addDetails-table {
+    margin-left: 0;
+}
+
+.addDetails-bullets {
+    margin: 0;
+    padding-left: 1rem;
+    list-style-position: outside;
+}
+
+.addDetails-table + .addDetails-bullets {
+    margin-top: 0.65rem;
+}
+
+.addDetails-bullets li {
+  margin-bottom: 0.22rem;
+  padding-left: 0;
+  line-height: 1.38;
+  font-size: 0.9375rem;
 }
 
 .title {
@@ -70,12 +95,6 @@ export default {
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-muted, #64748b);
-}
-
-.addDetails li {
-  margin-bottom: 0.5rem;
-  padding-left: 0.25rem;
-  line-height: 1.55;
 }
 
 </style>

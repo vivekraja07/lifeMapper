@@ -7,7 +7,7 @@
       "zoom": 18,
       "info": {
         "General": {
-          "title": "This is where the story begins folks.",
+          "title": "This is where the story begins, folks.",
           "Location": "Tirupur, Tamil Nadu"
         },
         "Languages": [
@@ -26,7 +26,7 @@
       "zoom": 18,
       "info": {
         "General": {
-          "title": "Moved to the neighboring, more industrial city",
+          "title": "A Slightly Bigger City",
           "Location": "Coimbatore, Tamil Nadu"
         },
         "school": {
@@ -61,7 +61,7 @@
       "zoom": 20,
       "info": {
         "General": {
-          "title": "Moved to the distant state of Gujarat, where I learned some new languages",
+          "title": "To Gujarat - Mastering the Gharba Dances",
           "Location": "Ahemdabad, Gujarat"
         },
         "Education": {
@@ -94,7 +94,7 @@
       "zoom": 18,
       "info": {
         "General": {
-          "title": "Moved to the distant state of Uttar Pradesh, which is on the outskirts of Delhi. ",
+          "title": "An Older Boy in Newer Delhi",
           "Location": "Noida, Uttar Pradesh"
         },
         "Education": {
@@ -127,7 +127,7 @@
       "zoom": 18,
       "info": {
         "General": {
-          "title": "Arrived at the US of A.",
+          "title": "Discovering the New World",
           "Location": "Alpharetta, Georgia"
         },
         "Education": {
@@ -160,7 +160,7 @@
       "zoom": 18,
       "info": {
         "General": {
-          "title": "6th to 8th Grade",
+          "title": "The Middle School Years",
           "Location": "Alpharetta, Georgia"
         },
         "Education": {
@@ -330,7 +330,7 @@
       "zoom": 20,
       "info": {
         "General": {
-          "title": "Sandwich Artist at Subway",
+          "title": "Subway Summer",
           "Location": "Alpharetta, Georgia"
         },
         "Jobs": [{
@@ -340,8 +340,7 @@
           "range": "Jun 2014 to July 2014 • 3 mos",
           "location": "Duluth, GA",
           "details": [
-            "Managed all transactions and dealt with customers single-handedly.",
-            "Learned about the business operations and efficient procedures of the multi-million dollar corporation.",
+            "Made sandwiches, artfully",
             "Created a report at the end of the summer with sales data, outlining ideas on decreasing costs and increasing sales."
           ]
         }],
@@ -467,8 +466,8 @@
           "range": "Jun 2015 to Jul 2015 • 2 mos",
           "location": "Alpharetta, GA",
           "details": [
-            "Ensured guest satisfaction and created a fun environment.",
-            "Carried around 8lbs of food up and down a fleet of stairs to guests at the facility"
+            "Carried around 8lbs of food up and down a fleet of stairs to guests at the facility",
+            "Squandered my opportunity to become a golf pro"
           ]
         },
         {
@@ -478,7 +477,8 @@
           "range": "Jun 2015 - Jul 2015 • 2 mos",
           "location": "Johns Creek, GA",
           "details": [
-            "Tutored 3 elementary and middle school students in basic English and Mathematics"
+            "Tutored 3 elementary/middle school kids in basic English and Mathematics",
+            "Passing down my great wisdom to the next generation"
           ]
         }],
         "Languages": [
@@ -695,7 +695,6 @@
           "title": "Project Euler",
           "details": [
             "A series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve",
-            "Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems",
             "Solved 65 problems on the site (top 3.532% on the site)"
           ]
         }],
@@ -769,8 +768,7 @@
         "Projects": [{
           "title": "WaterFall",
           "details": [
-            "Developed an Android application that allows users and experts to report water availability and contamination levels in their area in the event of a natural disaster",
-            "Used a Firebase backend for authorization and water report storage, implementing maps and location services to help users find clean water nearby"
+            "Developed an Android application that allows users and experts to report water availability and contamination levels in their area in the event of a natural disaster"
           ]
         },
         {
@@ -1013,8 +1011,7 @@
           "range": "Jan 2018 - May 2018 • 5 mos",
           "location": "GT Campus",
           "details": [
-            "Design homework questions and projects both to help study and demonstrate mastery of material",
-            "Lecture recitation urging students to be engaged and excited to learn about microprocessors and network designs",
+            "Lecture recitation of 50 students, engaging them to learn about microprocessors and network designs",
             "Tutor students individually, assisting with both homework and general questions"
           ]
         }],
@@ -1344,16 +1341,6 @@
             "title": "My Finances",
             "details": [
               "Developing a personalized finance website to replace my use of Intuit Mint"
-            ]},
-          {
-            "title": "My Tasks",
-            "details": [
-              "Developing a personalized to-do app that caters to my needs and habits"
-            ]},
-          {
-            "title": "Internship Search Visualization",
-            "details": [
-              "Developing a visualization using D3 and collected data of the timeline of my 2019 summer internship search"
             ]}
         ],
         "CLanguages": [
@@ -1845,7 +1832,7 @@
           "icon": "aif.png",
           "name": "Community Outreach Lead",
           "details": [
-            "Leading a team of dedicated volunteers to partner with local businesses to raise funds for the underprivileged"
+            "Leading a team of dedicated volunteers to partner with local businesses to raise funds for the needy"
           ]
         }],
       "CLanguages": [

@@ -3,9 +3,11 @@
               <h2 class="sectionTitle"> Projects</h2>
               <div class="Project" v-for="project in Projects" v-on:click="sideBarToggle()" :key="project.title">
                   <h3 class="title"> {{project.title}} </h3>
-                  <li v-for="point in project.details" :key="point">
-                      {{point}}
-                  </li>
+                  <ul class="project-details-list">
+                      <li v-for="point in project.details" :key="point">
+                          {{point}}
+                      </li>
+                  </ul>
               </div>
           </div>
 </template>
@@ -26,8 +28,8 @@ export default {
 
 .Project {
   border-bottom: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
-  padding-top: 1.25rem;
-  padding-bottom: 1rem;
+  padding-top: 0.95rem;
+  padding-bottom: 0.7rem;
 }
 
 .Project:last-child  {
@@ -53,12 +55,20 @@ export default {
   font-family: var(--font-display, system-ui, sans-serif);
   font-weight: var(--font-heading-weight, 700);
   font-size: 1rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
-.Project li {
-  line-height: 1.55;
-  margin-bottom: 0.35rem;
+.project-details-list {
+  margin: 0;
+  padding-left: 1rem;
+  list-style-position: outside;
+}
+
+.project-details-list li {
+  line-height: 1.38;
+  margin-bottom: 0.22rem;
+  padding-left: 0;
+  font-size: 0.9375rem;
 }
 
 </style>

@@ -50,12 +50,14 @@ export default {
     events: Object,
     projects: Array
   },
-  data: function() {
-    return {
-       pick: 'Profile'
-      //@TODO
-      //temporary for testing purposes:
-      //pick: 'Projects'
+  computed: {
+    pick: {
+      get () {
+        return this.$store.state.leftSidePick
+      },
+      set (val) {
+        this.$store.commit('setLeftSidePick', val)
+      }
     }
   },
   methods: {
