@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import eventOrder from '@/data/eventOrder.json'
 
 Vue.use(Vuex)
+
+const defaultActive =
+  Array.isArray(eventOrder) && eventOrder.length > 0
+    ? eventOrder[eventOrder.length - 1]
+    : 'June 2021 to Present'
 
 export default new Vuex.Store({
   state: {
     sidebarOpen: false,
-    active: 'June 2021 to Present',
+    active: defaultActive,
     /** Left panel tab: 'Map' | 'Profile' | 'Projects' | 'Skills' — matches LeftSide dynamic component name */
-    leftSidePick: 'Profile'
+    leftSidePick: 'Map'
   },
   mutations: {
     setActive (state, event) {

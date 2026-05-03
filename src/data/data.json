@@ -1,10 +1,13 @@
 {
-    
+  "events": {
     "January 12, 1998 to June 1999": {
       "start": "January-1998",
       "end": "June-1999",
-      "loc": [11.1085, 77.3411],
-      "zoom": 18,
+      "loc": [
+        11.1085,
+        77.3411
+      ],
+      "zoom": 7,
       "info": {
         "General": {
           "title": "This is where the story begins, folks.",
@@ -18,12 +21,14 @@
         ]
       }
     },
-    
     "July 1999 to May 2003": {
       "start": "July-1999",
       "end": "May-2003",
-      "loc": [11.0168, 76.9558],
-      "zoom": 18,
+      "loc": [
+        11.0168,
+        76.9558
+      ],
+      "zoom": 7,
       "info": {
         "General": {
           "title": "A Slightly Bigger City",
@@ -53,12 +58,14 @@
         ]
       }
     },
-    
     "June 2003 to May 2005": {
       "start": "June-2003",
       "end": "May-2005",
-      "loc": [23.020999, 72.5252289],
-      "zoom": 20,
+      "loc": [
+        23.020999,
+        72.5252289
+      ],
+      "zoom": 7,
       "info": {
         "General": {
           "title": "To Gujarat - Mastering the Gharba Dances",
@@ -86,11 +93,13 @@
         ]
       }
     },
-    
     "June 2005 to October 2007": {
       "start": "June-2005",
       "end": "October-2007",
-      "loc": [28.5735143, 77.36474339999995],
+      "loc": [
+        28.5735143,
+        77.36474339999995
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -119,11 +128,13 @@
         ]
       }
     },
-    
     "November 2007 to May 2009": {
       "start": "November-2007",
       "end": "May-2009",
-      "loc": [34.056411, -84.196612],
+      "loc": [
+        34.056411,
+        -84.196612
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -152,11 +163,13 @@
         ]
       }
     },
-    
     "June 2009 to July 2012": {
       "start": "June-2009",
       "end": "July-2012",
-      "loc": [34.067403, -84.231445],
+      "loc": [
+        34.067403,
+        -84.231445
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -169,14 +182,16 @@
           "range": "Aug 2009 - May 2012 • 3 years",
           "icon": "wbms.jpeg"
         },
-        "Activities": [{
-          "title": "Bala Vihar",
-          "icon": "CMA.png",
-          "name": "Student",
-          "details": [
-            "Participated in discussions and service projects"
-          ]
-        }],
+        "Activities": [
+          {
+            "title": "Bala Vihar",
+            "icon": "CMA.png",
+            "name": "Student",
+            "details": [
+              "Participated in discussions and service projects"
+            ]
+          }
+        ],
         "Languages": [
           {
             "name": "Tamil",
@@ -196,13 +211,14 @@
           }
         ]
       }
-
     },
-    
     "August 2012 to July 2013": {
       "start": "August-2012",
       "end": "July-2013",
-      "loc": [34.049821, -84.208407],
+      "loc": [
+        34.049821,
+        -84.208407
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -215,27 +231,74 @@
           "icon": "hooch.png",
           "range": "Aug 2012 - May 2013 • 1 year",
           "courses": {
-            "columns": ["Course Number", "Course Title", "Fall", "Spring"],
+            "columns": [
+              "Course Number",
+              "Course Title",
+              "Fall",
+              "Spring"
+            ],
             "rows": [
-              [1, "Accelerated Geometry Honors", "105", "106"],
-              [2, "Honors Biology", "105", "106"],
-              [3, "Band - Tuba Player", "97", "100"],
-              [4, "Home Room/Lunch", "-", "-"],
-              [5, "Spanish 2 Honors", "106", "106"],
-              [6, "Literature and Comprehension", "97", "100"],
-              [7, "AP US Government and Politics", "107", "-"],
-              [7, "AP Comparative Government", "-", "105"]
+              [
+                1,
+                "Accelerated Geometry Honors",
+                "105",
+                "106"
+              ],
+              [
+                2,
+                "Honors Biology",
+                "105",
+                "106"
+              ],
+              [
+                3,
+                "Band - Tuba Player",
+                "97",
+                "100"
+              ],
+              [
+                4,
+                "Home Room/Lunch",
+                "-",
+                "-"
+              ],
+              [
+                5,
+                "Spanish 2 Honors",
+                "106",
+                "106"
+              ],
+              [
+                6,
+                "Literature and Comprehension",
+                "97",
+                "100"
+              ],
+              [
+                7,
+                "AP US Government and Politics",
+                "107",
+                "-"
+              ],
+              [
+                7,
+                "AP Comparative Government",
+                "-",
+                "105"
+              ]
             ]
           }
         },
-        "Activities": [{
-          "title": "Bala Vihar",
-          "icon": "CMA.png",
-          "name": "Student",
-          "details": [
-            "Participated in discussions and service projects"
-          ]
-        }],
+        "Activities": [
+          {
+            "title": "Bala Vihar",
+            "icon": "CMA.png",
+            "name": "Student",
+            "details": [
+              "Participated in discussions and service projects"
+            ]
+          }
+        ],
         "Languages": [
           {
             "name": "Tamil",
@@ -256,11 +319,13 @@
         ]
       }
     },
-    
     "August 2013 to May 2014": {
       "start": "August-2013",
       "end": "May-2014",
-      "loc": [34.049821, -84.208407],
+      "loc": [
+        34.049821,
+        -84.208407
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -273,15 +338,55 @@
           "icon": "hooch.png",
           "range": "Aug 2013 - May 2014 • 1 year",
           "courses": {
-            "columns": ["Course Number", "Title", "Fall", "Spring"],
+            "columns": [
+              "Course Number",
+              "Title",
+              "Fall",
+              "Spring"
+            ],
             "rows": [
-              [1, "Honors Chemistry", 103, 104],
-              [2, "Band - Tuba Player", 100, 100],
-              [3, "Honors Literature", 103, 104],
-              [4, "Spanish 3 Honors", 103, 104],
-              [5, "Home Room/Lunch", "-", "-"],
-              [6, "AP World History", 101, 100],
-              [7, "Accelerated PreCalculus Honors", 107, 105]
+              [
+                1,
+                "Honors Chemistry",
+                103,
+                104
+              ],
+              [
+                2,
+                "Band - Tuba Player",
+                100,
+                100
+              ],
+              [
+                3,
+                "Honors Literature",
+                103,
+                104
+              ],
+              [
+                4,
+                "Spanish 3 Honors",
+                103,
+                104
+              ],
+              [
+                5,
+                "Home Room/Lunch",
+                "-",
+                "-"
+              ],
+              [
+                6,
+                "AP World History",
+                101,
+                100
+              ],
+              [
+                7,
+                "Accelerated PreCalculus Honors",
+                107,
+                105
+              ]
             ]
           }
         },
@@ -322,36 +427,48 @@
         ]
       }
     },
-    
     "June 2014 to July 2014": {
       "start": "June-2014",
       "end": "July-2014",
-      "loc": [34.047090, -84.179381],
+      "loc": [
+        34.04709,
+        -84.179381
+      ],
       "zoom": 20,
       "info": {
         "General": {
           "title": "Subway Summer",
           "Location": "Alpharetta, Georgia"
         },
-        "Jobs": [{
-          "title": "Sandwich Artist",
-          "name": "Subway",
-          "icon": "subway.png",
-          "range": "Jun 2014 to July 2014 • 3 mos",
-          "location": "Duluth, GA",
-          "details": [
-            "Made sandwiches, artfully",
-            "Created a report at the end of the summer with sales data, outlining ideas on decreasing costs and increasing sales."
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Sandwich Artist",
+            "name": "Subway",
+            "icon": "subway.png",
+            "range": "Jun 2014 to July 2014 • 3 mos",
+            "location": "Duluth, GA",
+            "details": [
+              "Made sandwiches, artfully",
+              "Created a report at the end of the summer with sales data, outlining ideas on decreasing costs and increasing sales."
+            ]
+          }
+        ],
         "school": {
           "title": "Fulton Virtual School",
           "name": "Sophomore",
           "icon": "fvs.png",
           "range": "June 2013 - July 2014 • 3 mos",
           "courses": {
-            "columns": ["Course", "Summer"],
-            "rows": [["FVS General Health", 99]]
+            "columns": [
+              "Course",
+              "Summer"
+            ],
+            "rows": [
+              [
+                "FVS General Health",
+                99
+              ]
+            ]
           }
         },
         "Languages": [
@@ -374,11 +491,13 @@
         ]
       }
     },
-    
     "August 2014 to May 2015": {
       "start": "August-2014",
       "end": "May-2015",
-      "loc": [34.049821, -84.208407],
+      "loc": [
+        34.049821,
+        -84.208407
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -391,15 +510,55 @@
           "icon": "hooch.png",
           "range": "Aug 2014 - May 2015 • 1 year",
           "courses": {
-            "columns": ["Course Number", "Title", "Fall", "Spring"],
+            "columns": [
+              "Course Number",
+              "Title",
+              "Fall",
+              "Spring"
+            ],
             "rows": [
-              [1, "AP Spanish Lang", 106, 106],
-              [2, "AP US History", 103, 100],
-              [3, "Accounting Principles 1", 98, 96],
-              [4, "Home Room/Lunch", "-", "-"],
-              [5, "AP Calculus BC", 103, 102],
-              [6, "AP Chemistry", 102, 102],
-              [7, "AP English Lanugage", 99, 100]
+              [
+                1,
+                "AP Spanish Lang",
+                106,
+                106
+              ],
+              [
+                2,
+                "AP US History",
+                103,
+                100
+              ],
+              [
+                3,
+                "Accounting Principles 1",
+                98,
+                96
+              ],
+              [
+                4,
+                "Home Room/Lunch",
+                "-",
+                "-"
+              ],
+              [
+                5,
+                "AP Calculus BC",
+                103,
+                102
+              ],
+              [
+                6,
+                "AP Chemistry",
+                102,
+                102
+              ],
+              [
+                7,
+                "AP English Lanugage",
+                99,
+                100
+              ]
             ]
           }
         },
@@ -448,39 +607,43 @@
         ]
       }
     },
-    
     "June 2015 to July 2015": {
       "start": "June-2015",
       "end": "July-2015",
-      "loc": [34.045314, -84.307211],
+      "loc": [
+        34.045314,
+        -84.307211
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "TopGolf + Cross-Country + Tutoring",
           "Location": "Alpharetta, Georgia"
         },
-        "Jobs": [{
-          "title": "Food Runner and Busser",
-          "name": "TopGolf",
-          "icon": "topgolf.png",
-          "range": "Jun 2015 to Jul 2015 • 2 mos",
-          "location": "Alpharetta, GA",
-          "details": [
-            "Carried around 8lbs of food up and down a fleet of stairs to guests at the facility",
-            "Squandered my opportunity to become a golf pro"
-          ]
-        },
-        {
-          "title": "Private Tutor",
-          "name": "Self-Employed",
-          "icon": "tutor.png",
-          "range": "Jun 2015 - Jul 2015 • 2 mos",
-          "location": "Johns Creek, GA",
-          "details": [
-            "Tutored 3 elementary/middle school kids in basic English and Mathematics",
-            "Passing down my great wisdom to the next generation"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Food Runner and Busser",
+            "name": "TopGolf",
+            "icon": "topgolf.png",
+            "range": "Jun 2015 to Jul 2015 • 2 mos",
+            "location": "Alpharetta, GA",
+            "details": [
+              "Carried around 8lbs of food up and down a fleet of stairs to guests at the facility",
+              "Squandered my opportunity to become a golf pro"
+            ]
+          },
+          {
+            "title": "Private Tutor",
+            "name": "Self-Employed",
+            "icon": "tutor.png",
+            "range": "Jun 2015 - Jul 2015 • 2 mos",
+            "location": "Johns Creek, GA",
+            "details": [
+              "Tutored 3 elementary/middle school kids in basic English and Mathematics",
+              "Passing down my great wisdom to the next generation"
+            ]
+          }
+        ],
         "Languages": [
           {
             "name": "Tamil",
@@ -501,11 +664,13 @@
         ]
       }
     },
-    
     "August 2015 to May 2016": {
       "start": "August-2015",
       "end": "May-2016",
-      "loc": [34.049821, -84.208407],
+      "loc": [
+        34.049821,
+        -84.208407
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -518,52 +683,103 @@
           "icon": "hooch.png",
           "range": "Aug 2015 - May 2016 • 1 year",
           "courses": {
-            "columns": ["Course Number", "Title", "Fall", "Spring"],
+            "columns": [
+              "Course Number",
+              "Title",
+              "Fall",
+              "Spring"
+            ],
             "rows": [
-              [1, "GT Distance Calculus MOWR", 102, 92],
-              [2, "Personal Fitness", 99, "-"],
-              [2, "GPC - College English 1102", "-", 92],
-              [3, "AP Microeconomics", 99, "-"],
-              [3, "AP Macroeconomics", "-", 98],
-              [4, "Home Room/Lunch", "-", "-"],
-              [5, "AP Computer Science A", 104, 99],
-              [6, "AP Physics 1", 103, 95],
-              [7, "AP Statistics", 102, 95]
+              [
+                1,
+                "GT Distance Calculus MOWR",
+                102,
+                92
+              ],
+              [
+                2,
+                "Personal Fitness",
+                99,
+                "-"
+              ],
+              [
+                2,
+                "GPC - College English 1102",
+                "-",
+                92
+              ],
+              [
+                3,
+                "AP Microeconomics",
+                99,
+                "-"
+              ],
+              [
+                3,
+                "AP Macroeconomics",
+                "-",
+                98
+              ],
+              [
+                4,
+                "Home Room/Lunch",
+                "-",
+                "-"
+              ],
+              [
+                5,
+                "AP Computer Science A",
+                104,
+                99
+              ],
+              [
+                6,
+                "AP Physics 1",
+                103,
+                95
+              ],
+              [
+                7,
+                "AP Statistics",
+                102,
+                95
+              ]
             ]
           }
         },
-        "Jobs": [ {
-          "title": "President and Founder",
-          "name": "APEX Tutoring",
-          "icon": "apex.png",
-          "range": "Apr 2016 - Jun 2016 • 3 mos",
-          "location": "GT Campus",
-          "details": [
-            "Opened up a tutoring center (2200 square feet) for high school students taking the AP Exam.",
-            "Helped over 41 students ace their exams, leading Principal of CHS, Tim Corrigan to claim, “Thank you for providing this wonderful opportunity for our students.”"
-          ]
-        },
-        {
-          "title": "President and Founder",
-          "name": "Winter Cougar Tennis Camp",
-          "icon": "winterCougarTennis.png",
-          "range": "Dec 2015 • 1 week",
-          "location": "Alpharetta, GA",
-          "details": [
-            "Organized a camp for all tennis players interested in trying out for Chattahoochee’s Varsity team.",
-            "More than 65% of the players that attended camp and tried out made the team."
-          ]
-        },
-        {
-          "title": "Private Tutor for AP US Government",
-          "name": "Self-Employed",
-          "icon": "govTutor.png",
-          "range": "Aug 2015 - Mar 2016 • 1 year",
-          "location": "Johns Creek, GA",
-          "details": [
-            "Tutored around 30 high school students, primarily in the class of AP Government"
-          ]
-        }
+        "Jobs": [
+          {
+            "title": "President and Founder",
+            "name": "APEX Tutoring",
+            "icon": "apex.png",
+            "range": "Apr 2016 - Jun 2016 • 3 mos",
+            "location": "GT Campus",
+            "details": [
+              "Opened up a tutoring center (2200 square feet) for high school students taking the AP Exam.",
+              "Helped over 41 students ace their exams, leading Principal of CHS, Tim Corrigan to claim, “Thank you for providing this wonderful opportunity for our students.”"
+            ]
+          },
+          {
+            "title": "President and Founder",
+            "name": "Winter Cougar Tennis Camp",
+            "icon": "winterCougarTennis.png",
+            "range": "Dec 2015 • 1 week",
+            "location": "Alpharetta, GA",
+            "details": [
+              "Organized a camp for all tennis players interested in trying out for Chattahoochee’s Varsity team.",
+              "More than 65% of the players that attended camp and tried out made the team."
+            ]
+          },
+          {
+            "title": "Private Tutor for AP US Government",
+            "name": "Self-Employed",
+            "icon": "govTutor.png",
+            "range": "Aug 2015 - Mar 2016 • 1 year",
+            "location": "Johns Creek, GA",
+            "details": [
+              "Tutored around 30 high school students, primarily in the class of AP Government"
+            ]
+          }
         ],
         "Activities": [
           {
@@ -616,27 +832,31 @@
         ]
       }
     },
-    
     "June 2016 to August 2016": {
       "start": "June-2016",
       "end": "August-2016",
-      "loc": [33.776497, -84.387357],
+      "loc": [
+        33.776497,
+        -84.387357
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Financial Analyst Internship",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Financial Analyst Internship",
-          "name": "Scheller College of Business at Georgia Tech",
-          "icon": "scheller.png",
-          "range": "Jun 2016 - Aug 2016 • 3 mos",
-          "location": "GT Campus",
-          "details": [
-            "Used Bloomberg Essentials to recreate contemporary models of the 1992 Tweedy, Browne’s famous “What has Worked in Investing” Report"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Financial Analyst Internship",
+            "name": "Scheller College of Business at Georgia Tech",
+            "icon": "scheller.png",
+            "range": "Jun 2016 - Aug 2016 • 3 mos",
+            "location": "GT Campus",
+            "details": [
+              "Used Bloomberg Essentials to recreate contemporary models of the 1992 Tweedy, Browne’s famous “What has Worked in Investing” Report"
+            ]
+          }
+        ],
         "CLanguages": [
           {
             "name": "Java",
@@ -663,11 +883,13 @@
         ]
       }
     },
-    
     "September 2016 to December 2016": {
       "start": "September-2016",
       "end": "December-2016",
-      "loc": [33.777378, -84.395516],
+      "loc": [
+        33.777378,
+        -84.395516
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -680,24 +902,54 @@
           "range": "2016 - 2020 • Freshman",
           "icon": "gatech.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["CS 2051", "Honors Discrete Math", "3"],
-              ["CS 1331", "Intro to Object Oriented Programming", "3"],
-              ["CS 1100", "Freshman Leap Seminar", "1"],
-              ["MGT 3078", "Finance and Investments", "3"],
-              ["PHYS 2211", "Intro Physics I", "4"],
-              ["APPH 1040", "Scientific Foundation of Health", "2"]
+              [
+                "CS 2051",
+                "Honors Discrete Math",
+                "3"
+              ],
+              [
+                "CS 1331",
+                "Intro to Object Oriented Programming",
+                "3"
+              ],
+              [
+                "CS 1100",
+                "Freshman Leap Seminar",
+                "1"
+              ],
+              [
+                "MGT 3078",
+                "Finance and Investments",
+                "3"
+              ],
+              [
+                "PHYS 2211",
+                "Intro Physics I",
+                "4"
+              ],
+              [
+                "APPH 1040",
+                "Scientific Foundation of Health",
+                "2"
+              ]
             ]
           }
         },
-        "Projects": [{
-          "title": "Project Euler",
-          "details": [
-            "A series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve",
-            "Solved 65 problems on the site (top 3.532% on the site)"
-          ]
-        }],
+        "Projects": [
+          {
+            "title": "Project Euler",
+            "details": [
+              "A series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve",
+              "Solved 65 problems on the site (top 3.532% on the site)"
+            ]
+          }
+        ],
         "Activities": [
           {
             "title": "GT Crew",
@@ -737,13 +989,14 @@
           }
         ]
       }
-
     },
-    
     "January 2017 to May 2017": {
       "start": "January-2017",
       "end": "May-2017",
-      "loc": [33.777378, -84.395516],
+      "loc": [
+        33.777378,
+        -84.395516
+      ],
       "zoom": 18,
       "info": {
         "General": {
@@ -756,29 +1009,51 @@
           "range": "2016 - 2020 • Freshman",
           "icon": "gatech.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["CS 1332", "Data Structures and Algorithms", "3"],
-              ["CS 2110", "Computer Organization and Programming", "4"],
-              ["CS 2340", "Objects and Design", "3"],
-              ["CHEM 1212k", "Chemical Principles II", "4"]
+              [
+                "CS 1332",
+                "Data Structures and Algorithms",
+                "3"
+              ],
+              [
+                "CS 2110",
+                "Computer Organization and Programming",
+                "4"
+              ],
+              [
+                "CS 2340",
+                "Objects and Design",
+                "3"
+              ],
+              [
+                "CHEM 1212k",
+                "Chemical Principles II",
+                "4"
+              ]
             ]
           }
         },
-        "Projects": [{
-          "title": "WaterFall",
-          "details": [
-            "Developed an Android application that allows users and experts to report water availability and contamination levels in their area in the event of a natural disaster"
-          ]
-        },
-        {
-          "title": "Gameboy Game: Drone Wars",
-          "details": [
-            "For CS 2110, created a gameboy game called Drone Wars in which a drone would roam the screen dropping bombs",
-            "The player will have to dodge the bombs while simultaneously shooting bullets back up at the drones",
-            "This game was written using native C"
-          ]
-        }],
+        "Projects": [
+          {
+            "title": "WaterFall",
+            "details": [
+              "Developed an Android application that allows users and experts to report water availability and contamination levels in their area in the event of a natural disaster"
+            ]
+          },
+          {
+            "title": "Gameboy Game: Drone Wars",
+            "details": [
+              "For CS 2110, created a gameboy game called Drone Wars in which a drone would roam the screen dropping bombs",
+              "The player will have to dodge the bombs while simultaneously shooting bullets back up at the drones",
+              "This game was written using native C"
+            ]
+          }
+        ],
         "Activities": [
           {
             "title": "GT Crew",
@@ -823,41 +1098,48 @@
         ]
       }
     },
-    
     "June 2017 to August 2017": {
       "start": "June-2017",
       "end": "August-2017",
-      "loc": [44.305783, -88.387126],
+      "loc": [
+        44.305783,
+        -88.387126
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Software Engineer Internship at Thrivent Financial",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Planning and Execution Oversight Intern",
-          "name": "Thrivent Financial",
-          "icon": "thrivent.jpeg",
-          "range": "Jun 2017 - Aug 2017 • 3 mos",
-          "location": "Appleton, Wisconsin",
-          "details": [
-            "Wrote selenium scripts to automate testing of applications using WebDriver, java, and Selenium Grid",
-            "Trained over 10 experienced java developers in Selenium scripting",
-            "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data. Script would send an email with results of validation test"
-          ]
-        }],
-        "Projects": [{
-          "title": "Craigslist Data Mining",
-          "details": [
-            "Using Selenium WebDriver, Java, ChromeDriver, Apache POI, and Excel to grab CraigsList data and store in Excel",
-            "Then, cross-referenced car with Kelly Blue Book to find out if car is a good deal or not"
-          ]
-        }, {
-          "title": "Expense Report",
-          "details": [
-            "Created an Expense Report using VBA that would forecast spending based on current trends, had budgetary capabilities, and had a friendly UI"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Planning and Execution Oversight Intern",
+            "name": "Thrivent Financial",
+            "icon": "thrivent.jpeg",
+            "range": "Jun 2017 - Aug 2017 • 3 mos",
+            "location": "Appleton, Wisconsin",
+            "details": [
+              "Wrote selenium scripts to automate testing of applications using WebDriver, java, and Selenium Grid",
+              "Trained over 10 experienced java developers in Selenium scripting",
+              "Created a VBA script to search for abnormalities in a 100GB+ file with PPM Data. Script would send an email with results of validation test"
+            ]
+          }
+        ],
+        "Projects": [
+          {
+            "title": "Craigslist Data Mining",
+            "details": [
+              "Using Selenium WebDriver, Java, ChromeDriver, Apache POI, and Excel to grab CraigsList data and store in Excel",
+              "Then, cross-referenced car with Kelly Blue Book to find out if car is a good deal or not"
+            ]
+          },
+          {
+            "title": "Expense Report",
+            "details": [
+              "Created an Expense Report using VBA that would forecast spending based on current trends, had budgetary capabilities, and had a friendly UI"
+            ]
+          }
+        ],
         "CLanguages": [
           {
             "name": "Java",
@@ -879,7 +1161,6 @@
             "name": "Python",
             "skill": "5%"
           }
-
         ],
         "Languages": [
           {
@@ -901,51 +1182,81 @@
         ]
       }
     },
-    
     "September 2017 to December 2017": {
       "start": "September-2017",
       "end": "December-2017",
-      "loc": [33.777378, -84.395516],
+      "loc": [
+        33.777378,
+        -84.395516
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Sophomore year 1st semester at GA Tech",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Tutor - CS 2110 and CS 1332",
-          "name": "College of Computing at Georgia Tech",
-          "icon": "coc.png",
-          "range": "September 2017 - December 2017 • 5 mos",
-          "location": "GT Campus",
-          "details": [
-            "Tutored 3 students weekly in CS 2110 (Computer Systems and Organization) and CS 1332 (Data Structures and Algorithms)"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Tutor - CS 2110 and CS 1332",
+            "name": "College of Computing at Georgia Tech",
+            "icon": "coc.png",
+            "range": "September 2017 - December 2017 • 5 mos",
+            "location": "GT Campus",
+            "details": [
+              "Tutored 3 students weekly in CS 2110 (Computer Systems and Organization) and CS 1332 (Data Structures and Algorithms)"
+            ]
+          }
+        ],
         "Education": {
           "title": "Georgia Institute of Technology",
           "name": "BS - Computer Science",
           "range": "2016 - 2020 • Sophomore",
           "icon": "gatech.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["CS 2200", "Systems and Networks", "4"],
-              ["CS 3600", "Intro to Artificial Intelligence", "3"],
-              ["CS 4400", "Intro to Database Systems", "3"],
-              ["PSYCH 1101", "General Psychology", "3"],
-              ["SPAN 3101", "Spanish Conversation I", "3"]
+              [
+                "CS 2200",
+                "Systems and Networks",
+                "4"
+              ],
+              [
+                "CS 3600",
+                "Intro to Artificial Intelligence",
+                "3"
+              ],
+              [
+                "CS 4400",
+                "Intro to Database Systems",
+                "3"
+              ],
+              [
+                "PSYCH 1101",
+                "General Psychology",
+                "3"
+              ],
+              [
+                "SPAN 3101",
+                "Spanish Conversation I",
+                "3"
+              ]
             ]
           }
         },
-        "Projects": [{
-          "title": "SYNCRUS (Winner at HackGT)",
-          "details": [
-            "We were inspired by the data set provided by NCR to build a data visualization of a stores best selling departments in different cities across the nation",
-            "We also build a simulation of shoppers to analyze the efficiency and shopper-friendly design of the stores locations per city.",
-            "We wanted to create a analytical view of the entire lifecycle of selling a product, from warehouse distribution to product placement within each specific store."
-          ]
-        }],
+        "Projects": [
+          {
+            "title": "SYNCRUS (Winner at HackGT)",
+            "details": [
+              "We were inspired by the data set provided by NCR to build a data visualization of a stores best selling departments in different cities across the nation",
+              "We also build a simulation of shoppers to analyze the efficiency and shopper-friendly design of the stores locations per city.",
+              "We wanted to create a analytical view of the entire lifecycle of selling a product, from warehouse distribution to product placement within each specific store."
+            ]
+          }
+        ],
         "CLanguages": [
           {
             "name": "Java",
@@ -971,7 +1282,6 @@
             "name": "SQL",
             "skill": "15%"
           }
-
         ],
         "Languages": [
           {
@@ -993,41 +1303,69 @@
         ]
       }
     },
-    
     "January 2018 to May 2018": {
       "start": "January-2018",
       "end": "May-2018",
-      "loc": [33.777378, -84.395516],
+      "loc": [
+        33.777378,
+        -84.395516
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Sophomore year 2nd semester at GA Tech",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Teaching Assistant, CS 2200: Systems and Networks",
-          "name": "College of Computing at Georgia Tech",
-          "icon": "coc.png",
-          "range": "Jan 2018 - May 2018 • 5 mos",
-          "location": "GT Campus",
-          "details": [
-            "Lecture recitation of 50 students, engaging them to learn about microprocessors and network designs",
-            "Tutor students individually, assisting with both homework and general questions"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Teaching Assistant, CS 2200: Systems and Networks",
+            "name": "College of Computing at Georgia Tech",
+            "icon": "coc.png",
+            "range": "Jan 2018 - May 2018 • 5 mos",
+            "location": "GT Campus",
+            "details": [
+              "Lecture recitation of 50 students, engaging them to learn about microprocessors and network designs",
+              "Tutor students individually, assisting with both homework and general questions"
+            ]
+          }
+        ],
         "Education": {
           "title": "Georgia Institute of Technology",
           "name": "BS - Computer Science",
           "range": "2016 - 2020 • Sophomore",
           "icon": "gatech.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["CS 3251", "Computer Networking I", "3"],
-              ["CS 3511", "Algorithms Honors", "3"],
-              ["CS 4641", "Machine Learning", "3"],
-              ["ISYE 3770", "Statistics and Applications", "3"],
-              ["PHIL 3127", "Sci, Tech, & Human Values", "3"]
+              [
+                "CS 3251",
+                "Computer Networking I",
+                "3"
+              ],
+              [
+                "CS 3511",
+                "Algorithms Honors",
+                "3"
+              ],
+              [
+                "CS 4641",
+                "Machine Learning",
+                "3"
+              ],
+              [
+                "ISYE 3770",
+                "Statistics and Applications",
+                "3"
+              ],
+              [
+                "PHIL 3127",
+                "Sci, Tech, & Human Values",
+                "3"
+              ]
             ]
           }
         },
@@ -1060,7 +1398,6 @@
             "name": "SQL",
             "skill": "15%"
           }
-
         ],
         "Languages": [
           {
@@ -1082,35 +1419,41 @@
         ]
       }
     },
-    
     "June 2018 to August 2018": {
       "start": "June-2018",
       "end": "August-2018",
-      "loc": [33.865961, -84.482348],
+      "loc": [
+        33.865961,
+        -84.482348
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Software Engineer Internship at Home Depot",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Software Engineering Intern",
-          "name": "The Home Depot",
-          "icon": "homeDepot.png",
-          "range": "May 2018 - Aug 2018 • 3 mos",
-          "location": "Smyrna, GA",
-          "details": [
-            "Created Flagster, a Feature-Flagging service using Node.js for the API and Vue.js for the front-end",
-            "Worked full-stack using TDD and XP and interacted with product owner to determine optimal design",
-            "Deployed to production and is used daily by 2000+ stores in a department that accounts for 8% of firm’s revenue"
-          ]
-        }],
-        "Projects": [{
-          "title": "LifeMapper",
-          "details": [
-            "Vue application that plots major life events on a Leaflet Map along with a time-line"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Software Engineering Intern",
+            "name": "The Home Depot",
+            "icon": "homeDepot.png",
+            "range": "May 2018 - Aug 2018 • 3 mos",
+            "location": "Smyrna, GA",
+            "details": [
+              "Created Flagster, a Feature-Flagging service using Node.js for the API and Vue.js for the front-end",
+              "Worked full-stack using TDD and XP and interacted with product owner to determine optimal design",
+              "Deployed to production and is used daily by 2000+ stores in a department that accounts for 8% of firm’s revenue"
+            ]
+          }
+        ],
+        "Projects": [
+          {
+            "title": "LifeMapper",
+            "details": [
+              "Vue application that plots major life events on a Leaflet Map along with a time-line"
+            ]
+          }
+        ],
         "CLanguages": [
           {
             "name": "Java",
@@ -1152,7 +1495,6 @@
             "name": "SQL",
             "skill": "15%"
           }
-
         ],
         "Languages": [
           {
@@ -1174,40 +1516,68 @@
         ]
       }
     },
-    
     "September 2018 to December 2018": {
       "start": "September-2018",
       "end": "December-2018",
-      "loc": [33.777378, -84.395516],
+      "loc": [
+        33.777378,
+        -84.395516
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Junior year 1st semester at GA Tech",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Resident Advisor at North Avenue South Apartments",
-          "name": "Georgia Institute of Technology",
-          "icon": "gatech.png",
-          "range": "Aug 2018 - May 2019 • 1 year",
-          "location": "GT Campus",
-          "details": [
-            "Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Resident Advisor at North Avenue South Apartments",
+            "name": "Georgia Institute of Technology",
+            "icon": "gatech.png",
+            "range": "Aug 2018 - May 2019 • 1 year",
+            "location": "GT Campus",
+            "details": [
+              "Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues"
+            ]
+          }
+        ],
         "Education": {
           "title": "Georgia Institute of Technology",
           "name": "BS - Computer Science",
           "range": "2016 - 2020 • Junior",
           "icon": "gatech.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["CS 3311", "Junior Design", "1"],
-              ["CS 3630", "Robotics and Perception", "3"],
-              ["CS 4476", "Computer Vision", "3"],
-              ["LMC 3432", "Technical Communication Strategies", "2"],
-              ["MATH 3012", "Applied Combinatorics", "3"]
+              [
+                "CS 3311",
+                "Junior Design",
+                "1"
+              ],
+              [
+                "CS 3630",
+                "Robotics and Perception",
+                "3"
+              ],
+              [
+                "CS 4476",
+                "Computer Vision",
+                "3"
+              ],
+              [
+                "LMC 3432",
+                "Technical Communication Strategies",
+                "2"
+              ],
+              [
+                "MATH 3012",
+                "Applied Combinatorics",
+                "3"
+              ]
             ]
           }
         },
@@ -1262,7 +1632,6 @@
             "name": "SQL",
             "skill": "15%"
           }
-
         ],
         "Languages": [
           {
@@ -1284,42 +1653,78 @@
         ]
       }
     },
-    
     "January 2019 to May 2019": {
       "start": "January-2018",
       "end": "May-2018",
-      "loc": [33.777378, -84.395516],
+      "loc": [
+        33.777378,
+        -84.395516
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Junior year 2nd semester at GA Tech",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Resident Advisor at North Avenue South Apartments",
-          "name": "Georgia Institute of Technology",
-          "icon": "gatech.png",
-          "range": "Aug 2018 - May 2019 • 1 year",
-          "location": "GT Campus",
-          "details": [
-            "Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Resident Advisor at North Avenue South Apartments",
+            "name": "Georgia Institute of Technology",
+            "icon": "gatech.png",
+            "range": "Aug 2018 - May 2019 • 1 year",
+            "location": "GT Campus",
+            "details": [
+              "Supervised a floor of 50 residents, organized floor programs, and advised residents on personal and academic issues"
+            ]
+          }
+        ],
         "Education": {
           "title": "Georgia Institute of Technology",
           "name": "BS - Computer Science",
           "range": "2016 - 2020 • Junior",
           "icon": "gatech.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["CS 3312", "Junior Design - Part 2", "2"],
-              ["CS 4001", "Computing & Society", "3"],
-              ["CS 4460", "Info Visualization", "3"],
-              ["CS 4510", "Automata & Complexity", "3"],
-              ["CS 4675", "Internet Systems & Services", "3"],
-              ["MATH 2802", "Advanced Linear Algebra", "2"],
-              ["LMC 3431", "Technical Communication Approaches", "1"]
+              [
+                "CS 3312",
+                "Junior Design - Part 2",
+                "2"
+              ],
+              [
+                "CS 4001",
+                "Computing & Society",
+                "3"
+              ],
+              [
+                "CS 4460",
+                "Info Visualization",
+                "3"
+              ],
+              [
+                "CS 4510",
+                "Automata & Complexity",
+                "3"
+              ],
+              [
+                "CS 4675",
+                "Internet Systems & Services",
+                "3"
+              ],
+              [
+                "MATH 2802",
+                "Advanced Linear Algebra",
+                "2"
+              ],
+              [
+                "LMC 3431",
+                "Technical Communication Approaches",
+                "1"
+              ]
             ]
           }
         },
@@ -1336,12 +1741,14 @@
             "title": "LinkedOut",
             "details": [
               "Scraping LinkedIn data of GT Alumni, then visualizing the results of various ML algorithms to extract data"
-            ]},
+            ]
+          },
           {
             "title": "My Finances",
             "details": [
               "Developing a personalized finance website to replace my use of Intuit Mint"
-            ]}
+            ]
+          }
         ],
         "CLanguages": [
           {
@@ -1405,35 +1812,40 @@
         ]
       }
     },
-    
     "June 2019 to August 2019": {
       "start": "June-2019",
       "end": "August-2019",
-      "loc": [47.5991499,-122.3371529],
+      "loc": [
+        47.5991499,
+        -122.3371529
+      ],
       "zoom": 16,
       "info": {
         "General": {
           "title": "Software Engineer Internship at Qualtrics",
           "Location": "Seattle, Washington"
         },
-        "Jobs": [{
-          "title": "Software Engineering Internship",
-          "name": "Qualtrics",
-          "icon": "qualtrics.png",
-          "range": "May 2019 - Aug 2019 • 3 mos",
-          "location": "Seattle, WA",
-          "details": [
-            "Built a PII-cleaning service for Qualtrics’s largest client, impacting over 13 million contacts and transctions",
-            "Designed sophisticated Java process to manipulate databases, store metrics, call internal APIs, and log precise details",
-            "Created system to be fault-tolerant and robust, using SQS for error-retry and intelligent exception handling"
-          ]
-        }],
-        "Projects": [ 
+        "Jobs": [
+          {
+            "title": "Software Engineering Internship",
+            "name": "Qualtrics",
+            "icon": "qualtrics.png",
+            "range": "May 2019 - Aug 2019 • 3 mos",
+            "location": "Seattle, WA",
+            "details": [
+              "Built a PII-cleaning service for Qualtrics’s largest client, impacting over 13 million contacts and transctions",
+              "Designed sophisticated Java process to manipulate databases, store metrics, call internal APIs, and log precise details",
+              "Created system to be fault-tolerant and robust, using SQS for error-retry and intelligent exception handling"
+            ]
+          }
+        ],
+        "Projects": [
           {
             "title": "Expense Report 2.0",
             "details": [
               "Created an Expense Report with Vue/Node that connects to banks using Plaid, uses K-NN to predict expense category, has budgetary capabilities, and displays interactive charts using D3"
-            ]}
+            ]
+          }
         ],
         "CLanguages": [
           {
@@ -1497,39 +1909,63 @@
         ]
       }
     },
-    
     "August 2019 to December 2019": {
       "start": "August-2019",
       "end": "December-2019",
-      "loc": [33.777378, -84.395516],
+      "loc": [
+        33.777378,
+        -84.395516
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Senior year 1st semester at GA Tech",
           "Location": "Atlanta, Georgia"
         },
-        "Jobs": [{
-          "title": "Research Assistant for Prof. Ling Liu ",
-          "name": "Distributed Data Intensive Systems Lab",
-          "icon": "coc.png",
-          "range": "Aug 2019 - May 2020 • 1 year",
-          "location": "Atlanta, GA",
-          "details": [
-            "Researching differentially private and utility preserving publication of trajectory data"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Research Assistant for Prof. Ling Liu ",
+            "name": "Distributed Data Intensive Systems Lab",
+            "icon": "coc.png",
+            "range": "Aug 2019 - May 2020 • 1 year",
+            "location": "Atlanta, GA",
+            "details": [
+              "Authored Utility-Optimized Synthesis of Dif erentially Private Location Traces, discussing a novel tool to allow publication of users’ location histories in a manner that guarantees privacy yet maximizes utility. The article was published at the IEEE International Conference on Trust, Privacy and Security in Intelligent Systems and Applications held in Guangzhou, China."
+            ]
+          }
+        ],
         "Education": {
           "title": "Georgia Institute of Technology",
           "name": "BS - Computer Science",
           "range": "2016 - 2020 • Senior",
           "icon": "gatech.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["CS 4641", "Machine Learning for Trading", "3"],
-              ["CS 4261", "Advanced Computer Networks", "3"],
-              ["ACCT 2101", "Accounting 1", "3"],
-              ["SPAN 3300", "Satire & Media in Latin America", "3"]
+              [
+                "CS 4641",
+                "Machine Learning for Trading",
+                "3"
+              ],
+              [
+                "CS 4261",
+                "Advanced Computer Networks",
+                "3"
+              ],
+              [
+                "ACCT 2101",
+                "Accounting 1",
+                "3"
+              ],
+              [
+                "SPAN 3300",
+                "Satire & Media in Latin America",
+                "3"
+              ]
             ]
           }
         },
@@ -1538,7 +1974,8 @@
             "title": "Adaptive Video Streaming",
             "details": [
               "Comparing various adaptive video streaming algorithms on various TCP flavors"
-            ]}
+            ]
+          }
         ],
         "CLanguages": [
           {
@@ -1602,40 +2039,68 @@
         ]
       }
     },
-    
     "January 2020 to May 2020": {
       "start": "January-2020",
       "end": "May-2020",
-      "loc": [1.3483, 103.6831],
+      "loc": [
+        1.3483,
+        103.6831
+      ],
       "zoom": 18,
       "info": {
         "General": {
           "title": "Senior year 2nd semester - NTU",
           "Location": "Singapore"
         },
-        "Jobs": [{
-          "title": "Research Assistant for Prof. Ling Liu ",
-          "name": "Distributed Data Intensive Systems Lab",
-          "icon": "coc.png",
-          "range": "Aug 2019 - May 2020 • 1 year",
-          "location": "Atlanta, GA",
-          "details": [
-            "Researching differentially private and utility preserving publication of trajectory data"
-          ]
-        }],
+        "Jobs": [
+          {
+            "title": "Research Assistant for Prof. Ling Liu ",
+            "name": "Distributed Data Intensive Systems Lab",
+            "icon": "coc.png",
+            "range": "Aug 2019 - May 2020 • 1 year",
+            "location": "Atlanta, GA",
+            "details": [
+              "Researching differentially private and utility preserving publication of trajectory data"
+            ]
+          }
+        ],
         "Education": {
           "title": "Nanyang Technological University",
           "name": "BS - Computer Science",
           "range": "2016 - 2020 • Senior",
           "icon": "ntu.png",
           "courses": {
-            "columns": ["Course Number", "Course Name", "Credit Hours"],
+            "columns": [
+              "Course Number",
+              "Course Name",
+              "Credit Hours"
+            ],
             "rows": [
-              ["AB 9601", "Negotiations: Strategy & Practice", "4"],
-              ["CZ 4024", "Cryptography & Network Security", "3"],
-              ["BU 8642", "Leadership in the 21st Century", "3"],
-              ["BU 8644", "The Science of Decision Making", "3"],
-              ["SS 9302", "Sports", "3"]
+              [
+                "AB 9601",
+                "Negotiations: Strategy & Practice",
+                "4"
+              ],
+              [
+                "CZ 4024",
+                "Cryptography & Network Security",
+                "3"
+              ],
+              [
+                "BU 8642",
+                "Leadership in the 21st Century",
+                "3"
+              ],
+              [
+                "BU 8644",
+                "The Science of Decision Making",
+                "3"
+              ],
+              [
+                "SS 9302",
+                "Sports",
+                "3"
+              ]
             ]
           }
         },
@@ -1705,204 +2170,363 @@
         ]
       }
     },
-
     "June 2020 to May 2021": {
-    "start": "June-2020",
-    "end": "May-2021",
-    "loc": [34.05328440831842, -83.88131775804713],
-    "zoom": 17,
-    "info": {
-      "General": {
-        "title": "Started Full Time Job - WFH Covid-19",
-        "Location": "Lawrenceville, GA"
-      },
-      "Jobs": [{
-        "title": "Software Engineer",
-        "name": "Expanse - Acquired by Palo Alto Networks",
-        "icon": "expanse.jpeg",
-        "range": "Aug 2020 - Present • 2 years 2 months",
-        "location": "San Francisco, CA",
-        "details": [
-          "Served as the tech lead on Service Deltas, leading the Data Platform team to migrate the Dataflow pipelines that power the Expanse product from a series of batch pipelines to streaming ones, reducing the latency from days to minutes",
-          "Created the XDR Collector, an integration to bring endpoint data into Expander and power the Remote Workforce product. In addition, worked on the API, UI, and platform to deliver this feature successfully",
-          "Led cross-team effort to increase database scalability, upgrading our largest production databases to Aurora without incident or significant downtime, analyzing index usage, and creating patterns for pruning stale data",
-          "Created Tycho-Ops, a one-click deploy tool that moved the team to daily releases, allowing for faster iteration",
-          "As the L2 On-Call engineer, drove responses on larger incidents and set up new response standards",
-          "Organized the company’s formal mentorship program, matching over 60 mentees and mentors and also started the New College Grad (NCG) program, creating a shared space for new engineers to collaborate during WFH"
-        ]
-      }],
-      "CLanguages": [
-        {
-          "name": "Java",
-          "skill": "95%"
-        },
-        {
-          "name": "Google Dataflow",
-          "skill": "80%"
-        },
-        {
-          "name": "Vue.js",
-          "skill": "80%"
-        },
-        {
-          "name": "Node.js",
-          "skill": "79%"
-        },
-        {
-          "name": "Python",
-          "skill": "78%"
-        },
-        {
-          "name": "Javascript",
-          "skill": "67%"
-        },
-        {
-          "name": "C",
-          "skill": "65%"
-        },
-        {
-          "name": "Groovy",
-          "skill": "62%"
-        },
-        {
-          "name": "SQL",
-          "skill": "60%"
-        },
-        {
-          "name": "Scikit-Learn",
-          "skill": "46%"
-        },
-        {
-          "name": "Selenium Webdriver",
-          "skill": "45%"
-        },
-        {
-          "name": "VBA",
-          "skill": "20%"
-        }
+      "start": "June-2020",
+      "end": "May-2021",
+      "loc": [
+        34.0465053,
+        -83.8811561
       ],
-      "Languages": [
-        {
-          "name": "Tamil",
-          "skill": "61%"
+      "zoom": 16,
+      "info": {
+        "General": {
+          "title": "Pandemic means I start my career remote. And we got acquired!!",
+          "Location": "Near Mulberry Park, Lawrenceville, GA"
         },
-        {
-          "name": "English",
-          "skill": "94%"
+        "Jobs": [
+          {
+            "title": "Software Engineer",
+            "name": "Expanse - Acquired by Palo Alto Networks",
+            "icon": "expanse.jpeg",
+            "range": "Aug 2020 - Present • 5 years 9 months",
+            "location": "San Francisco, CA",
+            "details": [
+              "Led cross-team effort to increase database scalability, upgrading our largest production databases to Aurora without incident or significant downtime, analyzing index usage, and creating patterns for pruning stale data",
+              "Created Tycho-Ops, a one-click deploy tool that moved the team to daily releases, allowing for faster iteration",
+              "Organized the company’s formal mentorship program, matching over 60 mentees and mentors and also started the New College Grad (NCG) program, creating a shared space for new engineers to collaborate during WFH"
+            ]
+          }
+        ],
+        "CLanguages": [
+          {
+            "name": "Java",
+            "skill": "95%"
+          },
+          {
+            "name": "Google Dataflow",
+            "skill": "80%"
+          },
+          {
+            "name": "Vue.js",
+            "skill": "80%"
+          },
+          {
+            "name": "Node.js",
+            "skill": "79%"
+          },
+          {
+            "name": "Python",
+            "skill": "78%"
+          },
+          {
+            "name": "Javascript",
+            "skill": "67%"
+          },
+          {
+            "name": "C",
+            "skill": "65%"
+          },
+          {
+            "name": "Groovy",
+            "skill": "62%"
+          },
+          {
+            "name": "SQL",
+            "skill": "60%"
+          },
+          {
+            "name": "Scikit-Learn",
+            "skill": "46%"
+          },
+          {
+            "name": "Selenium Webdriver",
+            "skill": "45%"
+          },
+          {
+            "name": "VBA",
+            "skill": "20%"
+          }
+        ],
+        "Languages": [
+          {
+            "name": "Tamil",
+            "skill": "61%"
+          },
+          {
+            "name": "English",
+            "skill": "94%"
+          },
+          {
+            "name": "Hindi",
+            "skill": "38%"
+          },
+          {
+            "name": "Spanish",
+            "skill": "43%"
+          }
+        ]
+      }
+    },
+    "June 2021 to April 2023": {
+      "start": "June-2021",
+      "end": "April-2023",
+      "loc": [
+        37.79136573465197,
+        -122.39794588682582
+      ],
+      "zoom": 15,
+      "info": {
+        "General": {
+          "title": "Finally Working In Person in SF",
+          "Location": "San Francisco, CA"
         },
-        {
-          "name": "Hindi",
-          "skill": "38%"
+        "Jobs": [
+          {
+            "title": "Senior Staff Software Engineer",
+            "name": "Expanse - Acquired by Palo Alto Networks",
+            "icon": "expanse.jpeg",
+            "range": "Aug 2020 - Present • 5 years 9 months",
+            "location": "San Francisco, CA",
+            "details": [
+              "Managed a team of 4 senior engineers to restructure a series of batch processing pipelines into a performant streaming system. Conducted large-scale data validations and added alerting capabilities while handling a complex migration. As a result, the redesigned system accelerated the processing of over 7,300 terabytes of customer assets (12% of the global internet) from over 2 days to under 2 minutes.",
+              "Created the XDR Collector, an integration to bring endpoint data into Expander and power the Remote Workforce product. In addition, worked on the API, UI, and platform to deliver this feature successfully",
+              "As the L2 On-Call engineer, drove responses on larger incidents and set up new response standards",
+              "Pioneered the company’s formal mentorship program, matching over 100 mentees with mentors. Survey responses showed that over 90% of participants felt their technical abilities improved as a result."
+            ]
+          }
+        ],
+        "Activities": [
+          {
+            "title": "AIF - Bay Area Young Professionals",
+            "icon": "aif.png",
+            "name": "Chapter Co-Lead",
+            "range": "Jan 2022 – May 2024",
+            "location": "San Francisco, CA",
+            "details": [
+              "Led a committee of 5 passionate volunteers to engage the local community in raising funds for the underprivileged",
+              "Hosted the Industry Panel, a fireside chat with 5 prominent founders and VCs in the Bay Area who shared their career and philanthropic experiences to a live audience of over 75 young professionals. Collected over $10,000 in donations."
+            ]
+          }
+        ],
+        "CLanguages": [
+          {
+            "name": "Java",
+            "skill": "95%"
+          },
+          {
+            "name": "Google Dataflow",
+            "skill": "90%"
+          },
+          {
+            "name": "Vue.js",
+            "skill": "80%"
+          },
+          {
+            "name": "Node.js",
+            "skill": "79%"
+          },
+          {
+            "name": "Python",
+            "skill": "78%"
+          },
+          {
+            "name": "Javascript",
+            "skill": "67%"
+          },
+          {
+            "name": "C",
+            "skill": "65%"
+          },
+          {
+            "name": "Groovy",
+            "skill": "62%"
+          },
+          {
+            "name": "SQL",
+            "skill": "60%"
+          },
+          {
+            "name": "Scikit-Learn",
+            "skill": "46%"
+          },
+          {
+            "name": "Selenium Webdriver",
+            "skill": "45%"
+          },
+          {
+            "name": "VBA",
+            "skill": "20%"
+          }
+        ],
+        "Languages": [
+          {
+            "name": "Tamil",
+            "skill": "61%"
+          },
+          {
+            "name": "English",
+            "skill": "94%"
+          },
+          {
+            "name": "Hindi",
+            "skill": "38%"
+          },
+          {
+            "name": "Spanish",
+            "skill": "43%"
+          }
+        ]
+      }
+    },
+    "May 2023 to Present": {
+      "start": "May-2023",
+      "end": "May-2026",
+      "loc": [
+        37.79136573465197,
+        -122.39794588682582
+      ],
+      "zoom": 15,
+      "info": {
+        "General": {
+          "title": "Software Manager at Xpanse",
+          "Location": "San Francisco, CA"
         },
-        {
-          "name": "Spanish",
-          "skill": "43%"
-        }
-      ]
+        "Jobs": [
+          {
+            "title": "Engineering Manager",
+            "name": "Expanse - Acquired by Palo Alto Networks",
+            "icon": "expanse.jpeg",
+            "range": "Aug 2020 - Present • 5 years 9 months",
+            "location": "San Francisco, CA",
+            "details": [
+              "Lead the 8-member Data Platform backend team, architecting high-performance systems that transform trillions of raw data points into critical cybersecurity insights. These platforms define and secure the perimeters of Fortune 500 companies and all US military branches, enhancing their threat detection and response capabilities.",
+              "Scaled the team from 4 to 8, overseeing onboarding, training, and career advancement. Coached and promoted 3 SWEs, empowering them with growth/project opportunities. Fostered a collaborative, high-achieving culture where our lean team took ownership of the vast backend system and consistently delivered critical projects.",
+              "Managed a full stack Tiger Team to build and launch the Exposure Management Command Center, an interactive visualization that unifies security visibility, insight, and action across a customer's entire attack surface.",
+              "Drove the development and successful launch of Attack Surface Testing, Expanse’s marquee feature, enabling customers to run penetrative tests and confirm inferred vulnerabilities. This product achieved widespread customer adoption, directly contributing to a 30% increase in Xpanse revenue."
+            ]
+          }
+        ],
+        "Activities": [
+          {
+            "title": "Jumpstart Mentorship",
+            "icon": "tutor.png",
+            "name": "President and Founder",
+            "range": "May 2023 – Present",
+            "location": "San Francisco, CA",
+            "details": [
+              "Matched over 50 college students with one-on-one mentorship from accomplished engineers in Silicon Valley for a 12-week program."
+            ]
+          },
+          {
+            "title": "AIF - Bay Area Young Professionals",
+            "icon": "aif.png",
+            "name": "Chapter Co-Lead",
+            "range": "Jan 2022 – May 2024",
+            "location": "San Francisco, CA",
+            "details": [
+              "Led a committee of 5 passionate volunteers to engage the local community in raising funds for the underprivileged",
+              "Hosted the Industry Panel, a fireside chat with 5 prominent founders and VCs in the Bay Area who shared their career and philanthropic experiences to a live audience of over 75 young professionals. Collected over $10,000 in donations."
+            ]
+          }
+        ],
+        "CLanguages": [
+          {
+            "name": "Java",
+            "skill": "95%"
+          },
+          {
+            "name": "Google Dataflow",
+            "skill": "90%"
+          },
+          {
+            "name": "Vue.js",
+            "skill": "80%"
+          },
+          {
+            "name": "Node.js",
+            "skill": "79%"
+          },
+          {
+            "name": "Python",
+            "skill": "78%"
+          },
+          {
+            "name": "Javascript",
+            "skill": "67%"
+          },
+          {
+            "name": "C",
+            "skill": "65%"
+          },
+          {
+            "name": "Groovy",
+            "skill": "62%"
+          },
+          {
+            "name": "SQL",
+            "skill": "60%"
+          },
+          {
+            "name": "Scikit-Learn",
+            "skill": "46%"
+          },
+          {
+            "name": "Selenium Webdriver",
+            "skill": "45%"
+          },
+          {
+            "name": "VBA",
+            "skill": "20%"
+          }
+        ],
+        "Languages": [
+          {
+            "name": "Tamil",
+            "skill": "61%"
+          },
+          {
+            "name": "English",
+            "skill": "94%"
+          },
+          {
+            "name": "Hindi",
+            "skill": "38%"
+          },
+          {
+            "name": "Spanish",
+            "skill": "43%"
+          }
+        ]
+      }
     }
   },
-
-    "June 2021 to Present": {
-    "start": "June-2021",
-    "end": "September-2022",
-    "loc": [37.79136573465197, -122.39794588682582],
-    "zoom": 15,
-    "info": {
-      "General": {
-        "title": "Finally Working In Person in SF",
-        "Location": "San Francisco, CA"
-      },
-      "Jobs": [{
-        "title": "Staff Software Engineer",
-        "name": "Expanse - Acquired by Palo Alto Networks",
-        "icon": "expanse.jpeg",
-        "range": "Oct 2021 - Present • 2 years 2 months",
-        "location": "San Francisco, CA",
-          "details": [
-            "Served as the tech lead on Service Deltas, leading the Data Platform team to migrate the Dataflow pipelines that power the Expanse product from a series of batch pipelines to streaming ones, reducing the latency from days to minutes",
-            "Created the XDR Collector, an integration to bring endpoint data into Expander and power the Remote Workforce product. In addition, worked on the API, UI, and platform to deliver this feature successfully",
-            "Led cross-team effort to increase database scalability, upgrading our largest production databases to Aurora without incident or significant downtime, analyzing index usage, and creating patterns for pruning stale data",
-            "Created Tycho-Ops, a one-click deploy tool that moved the team to daily releases, allowing for faster iteration",
-            "As the L2 On-Call engineer, drove responses on larger incidents and set up new response standards",
-            "Organized the company’s formal mentorship program, matching over 60 mentees and mentors and also started the New College Grad (NCG) program, creating a shared space for new engineers to collaborate during WFH"
-          ]
-        }],
-        "Activities": [{
-          "title": "AIF Bay Area Young Professionals",
-          "icon": "aif.png",
-          "name": "Community Outreach Lead",
-          "details": [
-            "Leading a team of dedicated volunteers to partner with local businesses to raise funds for the needy"
-          ]
-        }],
-      "CLanguages": [
-        {
-          "name": "Java",
-          "skill": "95%"
-        },
-        {
-          "name": "Google Dataflow",
-          "skill": "90%"
-        },
-        {
-          "name": "Vue.js",
-          "skill": "80%"
-        },
-        {
-          "name": "Node.js",
-          "skill": "79%"
-        },
-        {
-          "name": "Python",
-          "skill": "78%"
-        },
-        {
-          "name": "Javascript",
-          "skill": "67%"
-        },
-        {
-          "name": "C",
-          "skill": "65%"
-        },
-        {
-          "name": "Groovy",
-          "skill": "62%"
-        },
-        {
-          "name": "SQL",
-          "skill": "60%"
-        },
-        {
-          "name": "Scikit-Learn",
-          "skill": "46%"
-        },
-        {
-          "name": "Selenium Webdriver",
-          "skill": "45%"
-        },
-        {
-          "name": "VBA",
-          "skill": "20%"
-        }
-      ],
-      "Languages": [
-        {
-          "name": "Tamil",
-          "skill": "61%"
-        },
-        {
-          "name": "English",
-          "skill": "94%"
-        },
-        {
-          "name": "Hindi",
-          "skill": "38%"
-        },
-        {
-          "name": "Spanish",
-          "skill": "43%"
-        }
-      ]
-    }
-  }
+  "eventOrder": [
+    "January 12, 1998 to June 1999",
+    "July 1999 to May 2003",
+    "June 2003 to May 2005",
+    "June 2005 to October 2007",
+    "November 2007 to May 2009",
+    "June 2009 to July 2012",
+    "August 2012 to July 2013",
+    "August 2013 to May 2014",
+    "June 2014 to July 2014",
+    "August 2014 to May 2015",
+    "June 2015 to July 2015",
+    "August 2015 to May 2016",
+    "June 2016 to August 2016",
+    "September 2016 to December 2016",
+    "January 2017 to May 2017",
+    "June 2017 to August 2017",
+    "September 2017 to December 2017",
+    "January 2018 to May 2018",
+    "June 2018 to August 2018",
+    "September 2018 to December 2018",
+    "January 2019 to May 2019",
+    "June 2019 to August 2019",
+    "August 2019 to December 2019",
+    "January 2020 to May 2020",
+    "June 2020 to May 2021",
+    "June 2021 to April 2023",
+    "May 2023 to Present"
+  ]
 }

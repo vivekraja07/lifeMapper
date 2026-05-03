@@ -29,6 +29,12 @@
         </div>
 
         <div class = "iconHolder">
+          <a href="https://medium.com/@vivekraja07">
+            <img src="@/assets/medium.svg" alt="Medium">
+          </a>
+        </div>
+
+        <div class = "iconHolder">
           <a href="https://www.dropbox.com/s/id52myrvdr17n6u/VivekRaja.pdf?dl=0" target="_blank">
             <img src="@/assets/resume.png">
           </a>

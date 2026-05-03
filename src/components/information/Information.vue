@@ -5,7 +5,7 @@
     <Dates v-bind:eventOrder="eventOrder"/>
 
     <div id = "events">
-      <div v-for="(value, propertyName, index) in events[active].info" :key="index">
+      <div v-for="(value, propertyName, index) in activeInfo" :key="index">
         
         <section
           v-if="!propertyName.includes('Languages')"
@@ -83,6 +83,10 @@ export default {
     },
     open () {
       return this.$store.state.sidebarOpen
+    },
+    activeInfo () {
+      const ev = this.events && this.events[this.active]
+      return ev && ev.info ? ev.info : {}
     }
   },
   methods: {

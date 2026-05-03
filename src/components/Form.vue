@@ -35,12 +35,18 @@
 </template>
 
 <script>
-import Form from './Form.vue'
-
 export default {
   name: 'Form',
-  methods: {
-    
+  mounted () {
+    this._onEnter = (e) => {
+      if (e.key !== 'Enter') return
+      e.preventDefault()
+      this.$emit('close')
+    }
+    document.addEventListener('keydown', this._onEnter)
+  },
+  beforeDestroy () {
+    document.removeEventListener('keydown', this._onEnter)
   }
 }
 </script>

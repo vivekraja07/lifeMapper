@@ -2,22 +2,26 @@
   <div id="container">
      <div class="toggle">
 
-        <div class = "buttons">
+        <div
+          class="buttons"
+          role="radiogroup"
+          aria-label="Left panel view"
+        >
           <div>
             <input type="radio" id="one" value="Map" v-model="pick" @input="blur">
-            <label for="one">Map</label>
+            <label for="one" title="Show map">Map</label>
           </div>
           <div>
             <input type="radio" id="two" value="Profile" v-model="pick" @input="blur">
-            <label for="two">Profile</label>
+            <label for="two" title="Show profile">Profile</label>
           </div>
           <div>
             <input type="radio" id="three" value="Projects" v-model="pick" @input="blur">
-            <label for="three">Projects</label>
+            <label for="three" title="Show projects">Projects</label>
           </div>
           <div>
             <input type="radio" id="four" value="Skills" v-model="pick" @input="blur">
-            <label for="four">Skills</label>
+            <label for="four" title="Show skills">Skills</label>
           </div>
         </div>
 
@@ -125,22 +129,30 @@ export default {
   padding: 0.5rem 1rem;
   border-radius: var(--radius-pill, 999px);
   cursor: pointer;
+  user-select: none;
   color: var(--color-chrome-muted, #94a3b8);
-  background: transparent;
-  border: 1px solid transparent;
-  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(248, 250, 252, 0.22);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease,
+    box-shadow 0.15s ease, transform 0.1s ease;
 }
 
 .buttons label:hover {
   color: #f8fafc;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(248, 250, 252, 0.38);
+}
+
+.buttons label:active {
+  transform: scale(0.98);
 }
 
 .buttons input:checked + label {
   color: #0f172a;
   background: #f8fafc;
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.08));
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.12));
 }
 
 .buttons input:focus-visible + label {
