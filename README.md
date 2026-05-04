@@ -1,6 +1,13 @@
 # lifeMapper
 Resume of my life with map and timeline
 
+## Where things live
+
+- **`src/views/`** — top-level routes (`Home`, optional `Welcome`, `DataEditor` in dev only).
+- **`src/components/`** — UI split by area (`leftSide`, `information`, etc.).
+- **`src/data/`** — `data.json` (timeline + map content), `eventOrder.json`, `projects.json`. Edited in production by rebuilding after changes; in development you can use the data editor at `/#/editor`.
+- **`src/assets/`** — images and SVGs; see [`src/assets/README.md`](src/assets/README.md) for the `icons/` vs `social/` vs `ui/` layout.
+
 # To run:
 npm run serve
 

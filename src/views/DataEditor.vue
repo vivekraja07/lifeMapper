@@ -3,7 +3,7 @@
     <header class="data-editor__bar">
       <h1 class="data-editor__title">Life map data editor</h1>
       <p class="data-editor__hint">
-        Runs only with <code>npm run serve</code>. Open this screen via <strong><code>/#/editor</code></strong> (hash URL) or use <strong>Open data editor</strong> on the home page. Saves into <code>src/data/data.json</code>; icons go to <code>src/assets/icons/</code>.
+        Runs only with <code>npm run serve</code>. Open this screen via <strong><code>/#/editor</code></strong> (hash URL) or use <strong>Open data editor</strong> on the home page. Saves into <code>src/data/data.json</code>; timeline logos upload to <code>src/assets/icons/</code> (see <code>src/assets/README.md</code>).
       </p>
       <div class="data-editor__actions">
         <router-link class="data-editor__link" to="/">View site</router-link>
@@ -162,7 +162,7 @@
 
         <h2 class="data-editor__h">Icon upload</h2>
         <p class="data-editor__fineprint">
-          Upload copies the file into <code>src/assets/icons/</code> (dev server only). Then attach it to a slot below.
+          Upload copies the file into <code>src/assets/icons/</code> (dev server only). Then attach it to a slot below. Other static images live under <code>src/assets/social/</code>, <code>ui/</code>, and <code>brand/</code>—see <code>src/assets/README.md</code>.
         </p>
         <input type="file" accept="image/*" class="data-editor__file" @change="onPickIcon" >
         <p v-if="lastUploadedFilename" class="data-editor__last">

@@ -1,7 +1,7 @@
 <template>
-  <div id="profile">
+  <div id="profile" :class="{ 'profile--compact': compact }">
       <div class = "logoHolder">
-          <img id="vivek" src="@/assets/singapore.jpg">
+          <img id="vivek" src="@/assets/ui/profile.png" alt="Vivek Raja">
       </div>
 
       <h1>Vivek Raja</h1>
@@ -11,32 +11,44 @@
       <br>
       <div class = "icons">
         <div class = "iconHolder">
-            <a href="https://www.linkedin.com/in/vivekraja07/">
-              <img src="@/assets/linkedin.png">
+            <a href="https://www.linkedin.com/in/vivekraja07/" rel="noopener noreferrer" target="_blank">
+              <img class="socialIcon" src="@/assets/social/linkedin.png" width="512" height="512" alt="LinkedIn">
             </a>
         </div>
 
         <div class = "iconHolder">
-            <a href="https://github.com/vivekraja07">
-              <img src="@/assets/github.png">
+            <a href="https://github.com/vivekraja07" rel="noopener noreferrer" target="_blank">
+              <img class="socialIcon" src="@/assets/social/github.png" width="512" height="512" alt="GitHub">
             </a>
         </div>
 
         <div class = "iconHolder">
-          <a href="https://devpost.com/VivekanandRajasekar">
-            <img src="@/assets/devpost.jpg">
+          <a href="https://devpost.com/VivekanandRajasekar" rel="noopener noreferrer" target="_blank">
+            <img class="socialIcon socialIcon--vector" src="@/assets/social/devpost.svg" width="24" height="24" alt="Devpost">
           </a>
         </div>
 
         <div class = "iconHolder">
-          <a href="https://medium.com/@vivekraja07">
-            <img src="@/assets/medium.svg" alt="Medium">
+          <a href="https://medium.com/@vivekraja07" rel="noopener noreferrer" target="_blank">
+            <img class="socialIcon" src="@/assets/social/medium.png" width="512" height="512" alt="Medium">
           </a>
         </div>
 
         <div class = "iconHolder">
-          <a href="https://www.dropbox.com/s/id52myrvdr17n6u/VivekRaja.pdf?dl=0" target="_blank">
-            <img src="@/assets/resume.png">
+          <a href="https://www.strava.com/athletes/59144245" rel="noopener noreferrer" target="_blank">
+            <img class="socialIcon socialIcon--vector" src="@/assets/social/strava.svg" width="24" height="24" alt="Strava">
+          </a>
+        </div>
+
+        <div class = "iconHolder">
+          <a href="https://www.chess.com/member/keviv123" rel="noopener noreferrer" target="_blank">
+            <img class="socialIcon socialIcon--vector" src="@/assets/social/chesscom.svg" width="24" height="24" alt="Chess.com">
+          </a>
+        </div>
+
+        <div class = "iconHolder">
+          <a href="https://drive.google.com/file/d/1Xso5gpHvsvbeGZd_-zciS7CMfFj9mw4t/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
+            <img class="socialIcon" src="@/assets/social/resume.png" width="512" height="512" alt="Resume">
           </a>
         </div>
       </div>
@@ -51,7 +63,11 @@ export default {
 
   },
   props: {
-    events: Object
+    events: Object,
+    compact: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 
@@ -140,12 +156,23 @@ blockquote p {
   border-color: var(--color-accent, #0ea5e9);
 }
 
-img {
-    border-radius: 6px;
-    border: 0;
-    height: 2rem;
-    width: 2rem;
-    object-fit: contain;
+/* High-DPI sources (512px+) scaled down; intrinsic size hints crisp downsampling on retina */
+.socialIcon {
+  border-radius: 3px;
+  border: 0;
+  width: 2rem;
+  height: 2rem;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Vector brand marks (SVG): true transparency, no white matte */
+.socialIcon--vector {
+  border-radius: 0;
 }
 
 .icons {
@@ -155,6 +182,15 @@ img {
   gap: 1rem;
   margin-top: 0.5rem;
   padding: 0.5rem 0;
+}
+
+#profile.profile--compact #vivek {
+  max-height: min(220px, 38vh);
+}
+
+#profile.profile--compact blockquote {
+  padding: 0.75rem 1rem;
+  margin-top: 0.75rem;
 }
 
 </style>

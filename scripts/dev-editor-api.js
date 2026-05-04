@@ -1,6 +1,7 @@
 /**
  * Dev-only HTTP handlers mounted by vue-cli-service devServer.before.
- * Writes src/data/data.json and uploads to src/assets/icons without extra npm deps.
+ * Writes src/data/data.json and uploads timeline images to src/assets/icons/
+ * (see src/assets/README.md). No extra npm dependencies.
  */
 const fs = require('fs')
 const path = require('path')

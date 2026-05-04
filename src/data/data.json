@@ -100,7 +100,7 @@
         28.5735143,
         77.36474339999995
       ],
-      "zoom": 18,
+      "zoom": 5,
       "info": {
         "General": {
           "title": "An Older Boy in Newer Delhi",
@@ -2409,6 +2409,7 @@
         "Activities": [
           {
             "title": "Jumpstart Mentorship",
+            "link": "https://jumpstartmentoring.com/",
             "icon": "tutor.png",
             "name": "President and Founder",
             "range": "May 2023 – Present",

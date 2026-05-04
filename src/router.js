@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
+/** App routes. `/editor` is appended only in development (see `NODE_ENV` block below). */
 const routes = [
   // {
   //   path: '/',

@@ -3,7 +3,26 @@
         <IconHolder v-bind:icon="activity.icon" />
 
         <div class = "summaryInfo" v-if="activity.icon">
-            <h3 class = "title"> {{activity.title}} </h3>
+            <h3 class="title">
+              <a
+                v-if="activity.link"
+                :href="activity.link"
+                class="title-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                :aria-label="activity.title + ' (opens in new tab)'"
+              >
+                <span class="title-link__text">{{ activity.title }}</span>
+                <img
+                  class="title-link__icon"
+                  src="@/assets/ui/external.png"
+                  alt=""
+                  width="14"
+                  height="14"
+                >
+              </a>
+              <template v-else>{{ activity.title }}</template>
+            </h3>
             <h4 class = "name"> {{activity.name}} </h4>
             <h5 class = "timeRange"> {{activity.range}} </h5>
             <h5 v-if="activity.location" class = "location"> {{activity.location}} </h5>
@@ -82,6 +101,46 @@ export default {
   letter-spacing: -0.02em;
   color: var(--color-ink, #0f172a);
   margin-bottom: 0.25rem;
+}
+
+.title-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 100%;
+  color: var(--color-accent, #0ea5e9);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+  font-weight: inherit;
+  transition: color 0.15s ease, filter 0.15s ease;
+}
+
+.title-link:hover {
+  color: #0284c7;
+  filter: brightness(1.05);
+}
+
+.title-link:focus {
+  outline: none;
+}
+
+.title-link:focus-visible {
+  outline: 2px solid var(--color-accent, #0ea5e9);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.title-link__text {
+  min-width: 0;
+}
+
+.title-link__icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  opacity: 0.9;
 }
 
 .name {

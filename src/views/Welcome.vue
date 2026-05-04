@@ -3,7 +3,7 @@
     <div class="welcome-inner">
       <div class="google">
         <h1 class="headline">Welcome,</h1>
-        <img class="logo" src="@/assets/Google.png" alt="">
+        <img class="logo" src="@/assets/brand/Google.png" alt="">
       </div>
       <router-link to="/home" tag="button" class="cta">
         Continue

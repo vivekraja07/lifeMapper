@@ -14,7 +14,7 @@ export default new Vuex.Store({
     sidebarOpen: false,
     active: defaultActive,
     /** Left panel tab: 'Map' | 'Profile' | 'Projects' | 'Skills' — matches LeftSide dynamic component name */
-    leftSidePick: 'Map'
+    leftSidePick: 'Profile'
   },
   mutations: {
     setActive (state, event) {

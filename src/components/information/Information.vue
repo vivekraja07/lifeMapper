@@ -1,10 +1,10 @@
 <template>
 
-  <div id='features'>
-    
-    <Dates v-bind:eventOrder="eventOrder"/>
+  <div id="features" :class="{ 'features--stacked': stacked }">
 
-    <div id = "events">
+    <Dates v-if="!stacked" v-bind:eventOrder="eventOrder"/>
+
+    <div id="events" :class="{ 'events--stacked': stacked }">
       <div v-for="(value, propertyName, index) in activeInfo" :key="index">
         
         <section
@@ -20,7 +20,9 @@
           <div class="general" v-if="propertyName=='General'">
               <p class="general-line general-title">{{ value.title }}</p>
               <p class="general-line general-location">
+                <span v-if="stacked" class="general-location-plain">{{ value.Location }}</span>
                 <button
+                  v-else
                   type="button"
                   class="general-map-link"
                   aria-label="Show map on the left for this period"
@@ -69,7 +71,12 @@ export default {
   name: 'Information',
   props: {
     events: Object,
-    eventOrder: Array
+    eventOrder: Array,
+    /** Full-width column: hide duplicate Dates (use outer nav) and drop % heights */
+    stacked: {
+      type: Boolean,
+      default: false
+    }
   },
   components: {
     Activities,
@@ -116,6 +123,24 @@ export default {
   height: 90%;
   padding-right: 0;
   scrollbar-gutter: stable;
+}
+
+#features.features--stacked {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
+#events.events--stacked {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  overflow-x: hidden;
+}
+
+.general-location-plain {
+  color: var(--color-muted, #64748b);
 }
 
 .info-section {

@@ -1,16 +1,23 @@
 <template>
   <div id="timeContainer">
-    <div id="eventContainer">
+    <div id="eventContainer" class="event-strip">
       <div
         v-for="propertyName in orderedKeys"
         :key="propertyName"
         :class="{ rectangle: true, active: propertyName === active }"
+        role="button"
+        tabindex="0"
+        :aria-pressed="propertyName === active"
+        :aria-label="'Show period: ' + propertyName"
+        :title="'Show: ' + propertyName"
         @click="activeSet(propertyName)"
+        @keydown.enter.prevent="activeSet(propertyName)"
+        @keydown.space.prevent="activeSet(propertyName)"
         :style="{ width: barWidth(events[propertyName]) }"
       />
     </div>
 
-    <ul class="timelines-years">
+    <ul class="timelines-years timelines-years--axis">
       <li
         v-for="(seg, index) in yearSegments"
         :key="seg.year"
@@ -189,6 +196,13 @@ export default {
 </script>
 
 <style scoped>
+/* Percent bar widths must match the year axis: no flex gap; borders included in width. */
+#timeContainer,
+#eventContainer.event-strip,
+.rectangle,
+.timelines-years {
+  box-sizing: border-box;
+}
 
 #timeContainer {
   height: 10%;
@@ -201,46 +215,119 @@ export default {
 }
 
 .rectangle {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 0;
   background: linear-gradient(180deg, #475569 0%, #334155 100%);
   cursor: pointer;
-  min-height: 6px;
-  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  min-height: 0.625rem;
+  border-radius: 4px;
+  border: 1px solid rgba(248, 250, 252, 0.14);
+  /* Hairline between segments without consuming layout width (keeps % aligned with years). */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset -1px 0 0 rgba(15, 23, 42, 0.55),
+    0 1px 3px rgba(0, 0, 0, 0.35);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.12s ease,
+    border-color 0.15s ease, filter 0.15s ease;
+}
+
+.rectangle:last-of-type {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .rectangle:hover {
-  filter: brightness(1.12);
+  filter: brightness(1.14);
+  border-color: rgba(248, 250, 252, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset -1px 0 0 rgba(15, 23, 42, 0.55),
+    0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.rectangle:last-of-type:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .rectangle:active {
-  transform: scaleY(0.96);
+  transform: scaleY(0.94);
 }
 
 .active {
   background: linear-gradient(180deg, #38bdf8 0%, var(--color-accent, #0ea5e9) 100%);
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+  border-color: rgba(125, 211, 252, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset -1px 0 0 rgba(15, 23, 42, 0.4),
+    0 0 0 1px rgba(56, 189, 248, 0.45),
+    0 2px 10px rgba(14, 165, 233, 0.35);
 }
 
-#eventContainer {
+.active:last-of-type {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 0 0 1px rgba(56, 189, 248, 0.45),
+    0 2px 10px rgba(14, 165, 233, 0.35);
+}
+
+.active:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset -1px 0 0 rgba(15, 23, 42, 0.4),
+    0 0 0 1px rgba(56, 189, 248, 0.55),
+    0 2px 12px rgba(14, 165, 233, 0.45);
+}
+
+.active:last-of-type:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    0 0 0 1px rgba(56, 189, 248, 0.55),
+    0 2px 12px rgba(14, 165, 233, 0.45);
+}
+
+.rectangle:focus {
+  outline: none;
+}
+
+.rectangle:focus-visible {
+  outline: 2px solid var(--color-accent, #0ea5e9);
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+#eventContainer.event-strip {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   height: 70%;
-  padding: 0.35rem 0.25rem 0;
-  box-sizing: border-box;
+  /* Same horizontal inset as .timelines-years so bars line up with year columns. */
+  padding: 0.4rem 0.35rem 0.15rem;
+  min-width: 0;
 }
 
 .timelines-years {
   border-top: 1px solid rgba(148, 163, 184, 0.2);
-  background-color: var(--color-chrome, #0f172a);
+  background: var(--color-chrome, #0f172a);
   display: flex;
   justify-content: center;
   align-items: stretch;
   height: 30%;
   min-height: 1.75rem;
-  padding: 0;
+  padding: 0 0.35rem;
   margin: 0;
   list-style: none;
   -webkit-padding-start: 0;
+  cursor: default;
+  user-select: none;
+  min-width: 0;
+}
+
+.timelines-years--axis {
+  pointer-events: none;
 }
 
 .timelines-years__cell {
@@ -252,12 +339,14 @@ export default {
   color: var(--color-chrome-muted, #94a3b8);
   font-size: clamp(0.5rem, 0.85vw, 0.6875rem);
   font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
   text-align: center;
   border-right: 1px solid rgba(148, 163, 184, 0.15);
 }
 
 .timelines-years__cell--last .timelines-years__label {
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
 }
 
 .timelines-years__label {
@@ -265,6 +354,7 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  opacity: 0.95;
 }
 
 .timelines-years__cell:last-child {

@@ -5,10 +5,14 @@
 </template>
 
 <script>
+/**
+ * Timeline logo: `icon` is a basename in `src/assets/icons/` and must match
+ * the `icon` field on events in `src/data/data.json`.
+ */
 export default {
   name: 'IconHolder',
   props: {
-    icon: String,
+    icon: String
   }
 }
 </script>
