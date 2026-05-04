@@ -1,5 +1,10 @@
+const { mount: mountDevEditorApi } = require('./scripts/dev-editor-api.js')
+
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/lifeMapper/'
-    : '/'
+  publicPath: '/',
+  devServer: {
+    before (app) {
+      mountDevEditorApi(app)
+    }
+  }
 }

@@ -1,39 +1,36 @@
 <template>
-    <div id="timeContainer">
-        <div id="eventContainer">
-            <div v-for="(event, propertyName, index) in events" :key="index" :class="{'rectangle':true, 'active':(propertyName === active)}" v-on:click="activeSet(propertyName)" :style="{width: getWidth(event.start, event.end)}">
-
-            </div>
-        </div>
-
-        <ul class="timelines-years">
-            <li>1998</li>
-            <li>1999</li>
-            <li>2000</li>
-            <li>2001</li>
-            <li>2002</li>
-            <li>2003</li>
-            <li>2004</li>
-            <li>2005</li>
-            <li>2006</li>
-            <li>2007</li>
-            <li>2008</li>
-            <li>2009</li>
-            <li>2010</li>
-            <li>2011</li>
-            <li>2012</li>
-            <li>2013</li>
-            <li>2014</li>
-            <li>2015</li>
-            <li>2016</li>
-            <li>2017</li>
-            <li>2018</li>
-            <li>2019</li>
-            <li>2020</li>
-            <li>2021</li>
-            <li>2022</li>
-        </ul>
+  <div id="timeContainer">
+    <div id="eventContainer" class="event-strip">
+      <div
+        v-for="propertyName in orderedKeys"
+        :key="propertyName"
+        :class="{ rectangle: true, active: propertyName === active }"
+        role="button"
+        tabindex="0"
+        :aria-pressed="propertyName === active"
+        :aria-label="'Show period: ' + propertyName"
+        :title="'Show: ' + propertyName"
+        @click="activeSet(propertyName)"
+        @keydown.enter.prevent="activeSet(propertyName)"
+        @keydown.space.prevent="activeSet(propertyName)"
+        :style="{ width: barWidth(events[propertyName]) }"
+      />
     </div>
+
+    <ul class="timelines-years timelines-years--axis">
+      <li
+        v-for="(seg, index) in yearSegments"
+        :key="seg.year"
+        class="timelines-years__cell"
+        :class="{ 'timelines-years__cell--last': index === yearSegments.length - 1 }"
+        :style="{ flex: seg.months + ' 1 0%' }"
+        :aria-label="String(seg.year)"
+        :title="index === yearSegments.length - 1 ? String(seg.year) : undefined"
+      >
+        <span class="timelines-years__label">{{ yearLabel(seg, index) }}</span>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -42,24 +39,116 @@ import { mapActions } from 'vuex'
 export default {
   name: 'Timeline',
   props: {
-    events: Object
+    events: {
+      type: Object,
+      default: () => ({})
+    },
+    /** Chronological keys; falls back to object key order if omitted */
+    eventOrder: {
+      type: Array,
+      default: null
+    }
+  },
+  computed: {
+    active () {
+      return this.$store.state.active
+    },
+    orderedKeys () {
+      const ev = this.events
+      if (!ev || typeof ev !== 'object') return []
+      if (this.eventOrder && Array.isArray(this.eventOrder)) {
+        return this.eventOrder.filter((k) => Object.prototype.hasOwnProperty.call(ev, k))
+      }
+      return Object.keys(ev)
+    },
+    /** Earliest period start and latest period end as month indices (year×12 + month). */
+    timelineBounds () {
+      const ev = this.events
+      if (!ev || typeof ev !== 'object') return { lo: null, hi: null }
+      let lo = Infinity
+      let hi = -Infinity
+      for (const k of Object.keys(ev)) {
+        const e = ev[k]
+        if (!e || !e.start || !e.end) continue
+        const a = this.toMonthIndex(e.start)
+        const b = this.toMonthIndex(e.end)
+        if (!Number.isFinite(a) || !Number.isFinite(b)) continue
+        lo = Math.min(lo, a)
+        hi = Math.max(hi, b)
+      }
+      if (!Number.isFinite(lo) || !Number.isFinite(hi)) return { lo: null, hi: null }
+      return { lo, hi }
+    },
+    /** Inclusive month count across the full [lo, hi] span (matches sum of bar months if contiguous). */
+    timelineTotalMonths () {
+      const { lo, hi } = this.timelineBounds
+      if (lo == null) return 286
+      return hi - lo + 1
+    },
+    /**
+     * One column per calendar year that overlaps the data span.
+     * flex-grow = months of that year inside [lo, hi], so width matches the bar scale
+     * (same denominator as barWidth: partial 2026 is narrower than full years).
+     */
+    yearSegments () {
+      const { lo, hi } = this.timelineBounds
+      if (lo == null) return this.fallbackYearSegments()
+      const y0 = Math.floor((lo - 1) / 12)
+      const y1 = Math.floor((hi - 1) / 12)
+      const segments = []
+      for (let y = y0; y <= y1; y++) {
+        const yearStart = y * 12 + 1
+        const yearEnd = y * 12 + 12
+        const clipStart = Math.max(lo, yearStart)
+        const clipEnd = Math.min(hi, yearEnd)
+        const months = clipEnd >= clipStart ? clipEnd - clipStart + 1 : 0
+        if (months > 0) {
+          segments.push({ year: y, months })
+        }
+      }
+      return segments
+    }
   },
   methods: {
     ...mapActions([
       'activeSet'
     ]),
-    getWidth (beg, finish) {
-      var total = '286' // = 12 * 23 + 10
-      var start = this.getAsMonth(beg)
-      var end = this.getAsMonth(finish)
-      var numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1)
-      var perc = (numMonths / total * 100).toFixed(2)
-
-      // console.log(beg + ' to ' + finish + ': ' + numMonths + ': ' + perc)
+    fallbackYearSegments () {
+      const out = []
+      for (let y = 1998; y <= 2026; y++) {
+        out.push({ year: y, months: 1 })
+      }
+      return out
+    },
+    toMonthIndex (date) {
+      const parts = this.getAsMonth(date)
+      if (!parts || parts.length < 2) return NaN
+      const month = parseInt(parts[0], 10)
+      const year = parseInt(parts[1], 10)
+      if (!Number.isFinite(month) || !Number.isFinite(year)) return NaN
+      return year * 12 + month
+    },
+    barWidth (event) {
+      if (!event || !event.start || !event.end) return '0%'
+      const total = this.timelineTotalMonths
+      const start = this.getAsMonth(event.start)
+      const end = this.getAsMonth(event.end)
+      if (!start || !end || start.length < 2 || end.length < 2) return '0%'
+      const numMonths = (end[1] - start[1]) * 12 + (end[0] - start[0] + 1)
+      if (!Number.isFinite(numMonths) || total <= 0) return '0%'
+      const perc = (numMonths / total * 100).toFixed(2)
       return perc + '%'
     },
+    /** Last column uses 'yy to save width; empty if that slice is very narrow. */
+    yearLabel (seg, index) {
+      const list = this.yearSegments
+      const isLast = index === list.length - 1
+      if (!isLast) return String(seg.year)
+      if (seg.months < 2) return ''
+      return "'" + String(seg.year).slice(-2)
+    },
     getAsMonth (date) {
-      var arr = date.split('-')
+      const arr = date.split('-')
       switch (arr[0]) {
         case 'January':
           arr[0] = 1
@@ -97,73 +186,179 @@ export default {
         case 'December':
           arr[0] = 12
           break
+        default:
+          return null
       }
       return arr
-    }
-  },
-  computed: {
-    active () {
-      return this.$store.state.active
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* Percent bar widths must match the year axis: no flex gap; borders included in width. */
+#timeContainer,
+#eventContainer.event-strip,
+.rectangle,
+.timelines-years {
+  box-sizing: border-box;
+}
 
 #timeContainer {
   height: 10%;
+  min-height: 4.5rem;
   display: flex;
   flex-direction: column;
   font-size: 1rem;
+  background: var(--color-chrome, #0f172a);
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .rectangle {
-  background-color: #555;
-  /* border-right: thin solid; */
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 0;
+  background: linear-gradient(180deg, #475569 0%, #334155 100%);
   cursor: pointer;
-  }
+  min-height: 0.625rem;
+  border-radius: 4px;
+  border: 1px solid rgba(248, 250, 252, 0.14);
+  /* Hairline between segments without consuming layout width (keeps % aligned with years). */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset -1px 0 0 rgba(15, 23, 42, 0.55),
+    0 1px 3px rgba(0, 0, 0, 0.35);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.12s ease,
+    border-color 0.15s ease, filter 0.15s ease;
+}
+
+.rectangle:last-of-type {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.35);
+}
 
 .rectangle:hover {
-  opacity: .8;
+  filter: brightness(1.14);
+  border-color: rgba(248, 250, 252, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset -1px 0 0 rgba(15, 23, 42, 0.55),
+    0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.rectangle:last-of-type:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .rectangle:active {
-  background-color: red;
+  transform: scaleY(0.94);
 }
 
 .active {
-  background-color: blue;
+  background: linear-gradient(180deg, #38bdf8 0%, var(--color-accent, #0ea5e9) 100%);
+  border-color: rgba(125, 211, 252, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset -1px 0 0 rgba(15, 23, 42, 0.4),
+    0 0 0 1px rgba(56, 189, 248, 0.45),
+    0 2px 10px rgba(14, 165, 233, 0.35);
 }
 
-#eventContainer {
+.active:last-of-type {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 0 0 1px rgba(56, 189, 248, 0.45),
+    0 2px 10px rgba(14, 165, 233, 0.35);
+}
+
+.active:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset -1px 0 0 rgba(15, 23, 42, 0.4),
+    0 0 0 1px rgba(56, 189, 248, 0.55),
+    0 2px 12px rgba(14, 165, 233, 0.45);
+}
+
+.active:last-of-type:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    0 0 0 1px rgba(56, 189, 248, 0.55),
+    0 2px 12px rgba(14, 165, 233, 0.45);
+}
+
+.rectangle:focus {
+  outline: none;
+}
+
+.rectangle:focus-visible {
+  outline: 2px solid var(--color-accent, #0ea5e9);
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+#eventContainer.event-strip {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: stretch;
   height: 70%;
+  /* Same horizontal inset as .timelines-years so bars line up with year columns. */
+  padding: 0.4rem 0.35rem 0.15rem;
+  min-width: 0;
 }
 
 .timelines-years {
-	border-top: 1px solid #cfc1c1;
-  background-color: black;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  background: var(--color-chrome, #0f172a);
   display: flex;
   justify-content: center;
+  align-items: stretch;
   height: 30%;
+  min-height: 1.75rem;
+  padding: 0 0.35rem;
+  margin: 0;
+  list-style: none;
   -webkit-padding-start: 0;
+  cursor: default;
+  user-select: none;
+  min-width: 0;
 }
 
-li {
-	display: inline-block;
-  width: 4.34782608696%; /* = 100 / 23 */
-  color: #868686;
-  /* font-size: 20px; */
+.timelines-years--axis {
+  pointer-events: none;
+}
+
+.timelines-years__cell {
+  flex: 1 1 0;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-chrome-muted, #94a3b8);
+  font-size: clamp(0.5rem, 0.85vw, 0.6875rem);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
   text-align: center;
-  border-right: 1px solid #cfc1c1;
+  border-right: 1px solid rgba(148, 163, 184, 0.15);
 }
 
-li:last-child {
-  border-right: 0px;
-/*  !*width: 1.85873605948%;*!*/
+.timelines-years__cell--last .timelines-years__label {
+  letter-spacing: -0.03em;
+}
+
+.timelines-years__label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.95;
+}
+
+.timelines-years__cell:last-child {
+  border-right: 0;
 }
 
 </style>
