@@ -51,27 +51,7 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script type="text/javascript">
-    //google analytics code goes here
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-
-      const host = document.location.hostname
-      const isProd =
-        host === 'vivekraja.me' ||
-        host === 'www.vivekraja.me' ||
-        host.indexOf('mapraja') !== -1
-      if (isProd) {
-        gtag('config', 'UA-135109200-1')
-      } else {
-        gtag('config', 'UA-135109200-3')
-      }
-
-      gtag('js', new Date());
-      </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135109200-1"></script>
+    <!-- Google Analytics 4 is loaded from src/analytics.js -->
 
   </body>
 </html>

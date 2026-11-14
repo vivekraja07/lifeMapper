@@ -1,5 +1,5 @@
 <template>
-    <div id = "projects">
+    <div id = "projects" data-analytics-area="project">
         <div class="Project" v-for="(project, index) in projects" :key="index">
             <h3 class="title">
                 <a :href="project.link" v-if="!project.routerLink"> {{project.title}}

@@ -2,7 +2,7 @@
     <div>
         <IconHolder v-bind:icon="activity.icon" />
 
-        <div class = "summaryInfo" v-if="activity.icon">
+        <div class = "summaryInfo" v-if="activity.icon" data-analytics-area="activity">
             <h3 class="title">
               <a
                 v-if="activity.link"
