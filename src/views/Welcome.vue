@@ -14,12 +14,11 @@
 
 <script>
 
-
 export default {
   name: 'Welcome',
   components: {
 
-  },
+  }
 }
 
 </script>

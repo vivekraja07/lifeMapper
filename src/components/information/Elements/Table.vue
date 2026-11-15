@@ -1,4 +1,4 @@
-<template>        
+<template>
     <table>
         <thead>
             <tr>
@@ -23,45 +23,52 @@
 export default {
   name: 'Table',
   props: {
-    Table: Object,
+    Table: Object
   }
 }
 </script>
 
 <style scoped>
-
-/* table styles */
 table {
-    text-align: left;
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: var(--radius, 12px);
-    overflow: hidden;
-    font-size: 0.875rem;
-    box-shadow: var(--shadow-sm, 0 1px 2px rgba(15, 23, 42, 0.06));
-    border: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
-}
-
-thead {
-  background: var(--color-chrome, #0f172a);
-  color: #f8fafc;
+  width: 100%;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 th {
-    padding: 0.65rem 0.75rem;
-    font-weight: 600;
-    font-size: 0.8125rem;
-    letter-spacing: 0.02em;
-}
-
-tbody tr:nth-child(even) {
-  background: rgba(14, 165, 233, 0.06);
+  padding: 0.55rem 0.8rem;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted, #64748b);
 }
 
 td {
-    padding: 0.5rem 0.75rem;
-    border-top: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
+  padding: 0.5rem 0.8rem;
+  color: #334155;
+  border-top: 1px solid #f1f5f9;
 }
 
-</style>
+tbody tr:first-child td {
+  border-top: 0;
+}
 
+tbody tr:hover td {
+  background: #f8fafc;
+}
+
+/* First column is a code/number: keep it quiet and narrow */
+td:first-child {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted, #64748b);
+}
+</style>

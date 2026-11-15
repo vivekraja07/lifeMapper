@@ -205,8 +205,8 @@ export default {
 }
 
 #timeContainer {
-  height: 10%;
-  min-height: 4.5rem;
+  height: 4.75rem;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   font-size: 1rem;

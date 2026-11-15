@@ -1,9 +1,7 @@
 <template>
     <div class="Activities">
-        
         <h2 v-if="sectionTitle" class="sectionTitle">{{sectionTitle}}</h2>
-        
-        <Activity class="Activity" v-for="(activity, index) in activities" :key="index" v-bind:activity="activity"/>
+        <Activity class="Activity" v-for="(activity, index) in activities" :key="index" v-bind:activity="activity" :link-on="linkOn"/>
 
     </div>
 </template>
@@ -16,7 +14,11 @@ export default {
   name: 'Activities',
   props: {
     activities: Array,
-    sectionTitle: String
+    sectionTitle: String,
+    linkOn: {
+      type: String,
+      default: 'title'
+    }
   },
   components: {
     IconHolder,
@@ -26,32 +28,20 @@ export default {
 </script>
 
 <style scoped>
-/* Make sure that padding behaves as expected */
-* {box-sizing:border-box}
+* { box-sizing: border-box; }
 
-.Activity {
-  border-bottom: var(--border-section-width, 3px) solid var(--color-border, #e2e8f0);
-  padding-top: 0.95rem;
-  padding-bottom: 0.7rem;
-}
-
-.Activity:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.Activity:first-of-type {
-  padding-top: 0;
+.Activity + .Activity {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--color-border, #e2e8f0);
 }
 
 .sectionTitle {
-    font-family: var(--font-display, system-ui, sans-serif);
-    font-weight: var(--font-heading-weight, 700);
-    font-size: 1.125rem;
-    letter-spacing: -0.02em;
-    text-align: center;
-    color: var(--color-ink, #0f172a);
-    margin-bottom: 0.75rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-muted, #64748b);
 }
-
 </style>

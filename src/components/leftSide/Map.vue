@@ -3,11 +3,17 @@
 </template>
 
 <script>
+/* global L */ // Leaflet is loaded from a <script> tag in public/index.html
 
 export default {
   name: 'Map',
   props: {
-    events: Object
+    events: Object,
+    /** false = preview map (no pan/zoom) so touch scrolling passes through to the page. */
+    interactive: {
+      type: Boolean,
+      default: true
+    }
   },
   data: function () {
     return {
@@ -67,9 +73,18 @@ export default {
     },
     initMap () {
       const evt = this.events[this.active]
-      this.map = L.map('map', { keyboard: false }).setView(evt.loc, evt.zoom, evt.options)
+      const lockOpts = this.interactive ? {} : {
+        dragging: false,
+        touchZoom: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        zoomControl: false,
+        tap: false
+      }
+      this.map = L.map(this.$el, { keyboard: false, ...lockOpts }).setView(evt.loc, evt.zoom, evt.options)
       this.tileLayer = L.tileLayer(
-        'http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+        'https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
           maxZoom: 20,
           subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
           attribution: 'Google-Maps'
@@ -88,6 +103,8 @@ export default {
 #map {
   width: 100%;
   height: 100%;
+  /* Dark base so tiles that are still loading read as dark, not a light-grey flash */
+  background: var(--color-chrome, #0f172a);
 }
 
 </style>

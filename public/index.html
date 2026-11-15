@@ -4,21 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Vivek Raja</title>
-    <meta name="description" content="Personal site of Vivek Raja (Vivekanand Rajasekar): timeline, projects, and skills. Also known as Vivek Rajasekar.">
+    <title>Vivek Raja (Vivekanand Rajasekar) – Lead Engineer in New York</title>
+    <meta name="description" content="Vivek Raja (Vivekanand Rajasekar) is a Lead Engineer at Ultra For All Mankind in New York and former Engineering Manager at Expanse (Palo Alto Networks). Explore his journey on an interactive map, plus projects and skills.">
     <link rel="canonical" href="https://vivekraja.me/">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Vivek Raja">
-    <meta property="og:description" content="Vivek Raja's personal website — movement over time, projects, and skills.">
+    <meta property="og:title" content="Vivek Raja (Vivekanand Rajasekar) – Lead Engineer in New York">
+    <meta property="og:description" content="Lead Engineer at Ultra For All Mankind in New York. Explore Vivek's journey on an interactive map, plus projects and skills.">
     <meta property="og:url" content="https://vivekraja.me/">
     <meta property="og:image" content="https://vivekraja.me/screenshot.png">
-    <meta property="og:image:alt" content="Screenshot of Vivek Raja's personal website">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Screenshot of Vivek Raja's personal website: an interactive map of his journey with his current role">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vivek Raja">
-    <meta name="twitter:description" content="Vivek Raja's personal website — movement over time, projects, and skills.">
+    <meta name="twitter:title" content="Vivek Raja (Vivekanand Rajasekar) – Lead Engineer in New York">
+    <meta name="twitter:description" content="Lead Engineer at Ultra For All Mankind in New York. Explore Vivek's journey on an interactive map, plus projects and skills.">
     <meta name="twitter:image" content="https://vivekraja.me/screenshot.png">
 
     <script type="application/ld+json">
@@ -28,6 +30,23 @@
       "name": "Vivek Raja",
       "alternateName": ["Vivekanand Rajasekar", "Vivek Rajasekar"],
       "url": "https://vivekraja.me/",
+      "image": "https://vivekraja.me/vivek-raja.jpg",
+      "jobTitle": "Lead Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ultra For All Mankind",
+        "url": "https://ultrafam.com"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Georgia Institute of Technology"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/vivekraja07/",
         "https://github.com/vivekraja07",
@@ -40,15 +59,34 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <!-- Leaflet: keep CSS + script on the same version. Revert: set both to leaflet@1.3.1/dist/... -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but life-mapper doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
+    <!--
+      Static summary for search engines and link previews. Vue replaces everything inside #app
+      when it mounts, so visitors only see this for a moment (styled as a loading splash).
+    -->
+    <div id="app">
+      <main style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;padding:2rem 1.25rem;box-sizing:border-box;background:#0f172a;color:#f8fafc;font-family:Inter,system-ui,-apple-system,sans-serif;text-align:center;">
+        <h1 style="margin:0;font-family:Fraunces,Georgia,serif;font-size:2.5rem;font-weight:700;">Vivek Raja</h1>
+        <p style="margin:0;font-size:0.9rem;letter-spacing:0.04em;text-transform:uppercase;color:#94a3b8;">Vivekanand Rajasekar</p>
+        <p style="margin:0.75rem 0 0;max-width:38rem;line-height:1.6;color:#cbd5e1;">
+          Lead Engineer at Ultra For All Mankind in New York. Previously Engineering Manager at Expanse
+          (acquired by Palo Alto Networks) in San Francisco, leading the Data Platform backend team.
+          B.S. in Computer Science from the Georgia Institute of Technology and founder of Jumpstart Mentorship.
+          This site maps my journey from Tamil Nadu to New York, along with my projects and skills.
+        </p>
+        <nav aria-label="Profiles" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:0.75rem;font-size:0.9rem;">
+          <a href="https://www.linkedin.com/in/vivekraja07/" style="color:#7dd3fc;">LinkedIn</a>
+          <a href="https://github.com/vivekraja07" style="color:#7dd3fc;">GitHub</a>
+          <a href="https://devpost.com/VivekanandRajasekar" style="color:#7dd3fc;">Devpost</a>
+          <a href="https://medium.com/@vivekraja07" style="color:#7dd3fc;">Medium</a>
+        </nav>
+        <noscript><p style="margin-top:1rem;color:#94a3b8;">Enable JavaScript to explore the interactive map.</p></noscript>
+      </main>
+    </div>
     <!-- built files will be auto injected -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Google Analytics 4 is loaded from src/analytics.js -->

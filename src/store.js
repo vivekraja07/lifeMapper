@@ -13,8 +13,10 @@ export default new Vuex.Store({
   state: {
     sidebarOpen: false,
     active: defaultActive,
-    /** Left panel tab: 'Map' | 'Profile' | 'Projects' | 'Skills' — matches LeftSide dynamic component name */
-    leftSidePick: 'Profile'
+    /** Wide-layout right panel tab: 'Period' | 'Skills' | 'Projects' */
+    panelTab: 'Period',
+    /** Wide layout: full-screen profile view over the map/story layout */
+    profileOpen: false
   },
   mutations: {
     setActive (state, event) {
@@ -23,8 +25,11 @@ export default new Vuex.Store({
     toggleSideBar (state) {
       state.sidebarOpen = !state.sidebarOpen
     },
-    setLeftSidePick (state, pick) {
-      state.leftSidePick = pick
+    setPanelTab (state, tab) {
+      state.panelTab = tab
+    },
+    setProfileOpen (state, open) {
+      state.profileOpen = !!open
     }
   },
   actions: {

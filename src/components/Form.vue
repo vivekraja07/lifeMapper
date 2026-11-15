@@ -12,7 +12,7 @@
             <div class="column-guide" aria-label="Layout overview">
               <div class="column-guide__cell">
                 <span class="column-guide__name">Map</span>
-                <span class="column-guide__hint">Place &amp; tabs (Map, Profile, Projects…)</span>
+                <span class="column-guide__hint">Who I am &amp; where each period happened</span>
               </div>
               <div class="column-guide__cell">
                 <span class="column-guide__name">Story</span>
@@ -29,8 +29,8 @@
               to move through time.
             </div>
             <div class="instructions">
-              On <strong>Map</strong>, move through time to travel location history. <strong>Profile</strong>
-              and <strong>Projects</strong> stay stable if you prefer not to time-travel.
+              The <strong>map</strong> follows you through time. Switch to <strong>Skills</strong>
+              or <strong>Projects</strong> above the story if you prefer not to time-travel.
             </div>
             <div class="iconHolder">
               <img src="@/assets/ui/keyboardArrows.png">

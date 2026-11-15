@@ -1,47 +1,48 @@
 <template>
-    <div>
-        <IconHolder v-bind:icon="activity.icon" />
+    <div class="item">
+        <div class="item__head" data-analytics-area="activity">
+            <IconHolder v-if="activity.icon" v-bind:icon="activity.icon" :label="orgName" />
 
-        <div class = "summaryInfo" v-if="activity.icon" data-analytics-area="activity">
-            <h3 class="title">
-              <a
-                v-if="activity.link"
-                :href="activity.link"
-                class="title-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                :aria-label="activity.title + ' (opens in new tab)'"
-              >
-                <span class="title-link__text">{{ activity.title }}</span>
-                <img
-                  class="title-link__icon"
-                  src="@/assets/ui/external.png"
-                  alt=""
-                  width="14"
-                  height="14"
-                >
-              </a>
-              <template v-else>{{ activity.title }}</template>
-            </h3>
-            <h4 class = "name"> {{activity.name}} </h4>
-            <h5 class = "timeRange"> {{activity.range}} </h5>
-            <h5 v-if="activity.location" class = "location"> {{activity.location}} </h5>
+            <div class="item__summary">
+                <h3 class="item__title">
+                  <a
+                    v-if="activity.link && linkOn === 'title'"
+                    :href="activity.link"
+                    class="item__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    :aria-label="activity.title + ' (opens in new tab)'"
+                  >{{ activity.title }}<span class="item__link-arrow" aria-hidden="true">↗</span></a>
+                  <template v-else>{{ activity.title }}</template>
+                </h3>
+                <p v-if="activity.name" class="item__org">
+                  <a
+                    v-if="activity.link && linkOn === 'name'"
+                    :href="activity.link"
+                    class="item__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    :aria-label="activity.name + ' (opens in new tab)'"
+                  >{{ activity.name }}<span class="item__link-arrow" aria-hidden="true">↗</span></a>
+                  <template v-else>{{ activity.name }}</template>
+                </p>
+                <p v-if="activity.range || activity.location" class="item__meta">
+                  <span v-if="activity.range">{{ activity.range }}</span>
+                  <span v-if="activity.range && activity.location" class="item__dot" aria-hidden="true">·</span>
+                  <span v-if="activity.location">{{ activity.location }}</span>
+                </p>
+            </div>
         </div>
 
-        <div class="addDetails" v-if="activity.courses || activity.details">
+        <div class="item__body" v-if="activity.courses || (activity.details && activity.details.length)">
+            <Table v-if="activity.courses" v-bind:Table="activity.courses" />
 
-            <div v-if="activity.courses" class="addDetails-table">
-                <Table v-bind:Table="activity.courses" />
-            </div>
-
-            <ul v-if="activity.details && activity.details.length" class="addDetails-bullets">
+            <ul v-if="activity.details && activity.details.length" class="item__bullets">
                 <li v-for="point in activity.details" :key="point">
                     {{point}}
                 </li>
             </ul>
         </div>
-
-
     </div>
 </template>
 
@@ -53,108 +54,132 @@ export default {
   name: 'Activity',
   props: {
     activity: Object,
+    /** Which line carries `activity.link`: 'title' (orgs in Activities) or 'name' (company line on Jobs). */
+    linkOn: {
+      type: String,
+      default: 'title'
+    }
   },
   components: {
-      IconHolder,
-      Table
+    IconHolder,
+    Table
+  },
+  computed: {
+    /** Jobs keep the company in `name`; schools and activities keep the org in `title`. */
+    orgName () {
+      const a = this.activity || {}
+      return (this.linkOn === 'name' ? a.name : a.title) || ''
+    }
   }
 }
 </script>
 
 <style scoped>
+* { box-sizing: border-box; }
 
-.summaryInfo {
-    margin-left: 80px;
+.item__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
 }
 
-.addDetails {
-    clear: left;
-    margin-top: 0.75rem;
-    color: var(--color-ink, #0f172a);
+.item__summary {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.addDetails-table {
-    margin-left: 0;
-}
-
-.addDetails-bullets {
-    margin: 0;
-    padding-left: 1rem;
-    list-style-position: outside;
-}
-
-.addDetails-table + .addDetails-bullets {
-    margin-top: 0.65rem;
-}
-
-.addDetails-bullets li {
-  margin-bottom: 0.22rem;
-  padding-left: 0;
-  line-height: 1.38;
-  font-size: 0.9375rem;
-}
-
-.title {
-  font-family: var(--font-display, system-ui, sans-serif);
-  font-weight: var(--font-heading-weight, 700);
-  font-size: 1.0625rem;
-  letter-spacing: -0.02em;
+.item__title {
+  margin: 0;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
   color: var(--color-ink, #0f172a);
-  margin-bottom: 0.25rem;
 }
 
-.title-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  max-width: 100%;
-  color: var(--color-accent, #0ea5e9);
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 0.2em;
-  font-weight: inherit;
-  transition: color 0.15s ease, filter 0.15s ease;
+.item__org {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #334155;
 }
 
-.title-link:hover {
-  color: #0284c7;
-  filter: brightness(1.05);
+.item__meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--color-muted, #64748b);
 }
 
-.title-link:focus {
+.item__dot {
+  margin: 0 0.35rem;
+}
+
+.item__link {
+  color: var(--color-accent-hover, #0284c7);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(2, 132, 199, 0.35);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.item__link:hover {
+  color: #0369a1;
+  border-bottom-color: currentColor;
+}
+
+.item__link:focus {
   outline: none;
 }
 
-.title-link:focus-visible {
+.item__link:focus-visible {
   outline: 2px solid var(--color-accent, #0ea5e9);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-.title-link__text {
-  min-width: 0;
+.item__link-arrow {
+  display: inline-block;
+  margin-left: 0.2rem;
+  font-size: 0.85em;
 }
 
-.title-link__icon {
-  flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-  vertical-align: middle;
-  opacity: 0.9;
+.item__body {
+  margin-top: 0.9rem;
 }
 
-.name {
-  font-weight: 600;
-  font-size: 0.9375rem;
-  color: var(--color-muted, #64748b);
-  margin-bottom: 0.2rem;
+.item__bullets {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.timeRange, .location {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--color-muted, #64748b);
+.item__body > * + .item__bullets {
+  margin-top: 0.75rem;
 }
 
+.item__bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.item__bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.item__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent, #0ea5e9);
+}
 </style>
-

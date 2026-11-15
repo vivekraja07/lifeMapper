@@ -1,6 +1,6 @@
 {
   "events": {
-    "January 12, 1998 to June 1999": {
+    "January 1998 to June 1999": {
       "start": "January-1998",
       "end": "June-1999",
       "loc": [
@@ -233,58 +233,40 @@
           "courses": {
             "columns": [
               "Course Number",
-              "Course Title",
-              "Fall",
-              "Spring"
+              "Course Title"
             ],
             "rows": [
               [
                 1,
-                "Accelerated Geometry Honors",
-                "105",
-                "106"
+                "Accelerated Geometry Honors"
               ],
               [
                 2,
-                "Honors Biology",
-                "105",
-                "106"
+                "Honors Biology"
               ],
               [
                 3,
-                "Band - Tuba Player",
-                "97",
-                "100"
+                "Band - Tuba Player"
               ],
               [
                 4,
-                "Home Room/Lunch",
-                "-",
-                "-"
+                "Home Room/Lunch"
               ],
               [
                 5,
-                "Spanish 2 Honors",
-                "106",
-                "106"
+                "Spanish 2 Honors"
               ],
               [
                 6,
-                "Literature and Comprehension",
-                "97",
-                "100"
+                "Literature and Comprehension"
               ],
               [
                 7,
-                "AP US Government and Politics",
-                "107",
-                "-"
+                "AP US Government and Politics"
               ],
               [
                 7,
-                "AP Comparative Government",
-                "-",
-                "105"
+                "AP Comparative Government"
               ]
             ]
           }
@@ -340,52 +322,36 @@
           "courses": {
             "columns": [
               "Course Number",
-              "Title",
-              "Fall",
-              "Spring"
+              "Title"
             ],
             "rows": [
               [
                 1,
-                "Honors Chemistry",
-                103,
-                104
+                "Honors Chemistry"
               ],
               [
                 2,
-                "Band - Tuba Player",
-                100,
-                100
+                "Band - Tuba Player"
               ],
               [
                 3,
-                "Honors Literature",
-                103,
-                104
+                "Honors Literature"
               ],
               [
                 4,
-                "Spanish 3 Honors",
-                103,
-                104
+                "Spanish 3 Honors"
               ],
               [
                 5,
-                "Home Room/Lunch",
-                "-",
-                "-"
+                "Home Room/Lunch"
               ],
               [
                 6,
-                "AP World History",
-                101,
-                100
+                "AP World History"
               ],
               [
                 7,
-                "Accelerated PreCalculus Honors",
-                107,
-                105
+                "Accelerated PreCalculus Honors"
               ]
             ]
           }
@@ -460,13 +426,11 @@
           "range": "June 2013 - July 2014 • 3 mos",
           "courses": {
             "columns": [
-              "Course",
-              "Summer"
+              "Course"
             ],
             "rows": [
               [
-                "FVS General Health",
-                99
+                "FVS General Health"
               ]
             ]
           }
@@ -512,52 +476,36 @@
           "courses": {
             "columns": [
               "Course Number",
-              "Title",
-              "Fall",
-              "Spring"
+              "Title"
             ],
             "rows": [
               [
                 1,
-                "AP Spanish Lang",
-                106,
-                106
+                "AP Spanish Lang"
               ],
               [
                 2,
-                "AP US History",
-                103,
-                100
+                "AP US History"
               ],
               [
                 3,
-                "Accounting Principles 1",
-                98,
-                96
+                "Accounting Principles 1"
               ],
               [
                 4,
-                "Home Room/Lunch",
-                "-",
-                "-"
+                "Home Room/Lunch"
               ],
               [
                 5,
-                "AP Calculus BC",
-                103,
-                102
+                "AP Calculus BC"
               ],
               [
                 6,
-                "AP Chemistry",
-                102,
-                102
+                "AP Chemistry"
               ],
               [
                 7,
-                "AP English Lanugage",
-                99,
-                100
+                "AP English Language"
               ]
             ]
           }
@@ -685,64 +633,44 @@
           "courses": {
             "columns": [
               "Course Number",
-              "Title",
-              "Fall",
-              "Spring"
+              "Title"
             ],
             "rows": [
               [
                 1,
-                "GT Distance Calculus MOWR",
-                102,
-                92
+                "GT Distance Calculus MOWR"
               ],
               [
                 2,
-                "Personal Fitness",
-                99,
-                "-"
+                "Personal Fitness"
               ],
               [
                 2,
-                "GPC - College English 1102",
-                "-",
-                92
+                "GPC - College English 1102"
               ],
               [
                 3,
-                "AP Microeconomics",
-                99,
-                "-"
+                "AP Microeconomics"
               ],
               [
                 3,
-                "AP Macroeconomics",
-                "-",
-                98
+                "AP Macroeconomics"
               ],
               [
                 4,
-                "Home Room/Lunch",
-                "-",
-                "-"
+                "Home Room/Lunch"
               ],
               [
                 5,
-                "AP Computer Science A",
-                104,
-                99
+                "AP Computer Science A"
               ],
               [
                 6,
-                "AP Physics 1",
-                103,
-                95
+                "AP Physics 1"
               ],
               [
                 7,
-                "AP Statistics",
-                102,
-                95
+                "AP Statistics"
               ]
             ]
           }
@@ -1654,8 +1582,8 @@
       }
     },
     "January 2019 to May 2019": {
-      "start": "January-2018",
-      "end": "May-2018",
+      "start": "January-2019",
+      "end": "May-2019",
       "loc": [
         33.777378,
         -84.395516
@@ -2188,7 +2116,7 @@
             "title": "Software Engineer",
             "name": "Expanse - Acquired by Palo Alto Networks",
             "icon": "expanse.jpeg",
-            "range": "Aug 2020 - Present • 5 years 9 months",
+            "range": "Aug 2020 - May 2026 • 5 years 10 months",
             "location": "San Francisco, CA",
             "details": [
               "Led cross-team effort to increase database scalability, upgrading our largest production databases to Aurora without incident or significant downtime, analyzing index usage, and creating patterns for pruning stale data",
@@ -2285,7 +2213,7 @@
             "title": "Senior Staff Software Engineer",
             "name": "Expanse - Acquired by Palo Alto Networks",
             "icon": "expanse.jpeg",
-            "range": "Aug 2020 - Present • 5 years 9 months",
+            "range": "Aug 2020 - May 2026 • 5 years 10 months",
             "location": "San Francisco, CA",
             "details": [
               "Managed a team of 4 senior engineers to restructure a series of batch processing pipelines into a performant streaming system. Conducted large-scale data validations and added alerting capabilities while handling a complex migration. As a result, the redesigned system accelerated the processing of over 7,300 terabytes of customer assets (12% of the global internet) from over 2 days to under 2 minutes.",
@@ -2378,7 +2306,7 @@
         ]
       }
     },
-    "May 2023 to Present": {
+    "May 2023 to May 2026": {
       "start": "May-2023",
       "end": "May-2026",
       "loc": [
@@ -2388,7 +2316,7 @@
       "zoom": 15,
       "info": {
         "General": {
-          "title": "Software Manager at Xpanse",
+          "title": "Engineering Manager at Expanse",
           "Location": "San Francisco, CA"
         },
         "Jobs": [
@@ -2396,7 +2324,7 @@
             "title": "Engineering Manager",
             "name": "Expanse - Acquired by Palo Alto Networks",
             "icon": "expanse.jpeg",
-            "range": "Aug 2020 - Present • 5 years 9 months",
+            "range": "Aug 2020 - May 2026 • 5 years 10 months",
             "location": "San Francisco, CA",
             "details": [
               "Lead the 8-member Data Platform backend team, architecting high-performance systems that transform trillions of raw data points into critical cybersecurity insights. These platforms define and secure the perimeters of Fortune 500 companies and all US military branches, enhancing their threat detection and response capabilities.",
@@ -2412,7 +2340,7 @@
             "link": "https://jumpstartmentoring.com/",
             "icon": "tutor.png",
             "name": "President and Founder",
-            "range": "May 2023 – Present",
+            "range": "May 2023 – May 2026",
             "location": "San Francisco, CA",
             "details": [
               "Matched over 50 college students with one-on-one mentorship from accomplished engineers in Silicon Valley for a 12-week program."
@@ -2499,10 +2427,103 @@
           }
         ]
       }
+    },
+    "June 2026 to Present": {
+      "start": "June-2026",
+      "end": "November-2026",
+      "loc": [
+        40.72474,
+        -73.99712
+      ],
+      "zoom": 15,
+      "info": {
+        "General": {
+          "title": "Lead Engineer at Ultra For All Mankind",
+          "Location": "SoHo, New York, NY"
+        },
+        "Jobs": [
+          {
+            "title": "Lead Engineer",
+            "name": "Ultra For All Mankind",
+            "icon": "ultra.png",
+            "range": "Jun 2026 - Present",
+            "location": "584 Broadway, SoHo, New York, NY",
+            "link": "https://ultrafam.com"
+          }
+        ],
+        "CLanguages": [
+          {
+            "name": "Java",
+            "skill": "95%"
+          },
+          {
+            "name": "Google Dataflow",
+            "skill": "90%"
+          },
+          {
+            "name": "Vue.js",
+            "skill": "80%"
+          },
+          {
+            "name": "Node.js",
+            "skill": "79%"
+          },
+          {
+            "name": "Python",
+            "skill": "78%"
+          },
+          {
+            "name": "Javascript",
+            "skill": "67%"
+          },
+          {
+            "name": "C",
+            "skill": "65%"
+          },
+          {
+            "name": "Groovy",
+            "skill": "62%"
+          },
+          {
+            "name": "SQL",
+            "skill": "60%"
+          },
+          {
+            "name": "Scikit-Learn",
+            "skill": "46%"
+          },
+          {
+            "name": "Selenium Webdriver",
+            "skill": "45%"
+          },
+          {
+            "name": "VBA",
+            "skill": "20%"
+          }
+        ],
+        "Languages": [
+          {
+            "name": "Tamil",
+            "skill": "61%"
+          },
+          {
+            "name": "English",
+            "skill": "94%"
+          },
+          {
+            "name": "Hindi",
+            "skill": "38%"
+          },
+          {
+            "name": "Spanish",
+            "skill": "43%"
+          }
+        ]
+      }
     }
   },
   "eventOrder": [
-    "January 12, 1998 to June 1999",
+    "January 1998 to June 1999",
     "July 1999 to May 2003",
     "June 2003 to May 2005",
     "June 2005 to October 2007",
@@ -2528,6 +2549,7 @@
     "January 2020 to May 2020",
     "June 2020 to May 2021",
     "June 2021 to April 2023",
-    "May 2023 to Present"
+    "May 2023 to May 2026",
+    "June 2026 to Present"
   ]
 }

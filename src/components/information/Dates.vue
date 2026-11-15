@@ -5,18 +5,24 @@
             class="nav-btn nav-btn--prev"
             :disabled="!canGoPrev"
             aria-label="Previous time period"
+            title="Earlier (← key)"
             @click="getPrev"
         >
             <span class="nav-btn__icon" aria-hidden="true">&#8249;</span>
+            <span class="nav-btn__label">Earlier</span>
         </button>
-        <h3 id="date">{{active}}</h3>
+        <div class="dates__center">
+            <h3 id="date">{{active}}</h3>
+        </div>
         <button
             type="button"
             class="nav-btn nav-btn--next"
             :disabled="!canGoNext"
             aria-label="Next time period"
+            title="Later (→ key)"
             @click="getNext"
         >
+            <span class="nav-btn__label">Later</span>
             <span class="nav-btn__icon" aria-hidden="true">&#8250;</span>
         </button>
     </div>
@@ -37,7 +43,7 @@ export default {
   },
   data () {
     return {
-      _lastArrowRepeatNav: 0
+      lastArrowRepeatNav: 0
     }
   },
   created () {
@@ -65,7 +71,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'activeSet',
+      'activeSet'
     ]),
     _isEditableTarget (el) {
       if (!el || typeof el.closest !== 'function') return false
@@ -77,12 +83,13 @@ export default {
     _onWindowKeydown (e) {
       if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
       if (this._isEditableTarget(e.target)) return
+      if (this.$store.state.profileOpen) return
       if (e.repeat) {
         const now = Date.now()
-        if (now - this._lastArrowRepeatNav < 140) return
-        this._lastArrowRepeatNav = now
+        if (now - this.lastArrowRepeatNav < 140) return
+        this.lastArrowRepeatNav = now
       } else {
-        this._lastArrowRepeatNav = 0
+        this.lastArrowRepeatNav = 0
       }
       e.preventDefault()
       if (e.key === 'ArrowLeft') {
@@ -94,12 +101,18 @@ export default {
     getNext () {
       if (!this.canGoNext) return
       this.activeSet(this.eventOrder[this.activeIndex + 1])
-      gtag('event','click',{'event_category':'navigation','event_label':'left'});
+      this._track('left')
     },
     getPrev () {
       if (!this.canGoPrev) return
       this.activeSet(this.eventOrder[this.activeIndex - 1])
-      gtag('event','click',{'event_category':'navigation','event_label':'right'});
+      this._track('right')
+    },
+    _track (label) {
+      // gtag only exists when analytics loaded (not on the dev server)
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'click', { event_category: 'navigation', event_label: label })
+      }
     }
   }
 }
@@ -113,6 +126,7 @@ export default {
     background: var(--color-chrome, #0f172a);
     color: #f8fafc;
     border: 0;
+    flex: 0 0 auto;
     height: 10%;
     min-height: 3.5rem;
     display: flex;
@@ -124,12 +138,14 @@ export default {
     border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
 
-h3 {
+.dates__center {
   flex: 1;
   min-width: 0;
-  margin: 0;
   padding: 0 0.5rem;
-  align-self: center;
+}
+
+h3 {
+  margin: 0;
   font-family: var(--font-display, system-ui, sans-serif);
   font-weight: var(--font-heading-weight, 700);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
@@ -137,42 +153,54 @@ h3 {
   color: #f8fafc;
 }
 
+/* Prominent, filled accent pills so time navigation reads as the primary control. */
 .nav-btn {
   flex-shrink: 0;
   align-self: center;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  gap: 0.35rem;
+  height: 2.6rem;
+  min-width: 2.6rem;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   border-radius: var(--radius-pill, 999px);
-  border: 1px solid rgba(248, 250, 252, 0.28);
-  background: rgba(255, 255, 255, 0.08);
-  color: #f8fafc;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, var(--color-accent, #0ea5e9), var(--color-accent-hover, #0284c7));
+  color: #fff;
+  font-family: var(--font-sans, inherit);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.4);
   cursor: pointer;
-  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease,
-    box-shadow 0.15s ease, transform 0.1s ease;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease, opacity 0.15s ease;
+}
+
+.nav-btn--prev {
+  padding-left: 0.75rem;
+}
+
+.nav-btn--next {
+  padding-right: 0.75rem;
 }
 
 .nav-btn__icon {
   display: block;
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1;
-  margin-top: -0.05em;
+  margin-top: -0.1em;
 }
 
 .nav-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(248, 250, 252, 0.45);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.55);
+  transform: translateY(-1px);
 }
 
 .nav-btn:active:not(:disabled) {
-  transform: scale(0.96);
+  transform: translateY(0) scale(0.97);
 }
 
 .nav-btn:focus {
@@ -180,16 +208,30 @@ h3 {
 }
 
 .nav-btn:focus-visible {
-  outline: 2px solid var(--color-accent, #0ea5e9);
+  outline: 2px solid #f8fafc;
   outline-offset: 2px;
 }
 
 .nav-btn:disabled {
-  opacity: 0.38;
   cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.06);
   border-color: rgba(248, 250, 252, 0.12);
-  background: rgba(255, 255, 255, 0.03);
+  color: rgba(248, 250, 252, 0.35);
   box-shadow: none;
+}
+
+/* Narrow bars (phones): arrows only. */
+@media (max-width: 600px) {
+  .nav-btn__label {
+    display: none;
+  }
+
+  .nav-btn,
+  .nav-btn--prev,
+  .nav-btn--next {
+    padding: 0;
+    width: 2.75rem;
+  }
 }
 
 .dates.dates--fluid {

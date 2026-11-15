@@ -1,6 +1,6 @@
 <template>
     <div class = "logoHolder">
-        <img :src="require('@/assets/icons/' + icon)"/>
+        <img :src="require('@/assets/icons/' + icon)" :alt="label ? label + ' logo' : ''"/>
     </div>
 </template>
 
@@ -12,35 +12,32 @@
 export default {
   name: 'IconHolder',
   props: {
-    icon: String
+    icon: String,
+    /** Organization name, read out by screen readers as "<label> logo". */
+    label: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>
 
 <style scoped>
-/* logo icon styles go here */
-
 .logoHolder {
-  width: 72px;
-  height: 72px;
-  float: left;
-}
-
-.imageHolder {
-  border-radius: 6px;
-  height: 56px;
-  width: 56px;
-  background-size: contain;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
 }
 
 img {
-    border-radius: var(--radius, 10px);
-    border: 2px solid var(--color-border, #e2e8f0);
-    height: 64px;
-    width: 64px;
-    object-fit: contain;
-    background: var(--color-surface, #fff);
-    box-shadow: var(--shadow-sm, 0 1px 2px rgba(15, 23, 42, 0.06));
+  display: block;
+  width: 52px;
+  height: 52px;
+  padding: 3px;
+  box-sizing: border-box;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  background: #fff;
 }
-
 </style>

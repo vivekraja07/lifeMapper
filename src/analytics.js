@@ -33,6 +33,8 @@ export function track (name, params = {}) {
   if (enabled) {
     gtag('event', name, params)
   } else if (process.env.NODE_ENV !== 'production') {
+    // dev-only trace of analytics events
+    // eslint-disable-next-line no-console
     console.debug('[analytics]', name, params)
   }
 }
@@ -105,8 +107,11 @@ export function initAnalytics ({ router, store }) {
       case 'setActive':
         track('select_time_period', { period: String(mutation.payload) })
         break
-      case 'setLeftSidePick':
+      case 'setPanelTab':
         track('select_tab', { tab: String(mutation.payload) })
+        break
+      case 'setProfileOpen':
+        if (mutation.payload) track('open_profile', {})
         break
       case 'toggleSideBar':
         track('toggle_sidebar', { open: state.sidebarOpen })

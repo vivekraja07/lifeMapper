@@ -1,9 +1,5 @@
 <template>
   <div class="mobile-story">
-    <p class="mobile-story__hint">
-      Readable layout for phones and tablets. On a wide screen you get the full map, profile tabs, and timeline strip.
-    </p>
-
     <header class="mobile-story__sticky">
       <Dates :event-order="eventOrder" :fluid-height="true" />
       <div
@@ -29,11 +25,22 @@
     </header>
 
     <main class="mobile-story__main">
+      <div class="mobile-story__map">
+        <Map :events="events" :interactive="false" />
+      </div>
       <Information
         :events="events"
         :event-order="eventOrder"
         stacked
       />
+      <details class="mobile-story__fold">
+        <summary class="mobile-story__fold-title">Skills</summary>
+        <Skills :events="events" />
+      </details>
+      <details v-if="projects && projects.length" class="mobile-story__fold">
+        <summary class="mobile-story__fold-title">All projects</summary>
+        <Projects :projects="projects" />
+      </details>
       <section class="mobile-story__about" aria-labelledby="mobile-about-heading">
         <h2 id="mobile-about-heading" class="mobile-story__about-heading">
           About
@@ -57,13 +64,34 @@ import { mapActions } from 'vuex'
 import Dates from '@/components/information/Dates.vue'
 import Information from '@/components/information/Information.vue'
 import Profile from '@/components/leftSide/Profile.vue'
+import Map from '@/components/leftSide/Map.vue'
+import Skills from '@/components/leftSide/Skills.vue'
+import Projects from '@/components/leftSide/Projects.vue'
+
+const SHORT_SEASON_BY_MONTH = {
+  January: 'Spring',
+  February: 'Spring',
+  March: 'Spring',
+  April: 'Spring',
+  May: 'Spring',
+  June: 'Summer',
+  July: 'Summer',
+  August: 'Summer',
+  September: 'Fall',
+  October: 'Fall',
+  November: 'Fall',
+  December: 'Fall'
+}
 
 export default {
   name: 'MobileStory',
   components: {
     Dates,
     Information,
-    Profile
+    Profile,
+    Map,
+    Skills,
+    Projects
   },
   props: {
     events: {
@@ -73,6 +101,10 @@ export default {
     eventOrder: {
       type: Array,
       default: null
+    },
+    projects: {
+      type: Array,
+      default: () => []
     }
   },
   computed: {
@@ -101,15 +133,25 @@ export default {
     chipId (key) {
       return String(key).replace(/\W+/g, '-').slice(0, 48)
     },
+    /**
+     * Short, distinct chip text: multi-year periods show "2014–2015",
+     * single-year terms show "Spring '18" / "Summer '18" / "Fall '18" (season from the end month).
+     */
     chipLabel (key) {
       const years = key.match(/\d{4}/g) || []
+      if (key.includes('Present') && years.length) {
+        return `${years[0]}–now`
+      }
       if (years.length >= 2) {
         const a = years[0]
         const b = years[years.length - 1]
-        return a === b ? a : `${a}–${b}`
+        if (a !== b) return `${a}–${b}`
+        const endMonth = (key.split(' to ')[1] || '').trim().split(/\s+/)[0]
+        const season = SHORT_SEASON_BY_MONTH[endMonth]
+        return season ? `${season} '${b.slice(-2)}` : a
       }
       if (years.length === 1) {
-        return key.includes('Present') ? `${years[0]}–` : years[0]
+        return years[0]
       }
       return key.length > 16 ? `${key.slice(0, 14)}…` : key
     },
@@ -137,15 +179,54 @@ export default {
   background: var(--color-bg, #e8edf3);
 }
 
-.mobile-story__hint {
-  margin: 0;
-  padding: 0.85rem 1rem 0.65rem;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-  color: var(--color-muted, #64748b);
-  text-align: center;
+.mobile-story__map {
+  height: 12rem;
+  background: var(--color-chrome, #0f172a);
+}
+
+.mobile-story__fold {
+  margin-top: 0.5rem;
+  background: var(--color-surface, #fff);
+  border-top: 1px solid var(--color-border, #e2e8f0);
   border-bottom: 1px solid var(--color-border, #e2e8f0);
-  background: rgba(255, 255, 255, 0.45);
+}
+
+.mobile-story__fold-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: var(--font-display, system-ui, sans-serif);
+  font-weight: var(--font-heading-weight, 700);
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  color: var(--color-ink, #0f172a);
+  cursor: pointer;
+  list-style: none;
+}
+
+.mobile-story__fold-title::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-story__fold-title::after {
+  content: '+';
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-muted, #64748b);
+}
+
+.mobile-story__fold[open] > .mobile-story__fold-title::after {
+  content: '\2212';
+}
+
+.mobile-story__fold-title:focus-visible {
+  outline: 2px solid var(--color-accent, #0ea5e9);
+  outline-offset: -2px;
+}
+
+.mobile-story__fold > :not(summary) {
+  padding-bottom: 1rem;
 }
 
 .mobile-story__sticky {

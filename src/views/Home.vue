@@ -15,14 +15,16 @@
     <!-- <img src="@/assets/brand/logo.png"> -->
     <!-- <Sidebar/> -->
 
-    <LeftSide v-bind:events="x" v-bind:projects="projects" v-if="$mq === 'lg'"/>
-    <Information v-bind:events="x" v-bind:eventOrder="eventOrder" v-if="$mq === 'lg'"/>
+    <LeftSide v-bind:events="x" v-if="$mq === 'lg'"/>
+    <Information v-bind:events="x" v-bind:eventOrder="eventOrder" v-bind:projects="projects" v-if="$mq === 'lg'"/>
     <Timeline v-bind:events="x" v-bind:event-order="eventOrder" v-if="$mq === 'lg'"/>
     <Form v-if="showModal && $mq === 'lg'" @close="dismissOnboarding" />
+    <ProfileView v-if="$mq === 'lg'" :events="x" :event-order="eventOrder" />
     <MobileStory
       v-if="$mq !== 'lg'"
       :events="x"
       :event-order="eventOrder"
+      :projects="projects"
     />
 
   </div>
@@ -35,6 +37,7 @@ import Timeline from '@/components/Timeline.vue'
 import Sidebar from '@/components/Sidebar.vue'
 import LeftSide from '@/components/leftSide/LeftSide.vue'
 import Form from '@/components/Form.vue'
+import ProfileView from '@/components/ProfileView.vue'
 
 import MobileStory from '@/components/MobileStory.vue'
 
@@ -68,6 +71,7 @@ export default {
     Sidebar,
     LeftSide,
     Form,
+    ProfileView,
     MobileStory
   },
   data: function () {
@@ -96,6 +100,34 @@ export default {
   height: 100%;
   width: 100%;
   font-size: 0;
+}
+
+/* Wide layout: grid keeps the timeline on-screen regardless of window height or the dev banner. */
+.home:not(.home--stacked) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+}
+
+.home:not(.home--stacked) > .home__devBanner {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.home:not(.home--stacked) > #container {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.home:not(.home--stacked) > #features {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.home:not(.home--stacked) > #timeContainer {
+  grid-column: 1 / -1;
+  grid-row: 3;
 }
 
 .home.home--stacked {

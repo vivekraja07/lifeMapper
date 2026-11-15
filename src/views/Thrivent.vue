@@ -19,17 +19,13 @@
   </div>
 </template>
 
-
-
 <script>
 
 export default {
-  name: 'thrivent',
+  name: 'thrivent'
 }
 
 </script>
-
-
 
 <style scoped>
 
@@ -40,15 +36,13 @@ export default {
   justify-content: center;
   height: 100%;
   align-items: center;
-  align-content: center; 
-  
+  align-content: center;
+
 }
 
 .content {
   text-align: left;
   font-size: 30px;
 }
-
-
 
 </style>

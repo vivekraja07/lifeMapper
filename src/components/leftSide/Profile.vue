@@ -1,54 +1,43 @@
 <template>
-  <div id="profile" :class="{ 'profile--compact': compact }">
+  <div
+    id="profile"
+    :class="{ 'profile--compact': compact, 'profile--header': header }"
+    :role="header ? 'button' : null"
+    :tabindex="header ? 0 : null"
+    :aria-label="header ? 'Open full profile' : null"
+    @click="openFull"
+    @keydown.enter.self="openFull"
+    @keydown.space.self.prevent="openFull"
+  >
       <div class = "logoHolder">
           <img id="vivek" src="@/assets/ui/profile.png" alt="Vivek Raja">
       </div>
 
-      <h1>Vivek Raja</h1>
-      <blockquote>
+      <h1>
+        Vivek Raja
+        <span v-if="header" class="profile__open-hint" aria-hidden="true">View profile &rsaquo;</span>
+      </h1>
+      <p v-if="!header" class="profile__fullname">Vivekanand Rajasekar</p>
+      <blockquote v-if="!header">
         <p>"Never discount the power of enthusiasm"</p>
-        </blockquote>
-      <br>
+      </blockquote>
       <div class = "icons">
-        <div class = "iconHolder">
-            <a href="https://www.linkedin.com/in/vivekraja07/" rel="noopener noreferrer" target="_blank">
-              <img class="socialIcon" src="@/assets/social/linkedin.png" width="512" height="512" alt="LinkedIn">
-            </a>
-        </div>
-
-        <div class = "iconHolder">
-            <a href="https://github.com/vivekraja07" rel="noopener noreferrer" target="_blank">
-              <img class="socialIcon" src="@/assets/social/github.png" width="512" height="512" alt="GitHub">
-            </a>
-        </div>
-
-        <div class = "iconHolder">
-          <a href="https://devpost.com/VivekanandRajasekar" rel="noopener noreferrer" target="_blank">
-            <img class="socialIcon socialIcon--vector" src="@/assets/social/devpost.svg" width="24" height="24" alt="Devpost">
-          </a>
-        </div>
-
-        <div class = "iconHolder">
-          <a href="https://medium.com/@vivekraja07" rel="noopener noreferrer" target="_blank">
-            <img class="socialIcon" src="@/assets/social/medium.png" width="512" height="512" alt="Medium">
-          </a>
-        </div>
-
-        <div class = "iconHolder">
-          <a href="https://www.strava.com/athletes/59144245" rel="noopener noreferrer" target="_blank">
-            <img class="socialIcon socialIcon--vector" src="@/assets/social/strava.svg" width="24" height="24" alt="Strava">
-          </a>
-        </div>
-
-        <div class = "iconHolder">
-          <a href="https://www.chess.com/member/keviv123" rel="noopener noreferrer" target="_blank">
-            <img class="socialIcon socialIcon--vector" src="@/assets/social/chesscom.svg" width="24" height="24" alt="Chess.com">
-          </a>
-        </div>
-
-        <div class = "iconHolder">
-          <a href="https://drive.google.com/file/d/1Xso5gpHvsvbeGZd_-zciS7CMfFj9mw4t/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
-            <img class="socialIcon" src="@/assets/social/resume.png" width="512" height="512" alt="Resume">
+        <div v-for="link in socialLinks" :key="link.label" class = "iconHolder">
+          <a
+            :href="link.href"
+            rel="noopener noreferrer"
+            target="_blank"
+            :title="link.label"
+            @click.stop
+          >
+            <img
+              class="socialIcon"
+              :class="{ 'socialIcon--vector': link.vector }"
+              :src="link.icon"
+              :width="link.vector ? 24 : 512"
+              :height="link.vector ? 24 : 512"
+              :alt="link.label"
+            >
           </a>
         </div>
       </div>
@@ -57,16 +46,28 @@
 </template>
 
 <script>
+import SOCIAL_LINKS from '@/data/socialLinks'
+
 export default {
   name: 'Profile',
-  components: {
-
-  },
   props: {
     events: Object,
     compact: {
       type: Boolean,
       default: false
+    },
+    /** One-row strip above the map on wide screens: small round photo, name, tagline, icons. */
+    header: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data () {
+    return { socialLinks: SOCIAL_LINKS }
+  },
+  methods: {
+    openFull () {
+      if (this.header) this.$store.commit('setProfileOpen', true)
     }
   }
 }
@@ -88,12 +89,21 @@ export default {
 }
 
 h1 {
-  font-family: var(--font-display, system-ui, sans-serif);
-  font-weight: var(--font-heading-weight, 700);
+  font-family: var(--font-name, Georgia, serif);
+  font-weight: 700;
+  font-optical-sizing: auto;
   font-size: clamp(1.25rem, 3vw, 1.75rem);
   letter-spacing: -0.02em;
   color: var(--color-ink, #0f172a);
   margin-top: 0.75rem;
+}
+
+.profile__fullname {
+  margin: 0.2rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-muted, #64748b);
 }
 
 blockquote {
@@ -180,12 +190,135 @@ blockquote p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 1.25rem;
   padding: 0.5rem 0;
 }
 
 #profile.profile--compact #vivek {
   max-height: min(220px, 38vh);
+}
+
+#profile.profile--header {
+  height: auto;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "photo name"
+    "photo icons";
+  column-gap: 1rem;
+  row-gap: 0.15rem;
+  align-items: center;
+  padding: 0.85rem 1.25rem 0.9rem;
+  text-align: left;
+  background: var(--color-chrome, #0f172a);
+  color: #f8fafc;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  scrollbar-gutter: auto;
+}
+
+#profile.profile--header {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#profile.profile--header:hover {
+  background: #16213a;
+}
+
+#profile.profile--header:focus {
+  outline: none;
+}
+
+#profile.profile--header:focus-visible {
+  outline: 2px solid var(--color-accent, #0ea5e9);
+  outline-offset: -2px;
+}
+
+.profile__open-hint {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  margin-left: 0.6rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid rgba(248, 250, 252, 0.25);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--color-chrome-muted, #94a3b8);
+  vertical-align: middle;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+#profile.profile--header:hover .profile__open-hint {
+  color: #fff;
+  border-color: var(--color-accent, #0ea5e9);
+  background: var(--color-accent, #0ea5e9);
+}
+
+#profile.profile--header .logoHolder {
+  grid-area: photo;
+  width: auto;
+  padding: 0;
+}
+
+#profile.profile--header #vivek {
+  display: block;
+  width: 5.5rem;
+  height: 5.5rem;
+  max-height: none;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border: 2px solid rgba(248, 250, 252, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+#profile.profile--header h1 {
+  grid-area: name;
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: #f8fafc;
+}
+
+#profile.profile--header blockquote {
+  grid-area: quote;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  border: 0;
+  background: none;
+}
+
+#profile.profile--header blockquote p {
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: var(--color-chrome-muted, #94a3b8);
+}
+
+#profile.profile--header .icons {
+  grid-area: icons;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+}
+
+#profile.profile--header .iconHolder {
+  width: auto;
+  height: auto;
+}
+
+#profile.profile--header .iconHolder a {
+  width: 2.1rem;
+  height: 2.1rem;
+  background: rgba(248, 250, 252, 0.92);
+  border-color: rgba(248, 250, 252, 0.25);
+}
+
+#profile.profile--header .socialIcon {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 #profile.profile--compact blockquote {

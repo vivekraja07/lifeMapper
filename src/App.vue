@@ -13,6 +13,8 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading-weight: 700;
+  /* Display serif reserved for the name */
+  --font-name: 'Fraunces', Georgia, 'Times New Roman', serif;
   --color-bg: #e8edf3;
   --color-surface: #ffffff;
   --color-ink: #0f172a;

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {TweenMax, Power4} from 'gsap'
+import { TweenMax, Power4 } from 'gsap'
 
 export default {
   name: 'Sidebar',
@@ -22,7 +22,6 @@ export default {
   watch: {
     open: function (open) {
       const dX = open ? 0 : -this.$el.offsetWidth
-      console.log(this.$el)
       TweenMax.to(this.$el, 0.6, {
         x: dX,
         ease: Power4.easeOut
